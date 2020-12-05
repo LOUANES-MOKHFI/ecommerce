@@ -1,0 +1,26 @@
+<?php
+return [
+ 
+    'tagname'              => 'اسم العلامة ',
+    'all_tags'             => ' جميع العلامات ',
+    'slug'                 => 'الإسم بالرابط',
+    'status'               => 'الحالة',
+    'action'               => 'الإجراءات',
+    'all_main_category'    => 'جميع الاقسام الرئيسية',
+    'all_category'         => 'الاقسام الرئيسية',
+    'active'               => 'مفعل',
+    'notactive'            => 'غير مفعل',
+    'delete'               => 'حذف',
+    'edit'                 => 'تعديل',
+    'activer'              => 'تفعيل',
+    'desactiver'           => 'تعطيل',
+    'editcategory'         => 'تعديل القسم الرئيسي',
+    'editsubcategory'         => 'تعديل القسم الفرعي',
+    'tags_information'     => 'بيانات العلامة',
+    'subcategory_information' => ' بيانات القسم الفرعي',
+    'addtags'              => 'إضافة علامة جديدة ',
+    'addsubcategory'       => 'إضافة قسم فرعي جديد ',
+    'all_sub_category'     => 'جميع الاقسام الفرعية',
+    'all_subcategory'      => 'الاقسام الفرعية',
+    'chosecategory'        => ' اختر القسم الرئيسي ',
+];

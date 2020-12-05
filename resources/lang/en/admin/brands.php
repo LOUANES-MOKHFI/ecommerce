@@ -1,0 +1,26 @@
+<?php
+return [
+ 
+    'image'                => 'Brand image',
+    'brands'               => ' Brand name ',
+    'slug'                 => 'الإسم بالرابط',
+    'status'               => 'Status',
+    'action'               => 'Actions',
+    'all_brands'           => 'All Brands   ',
+    'all_category'         => 'الاقسام الرئيسية',
+    'active'               => 'مفعل',
+    'notactive'            => 'غير مفعل',
+    'delete'               => 'حذف',
+    'edit'                 => 'تعديل',
+    'activer'              => 'تفعيل',
+    'desactiver'           => 'تعطيل',
+    'editcategory'         => 'تعديل القسم الرئيسي',
+    'editsubcategory'         => 'تعديل القسم الفرعي',
+    'category_information' => 'بيانات القسم',
+    'brands_information' => 'Brands Informations',
+    'addbrands'          => 'Add new brand   ',
+    'addsubcategory'       => 'إضافة قسم فرعي جديد ',
+    'all_sub_category'     => 'جميع الاقسام الفرعية',
+    'all_subcategory'      => 'الاقسام الفرعية',
+    'chosecategory'        => ' اختر القسم الرئيسي ',
+];

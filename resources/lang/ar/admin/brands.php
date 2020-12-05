@@ -1,0 +1,26 @@
+<?php
+return [
+ 
+    'image'                => 'صورة الماركة التجارية',
+    'brands'               => ' اسم الماركة التجارية ',
+    'slug'                 => 'الإسم بالرابط',
+    'status'               => 'الحالة',
+    'action'               => 'الإجراءات',
+    'all_brands'           => 'جميع الماركات التجارية ',
+    'all_category'         => 'الاقسام الرئيسية',
+    'active'               => 'مفعل',
+    'notactive'            => 'غير مفعل',
+    'delete'               => 'حذف',
+    'edit'                 => 'تعديل',
+    'activer'              => 'تفعيل',
+    'desactiver'           => 'تعطيل',
+    'editcategory'         => 'تعديل القسم الرئيسي',
+    'editsubcategory'         => 'تعديل القسم الفرعي',
+    'category_information' => 'بيانات القسم',
+    'brands_information' => ' بيانات الماركة التجارية',
+    'addbrands'          => 'إضافة ماركة تجارية جديدة ',
+    'addsubcategory'       => 'إضافة قسم فرعي جديد ',
+    'all_sub_category'     => 'جميع الاقسام الفرعية',
+    'all_subcategory'      => 'الاقسام الفرعية',
+    'chosecategory'        => ' اختر القسم الرئيسي ',
+];
