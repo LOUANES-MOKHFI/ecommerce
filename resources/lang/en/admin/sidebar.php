@@ -8,6 +8,8 @@ return [
     'brands' => 'Brands ',
     'addbrands'    => 'Add new brand',
     'tags' => 'Tags',
+    'products' => 'Products',
+    'addproduct' => 'Add new product',
     'addtags'    => 'Add new tag',
     'settings' => 'Settings',
     'shipping_methods' => 'Shipping Methods',

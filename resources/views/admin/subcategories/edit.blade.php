@@ -78,7 +78,7 @@
                                                                 <div class="form-group">
                                                                     <label for="projectinput1">   {{__('admin/category.subcategory')}} </label>
                                                                     <select name="parent_id" class="select2 form-control">
-                                                                   
+                                                                    <option value="{{$subCategory->parent_id}}">{{$subCategory->name}}</option>
                                                                     <optgroup label="{{__('admin/category.chosecategory')}}">
                                                                     @if($categories && $categories->count()>0)
                                                                         @foreach($categories as $category)

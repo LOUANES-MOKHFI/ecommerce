@@ -81,6 +81,16 @@ Route::group(['namespace' => 'Admin','middleware'=>'auth:admins','prefix' => 'ad
         Route::get('changeStatus/{id}','TagsController@changeStatus')->name('admin.tags.changeStatus');
     });
 
+    Route::group(['prefix' => 'products'],function(){
+        Route::get('/','ProductController@index')->name('admin.products');
+        Route::get('general-information','ProductController@create')->name('admin.products.general.create');
+        Route::post('store-general-information','ProductController@store')->name('admin.products.general.store');
+        Route::get('edit-general-information/{id}','TagsController@edit')->name('admin.products.edit');
+        Route::post('update-general-information/{id}','TagsController@update')->name('admin.products.update');
+        Route::get('delete/{id}','TagsController@destroy')->name('admin.products.delete');
+        Route::get('changeStatus/{id}','TagsController@changeStatus')->name('admin.products.changeStatus');
+    });
+
 });
 
 Route::group(['namespace' => 'Admin', 'middleware'=>'guest:admins','prefix' => 'admin'],function(){

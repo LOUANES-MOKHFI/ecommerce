@@ -14,7 +14,7 @@ return [
     'edit'                 => 'تعديل',
     'activer'              => 'تفعيل',
     'desactiver'           => 'تعطيل',
-    'editcategory'         => 'تعديل القسم الرئيسي',
+    'editbrands'         => 'Edit Brand',
     'editsubcategory'         => 'تعديل القسم الفرعي',
     'category_information' => 'بيانات القسم',
     'brands_information' => 'Brands Informations',

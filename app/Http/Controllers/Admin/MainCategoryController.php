@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Category;
 use App\Http\Requests\MainCategoryRequest;
 use DB;
+use App\Http\Enumerations\CategoryType;
 class MainCategoryController extends Controller
 {
     /**
@@ -51,7 +52,7 @@ class MainCategoryController extends Controller
            else{
                $mainCategory->is_active = 1;
            }
-           if($request->type == 1){
+           if($request->type == CategoryType::mainCategory){
                $request->request->add(['parent_id'=> null]);
            }
            $mainCategory->parent_id = $request->parent_id;

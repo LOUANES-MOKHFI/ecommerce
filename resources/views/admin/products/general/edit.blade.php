@@ -1,5 +1,5 @@
 @extends('layouts.admin')
-@section('title','Modifier une marque')
+@section('title','Modifier un categorie')
 
 @section('content')
 
@@ -12,9 +12,9 @@
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="">{{__('admin/header.home')}} </a>
                                 </li>
-                                <li class="breadcrumb-item"><a href=""> {{__('admin/brands.all_brands') }} </a>
+                                <li class="breadcrumb-item"><a href=""> {{__('admin/category.all_category') }} </a>
                                 </li>
-                                <li class="breadcrumb-item active"> {{__('admin/category.edit') }} - {{$brand -> name}}
+                                <li class="breadcrumb-item active"> {{__('admin/category.edit') }} - {{$mainCategory -> name}}
                                 </li>
                             </ol>
                         </div>
@@ -28,7 +28,7 @@
                         <div class="col-md-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <h4 class="card-title" id="basic-layout-form"> {{__('admin/brands.editbrands') }} </h4>
+                                    <h4 class="card-title" id="basic-layout-form"> {{__('admin/category.editcategory') }} </h4>
                                     <a class="heading-elements-toggle"><i
                                             class="la la-ellipsis-v font-medium-3"></i></a>
                                     <div class="heading-elements">
@@ -44,24 +44,24 @@
                                 <div class="card-content collapse show">
                                     <div class="card-body">
                                         <form class="form"
-                                              action="{{route('admin.brands.update',$brand -> id)}}"
+                                              action="{{route('admin.maincategories.update',$mainCategory -> id)}}"
                                               method="POST"
                                               enctype="multipart/form-data">
                                             @csrf
 
-                                            <input name="id" value="{{$brand -> id}}" type="hidden">
+                                            <input name="id" value="{{$mainCategory -> id}}" type="hidden">
 
                                             <div class="form-group">
                                                 <div class="text-center">
                                                     <img
-                                                        src="{{$brand -> photo}}"
-                                                        class="rounded-circle  height-150" alt="{{__('admin/brands.image') }}">
+                                                        src="{{$mainCategory -> photo}}"
+                                                        class="rounded-circle  height-150" alt="{{__('admin/category.image') }}">
                                                 </div>
                                             </div>
 
 
                                             <div class="form-group">
-                                                <label> {{__('admin/brands.image') }}  </label>
+                                                <label> {{__('admin/category.image') }}  </label>
                                                 <label id="projectinput7" class="file center-block">
                                                     <input type="file" id="file" name="photo">
                                                     <span class="file-custom"></span>
@@ -73,16 +73,15 @@
 
                                             <div class="form-body">
 
-                                                <h4 class="form-section"><i class="ft-home"></i>{{__('admin/brands.brands_information') }} </h4>
-                                               
+                                                <h4 class="form-section"><i class="ft-home"></i>{{__('admin/category.category_information') }} </h4>
                                                 <div class="row">
-                                                    <div class="col-md-12">
+                                                    <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <label for="projectinput1">{{__('admin/brands.brands')}}</label>
+                                                            <label for="projectinput1"> {{__('admin/category.category')}}</label>
                                                             <input type="text" id="name"
                                                                    class="form-control"
                                                                    placeholder="  "
-                                                                   value="{{$brand -> name}}"
+                                                                   value="{{$mainCategory -> name}}"
                                                                    name="name">
                                                             @error("name")
                                                             <span class="text-danger">{{$message}}</span>
@@ -91,7 +90,21 @@
                                                     </div>
 
 
-                                                    
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="projectinput1"> {{__('admin/category.slug')}}</label>
+                                                            <input type="text" id="slug"
+                                                                   class="form-control"
+                                                                   placeholder="  "
+                                                                   value="{{$mainCategory -> slug}}"
+                                                                   name="slug">
+
+                                                            @error("slug")
+                                                            <span class="text-danger"> {{$message}} </span>
+                                                            @enderror
+                                                        </div>
+                                                    </div>
+
 
                                                 </div>
                                                 <div class="row">
@@ -101,7 +114,7 @@
                                                                    name="is_active"
                                                                    id="switcheryColor4"
                                                                    class="switchery" data-color="success"
-                                                                   @if($brand -> is_active == 1)checked @endif/>
+                                                                   @if($mainCategory -> is_active == 1)checked @endif/>
                                                             <label for="switcheryColor4"
                                                                    class="card-title ml-1"> {{__('admin/category.status')}}</label>
 

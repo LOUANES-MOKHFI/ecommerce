@@ -42,9 +42,14 @@ class Brand extends Model
    public function getActive(){
       return $this->is_active == 1 ? __('admin/category.active') :  __('admin/category.notactive');
    }
+   
 
    public function getphotoAttribute($val){
       return ($val !== null) ? asset('assets/images/brands/'.$val) : "";
  }
+
+      public function scopeActive($query){
+         return $query->where('is_active',1);
+      }
 
 }

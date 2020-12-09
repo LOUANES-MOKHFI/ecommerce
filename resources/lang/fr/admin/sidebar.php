@@ -9,6 +9,8 @@ return [
     'addbrands'    => 'Ajouter une nouvelle marque',
     'tags' => 'Mots clés ',
     'addtags'    => 'Ajouter un Mot clé',
+    'products' => 'Produits',
+    'addproduct' => 'Ajouter un produit',
     'settings' => 'Parametres',
     'shipping_methods' => 'Moyens de livraison',
     'free_shipping'  => 'Livraison gratuit',
