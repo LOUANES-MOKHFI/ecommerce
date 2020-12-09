@@ -54,14 +54,12 @@ class ProductController extends Controller
         
          
           if(!$request->has('is_active')){
-              $mainCategory->is_active = 0;
+              $product->is_active = 0;
           }
           else{
-              $mainCategory->is_active = 1;
+              $product->is_active = 1;
           }
-          if($request->type == CategoryType::mainCategory){
-              $request->request->add(['parent_id'=> null]);
-          }
+         
           $mainCategory->parent_id = $request->parent_id;
           $mainCategory->slug = $request->slug;
           $mainCategory->name = $request->name;
