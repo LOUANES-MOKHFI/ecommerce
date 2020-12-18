@@ -1,17 +1,20 @@
 @extends('layouts.admin')
+@section('title')
+{{__('admin/products.all_products')}}
 
+@endsection
 @section('content')
     <div class="app-content content">
         <div class="content-wrapper">
             <div class="content-header row">
                 <div class="content-header-left col-md-6 col-12 mb-2">
-                    <h3 class="content-header-title">{{__('admin/category.all_category') }}</h3>
+                    <h3 class="content-header-title">{{__('admin/products.all_products') }}</h3>
                     <div class="row breadcrumbs-top">
                         <div class="breadcrumb-wrapper col-12">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="">{{__('admin/header.home')}} </a>
                                 </li>
-                                <li class="breadcrumb-item active">{{__('admin/category.all_category')}}
+                                <li class="breadcrumb-item active">{{__('admin/products.all_products')}}
                                 </li>
                             </ol>
                         </div>
@@ -25,7 +28,7 @@
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <h4 class="card-title">{{__('admin/category.all_main_category') }}</h4>
+                                    <h4 class="card-title">{{__('admin/products.all_products') }}</h4>
                                     <a class="heading-elements-toggle"><i
                                             class="la la-ellipsis-v font-medium-3"></i></a>
                                     <div class="heading-elements">
@@ -46,43 +49,39 @@
                                             class="table display nowrap table-striped table-bordered scroll-horizontal">
                                             <thead class="">
                                             <tr>
-                                                <th>{{__('admin/category.image') }}</th>
-                                                <th>{{__('admin/category.category')}} </th>
-                                                <th>{{__('admin/category.maincategory')}} </th>
-                                                <th>{{__('admin/category.slug')}}</th>
-                                                <th>{{__('admin/category.status')}}</th>
-                                                <th>{{__('admin/category.action')}}</th>
+                                                <th>{{__('admin/products.image') }}</th>
+                                                <th>{{__('admin/products.product')}} </th>
+                                                <th>{{__('admin/products.slug')}}</th>
+                                                <th>{{__('admin/products.price')}}</th>
+                                                <th>{{__('admin/products.status')}}</th>
+                                                <th>{{__('admin/products.action')}}</th>
                                             </tr>
                                             </thead>
                                             <tbody>
 
-                                            @isset($categories)
-                                                @foreach($categories as $category)
+                                            @isset($products)
+                                                @foreach($products as $product)
                                                     <tr>
                                                         <td> <img style="width: 150px; height: 100px;" src=""></td>
-                                                        <td>{{$category -> name}}</td>
-                                                        <td>{{$category ->is_parent->name ?? '--'}}</td>
-                                                        <td>{{$category -> slug}}</td>
-                                                        <td>{{$category -> getActive()}}</td>
+                                                        <td>{{$product -> name}}</td>
+                                                        <td>{{$product -> slug}}</td>
+                                                        <td>{{$product -> price}}</td>
+                                                        <td>{{$product->getActive()}}</td>
 
                                                         <td>
                                                             <div class="btn-group" role="group"
                                                                  aria-label="Basic example">
-                                                                <a href="{{route('admin.maincategories.edit',$category -> id)}}"
-                                                                   class="btn btn-outline-primary btn-min-width box-shadow-3 mr-1 mb-1">{{__('admin/category.edit') }}</a>
+                                                                <a href="{{route('admin.products.price',$product -> id)}}"
+                                                                   class="btn btn-outline-primary btn-min-width box-shadow-3 mr-1 mb-1">{{__('admin/products.price') }}</a>
 
 
-                                                                <a href="{{route('admin.maincategories.delete',$category -> id)}}"
-                                                                   class="btn btn-outline-danger btn-min-width box-shadow-3 mr-1 mb-1">{{__('admin/category.delete') }}</a>
+                                                                <a href="{{route('admin.products.images',$product -> id)}}"
+                                                                   class="btn btn-outline-danger btn-min-width box-shadow-3 mr-1 mb-1">{{__('admin/products.images') }}</a>
 
 
-                                                                <a href="{{route('admin.maincategories.changeStatus',$category -> id)}}"
+                                                                <a href="{{route('admin.products.stock',$product -> id)}}"
                                                                    class="btn btn-outline-warning btn-min-width box-shadow-3 mr-1 mb-1">
-                                                                    @if($category -> is_active == 0)
-                                                                    {{__('admin/category.activer') }}
-                                                                        @else
-                                                                    {{__('admin/category.desactiver') }}
-                                                                    @endif
+                                                                   {{__('admin/products.stock') }}
                                                                 </a>
 
 
@@ -96,7 +95,7 @@
                                             </tbody>
                                         </table>
                                         <div class="justify-content-center d-flex">
-                                        {{$categories->links()}}
+                                        {{$products->links()}}
 
                                         </div>
                                     </div>

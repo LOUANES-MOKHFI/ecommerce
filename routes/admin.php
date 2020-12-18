@@ -85,11 +85,40 @@ Route::group(['namespace' => 'Admin','middleware'=>'auth:admins','prefix' => 'ad
         Route::get('/','ProductController@index')->name('admin.products');
         Route::get('general-information','ProductController@create')->name('admin.products.general.create');
         Route::post('store-general-information','ProductController@store')->name('admin.products.general.store');
+
+        Route::get('images/{id}','ProductController@getImages')->name('admin.products.images');
+        Route::post('store-images','ProductController@postImages')->name('admin.products.images.store');
+        Route::post('save-images/db','ProductController@saveImageDB')->name('admin.products.images.store.db');
+
+        Route::get('stock/{id}','ProductController@getStock')->name('admin.products.stock');
+        Route::post('store-stock','ProductController@postStock')->name('admin.products.stock.store');
+
+        Route::get('price/{id}','ProductController@getPrice')->name('admin.products.price');
+        Route::post('store-price','ProductController@postPrice')->name('admin.products.price.store');
         Route::get('edit-general-information/{id}','TagsController@edit')->name('admin.products.edit');
         Route::post('update-general-information/{id}','TagsController@update')->name('admin.products.update');
         Route::get('delete/{id}','TagsController@destroy')->name('admin.products.delete');
         Route::get('changeStatus/{id}','TagsController@changeStatus')->name('admin.products.changeStatus');
     });
+
+    Route::group(['prefix' => 'attributes'],function(){
+        Route::get('/','AttributeController@index')->name('admin.attributes');
+        Route::get('create','AttributeController@create')->name('admin.attributes.create');
+        Route::post('store','AttributeController@store')->name('admin.attributes.store');
+        Route::get('edit/{id}','AttributeController@edit')->name('admin.attributes.edit');
+        Route::post('update/{id}','AttributeController@update')->name('admin.attributes.update');
+        Route::get('delete/{id}','AttributeController@destroy')->name('admin.attributes.delete');
+    });
+
+    Route::group(['prefix' => 'options'],function(){
+        Route::get('/','OptionsController@index')->name('admin.options');
+        Route::get('create','OptionsController@create')->name('admin.options.create');
+        Route::post('store','OptionsController@store')->name('admin.options.store');
+        Route::get('edit/{id}','OptionsController@edit')->name('admin.options.edit');
+        Route::post('update/{id}','OptionsController@update')->name('admin.options.update');
+        Route::get('delete/{id}','OptionsController@destroy')->name('admin.options.delete');
+    });
+
 
 });
 

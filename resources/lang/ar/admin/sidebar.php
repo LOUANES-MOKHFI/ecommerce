@@ -16,4 +16,8 @@ return [
     'free_shipping'  => 'توصيل مجاني',
     'outer_shipping' => 'توصيل خارجي',
     'inner_shipping' => 'توصيل داخلي',
+    'attributes'     => 'كل الخصائص',
+    'addattribute'   => 'أضف خاصية للمنتج',
+    'options'        => 'خصائص المنتج',
+    'addoptions'     => 'أضف خاصية جديدة',
 ];

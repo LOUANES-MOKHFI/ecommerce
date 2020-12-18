@@ -24,14 +24,14 @@ class GeneralProductRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|max:100',
-            'type' => 'required|unique:products,slug,'.$this->is,
-            'description' => 'required|min:3|max:1000',
-            'short_description' => 'nullable|min:3|max:500',
-            'categories' => 'array|min:1',
-            'categories.*' => 'numeric|exists:categories,id',
-            'tags'       => 'nullable',
-            'brands'     => 'required|exists:brands,id',
+            'name'              => 'required|max:100',
+            'slug'              => 'required|unique:products,slug,'.$this->id,
+            'description'       => 'required|max:1000',
+            'short_description' => 'nullable|max:500',
+            'categories'        => 'array|min:1',
+            'categories.*'      => 'numeric|exists:categories,id',
+            'tags'              => 'nullable',
+            'brand_id'           => 'required|exists:brands,id'
         ];
     }
 }

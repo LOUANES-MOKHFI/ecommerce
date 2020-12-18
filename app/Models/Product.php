@@ -5,7 +5,6 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Astrotomic\Translatable\Translatable;
 use Illuminate\Database\Eloquent\SoftDeletes;
-
 class Product extends Model
 {
   
@@ -16,7 +15,7 @@ class Product extends Model
    
    protected $with = ['translations'];
   
-   protected $translatedAttributes = ['name','description','short_decription'];
+   protected $translatedAttributes = ['name','description','short_description'];
 /**
    * the relations to eager on very query.
    *
@@ -32,7 +31,7 @@ class Product extends Model
    protected $casts = [
        'manage_stock' => 'boolean',
        'is_stock' => 'boolean',
-       'is_active' => 'boolean'
+      // 'is_active' => 'boolean'
    ];
 
    protected $date = [
@@ -43,10 +42,12 @@ class Product extends Model
     'deleted_at' => 'boolean'
     ];
 
- 
-   public function getActive(){
-      return $this->is_active == 1 ? __('admin/category.active') :  __('admin/category.notactive');
-   }
+    public function scopeActive($query){
+        return $query->where('is_active',1);
+     }
+    public function getActive(){
+        return $this->is_active == 1 ? __('admin/products.active') :  __('admin/products.notactive');
+     }
 
    public function getphotoAttribute($val){
       return ($val !== null) ? asset('assets/images/products/'.$val) : "";
@@ -63,4 +64,7 @@ class Product extends Model
         return $this->belongsToMany(Tags::class,'product_tags');
     }
 
+    public function options(){
+        return $this->hasMany(Options::class,'product_id');
+    }
 }

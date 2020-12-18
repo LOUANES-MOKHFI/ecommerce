@@ -16,4 +16,8 @@ return [
     'free_shipping'  => 'Free shipping',
     'outer_shipping' => 'Outer shipping',
     'inner_shipping' => 'Inner shipping',
+    'attributes'     => 'All Attributes',
+    'addattribute'    => 'Add new attribute',
+    'options'        => 'Product Options',
+    'addoptions'     => 'Add option',
 ];

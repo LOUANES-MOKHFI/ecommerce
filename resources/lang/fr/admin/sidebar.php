@@ -16,7 +16,9 @@ return [
     'free_shipping'  => 'Livraison gratuit',
     'outer_shipping' => 'Livraison externe',
     'inner_shipping' => 'Livraison locale',
-
-
+    'attributes'     => 'Tout les attributs',
+    'addattribute'    => 'Ajouter une attribut',
+    'options'        => 'Tout les options',
+    'addoptions'     => 'Ajouter une option ',
     
 ];

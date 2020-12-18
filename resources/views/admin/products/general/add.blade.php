@@ -132,7 +132,7 @@
                                                                     @endif
                                                                     </optgroup>
                                                                     </select>
-                                                                    @error("categories")
+                                                                    @error("categories.0")
                                                                     <span class="text-danger"> {{$message}}  </span>
                                                                     @enderror
                                                                 </div>
@@ -142,7 +142,7 @@
                                                             <div class="col-md-4">
                                                                 <div class="form-group">
                                                                     <label for="projectinput1"> {{__('admin/products.chosetags')}}</label>
-                                                                    <select name="tags" class="select2 form-control" multiple>
+                                                                    <select name="tags[]" class="select2 form-control" multiple>
                                                                     <optgroup label="{{__('admin/products.chosetags')}}">
                                                                     @if($tags && $tags->count()>0)
                                                                         @foreach($tags as $tag)
@@ -159,7 +159,7 @@
                                                             <div class="col-md-4">
                                                                 <div class="form-group">
                                                                     <label for="projectinput1"> {{__('admin/products.chosebrands')}}</label>
-                                                                    <select name="brands" class="select2 form-control">
+                                                                    <select name="brand_id" class="select2 form-control">
                                                                     <optgroup label="{{__('admin/products.chosetags')}}">
                                                                     @if($brands && $brands->count()>0)
                                                                         @foreach($brands as $brand)
@@ -169,7 +169,7 @@
                                                                     </optgroup>
                                                                     </select>
 
-                                                                    @error("brands")
+                                                                    @error("brand_id")
                                                                     <span class="text-danger"> {{$message}}</span>
                                                                     @enderror
                                                                 </div>
