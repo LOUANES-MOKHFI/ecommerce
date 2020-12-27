@@ -20,4 +20,6 @@ return [
     'addattribute'    => 'Add new attribute',
     'options'        => 'Product Options',
     'addoptions'     => 'Add option',
+    'addSliders'     => 'Add images',
+    'sliders'        => 'All Sliders'
 ];

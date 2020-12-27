@@ -119,6 +119,13 @@ Route::group(['namespace' => 'Admin','middleware'=>'auth:admins','prefix' => 'ad
         Route::get('delete/{id}','OptionsController@destroy')->name('admin.options.delete');
     });
 
+    Route::group(['prefix' => 'sliders'], function () {
+        Route::get('/', 'SlidersController@addImages')->name('admin.sliders.create');
+        Route::post('images', 'SlidersController@saveSliderImages')->name('admin.sliders.images.store');
+        Route::post('images/db', 'SlidersController@saveSliderImagesDB')->name('admin.sliders.images.store.db');
+
+    });
+
 
 });
 

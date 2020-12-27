@@ -73,15 +73,15 @@ class OptionsController extends Controller
  
     public function edit($id)
     {
- 
-        $option = Options::find($id);
-        if(!$option){
+        $data = [];
+        $data['option'] = Options::find($id);
+        if(!$data['option']){
             return redirect()->route('admin.options')->with(['error'=> 'هذه الخاصية غير موجودة']);
         }
-        $data = [];
+        
         $data['products'] = Product::active()->select('id')->orderBy('id','DESC')->get();
         $data['attributes'] = Attributes::select('id')->orderBy('id','DESC')->get();
-        return view('admin.options.edit',compact('option'),$data);
+        return view('admin.options.edit',$data);
  
     }
  
@@ -92,13 +92,17 @@ class OptionsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function update(OptionsRequest $request)
+    public function update(OptionsRequest $request,$id)
     {
-        
-        try {
+        $option = Options::find($id);
+        if(!$option){
+         return redirect()->route('admin.options')->with(['error'=> 'هذه الخاصية غير موجودة']);
+        }
+       // try {
+          
            DB::beginTransaction();
  
-           $option = Options::update([
+           $option -> update([
                'price'        => $request->price,
                'product_id'   => $request->product_id,
                'attribute_id' => $request->attribute_id,
@@ -111,10 +115,10 @@ class OptionsController extends Controller
            DB::commit();
            return redirect()->route('admin.options')->with('success','تمت  التحديث بنجاح.');
       
-        } catch (\Exception $ex) {
+        /*} catch (\Exception $ex) {
         return redirect()->back()->with('error','خطأ في الملومات, يرجى التأكد.');
             DB::rollback();
-        }
+        }*/
     }
  
    

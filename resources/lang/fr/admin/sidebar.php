@@ -19,6 +19,8 @@ return [
     'attributes'     => 'Tout les attributs',
     'addattribute'    => 'Ajouter une attribut',
     'options'        => 'Tout les options',
-    'addoptions'     => 'Ajouter une option ',
+    'addoptions'     => 'Ajouter une option',
+    'addSliders'     => 'Ajouter des images',
+    'sliders'        => 'Sliders'
     
 ];

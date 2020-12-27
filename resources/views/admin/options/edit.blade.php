@@ -45,7 +45,7 @@
                                 <div class="card-content collapse show">
                                     <div class="card-body">
                                         <form class="form"
-                                              action="{{route('admin.attributes.update',$option -> id)}}"
+                                              action="{{route('admin.options.update',$option -> id)}}"
                                               method="POST"
                                               enctype="multipart/form-data">
                                             @csrf
@@ -87,7 +87,9 @@
                                                                     <optgroup label="{{__('admin/options.choseProduct')}}" >
                                                                     @if($products && $products->count()>0)
                                                                         @foreach($products as $product)
-                                                                            <option value="{{$product->id}}">{{$product->name}}</option>
+                                                                            <option value="{{$product->id}}"
+                                                                            @if($product->id == $option->product_id) selected @endif>
+                                                                            {{$product->name}}</option>
                                                                         @endforeach
                                                                     @endif
                                                                     </optgroup>
@@ -104,7 +106,9 @@
                                                                     <optgroup label="{{__('admin/options.choseAttribute')}}">
                                                                     @if($attributes && $attributes->count()>0)
                                                                         @foreach($attributes as $attribute)
-                                                                            <option value="{{$attribute->id}}">{{$attribute->name}}</option>
+                                                                            <option value="{{$attribute->id}}"
+                                                                            @if($attribute->id == $option->attribute_id) selected @endif>
+                                                                            {{$attribute->name}}</option>
                                                                         @endforeach
                                                                     @endif
                                                                     </optgroup>

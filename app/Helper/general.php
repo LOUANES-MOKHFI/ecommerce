@@ -6,9 +6,9 @@ function getFolder(){
 }
 
 function UploadImage($folder, $image){
-     $image->store('/',$folder);
+     $image->store('/', $folder);
      $filename = $image->hashName();
-     return $filename;
+     return  $filename;
   }
 
 ?>

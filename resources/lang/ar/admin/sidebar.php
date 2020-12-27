@@ -3,7 +3,7 @@ return [
     'maincategories' => 'الأقسام',
     'showAll'       => 'عرض الكل',
     'addcategory'    => 'أضف قسم جديد',
-    'subcategories' => 'الأقسام الnفرعية',
+    'subcategories' => 'الأقسام الفرعية',
     'addsubcategory'    => 'أضف قسم فرعي جديد',
     'brands' => 'الماركات ',
     'addbrands'    => 'أضف ماركة جديدة',
@@ -20,4 +20,6 @@ return [
     'addattribute'   => 'أضف خاصية للمنتج',
     'options'        => 'خصائص المنتج',
     'addoptions'     => 'أضف خاصية جديدة',
+    'addSliders'     => ' أضف صور جديدة',
+    'sliders'        => '  كل الصور'
 ];

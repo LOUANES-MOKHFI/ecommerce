@@ -123,6 +123,7 @@
                 </ul>
             </li>
 
+
             <li class="nav-item"><a href=""><i class="la la-male"></i>
                     <span class="menu-title" data-i18n="nav.dash.main">المتاجر  </span>
                     <span
@@ -185,6 +186,18 @@
                             
                         </ul>
                     </li>
+                    <li class="nav-item"><a href=""><i class="la la-group"></i>
+                    <span class="menu-title" data-i18n="nav.dash.main"> {{__('admin/sidebar.sliders')}}    </span>
+                    <span
+                        class="badge badge badge-danger badge-pill float-right mr-2">{{\App\Models\Sliders::count()}}</span>
+                </a>
+                <ul class="menu-content">
+                    
+                    <li><a class="menu-item" href="{{route('admin.sliders.create')}}" data-i18n="nav.dash.crypto">
+                    {{__('admin/sidebar.addSliders')}} </a>
+                    </li>
+                </ul>
+            </li>
                     <li><a class="menu-item" href="#" data-i18n="nav.templates.horz.main">Horizontal</a>
                         <ul class="menu-content">
                             <li><a class="menu-item" href="../horizontal-menu-template"

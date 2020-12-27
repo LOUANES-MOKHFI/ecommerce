@@ -14,8 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('test',function(){
-     $cat = \App\Models\Category::find(13);
-     $cat -> makeVisible(['translation']);
-     return $cat;
-});
+
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

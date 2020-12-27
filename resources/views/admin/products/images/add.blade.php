@@ -88,57 +88,59 @@
 
 @endsection
 @section('script')
-    <script>
-        var uploadedDocumentMap = {}
-        Dropzone.options.dpzMultipleFiles = {
-            paramName : "dzfile",
-            maxFilessize : 5,
-            clickable : true,
-            adRemoveLinks : true,
-            acceptedFiles : 'image/*',
-            dictFallbackMessage : "csdcsdc",
-            dictInvalidFileType : " Vous ne pouves pas ajouter ce type de fichier ",
-            dictCancelUpload : "csdadcs",
-            dictCancelUploadConfirmation : "sdadasda",
-            dictRemoveFile: " Supprimer la photo",
-            dictMaxFilesExceeded : "vous ne peuvez pas ajouter ce nombre des photos",
-            headers : {
-                'X-CSRF-TOKEN':
-                "{{csrf_token()}}"
-            },
-
-            url: "{{ route('admin.products.images.store') }}",
-            success: function(file, response){
-                    $('form').append('<input type="hidden" name = "document[]" value="' + response.name +'">')
-                    uploadedDocumentMap[file.name] = response.name
-                },
-
-            removedFile: function(file)
-            {
-                file.previewElement.remove()
-                var name = ''
-                if(typeof file.file_name !== 'undifined'){
-                    name = file.file_name
+    
+<script>
+             var uploadedDocumentMap = {}
+            Dropzone.options.dpzMultipleFiles = {
+                paramName: "dzfile", // The name that will be used to transfer the file
+                //autoProcessQueue: false,
+                maxFilesize: 5, // MB
+                clickable: true,
+                addRemoveLinks: true,
+                acceptedFiles: 'image/*',
+                dictFallbackMessage: " المتصفح الخاص بكم لا يدعم خاصيه تعدد الصوره والسحب والافلات ",
+                dictInvalidFileType: "لايمكنك رفع هذا النوع من الملفات ",
+                dictCancelUpload: "الغاء الرفع ",
+                dictCancelUploadConfirmation: " هل انت متاكد من الغاء رفع الملفات ؟ ",
+                dictRemoveFile: "حذف الصوره",
+                dictMaxFilesExceeded: "لايمكنك رفع عدد اكثر من هضا ",
+                headers: {
+                    'X-CSRF-TOKEN':
+                        "{{ csrf_token() }}"
                 }
-                else{
-                    name = uploadedDocumentMap[file.name]
+                ,
+                url: "{{ route('admin.products.images.store') }}", // Set the url
+                success:
+                    function (file, response) {
+                        $('form').append('<input type="hidden" name="document[]" value="' + response.name + '">')
+                        uploadedDocumentMap[file.name] = response.name
+                    }
+                ,
+                removedfile: function (file) {
+                    file.previewElement.remove()
+                    var name = ''
+                    if (typeof file.file_name !== 'undefined') {
+                        name = file.file_name
+                    } else {
+                        name = uploadedDocumentMap[file.name]
+                    }
+                    $('form').find('input[name="document[]"][value="' + name + '"]').remove()
                 }
-                $('form').find('input[name="document[]"][value="'+ name + '"]').remove()
-            },
-            init:
-             function()
-            {
-                @if(isset($event) && $event->document)
-                var files = {!!json_encode($event->document) !!}
-                for(var i in files){
-                    var file = files[i]
-                    this.options.addedfile.call(this, file)
-                    file.previewElement.classList.add('dz-complete')
-                    $('form').append('<input type="hidden" name= "document[]" value="' + file.file_name +'">')
+                ,
+                // previewsContainer: "#dpz-btn-select-files", // Define the container to display the previews
+                init: function () {
+                        @if(isset($event) && $event->document)
+                    var files =
+                    {!! json_encode($event->document) !!}
+                        for (var i in files) {
+                        var file = files[i]
+                        this.options.addedfile.call(this, file)
+                        file.previewElement.classList.add('dz-complete')
+                        $('form').append('<input type="hidden" name="document[]" value="' + file.file_name + '">')
+                    }
+                    @endif
                 }
-                @endif
             }
-        }
     </script>
    <script>
         $('input:radio[name="type"]').change(
