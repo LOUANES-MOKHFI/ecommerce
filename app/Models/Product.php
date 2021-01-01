@@ -67,4 +67,12 @@ class Product extends Model
     public function options(){
         return $this->hasMany(Options::class,'product_id');
     }
+
+    public function images(){
+        return $this->hasMany(Image::class,'product_id');
+    }
+
+    public function cart_product(){
+        return $this->belongsTo(self::class,'id');
+    }
 }

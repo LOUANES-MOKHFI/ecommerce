@@ -11,4 +11,8 @@ function UploadImage($folder, $image){
      return  $filename;
   }
 
+function getProduct($id){
+     return \App\Models\Product::find($id);
+ }
+
 ?>

@@ -39,5 +39,8 @@ class Tags extends Model
       // 'is_searchable' => 'boolean',
       // 'is_active' => 'boolean'
    ];
-  
+   
+   public function product(){
+      return $this->belongsTo(Product::class,'product_id');
+   }
 }

@@ -55,7 +55,7 @@ class ProductController extends Controller
    {
        
        
-       try {
+      try {
           DB::beginTransaction();
         
           if(!$request->has('is_active')){
@@ -79,6 +79,7 @@ class ProductController extends Controller
           $product->save();
 
           //product categories
+
          $product->categories()->attach($request->categories);
 
          //tags products

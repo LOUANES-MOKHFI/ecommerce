@@ -123,6 +123,24 @@
 <script src="{{asset('assets/admin/js/scripts/forms/checkbox-radio.js')}}" type="text/javascript"></script>
 
 <script src="{{asset('assets/admin/js/scripts/modal/components-modal.js')}}" type="text/javascript"></script>
+<script src="//js.pusher.com/3.1/pusher.min.js"></script>
+
+  <script>   
+    var previousCounter = $('.notification-counter').text();
+    var notificationCount = parseInt(previousCounter);
+
+    // Enable pusher logging - don't include this in production
+    var pusher = new Pusher('399437e3b80820587727', {
+      encrypted: true
+    });
+    //pusher.logToConsole = true;
+
+    var channel = pusher.subscribe('order');
+    channel.bind('App\\Events\\NewOrder', function(data) {
+        notificationCount+= 1;
+        $('.notification-counter').text(notificationCount)
+    });
+  </script>
 
 <script>
     $('#meridians1').timeDropper({
