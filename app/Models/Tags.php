@@ -40,6 +40,9 @@ class Tags extends Model
       // 'is_active' => 'boolean'
    ];
    
+   public function tags(){
+      return $this->belongsToMany(Product::class,'product_tags');
+   }
    public function product(){
       return $this->belongsTo(Product::class,'product_id');
    }

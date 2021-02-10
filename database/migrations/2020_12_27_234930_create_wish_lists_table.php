@@ -13,7 +13,7 @@ class CreateWishListsTable extends Migration
      */
     public function up()
     {
-        Schema::create('wish_lists', function (Blueprint $table) {
+        /*Schema::create('wish_lists', function (Blueprint $table) {
             $table->integer('user_id')->unsigned();
             $table->integer('product_id')->unsigned();
             $table->timestamps();
@@ -22,7 +22,7 @@ class CreateWishListsTable extends Migration
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
 
-        });
+        });*/
     }
 
     /**

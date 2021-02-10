@@ -11,7 +11,7 @@
     <meta name="author" content="PIXINVENT">
     <title>@yield('title')</title>
     <link rel="apple-touch-icon" href="{{asset('assets/admin/images/ico/apple-icon-120.png')}}">
-    <link rel="shortcut icon" type="image/x-icon" href="{{asset('assets/admin/images/ico/favicon.ico')}}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{asset('assets/quickshop3.png')}}">
     <link
         href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Quicksand:300,400,500,700"
         rel="stylesheet">
@@ -54,7 +54,6 @@
     <!-- BEGIN Custom CSS-->
     <link rel="stylesheet" type="text/css" href="{{asset('assets/admin/'.getFolder().'/style-rtl.css')}}">
     <!-- END Custom CSS-->
-    @notify_css
     @yield('style')
     <link href="https://fonts.googleapis.com/css?family=Cairo&display=swap" rel="stylesheet">
     <style>
@@ -123,16 +122,31 @@
 <script src="{{asset('assets/admin/js/scripts/forms/checkbox-radio.js')}}" type="text/javascript"></script>
 
 <script src="{{asset('assets/admin/js/scripts/modal/components-modal.js')}}" type="text/javascript"></script>
-<script src="//js.pusher.com/3.1/pusher.min.js"></script>
+<script src="https://js.pusher.com/7.0/pusher.min.js"></script>
+  <script>
+
+    // Enable pusher logging - don't include this in production
+    Pusher.logToConsole = true;
+
+    var pusher = new Pusher('399437e3b80820587727', {
+      cluster: 'eu'
+    });
+
+    var channel = pusher.subscribe('order');
+    channel.bind('my-event', function(data) {
+      alert(JSON.stringify(data));
+    });
+  </script>
 
   <script>   
     var previousCounter = $('.notification-counter').text();
     var notificationCount = parseInt(previousCounter);
 
     // Enable pusher logging - don't include this in production
-    var pusher = new Pusher('399437e3b80820587727', {
-      encrypted: true
-    });
+
+var pusher = new Pusher('399437e3b80820587727', {
+  cluster: 'eu'
+});
     //pusher.logToConsole = true;
 
     var channel = pusher.subscribe('order');

@@ -192,8 +192,23 @@
                                                                     @enderror
                                                                 </div>
                                                             </div>
+                                                            <div class="col-md-6">
+                                                                <div class="form-group mt-1">
+                                                                    <input type="checkbox" value="1"
+                                                                           name="special"
+                                                                           id="switcheryColor4"
+                                                                           class="switchery" data-color="success"
+                                                                           checked/>
+                                                                    <label for="switcheryColor4"
+                                                                           class="card-title ml-1">Special ? </label>
+
+                                                                    @error("special")
+                                                                        <span class="text-danger"> </span>
+                                                                    @enderror
+                                                                </div>
+                                                            </div>
               
-                                            </div>
+                                                        </div>
                                             <div class="form-actions">
                                             <button type="button" class="btn btn-warning mr-1"
                                                         onclick="history.back();">

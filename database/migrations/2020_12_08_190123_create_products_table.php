@@ -15,17 +15,17 @@ class CreateProductsTable extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('brand_id')->unsigned()->nullable();
+            $table->integer('brand_id')->unsigned();
             $table->string('slug')->unique();
             $table->decimal('price',18,4)->unsigned();
-            $table->decimal('special_price',18,4)->unsigned()->nullable();
-            $table->string('special_price_type')->nullable();
-            $table->date('special_price_start')->nullable();
-            $table->date('special_price_end')->nullable();
+            $table->decimal('special_price',18,4)->unsigned();
+            $table->string('special_price_type');
+            $table->date('special_price_start');
+            $table->date('special_price_end');
             $table->decimal('selling_price',18,4)->unsigned()->nullable();
-            $table->string('sku')->nullable();
+            $table->string('sku');
             $table->boolean('manage_stock');
-            $table->integer('qty')->nullable();
+            $table->integer('qty');
             $table->boolean('in_stock');
             $table->integer('viewed')->unsigned()->default(0);
             $table->boolean('is_active');

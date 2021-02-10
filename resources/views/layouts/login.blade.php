@@ -34,9 +34,9 @@
     <!-- END Page Level CSS-->
     <!-- BEGIN Custom CSS-->
     <link rel="stylesheet" type="text/css" href="{{asset('assets/admin/'.getFolder().'/style-rtl.css')}}">
-    <!-- END Custom CSS-->
-    @notify_css
-    <link href="https://fonts.googleapis.com/css?family=Cairo&display=swap" rel="stylesheet">s
+    <!--  END Custom CSS-->
+    
+    <link href="https://fonts.googleapis.com/css?family=Cairo&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Cairo', sans-serif;

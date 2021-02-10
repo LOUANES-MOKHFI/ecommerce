@@ -62,8 +62,10 @@
                                             @isset($products)
                                                 @foreach($products as $product)
                                                     <tr>
-                                                        <td> <img style="width: 150px; height: 100px;" src=""></td>
-                                                        <td>{{$product -> name}}</td>
+                                                        <td> <img style="width: 150px; height: 100px;" src="{{$product -> images[0] -> photo ?? ''}}"></td>
+                                                        <td>{{$product -> name}}<br>
+                                                         <a href="{{route('admin.products.edit',$product->id)}}" class="btn btn-outline-warning btn-min-width box-shadow-3 mr-1 mb-1">Modifier</a>
+                                                        </td>
                                                         <td>{{$product -> slug}}</td>
                                                         <td>{{$product -> price}}</td>
                                                         <td>{{$product->getActive()}}</td>

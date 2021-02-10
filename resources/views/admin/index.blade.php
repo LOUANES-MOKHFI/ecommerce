@@ -1,5 +1,7 @@
 @extends('layouts.admin')
-
+@section('title')
+Accueil
+@endsection
 @section('content')
     <div class="app-content content">
         <div class="content-wrapper">
@@ -13,15 +15,15 @@
                                 <div class="card-body pb-0">
                                     <div class="row">
                                         <div class="col-2">
-                                            <h1><i class="cc BTC warning font-large-2" title="BTC"></i></h1>
+                                            <h1><i class=" la la-group warning font-large-2" title="BTC"></i></h1>
                                         </div>
-                                        <div class="col-5 pl-2">
-                                            <h4>إجمالي المبيعات</h4>
+                                        <div class="col-8 pl-2">
+                                            <h4>Newsletters</h4>
                                             
                                         </div>
-                                        <div class="col-5 text-right">
-                                            <h4>$9,980</h4>
-                                            <h6 class="success darken-4">31% <i class="la la-arrow-up"></i></h6>
+                                        <div class="col-2 text-right">
+                                            <h4>{{$newsletters->count()}}</h4>
+                                            <h6 class="success darken-4"></h6>
                                         </div>
                                     </div>
                                 </div>
@@ -41,12 +43,12 @@
                                         <div class="col-2">
                                             <h1><i class="cc ETH blue-grey lighten-1 font-large-2" title="ETH"></i></h1>
                                         </div>
-                                        <div class="col-5 pl-2">
-                                            <h4>إجمالي الطلبات</h4>
+                                        <div class="col-8 pl-2">
+                                            <h4>Commandes</h4>
                                         </div>
-                                        <div class="col-5 text-right">
-                                            <h4>$944</h4>
-                                            <h6 class="success darken-4">12% <i class="la la-arrow-up"></i></h6>
+                                        <div class="col-2 text-right">
+                                            <h4>{{$orders->count()}}</h4>
+                                            <h6 class="success darken-4"> </h6>
                                         </div>
                                     </div>
                                 </div>
@@ -66,12 +68,12 @@
                                         <div class="col-2">
                                             <h1><i class="cc XRP info font-large-2" title="XRP"></i></h1>
                                         </div>
-                                        <div class="col-5 pl-2">
-                                            <h4>عدد المنتجات</h4>
+                                        <div class="col-6 pl-2">
+                                            <h4>produits</h4>
                                         </div>
-                                        <div class="col-5 text-right">
-                                            <h4>$1.2</h4>
-                                            <h6 class="danger">20% <i class="la la-arrow-down"></i></h6>
+                                        <div class="col-4 text-right">
+                                            <h4>{{$products->count()}}</h4>
+                                            <h6 class="danger"> <!--i class="la la-arrow-down"></i--></h6>
                                         </div>
                                     </div>
                                 </div>
@@ -89,14 +91,14 @@
                                 <div class="card-body pb-0">
                                     <div class="row">
                                         <div class="col-2">
-                                            <h1><i class="cc BTC warning font-large-2" title="BTC"></i></h1>
+                                            <h1><i class="la la-group warning font-large-2" title="BTC"></i></h1>
                                         </div>
-                                        <div class="col-5 pl-2">
-                                            <h4>عدد العملاء</h4>
+                                        <div class="col-8 pl-2">
+                                            <h4>Utilisateurs</h4>
                                         </div>
-                                        <div class="col-5 text-right">
-                                            <h4>$9,980</h4>
-                                            <h6 class="success darken-4">31% <i class="la la-arrow-up"></i></h6>
+                                        <div class="col-2 text-right">
+                                            <h4>{{$users->count()}}</h4>
+                                            <h6 class="success darken-4"> <!--i class="la la-arrow-up"></i--></h6>
                                         </div>
                                     </div>
                                 </div>
@@ -112,7 +114,7 @@
                 <!-- Candlestick Multi Level Control Chart -->
 
                 <!-- Sell Orders & Buy Order -->
-                <div class="row match-height">
+                <!--div class="row match-height">
                     
                     <div class="col-12 col-xl-7">
                         <div class="card">
@@ -181,7 +183,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div-->
                 <!--/ Sell Orders & Buy Order -->
                 <!-- Active Orders -->
                 <div class="row">

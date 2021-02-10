@@ -21,6 +21,12 @@ return [
     'options'        => 'Tout les options',
     'addoptions'     => 'Ajouter une option',
     'addSliders'     => 'Ajouter des images',
-    'sliders'        => 'Sliders'
+    'sliders'        => 'Sliders',
+    'roles'          => 'Roles',
+    'addrole'        => 'Ajouter un role',
+    'users'          => 'Utilisateurs',
+    'adduser'        => 'Ajouter un utilisateur',
+    'states'          => 'Wilayas',
+    'addstate'        => 'Ajouter une wilaya',
     
 ];

@@ -55,7 +55,7 @@ class ProductController extends Controller
    {
        
        
-      try {
+     // try {
           DB::beginTransaction();
         
           if(!$request->has('is_active')){
@@ -64,11 +64,18 @@ class ProductController extends Controller
             else{
                 $request->request->add(['is_active' => 1]);
             }
+            if(!$request->has('special')){
+                $request->request->add(['special' => 0]);
+            }
+            else{
+                $request->request->add(['special' => 1]);
+            }
 
           $product = Product::create([
               'slug'      => $request->slug,
               'brand_id'  => $request->brand_id,
               'is_active' => $request->is_active,
+              'special'   => $request->special,
 
           ]);
 
@@ -81,17 +88,85 @@ class ProductController extends Controller
           //product categories
 
          $product->categories()->attach($request->categories);
-
+         $product->tags()->attach($request->tags);
          //tags products
          
 
           DB::commit();
           return redirect()->route('admin.products')->with('success','تمت إضافة القسم بنجاح.');
      
-       } catch (\Exception $ex) {
-       return redirect()->back()->with('error','خطأ في الملومات, يرجى التأكد.');
-           DB::rollback();
-       }
+      // } catch (\Exception $ex) {
+       //return redirect()->back()->with('error','خطأ في الملومات, يرجى التأكد.');
+        //   DB::rollback();
+       //}
+   }
+
+ public function edit($id){
+   $data = [];
+    $data['product'] = Product::find($id);
+      if(!$data['product']){
+        return redirect()->route('admin.products')->with('error',"Ce produit n'existe pas");
+      }
+
+   
+    $data['brands'] = Brand::active()->select('id')->orderBy('id','DESC')->get();
+    $data['tags'] = Tags::select('id')->orderBy('id','DESC')->get();
+    $data['categories'] = Category::active()->select('id')->orderBy('id','DESC')->get();
+
+    return view('admin.products.general.edit',$data);
+   }
+  
+    public function update(GeneralProductRequest $request,$id)
+   {
+       
+      $product = Product::find($id);
+      if(!$product){
+        return redirect()->route('admin.products')->with('error',"Ce produit n'existe pas");
+      }
+     // try {
+          DB::beginTransaction();
+        
+          if(!$request->has('is_active')){
+                $request->request->add(['is_active' => 0]);
+            }
+            else{
+                $request->request->add(['is_active' => 1]);
+            }
+            if(!$request->has('special')){
+                $request->request->add(['special' => 0]);
+            }
+            else{
+                $request->request->add(['special' => 1]);
+            }
+
+          $product->update([
+              'slug'      => $request->slug,
+              'brand_id'  => $request->brand_id,
+              'is_active' => $request->is_active,
+              'special'   => $request->special,
+
+          ]);
+
+         
+          $product->name = $request->name;
+          $product->description = $request->description;
+          $product->short_description = $request->short_description;
+          $product->save();
+
+          //product categories
+
+         $product->categories()->attach($request->categories);
+         $product->tags()->attach($request->tags);
+         //tags products
+         
+
+          DB::commit();
+          return redirect()->route('admin.products')->with('success','تمت إضافة القسم بنجاح.');
+     
+      // } catch (\Exception $ex) {
+       //return redirect()->back()->with('error','خطأ في الملومات, يرجى التأكد.');
+        //   DB::rollback();
+       //}
    }
 
 

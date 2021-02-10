@@ -9,8 +9,8 @@
                 <li class="nav-item">
                     <a class="navbar-brand" href="index.html">
                         <img class="brand-logo" alt="modern admin logo"
-                             src="{{asset('assets/admin/images/logo/logo.png')}}">
-                        <h3 class="brand-text">Modern Admin</h3>
+                             src="{{asset('assets/quickshop3.png')}}">
+                        <h3 class="brand-text">QuickShop</h3>
                     </a>
                 </li>
                 <li class="nav-item d-md-none">
@@ -167,9 +167,10 @@
                                     <span class="grey darken-2">Messages</span>
                                 </h6>
                                 <span
-                                    class="notification-tag badge badge-default badge-warning float-right m-0">4 New</span>
+                                    class="notification-tag badge badge-default badge-warning float-right m-0">{{count(All_contact())}} messages</span>
                             </li>
                             <li class="scrollable-container media-list w-100">
+                                @foreach(All_contact() as $message)
                                 <a href="javascript:void(0)">
                                     <div class="media">
                                         <div class="media-left">
@@ -178,74 +179,22 @@
                                alt="avatar"><i></i></span>
                                         </div>
                                         <div class="media-body">
-                                            <h6 class="media-heading">Margaret Govan</h6>
-                                            <p class="notification-text font-small-3 text-muted">I like your portfolio,
-                                                let's start.</p>
+                                            <h6 class="media-heading">{{$message->name}}</h6>
+                                            <p class="notification-text font-small-3 text-muted">{{Str::limit($message->message,200)}}.</p>
                                             <small>
                                                 <time class="media-meta text-muted"
-                                                      datetime="2015-06-11T18:29:20+08:00">Today
+                                                      datetime="2015-06-11T18:29:20+08:00">{{date_format($message->created_at,"Y-M-D")}} à {{date_format($message->created_at,"G:i:s")}}
                                                 </time>
                                             </small>
                                         </div>
                                     </div>
                                 </a>
-                                <a href="javascript:void(0)">
-                                    <div class="media">
-                                        <div class="media-left">
-                        <span class="avatar avatar-sm avatar-busy rounded-circle">
-                          <img src="{{asset('assets/admin/images/portrait/small/avatar-s-2.png')}}" alt="avatar"><i></i></span>
-                                        </div>
-                                        <div class="media-body">
-                                            <h6 class="media-heading">Bret Lezama</h6>
-                                            <p class="notification-text font-small-3 text-muted">I have seen your work,
-                                                there is</p>
-                                            <small>
-                                                <time class="media-meta text-muted"
-                                                      datetime="2015-06-11T18:29:20+08:00">Tuesday
-                                                </time>
-                                            </small>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a href="javascript:void(0)">
-                                    <div class="media">
-                                        <div class="media-left">
-                        <span class="avatar avatar-sm avatar-online rounded-circle">
-                          <img src="{{asset('assets/admin/images/portrait/small/avatar-s-3.png')}}" alt="avatar"><i></i></span>
-                                        </div>
-                                        <div class="media-body">
-                                            <h6 class="media-heading">Carie Berra</h6>
-                                            <p class="notification-text font-small-3 text-muted">Can we have call in
-                                                this week ?</p>
-                                            <small>
-                                                <time class="media-meta text-muted"
-                                                      datetime="2015-06-11T18:29:20+08:00">Friday
-                                                </time>
-                                            </small>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a href="javascript:void(0)">
-                                    <div class="media">
-                                        <div class="media-left">
-                        <span class="avatar avatar-sm avatar-away rounded-circle">
-                          <img src="{{asset('assets/admin/images/portrait/small/avatar-s-6.png')}}" alt="avatar"><i></i></span>
-                                        </div>
-                                        <div class="media-body">
-                                            <h6 class="media-heading">Eric Alsobrook</h6>
-                                            <p class="notification-text font-small-3 text-muted">We have project party
-                                                this saturday.</p>
-                                            <small>
-                                                <time class="media-meta text-muted"
-                                                      datetime="2015-06-11T18:29:20+08:00">last month
-                                                </time>
-                                            </small>
-                                        </div>
-                                    </div>
-                                </a>
+                               @endforeach
+                                
+                               
                             </li>
                             <li class="dropdown-menu-footer"><a class="dropdown-item text-muted text-center"
-                                                                href="javascript:void(0)">Read all messages</a></li>
+                                                                href="javascript:void(0)">Afficher tout les messages</a></li>
                         </ul>
                     </li>
                 </ul>

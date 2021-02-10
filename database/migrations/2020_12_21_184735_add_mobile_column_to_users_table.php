@@ -14,7 +14,7 @@ class AddMobileColumnToUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string('mobile')->index()->after('email');
+            //$table->string('mobile')->after('email');
         });
     }
 
@@ -26,7 +26,7 @@ class AddMobileColumnToUsersTable extends Migration
     public function down()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('mobile');
+            //$table->dropColumn('mobile');
         });
     }
 }

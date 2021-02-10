@@ -1,257 +1,143 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" data-textdirection="{{app()-> getLocale() === 'ar' ? 'rtl' :'ltr'}}">
 <head>
+<title>@yield('title')- QuickShop</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="csrf-token" content="{{csrf_token()}}">
+<meta name="description" content=" Un site web pour la vente de nos produits en ligne">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" type="image/x-icon" href="{{asset('assets/quickshop3.png')}}">
+@if(app()-> getLocale() === 'ar')
+<link rel="stylesheet" href="/assets/assets/css/rtl/bootstrap.min.css">
+<link rel="stylesheet" href="/assets/assets/css/rtl/main.css">
+<link rel="stylesheet" href="/assets/assets/css/rtl/font-awesome.css">
 
+@else
 
-    <meta charset="utf-8">
+<link rel="stylesheet" href="/assets/assets/css/bootstrap.min.css">
 
+<!-- Customizable CSS -->
+<link rel="stylesheet" href="/assets/assets/css/main.css">
+@endif
 
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
+<link rel="stylesheet" href="/assets/assets/css/blue.css">
+<link rel="stylesheet" href="/assets/assets/css/owl.carousel.css">
+<link rel="stylesheet" href="/assets/assets/css/owl.transitions.css">
+<link rel="stylesheet" href="/assets/assets/css/animate.min.css">
+<link rel="stylesheet" href="/assets/assets/css/rateit.css">
+<link rel="stylesheet" href="/assets/assets/css/bootstrap-select.min.css">
 
+<!-- Icons/Glyphs -->
+<link rel="stylesheet" href="/assets/assets/css/font-awesome.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
 
-    <title>@yield('title')</title>
-    <meta name="description" content="Shop powered by PrestaShop">
-    <meta name="keywords" content="">
-    <meta name="csrf-token" content="{{csrf_token()}}">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=yes">
-    <link rel="icon" type="image/vnd.microsoft.icon" href="{{asset('assets/front/img/favicon.ico')}}?1531456858">
-    <link rel="shortcut icon" type="image/x-icon" href="{{asset('assets/front/img/favicon.ico')}}?1531456858">
-    <link href="{{asset('assets/front/css/css.css')}}?family=Roboto:300,400,500,600,700,900" rel="stylesheet">
-    <link href="{{asset('assets/front/css/css-1.css')}}?family=Oswald:300,400,500,600,700,900" rel="stylesheet">
-    <link rel="stylesheet" href="{{asset('assets/front/themes/vinova_savemart/assets/cache/theme-78026624.css')}}"
-          type="text/css" media="all">
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Barlow:200,300,300i,400,400i,500,500i,600,700,800" rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600,600italic,700,700italic,800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 
-
-    <script type="text/javascript">
-
-        var prestashop = {
-            "static_token": "28add935523ef131c8432825597b9928",
-            "token": "cad5fe8236d849a3b4023c4e5ca6a313"
-        };
-    </script>
-
-    <script type="text/javascript">
-        var baseDir = "/savemart/";
-        var static_token = "28add935523ef131c8432825597b9928";
-    </script>
-
-
-    <style type="text/css">
-        #main-site {
-            background-color: #ffffff;
-        }
-
-        @media (min-width: 1200px) {
-            .container {
-                width: 1200px;
-            }
-
-            #header .container {
-                width: 1200px;
-            }
-
-            .footer .container {
-                width: 1200px;
-            }
-
-            #index .container {
-                width: 1200px;
-            }
-        }
-
-        #popup-subscribe .modal-dialog .modal-content {
-            background-image: url(../modules/novthemeconfig/images/newsletter_bg-1.png);
-        }
-    </style>
-
-    @yield('style')
+@yield('style')
 </head>
-<body id="index" class="lang-en country-gb currency-gbp layout-full-width page-index tax-display-enabled">
 
+<body>
 
-<main id="main-site" class="displayhomenovthree">
+<div class="super_container">
+    
+    <!-- Header -->
+    
+   @include('front.includes.header')
+    
+    <!-- Banner -->
 
+   @yield('content')
 
-    <header id="header" class="header-3 sticky-menu">
+    <!-- Footer -->
 
-        @include('front.includes.header-mobile')
-        @include('front.includes.header-top')
-        @include('front.includes.header-center')
-        @include('front.includes.header-bottom')
-    </header>
+  @include('front.includes.footer')
 
-    <div id="header-sticky">
-        <div class="container">
-            <div class="row align-items-center justify-content-between">
-                <div class="d-flex align-items-center col-xl-3 col-md-3">
-                    <div class="contentstickynew_verticalmenu"></div>
-                    <div class="contentstickynew_logo"></div>
-                </div>
-                <div class="contentstickynew_search col-xl-7 col-md-6"></div>
-                <div class="contentstickynew_group d-flex justify-content-end col-xl-2 col-md-3"></div>
-            </div>
-        </div>
-    </div>
+  @include('front.includes.suivi-commande')
+    <!-- Copyright -->
 
-
-    <aside id="notifications">
-        <div class="container">
-
-
-        </div>
-    </aside>
-
-    @yield('slider')
-    <div id="wrapper-site">
-        <div id="content-wrapper" class="full-width">
-            @yield('content')
-        </div>
-    </div>
-
-    @include('front.includes.footer')
-    <div class="canvas-overlay"></div>
-    <div id="back-top">
-  <span>
-    <i class="fa fa-long-arrow-up"></i>  </span>
-    </div>
-</main>
-
-<div id="mobile_top_menu_wrapper" class="hidden-md-up">
-    <div class="content">
-        <div id="_mobile_verticalmenu"></div>
-    </div>
 </div>
 
-
-<div id="mobile-pagemenu" class="mobile-boxpage d-flex hidden-md-up">
-    <div class="content-boxpage col">
-        <div class="box-header d-flex justify-content-between align-items-center">
-            <div class="title-box">Menu</div>
-            <div class="close-box">Close</div>
-        </div>
-        <div class="box-content">
-            <div id="_mobile_top_menu" class="js-top-menu"></div>
-        </div>
-    </div>
-</div>
-<div id="mobile-blockcart" class="mobile-boxpage d-flex hidden-md-up">
-    <div class="content-boxpage col">
-        <div class="box-header d-flex justify-content-between align-items-center">
-            <div class="title-box">Cart</div>
-            <div class="close-box">Close</div>
-        </div>
-        <div id="_mobile_cart" class="box-content"></div>
-    </div>
-</div>
-<div id="mobile-pageaccount" class="mobile-boxpage d-flex hidden-md-up" data-titlebox-parent="Account">
-    <div class="content-boxpage col">
-        <div class="box-header d-flex justify-content-between align-items-center">
-            <div class="back-box">Back</div>
-            <div class="title-box">Account</div>
-            <div class="close-box">Close</div>
-        </div>
-        <div class="box-content d-flex justify-content-center align-items-center text-center">
-            <div>
-                <div id="_mobile_account_list">
-                    <div class="account-list-content">
-                        <div>
-                            <a class="login" href="login-1.html" rel="nofollow" title="Log in to your customer account"><i
-                                    class="fa fa-sign-in"></i>Sign in</a>
-                        </div>
-                        <div>
-                            <a class="register" href="login-1.html" rel="nofollow" title="Register Account"><i
-                                    class="fa fa-user"></i>Register Account</a>
-                        </div>
-                        <div>
-                            <a class="check-out" href="cart.html" rel="nofollow" title="Checkout"><i
-                                    class="material-icons">check_circle</i>Checkout</a>
-                        </div>
-                        <div class="link_wishlist">
-                            <a href="login-2.html" title="My Wishlists">
-                                <i class="fa fa-heart"></i>My Wishlists
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="links-currency" data-target="#box-currency" data-titlebox="Currency"><span>Currency</span><i
-                        class="zmdi zmdi-arrow-right"></i></div>
-                <div class="links-language" data-target="#box-language" data-titlebox="Language"><span>Language</span><i
-                        class="zmdi zmdi-arrow-right"></i></div>
-            </div>
-        </div>
-        <div id="box-currency" class="box-content d-flex">
-            <div class="w-100">
-                <div class="item-currency current">
-                    <a title="British Pound" rel="nofollow"
-                       href="index-1.htm?home=home_3&amp;SubmitCurrency=1&amp;id_currency=1">British Pound: GBP</a>
-                </div>
-                <div class="item-currency">
-                    <a title="US Dollar" rel="nofollow"
-                       href="index-2.htm?home=home_3&amp;SubmitCurrency=1&amp;id_currency=2">US Dollar: USD</a>
-                </div>
-            </div>
-        </div>
-
-        <div id="box-language" class="box-content d-flex">
-            <div class="w-100">
-                <div class="item-language current">
-                    <a href="index.htm?home=home_3" class="d-flex align-items-center"><img class="img-fluid mr-2"
-                                                                                           src="../img/l/1.jpg"
-                                                                                           alt="English (English)"
-                                                                                           width="16" height="11"><span>English</span></a>
-                </div>
-                <div class="item-language">
-                    <a href="http://demo.bestprestashoptheme.com/savemart/fr/?home=home_3"
-                       class="d-flex align-items-center"><img class="img-fluid mr-2" src="{{asset('assets/front/img/I/2.jpg')}}"
-                                                              alt="Français (French)" width="16" height="11"><span>Français</span></a>
-                </div>
-                <div class="item-language">
-                    <a href="http://demo.bestprestashoptheme.com/savemart/es/?home=home_3"
-                       class="d-flex align-items-center"><img class="img-fluid mr-2" src="../img/l/3.jpg"
-                                                              alt="Español (Spanish)" width="16" height="11"><span>Español</span></a>
-                </div>
-                <div class="item-language">
-                    <a href="http://demo.bestprestashoptheme.com/savemart/it/?home=home_3"
-                       class="d-flex align-items-center"><img class="img-fluid mr-2" src="../img/l/4.jpg"
-                                                              alt="Italiano (Italian)" width="16" height="11"><span>Italiano</span></a>
-                </div>
-                <div class="item-language">
-                    <a href="http://demo.bestprestashoptheme.com/savemart/pl/?home=home_3"
-                       class="d-flex align-items-center"><img class="img-fluid mr-2" src="../img/l/5.jpg"
-                                                              alt="Polski (Polish)" width="16"
-                                                              height="11"><span>Polski</span></a>
-                </div>
-                <div class="item-language">
-                    <a href="http://demo.bestprestashoptheme.com/savemart/ar/?home=home_3"
-                       class="d-flex align-items-center"><img class="img-fluid mr-2" src="../img/l/6.jpg"
-                                                              alt="اللغة العربية (Arabic)" width="16" height="11"><span>اللغة العربية</span></a>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</div>
+<script src="/assets/assets/js/jquery-1.11.1.min.js"></script> 
+<script src="/assets/assets/js/bootstrap.min.js"></script> 
+<script src="/assets/assets/js/bootstrap-hover-dropdown.min.js"></script> 
+<script src="/assets/assets/js/owl.carousel.min.js"></script> 
+<script src="/assets/assets/js/echo.min.js"></script> 
+<script src="/assets/assets/js/jquery.easing-1.3.min.js"></script> 
+<script src="/assets/assets/js/bootstrap-slider.min.js"></script> 
+<script src="/assets/assets/js/jquery.rateit.min.js"></script> 
+<script src="/assets/assets/js/lightbox.min.js"></script> 
+<script src="/assets/assets/js/bootstrap-select.min.js"></script> 
+<script src="/assets/assets/js/wow.min.js"></script> 
+<script src="/assets/assets/js/scripts.js"></script>
 
 
-<div id="stickymenu_bottom_mobile" class="d-flex align-items-center justify-content-center hidden-md-up text-center">
-    <div class="stickymenu-item"><a href="http://demo.bestprestashoptheme.com/savemart/"><i
-                class="zmdi zmdi-home"></i><span>Home</span></a></div>
-    <div class="stickymenu-item"><a href="#" class="js-btn-search"><i
-                class="zmdi zmdi-search"></i><span>Search</span></a></div>
-    <div class="stickymenu-item">
-        <div id="_mobile_cart_bottom" class="nov-toggle-page" data-target="#mobile-blockcart"></div>
-    </div>
-    <div class="stickymenu-item"><a href="login-2.html"><i class="zmdi zmdi-favorite-outline"></i><span>Wishlist</span></a>
-    </div>
-    <div class="stickymenu-item"><a href="#" class="nov-toggle-page" data-target="#mobile-pageaccount"><i
-                class="zmdi zmdi-account-o"></i><span>Account</span></a></div>
-</div>
+     <script type="text/javascript">
 
+     $(document).ready(function(){
+      $('body').on('click', '#btn-color-targets > .btn', function(){
+          var color = $(this).data('target-color');
+          $('#modalColor').attr('data-modal-color', color);
+        });
+    }); 
 
-<script type="text/javascript"
-        src="{{asset('assets/front/themes/vinova_savemart/assets/cache/bottom-3c96ed23.js')}}"></script>
+        function checkSubscriber(){
+            var email = $("#email").val();
+            $.ajax({
+               type:'post',
+               url: '/check-subscriber-email',
+               data:{email:email},
+               success:function(response){
+                if(response == "exist"){
 
-@yield('scripts')
+                    $("#statusSubscribe").show();
+                     $("#btnSubmit").hide();
+                    $("#statusSubscribe").html("<span style='color:red;'>cette Adress email est existe</span>");
+                }else{
+                    $("#statusSubscribe").show();
+                    $("#statusSubscribe").html("<font style='color:green;'>Votre Adress email est Ajouter avec succees</font>");
+                }
+               },
+               error:function(response){
+              //  alert('error');
+               }
+            });
+        }
 
+        function addSubscriber(){
+            var email = $("#email").val();
+            $.ajax({
+               type:'post',
+               url:'/add-subscriber-email',
+               data:{email:email},
+               success:function(response){
+                if(response == "exist"){
+
+                    $("#statusSubscribe").show();
+                     $("#btnSubmit").hide();
+                    $("#statusSubscribe").html("<span style='color:red;'>cette Adress email est existe</span>");
+                }else if(response == "Enregistre"){
+                    $("#statusSubscribe").show();
+                    
+                    $("#statusSubscribe").html("<font style='color:green;'>Votre Adress email est Ajouter avec succees</font>");
+                }
+               },
+               error:function(response){
+              //  alert('error');
+               }
+            });
+        }
+
+        function enableSubscriber(){
+            $("#btnSubmit").show();
+            $("#statusSubscribe").hide();
+        }
+    </script>
+@yield('script')
 </body>
+
 </html>

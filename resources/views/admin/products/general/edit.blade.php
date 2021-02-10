@@ -1,5 +1,7 @@
 @extends('layouts.admin')
-@section('title','Modifier un categorie')
+@section('title')
+{{$product->name}}
+@endsection
 
 @section('content')
 
@@ -12,9 +14,9 @@
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="">{{__('admin/header.home')}} </a>
                                 </li>
-                                <li class="breadcrumb-item"><a href=""> {{__('admin/category.all_category') }} </a>
+                                <li class="breadcrumb-item"><a href=""> {{__('admin/products.all_products') }}  </a>
                                 </li>
-                                <li class="breadcrumb-item active"> {{__('admin/category.edit') }} - {{$mainCategory -> name}}
+                                <li class="breadcrumb-item active">{{$product->name}}
                                 </li>
                             </ol>
                         </div>
@@ -28,7 +30,7 @@
                         <div class="col-md-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <h4 class="card-title" id="basic-layout-form"> {{__('admin/category.editcategory') }} </h4>
+                                    <h4 class="card-title" id="basic-layout-form">  {{$product->name}}  </h4>
                                     <a class="heading-elements-toggle"><i
                                             class="la la-ellipsis-v font-medium-3"></i></a>
                                     <div class="heading-elements">
@@ -43,24 +45,11 @@
                                 @include('admin.includes.alerts.alerts')
                                 <div class="card-content collapse show">
                                     <div class="card-body">
-                                        <form class="form"
-                                              action="{{route('admin.maincategories.update',$mainCategory -> id)}}"
+                                        <form class="form" action="{{route('admin.products.update',$product->id)}}"
                                               method="POST"
                                               enctype="multipart/form-data">
                                             @csrf
-
-                                            <input name="id" value="{{$mainCategory -> id}}" type="hidden">
-
-                                            <div class="form-group">
-                                                <div class="text-center">
-                                                    <img
-                                                        src="{{$mainCategory -> photo}}"
-                                                        class="rounded-circle  height-150" alt="{{__('admin/category.image') }}">
-                                                </div>
-                                            </div>
-
-
-                                            <div class="form-group">
+                                            <!--div class="form-group">
                                                 <label> {{__('admin/category.image') }}  </label>
                                                 <label id="projectinput7" class="file center-block">
                                                     <input type="file" id="file" name="photo">
@@ -69,66 +58,161 @@
                                                 @error('photo')
                                                 <span class="text-danger">{{$message}}</span>
                                                 @enderror
-                                            </div>
+                                            </div-->
 
                                             <div class="form-body">
 
-                                                <h4 class="form-section"><i class="ft-home"></i>{{__('admin/category.category_information') }} </h4>
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <label for="projectinput1"> {{__('admin/category.category')}}</label>
-                                                            <input type="text" id="name"
-                                                                   class="form-control"
-                                                                   placeholder="  "
-                                                                   value="{{$mainCategory -> name}}"
-                                                                   name="name">
-                                                            @error("name")
-                                                            <span class="text-danger">{{$message}}</span>
-                                                            @enderror
+                                                <h4 class="form-section"><i class="ft-home"></i>{{__('admin/products.product_information') }} </h4>
+
+                                              
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label for="projectinput1">   {{__('admin/products.product')}} </label>
+                                                                    <input type="text" value="{{$product->name}}" id="name"
+                                                                           class="form-control"
+                                                                           placeholder="  "
+                                                                           name="name">
+                                                                    @error("name")
+                                                                    <span class="text-danger"> {{$message}}  </span>
+                                                                    @enderror
+                                                                </div>
+                                                            </div>
+
+
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label for="projectinput1"> {{__('admin/products.slug')}}</label>
+                                                                    <input type="text" id="abbr"
+                                                                           class="form-control"
+                                                                           placeholder="  "
+                                                                           value="{{$product->slug}}"
+                                                                           name="slug">
+
+                                                                    @error("slug")
+                                                                    <span class="text-danger"> {{$message}}</span>
+                                                                    @enderror
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label for="projectinput1">   {{__('admin/products.description')}} </label>
+                                                                    <textarea class="form-control"
+                                                                           placeholder="  "
+                                                                           name="description">{{$product->description}}
+                                                                    </textarea>
+                                                                    @error("description")
+                                                                    <span class="text-danger"> {{$message}}  </span>
+                                                                    @enderror
+                                                                </div>
+                                                            </div>
+
+
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label for="projectinput1"> {{__('admin/products.short_description')}}</label>
+                                                                    <textarea class="form-control"
+                                                                           placeholder="  "
+                                                                           name="short_description">{{$product->short_description}}
+                                                                    </textarea>
+                                                                    @error("short_description")
+                                                                    <span class="text-danger"> {{$message}}</span>
+                                                                    @enderror
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <div class="form-group">
+                                                                    <label for="projectinput1">{{__('admin/products.choseCategory')}} </label>
+                                                                    <select name="categories[]" class="select2 form-control" multiple>
+
+                                                                    <optgroup label="{{__('admin/products.choseCategory')}}" >
+                                                                    @if($categories && $categories->count()>0)
+                                                                        @foreach($categories as $category)
+                                                                            <option value="{{$category->id}}">{{$category->name}}</option>
+                                                                        @endforeach
+                                                                    @endif
+                                                                    </optgroup>
+                                                                    </select>
+                                                                    @error("categories.0")
+                                                                    <span class="text-danger"> {{$message}}  </span>
+                                                                    @enderror
+                                                                </div>
+                                                            </div>
+
+
+                                                            <div class="col-md-4">
+                                                                <div class="form-group">
+                                                                    <label for="projectinput1"> {{__('admin/products.chosetags')}}</label>
+                                                                    <select name="tags[]" class="select2 form-control" multiple>
+                                                                    <optgroup label="{{__('admin/products.chosetags')}}">
+                                                                    @if($tags && $tags->count()>0)
+                                                                        @foreach($tags as $tag)
+                                                                            <option value="{{$tag->id}}">{{$tag->name}}</option>
+                                                                        @endforeach
+                                                                    @endif
+                                                                    </optgroup>
+                                                                    </select>
+                                                                    @error("tags")
+                                                                    <span class="text-danger"> {{$message}}</span>
+                                                                    @enderror
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <div class="form-group">
+                                                                    <label for="projectinput1"> {{__('admin/products.chosebrands')}}</label>
+                                                                    <select name="brand_id" class="select2 form-control">
+                                                                    <optgroup label="{{__('admin/products.chosetags')}}">
+                                                                    @if($brands && $brands->count()>0)
+                                                                        @foreach($brands as $brand)
+                                                                            <option value="{{$brand->id}}" @if($product->brand->name == $brand->name) selected @endif>@if($product->brand->name == $brand->name) {{$brand->name}} @endif</option>
+                                                                            <option value="{{$brand->id}}">{{$brand->name}}</option>
+                                                                        @endforeach
+                                                                    @endif
+                                                                    </optgroup>
+                                                                    </select>
+
+                                                                    @error("brand_id")
+                                                                    <span class="text-danger"> {{$message}}</span>
+                                                                    @enderror
+                                                                </div>
+                                                            </div>
                                                         </div>
-                                                    </div>
+                                                        
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <div class="form-group mt-1">
+                                                                    <input type="checkbox" value="1"
+                                                                           name="is_active"
+                                                                           id="switcheryColor4"
+                                                                           class="switchery" data-color="success"
+                                                                           @if($product->is_active == 1) checked @endif/>
+                                                                    <label for="switcheryColor4"
+                                                                           class="card-title ml-1"> {{__('admin/products.status')}} </label>
 
+                                                                    @error("is_active")
+                                                                        <span class="text-danger"> </span>
+                                                                    @enderror
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <div class="form-group mt-1">
+                                                                    <input type="checkbox" value="1"
+                                                                           name="special"
+                                                                           id="switcheryColor4"
+                                                                           class="switchery" data-color="success"
+                                                                           @if($product->special == 1) checked @endif/>
+                                                                    <label for="switcheryColor4"
+                                                                           class="card-title ml-1">Special ? </label>
 
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <label for="projectinput1"> {{__('admin/category.slug')}}</label>
-                                                            <input type="text" id="slug"
-                                                                   class="form-control"
-                                                                   placeholder="  "
-                                                                   value="{{$mainCategory -> slug}}"
-                                                                   name="slug">
-
-                                                            @error("slug")
-                                                            <span class="text-danger"> {{$message}} </span>
-                                                            @enderror
+                                                                    @error("special")
+                                                                        <span class="text-danger"> </span>
+                                                                    @enderror
+                                                                </div>
+                                                            </div>
+              
                                                         </div>
-                                                    </div>
-
-
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <div class="form-group mt-1">
-                                                            <input type="checkbox" value="1"
-                                                                   name="is_active"
-                                                                   id="switcheryColor4"
-                                                                   class="switchery" data-color="success"
-                                                                   @if($mainCategory -> is_active == 1)checked @endif/>
-                                                            <label for="switcheryColor4"
-                                                                   class="card-title ml-1"> {{__('admin/category.status')}}</label>
-
-                                                            @error("is_active")
-                                                            <span class="text-danger"> </span>
-                                                            @enderror
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-
                                             <div class="form-actions">
-                                                <button type="button" class="btn btn-warning mr-1"
+                                            <button type="button" class="btn btn-warning mr-1"
                                                         onclick="history.back();">
                                                     <i class="ft-x"></i> {{__('admin/content.back')}}
                                                 </button>
@@ -137,9 +221,6 @@
                                                 </button>
                                             </div>
                                         </form>
-
-                                       
-
                                     </div>
                                 </div>
                             </div>
@@ -151,4 +232,18 @@
         </div>
     </div>
 
+@endsection
+@section('script')
+
+   <script>
+        $('input:radio[name="type"]').change(
+            function(){
+                if(this.checked && this.value == '2'){
+                    $('#cats_list').removeClass('hidden');
+                }
+                else{
+                    $('#cats_list').addClass('hidden');
+                }
+            });
+   </script>
 @endsection

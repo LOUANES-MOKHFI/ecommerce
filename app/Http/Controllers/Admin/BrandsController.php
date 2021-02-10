@@ -41,7 +41,6 @@ class BrandsController extends Controller
      */
     public function store(BrandsRequest $request, Brand $brand)
     {
-        
         try {
            DB::beginTransaction();
          

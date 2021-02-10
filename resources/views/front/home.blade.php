@@ -1,6959 +1,898 @@
 @extends('layouts.site')
 @section('title')
-    Home
+    Accueill
 @endsection
-@section('slider')
-<div id="displayTop" class="displaytopthree">
-            <div class="container">
-                <div class="row">
-                    <div class="nov-row  col-lg-12 col-xs-12" ><div class="nov-row-wrap row">
-                            <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novpagemanage/views/source/html.tpl -->
-                            <div class="nov-html col-xl-3 col-lg-3 col-md-3">
-                                <div class="block">
-                                    <div class="block_content">
 
-                                    </div>
-                                </div>
-                            </div>
+@section('style')
+  
 
-                            <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novpagemanage/views/source/html.tpl -->
+   <style type="text/css">
+       
+   </style>
+@endsection 
 
-                            <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novpagemanage/views/source/slider.tpl -->
-                            <div id="nov-slider" class="slider-wrapper theme-default col-xl-9 col-lg-9 col-md-9 col-md-12"
-                                 data-effect="random"
-                                 data-slices="15"
-                                 data-animSpeed="500"
-                                 data-pauseTime="10000"
-                                 data-startSlide="0"
-                                 data-directionnav="false"
-                                 data-controlNav="true"
-                                 data-controlNavThumbs="false"
-                                 data-pauseOnHover="true"
-                                 data-manualAdvance="false"
-                                 data-randomStart="false">
-                                <div class="nov_preload">
-                                    <div class="process-loading active">
-                                        <div class="loader">
-                                        @isset($sliders)
-                                            @foreach($sliders as $slider)
-                                                <div class="dot"></div>
-                                            @endforeach
-                                        @endisset
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="nivoSlider">
-                                @isset($sliders)
-                                    @foreach($sliders as $slider)
-                                        <a href="#">
-                                            <img src="{{$slider -> photo }}"
-                                                 alt="" title="#htmlcaption_42">
-                                        </a>
-                                    @endforeach
-                                @endisset
-                                </div>
-                                <div id="htmlcaption_42" class="nivo-html-caption">
-                                    <div class="nov-slider-ct">
-                                        <div class="nov-center slider-none">
-                                            <div class="nov-title effect-0" >
-                                                Slide Home 3 01
-                                            </div>
-                                            <div class="nov-description effect-0" >
-                                                <p>Slide Home 3 01</p>
-                                            </div>
-                                            <div class="nov-html effect-0">
-                                                <p>Slide Home 3 01</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="htmlcaption_43" class="nivo-html-caption">
-                                    <div class="nov-slider-ct">
-                                        <div class="nov-center slider-none">
-                                            <div class="nov-title effect-0" >
-                                                Slide Home 3 02
-                                            </div>
-                                            <div class="nov-description effect-0" >
-                                                <p>Slide Home 3 02</p>
-                                            </div>
-                                            <div class="nov-html effect-0">
-                                                <p>Slide Home 3 02</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="htmlcaption_57" class="nivo-html-caption">
-                                    <div class="nov-slider-ct">
-                                        <div class="nov-center slider-none">
-                                            <div class="nov-title effect-0" >
-                                                Slider Home 3 03
-                                            </div>
-                                            <div class="nov-description effect-0" >
-                                                <p>Slider Home 3 03</p>
-                                            </div>
-                                            <div class="nov-html effect-0">
-                                                <p>Slider Home 3 03</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div></div>
-                </div>
-            </div>
-        </div>
-@stop
 @section('content')
-    <div id="main">
-
-        <section id="content" class="page-home pagehome-three">
-            <div class="container">
-                <div class="row">
-                    <div class="nov-row spacing-30 mt-15 col-lg-12 col-xs-12" ><div class="nov-row-wrap row">
-                    @isset($sliders)
-                        @foreach($sliders as $slider)
-                            <div class="nov-image col-lg-4 col-md-4">
-                                <div class="block">
-                                    <div class="block_content">
-                                        <div class="effect">
-                                            <a href="#"> <img class="img-fluid" src="{{$slider->photo}}" alt="banner3-1" title="banner3-1"></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        @endforeach
-                    @endisset
-
-                          
-
-                        </div></div><div class="nov-row  col-lg-12 col-xs-12" ><div class="nov-row-wrap row">
-                            <div class="nov-productlist nov-countdown-productlist col-xl-4 col-lg-4 col-md-4  col-xs-12 col-md-12">
-                                <div class="block block-product clearfix">
-                                    <h2 class="title_block">
-                                        FLASH DEALS
-                                    </h2>
-                                    <div class="block_content">
-                                        <div id="productlist706506225" class="product_list countdown-productlist countdown-column-1 owl-carousel owl-theme" data-autoplay="false" data-autoplayTimeout="6000" data-loop="false" data-margin="30" data-dots="false" data-nav="true" data-items="1" data-items_large="1" data-items_tablet="2" data-items_mobile="1">
-                                            <div class="item item-list">
-                                                <div class="product-miniature js-product-miniature first_item" data-id-product="12" data-id-product-attribute="232" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="thumbnail-container">
-
-                                                        <a href="http://demo.bestprestashoptheme.com/savemart/ar/home-appliance/12-232-nam-volutpat-justo-a-vehicula.html#/1-الحجم-ص/11-اللون_-اسود" class="thumbnail product-thumbnail two-image">
-                                                            <img class="img-fluid image-cover" src = "http://demo.bestprestashoptheme.com/savemart/79-home_default/nam-volutpat-justo-a-vehicula.jpg"
-                                                                 alt = ""
-                                                                 data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/79-large_default/nam-volutpat-justo-a-vehicula.jpg"
-                                                                 width="600"
-                                                                 height="600"
-                                                            >
-                                                            <img
-                                                                class="img-fluid image-secondary"
-                                                                src = "http://demo.bestprestashoptheme.com/savemart/80-home_default/nam-volutpat-justo-a-vehicula.jpg"
-                                                                alt = ""
-                                                                data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/80-large_default/nam-volutpat-justo-a-vehicula.jpg"
-                                                                width="600"
-                                                                height="600"
-                                                            >
-                                                        </a>
-
-
-                                                        <div class="product-flags discount">Sale</div>
-
-
-
-
-                                                    </div>
-                                                    <div class="product-description">
-                                                        <div class="product-groups">
-
-                                                            <div class="product-title" itemprop="name"><a href="http://demo.bestprestashoptheme.com/savemart/ar/home-appliance/12-232-nam-volutpat-justo-a-vehicula.html#/1-الحجم-ص/11-اللون_-اسود">Nam volutpat justo a vehicula</a></div>
-
-
-                                                            <!-- begin modules/novproductcomments/novproductcomments_reviews.tpl -->
-                                                            <div class="product-comments">
-                                                                <div class="star_content">
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                </div>
-                                                                <span>0 review</span>
-                                                            </div>
-                                                            <!-- end modules/novproductcomments/novproductcomments_reviews.tpl -->
-
-                                                            <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-                                                            <p class="seller_name">
-                                                                <a title="View seller profile" href="http://demo.bestprestashoptheme.com/savemart/ar/jmarketplace/3_harry-makle/">
-                                                                    <i class="fa fa-user"></i>
-                                                                    Harry Makle
-                                                                </a>
-                                                            </p>
-
-                                                            <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-
-                                                            <div class="product-group-price">
-
-                                                                <div class="product-price-and-shipping">
-
-
-
-                                                                    <span itemprop="price" class="price">7.56 UK£</span>
-
-
-
-                                                                    <span class="regular-price">10.80 UK£</span>
-
-
-
-
-                                                                </div>
-
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="product-buttons d-flex justify-content-center" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-                                                            <form action="http://demo.bestprestashoptheme.com/savemart/ar/عربة التسوق" method="post" class="formAddToCart">
-                                                                <input type="hidden" name="token" value="28add935523ef131c8432825597b9928">
-                                                                <input type="hidden" name="id_product" value="12">
-                                                                <a class="add-to-cart" href="#" data-button-action="add-to-cart"><i class="novicon-cart"></i><span>أضف للسلة</span></a>
-                                                            </form>
-
-                                                            <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novblockwishlist/novblockwishlist_button.tpl -->
-
-                                                            <a class="addToWishlist wishlistProd_12" href="#" data-rel="12" onclick="WishlistCart('wishlist_block_list', 'add', '12', false, 1); return false;">
-                                                                <i class="fa fa-heart"></i>
-                                                                <span>Add to Wishlist</span>
-                                                            </a>
-                                                            <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novblockwishlist/novblockwishlist_button.tpl -->
-
-                                                            <a href="#" class="quick-view hidden-sm-down" data-link-action="quickview">
-                                                                <i class="fa fa-search"></i><span> نظرة سريعة</span>
-                                                            </a>
-                                                        </div>
-
-                                                    </div>
-
-                                                    <!-- begin modules/novthemeconfig/views/templates/hook/countdown.tpl -->
-                                                    <div class="countdownfree d-flex" data-date="2021/12/30"></div>
-
-                                                    <!-- end modules/novthemeconfig/views/templates/hook/countdown.tpl -->
-
-                                                </div>
-                                            </div>
-                                            <div class="item item-list">
-                                                <div class="product-miniature js-product-miniature first_item" data-id-product="15" data-id-product-attribute="303" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="thumbnail-container">
-
-                                                        <a href="http://demo.bestprestashoptheme.com/savemart/ar/audio/15-303-nunc-tempus-velit-quis-urnanb.html#/1-الحجم-ص/10-اللون_-احمر" class="thumbnail product-thumbnail two-image">
-                                                            <img class="img-fluid image-cover" src = "http://demo.bestprestashoptheme.com/savemart/94-home_default/nunc-tempus-velit-quis-urnanb.jpg"
-                                                                 alt = ""
-                                                                 data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/94-large_default/nunc-tempus-velit-quis-urnanb.jpg"
-                                                                 width="600"
-                                                                 height="600"
-                                                            >
-                                                            <img
-                                                                class="img-fluid image-secondary"
-                                                                src = "http://demo.bestprestashoptheme.com/savemart/95-home_default/nunc-tempus-velit-quis-urnanb.jpg"
-                                                                alt = ""
-                                                                data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/95-large_default/nunc-tempus-velit-quis-urnanb.jpg"
-                                                                width="600"
-                                                                height="600"
-                                                            >
-                                                        </a>
-
-
-                                                        <div class="product-flags discount">Sale</div>
-
-
-
-
-                                                    </div>
-                                                    <div class="product-description">
-                                                        <div class="product-groups">
-
-                                                            <div class="product-title" itemprop="name"><a href="http://demo.bestprestashoptheme.com/savemart/ar/audio/15-303-nunc-tempus-velit-quis-urnanb.html#/1-الحجم-ص/10-اللون_-احمر">Nunc tempus velit quis urnanb</a></div>
-
-
-                                                            <!-- begin modules/novproductcomments/novproductcomments_reviews.tpl -->
-                                                            <div class="product-comments">
-                                                                <div class="star_content">
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                </div>
-                                                                <span>0 review</span>
-                                                            </div>
-                                                            <!-- end modules/novproductcomments/novproductcomments_reviews.tpl -->
-
-                                                            <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-                                                            <p class="seller_name">
-                                                                <a title="View seller profile" href="http://demo.bestprestashoptheme.com/savemart/ar/jmarketplace/1_david-james/">
-                                                                    <i class="fa fa-user"></i>
-                                                                    David James
-                                                                </a>
-                                                            </p>
-
-                                                            <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-
-                                                            <div class="product-group-price">
-
-                                                                <div class="product-price-and-shipping">
-
-
-
-                                                                    <span itemprop="price" class="price">37.80 UK£</span>
-
-
-
-                                                                    <span class="regular-price">42.00 UK£</span>
-
-
-
-
-                                                                </div>
-
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="product-buttons d-flex justify-content-center" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-                                                            <form action="http://demo.bestprestashoptheme.com/savemart/ar/عربة التسوق" method="post" class="formAddToCart">
-                                                                <input type="hidden" name="token" value="28add935523ef131c8432825597b9928">
-                                                                <input type="hidden" name="id_product" value="15">
-                                                                <a class="add-to-cart" href="#" data-button-action="add-to-cart"><i class="novicon-cart"></i><span>أضف للسلة</span></a>
-                                                            </form>
-
-                                                            <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novblockwishlist/novblockwishlist_button.tpl -->
-
-                                                            <a class="addToWishlist wishlistProd_15" href="#" data-rel="15" onclick="WishlistCart('wishlist_block_list', 'add', '15', false, 1); return false;">
-                                                                <i class="fa fa-heart"></i>
-                                                                <span>Add to Wishlist</span>
-                                                            </a>
-                                                            <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novblockwishlist/novblockwishlist_button.tpl -->
-
-                                                            <a href="#" class="quick-view hidden-sm-down" data-link-action="quickview">
-                                                                <i class="fa fa-search"></i><span> نظرة سريعة</span>
-                                                            </a>
-                                                        </div>
-
-                                                    </div>
-
-                                                    <!-- begin modules/novthemeconfig/views/templates/hook/countdown.tpl -->
-                                                    <div class="countdownfree d-flex" data-date="2021/12/30"></div>
-
-                                                    <!-- end modules/novthemeconfig/views/templates/hook/countdown.tpl -->
-
-                                                </div>
-                                            </div>
-                                            <div class="item item-list">
-                                                <div class="product-miniature js-product-miniature first_item" data-id-product="16" data-id-product-attribute="323" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="thumbnail-container">
-
-                                                        <a href="http://demo.bestprestashoptheme.com/savemart/ar/home-appliance/16-323-cras-consequat-quis-dolor-eunde.html#/1-الحجم-ص/11-اللون_-اسود" class="thumbnail product-thumbnail two-image">
-                                                            <img class="img-fluid image-cover" src = "http://demo.bestprestashoptheme.com/savemart/99-home_default/cras-consequat-quis-dolor-eunde.jpg"
-                                                                 alt = ""
-                                                                 data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/99-large_default/cras-consequat-quis-dolor-eunde.jpg"
-                                                                 width="600"
-                                                                 height="600"
-                                                            >
-                                                            <img
-                                                                class="img-fluid image-secondary"
-                                                                src = "http://demo.bestprestashoptheme.com/savemart/100-home_default/cras-consequat-quis-dolor-eunde.jpg"
-                                                                alt = ""
-                                                                data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/100-large_default/cras-consequat-quis-dolor-eunde.jpg"
-                                                                width="600"
-                                                                height="600"
-                                                            >
-                                                        </a>
-
-
-                                                        <div class="product-flags discount">Sale</div>
-
-
-
-
-                                                    </div>
-                                                    <div class="product-description">
-                                                        <div class="product-groups">
-
-                                                            <div class="product-title" itemprop="name"><a href="http://demo.bestprestashoptheme.com/savemart/ar/home-appliance/16-323-cras-consequat-quis-dolor-eunde.html#/1-الحجم-ص/11-اللون_-اسود">Cras consequat quis dolor eunde</a></div>
-
-
-                                                            <!-- begin modules/novproductcomments/novproductcomments_reviews.tpl -->
-                                                            <div class="product-comments">
-                                                                <div class="star_content">
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                </div>
-                                                                <span>0 review</span>
-                                                            </div>
-                                                            <!-- end modules/novproductcomments/novproductcomments_reviews.tpl -->
-
-                                                            <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-                                                            <p class="seller_name">
-                                                                <a title="View seller profile" href="http://demo.bestprestashoptheme.com/savemart/ar/jmarketplace/3_harry-makle/">
-                                                                    <i class="fa fa-user"></i>
-                                                                    Harry Makle
-                                                                </a>
-                                                            </p>
-
-                                                            <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-
-                                                            <div class="product-group-price">
-
-                                                                <div class="product-price-and-shipping">
-
-
-
-                                                                    <span itemprop="price" class="price">21.60 UK£</span>
-
-
-
-                                                                    <span class="regular-price">24.00 UK£</span>
-
-
-
-
-                                                                </div>
-
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="product-buttons d-flex justify-content-center" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-                                                            <form action="http://demo.bestprestashoptheme.com/savemart/ar/عربة التسوق" method="post" class="formAddToCart">
-                                                                <input type="hidden" name="token" value="28add935523ef131c8432825597b9928">
-                                                                <input type="hidden" name="id_product" value="16">
-                                                                <a class="add-to-cart" href="#" data-button-action="add-to-cart"><i class="novicon-cart"></i><span>أضف للسلة</span></a>
-                                                            </form>
-
-                                                            <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novblockwishlist/novblockwishlist_button.tpl -->
-
-                                                            <a class="addToWishlist wishlistProd_16" href="#" data-rel="16" onclick="WishlistCart('wishlist_block_list', 'add', '16', false, 1); return false;">
-                                                                <i class="fa fa-heart"></i>
-                                                                <span>Add to Wishlist</span>
-                                                            </a>
-                                                            <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novblockwishlist/novblockwishlist_button.tpl -->
-
-                                                            <a href="#" class="quick-view hidden-sm-down" data-link-action="quickview">
-                                                                <i class="fa fa-search"></i><span> نظرة سريعة</span>
-                                                            </a>
-                                                        </div>
-
-                                                    </div>
-
-                                                    <!-- begin modules/novthemeconfig/views/templates/hook/countdown.tpl -->
-                                                    <div class="countdownfree d-flex" data-date="2021/12/30"></div>
-
-                                                    <!-- end modules/novthemeconfig/views/templates/hook/countdown.tpl -->
-
-                                                </div>
-                                            </div>
-                                            <div class="item item-list">
-                                                <div class="product-miniature js-product-miniature first_item" data-id-product="21" data-id-product-attribute="391" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="thumbnail-container">
-
-                                                        <a href="http://demo.bestprestashoptheme.com/savemart/ar/audio/21-391-nunc-eros-lacus-porta-sed-mattis.html#/1-الحجم-ص/13-اللون_-برتقالي" class="thumbnail product-thumbnail two-image">
-                                                            <img class="img-fluid image-cover" src = "http://demo.bestprestashoptheme.com/savemart/120-home_default/nunc-eros-lacus-porta-sed-mattis.jpg"
-                                                                 alt = ""
-                                                                 data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/120-large_default/nunc-eros-lacus-porta-sed-mattis.jpg"
-                                                                 width="600"
-                                                                 height="600"
-                                                            >
-                                                            <img
-                                                                class="img-fluid image-secondary"
-                                                                src = "http://demo.bestprestashoptheme.com/savemart/121-home_default/nunc-eros-lacus-porta-sed-mattis.jpg"
-                                                                alt = ""
-                                                                data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/121-large_default/nunc-eros-lacus-porta-sed-mattis.jpg"
-                                                                width="600"
-                                                                height="600"
-                                                            >
-                                                        </a>
-
-
-                                                        <div class="product-flags discount">Sale</div>
-
-
-
-
-                                                    </div>
-                                                    <div class="product-description">
-                                                        <div class="product-groups">
-
-                                                            <div class="product-title" itemprop="name"><a href="http://demo.bestprestashoptheme.com/savemart/ar/audio/21-391-nunc-eros-lacus-porta-sed-mattis.html#/1-الحجم-ص/13-اللون_-برتقالي">Nunc eros lacus porta sed mattis</a></div>
-
-
-                                                            <!-- begin modules/novproductcomments/novproductcomments_reviews.tpl -->
-                                                            <div class="product-comments">
-                                                                <div class="star_content">
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                </div>
-                                                                <span>0 review</span>
-                                                            </div>
-                                                            <!-- end modules/novproductcomments/novproductcomments_reviews.tpl -->
-
-                                                            <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-                                                            <p class="seller_name">
-                                                                <a title="View seller profile" href="http://demo.bestprestashoptheme.com/savemart/ar/jmarketplace/1_david-james/">
-                                                                    <i class="fa fa-user"></i>
-                                                                    David James
-                                                                </a>
-                                                            </p>
-
-                                                            <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-
-                                                            <div class="product-group-price">
-
-                                                                <div class="product-price-and-shipping">
-
-
-
-                                                                    <span itemprop="price" class="price">16.20 UK£</span>
-
-
-
-                                                                    <span class="regular-price">18.00 UK£</span>
-
-
-
-
-                                                                </div>
-
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="product-buttons d-flex justify-content-center" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-                                                            <form action="http://demo.bestprestashoptheme.com/savemart/ar/عربة التسوق" method="post" class="formAddToCart">
-                                                                <input type="hidden" name="token" value="28add935523ef131c8432825597b9928">
-                                                                <input type="hidden" name="id_product" value="21">
-                                                                <a class="add-to-cart" href="#" data-button-action="add-to-cart"><i class="novicon-cart"></i><span>أضف للسلة</span></a>
-                                                            </form>
-
-                                                            <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novblockwishlist/novblockwishlist_button.tpl -->
-
-                                                            <a class="addToWishlist wishlistProd_21" href="#" data-rel="21" onclick="WishlistCart('wishlist_block_list', 'add', '21', false, 1); return false;">
-                                                                <i class="fa fa-heart"></i>
-                                                                <span>Add to Wishlist</span>
-                                                            </a>
-                                                            <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novblockwishlist/novblockwishlist_button.tpl -->
-
-                                                            <a href="#" class="quick-view hidden-sm-down" data-link-action="quickview">
-                                                                <i class="fa fa-search"></i><span> نظرة سريعة</span>
-                                                            </a>
-                                                        </div>
-
-                                                    </div>
-
-                                                    <!-- begin modules/novthemeconfig/views/templates/hook/countdown.tpl -->
-                                                    <div class="countdownfree d-flex" data-date="2021/12/30"></div>
-
-                                                    <!-- end modules/novthemeconfig/views/templates/hook/countdown.tpl -->
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novpagemanage/views/source/countdown_product.tpl -->
-
-                            <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novpagemanage/views/source/productlist.tpl -->
-
-                            <div class="nov-productlist  productlist-rows     col-xl-8 col-lg-8 col-md-8 col-xs-12 col-md-12">
-                                <div class="block block-product clearfix">
-                                    <h2 class="title_block">
-                                        NEW ARRIVALS
-                                    </h2>
-                                    <div class="block_content">
-                                        <div id="productlist1693764381" class="product_list grid owl-carousel owl-theme multi-row" data-autoplay="false" data-autoplayTimeout="6000" data-loop="false" data-margin="30" data-dots="false" data-nav="true" data-items="2" data-items_large="2" data-items_tablet="3" data-items_mobile="1" >
-                                            <div class="item  text-center">
-                                                <div class="d-flex flex-wrap align-items-center product-miniature js-product-miniature item-row first_item" data-id-product="1" data-id-product-attribute="40" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="col-12 col-w40 pl-0">
-                                                        <div class="thumbnail-container">
-
-                                                            <a href="http://demo.bestprestashoptheme.com/savemart/ar/smartphone-tablet/1-40-hummingbird-printed-t-shirt.html#/1-الحجم-ص/6-اللون_-رمادي_داكن" class="thumbnail product-thumbnail two-image">
-                                                                <img
-                                                                    class="img-fluid image-cover"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/24-home_default/hummingbird-printed-t-shirt.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/24-large_default/hummingbird-printed-t-shirt.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                                <img
-                                                                    class="img-fluid image-secondary"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/25-home_default/hummingbird-printed-t-shirt.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/25-large_default/hummingbird-printed-t-shirt.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                            </a>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 col-w60 no-padding">
-                                                        <div class="product-description">
-                                                            <div class="product-groups">
-
-                                                                <!-- begin modules/novproductcomments/novproductcomments_reviews.tpl -->
-                                                                <div class="product-comments">
-                                                                    <div class="star_content">
-                                                                        <div class="star star_on"></div>
-                                                                        <div class="star star_on"></div>
-                                                                        <div class="star star_on"></div>
-                                                                        <div class="star star_on"></div>
-                                                                        <div class="star star_on"></div>
-                                                                    </div>
-                                                                    <span>5 review</span>
-                                                                </div>
-                                                                <!-- end modules/novproductcomments/novproductcomments_reviews.tpl -->
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-                                                                <p class="seller_name">
-                                                                    <a title="View seller profile" href="http://demo.bestprestashoptheme.com/savemart/ar/jmarketplace/1_david-james/">
-                                                                        <i class="fa fa-user"></i>
-                                                                        David James
-                                                                    </a>
-                                                                </p>
-
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-
-
-                                                                <div class="product-title" itemprop="name"><a href="http://demo.bestprestashoptheme.com/savemart/ar/smartphone-tablet/1-40-hummingbird-printed-t-shirt.html#/1-الحجم-ص/6-اللون_-رمادي_داكن">Nullam sed sollicitudin mauris</a></div>
-
-                                                                <div class="product-group-price">
-
-                                                                    <div class="product-price-and-shipping">
-
-
-
-                                                                        <span itemprop="price" class="price">24.00 UK£</span>
-
-
-
-
-
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                            <div class="product-buttons d-flex justify-content-center" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-                                                                <form action="http://demo.bestprestashoptheme.com/savemart/ar/عربة التسوق" method="post" class="formAddToCart">
-                                                                    <input type="hidden" name="token" value="28add935523ef131c8432825597b9928">
-                                                                    <input type="hidden" name="id_product" value="1">
-                                                                    <a class="add-to-cart" href="#" data-button-action="add-to-cart"><i class="novicon-cart"></i><span>أضف للسلة</span></a>
-                                                                </form>
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novblockwishlist/novblockwishlist_button.tpl -->
-
-                                                                <a class="addToWishlist wishlistProd_1" href="#" data-rel="1" onclick="WishlistCart('wishlist_block_list', 'add', '1', false, 1); return false;">
-                                                                    <i class="fa fa-heart"></i>
-                                                                    <span>Add to Wishlist</span>
-                                                                </a>
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novblockwishlist/novblockwishlist_button.tpl -->
-
-                                                                <a href="#" class="quick-view hidden-sm-down" data-link-action="quickview">
-                                                                    <i class="fa fa-search"></i><span> نظرة سريعة</span>
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex flex-wrap align-items-center product-miniature js-product-miniature item-row" data-id-product="2" data-id-product-attribute="60" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="col-12 col-w40 pl-0">
-                                                        <div class="thumbnail-container">
-
-                                                            <a href="http://demo.bestprestashoptheme.com/savemart/ar/smartphone-tablet/2-60-brown-bear-printed-sweater.html#/1-الحجم-ص/11-اللون_-اسود" class="thumbnail product-thumbnail two-image">
-                                                                <img
-                                                                    class="img-fluid image-cover"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/29-home_default/brown-bear-printed-sweater.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/29-large_default/brown-bear-printed-sweater.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                                <img
-                                                                    class="img-fluid image-secondary"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/30-home_default/brown-bear-printed-sweater.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/30-large_default/brown-bear-printed-sweater.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                            </a>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 col-w60 no-padding">
-                                                        <div class="product-description">
-                                                            <div class="product-groups">
-
-                                                                <!-- begin modules/novproductcomments/novproductcomments_reviews.tpl -->
-                                                                <div class="product-comments">
-                                                                    <div class="star_content">
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                    </div>
-                                                                    <span>0 review</span>
-                                                                </div>
-                                                                <!-- end modules/novproductcomments/novproductcomments_reviews.tpl -->
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-                                                                <p class="seller_name">
-                                                                    <a title="View seller profile" href="http://demo.bestprestashoptheme.com/savemart/ar/jmarketplace/1_david-james/">
-                                                                        <i class="fa fa-user"></i>
-                                                                        David James
-                                                                    </a>
-                                                                </p>
-
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-
-
-                                                                <div class="product-title" itemprop="name"><a href="http://demo.bestprestashoptheme.com/savemart/ar/smartphone-tablet/2-60-brown-bear-printed-sweater.html#/1-الحجم-ص/11-اللون_-اسود">Lorem ipsum dolor sit amet ege</a></div>
-
-                                                                <div class="product-group-price">
-
-                                                                    <div class="product-price-and-shipping">
-
-
-
-                                                                        <span itemprop="price" class="price">36.00 UK£</span>
-
-
-
-
-
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                            <div class="product-buttons d-flex justify-content-center" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-                                                                <form action="http://demo.bestprestashoptheme.com/savemart/ar/عربة التسوق" method="post" class="formAddToCart">
-                                                                    <input type="hidden" name="token" value="28add935523ef131c8432825597b9928">
-                                                                    <input type="hidden" name="id_product" value="2">
-                                                                    <a class="add-to-cart" href="#" data-button-action="add-to-cart"><i class="novicon-cart"></i><span>أضف للسلة</span></a>
-                                                                </form>
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novblockwishlist/novblockwishlist_button.tpl -->
-
-                                                                <a class="addToWishlist wishlistProd_2" href="#" data-rel="2" onclick="WishlistCart('wishlist_block_list', 'add', '2', false, 1); return false;">
-                                                                    <i class="fa fa-heart"></i>
-                                                                    <span>Add to Wishlist</span>
-                                                                </a>
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novblockwishlist/novblockwishlist_button.tpl -->
-
-                                                                <a href="#" class="quick-view hidden-sm-down" data-link-action="quickview">
-                                                                    <i class="fa fa-search"></i><span> نظرة سريعة</span>
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex flex-wrap align-items-center product-miniature js-product-miniature item-row last_item" data-id-product="3" data-id-product-attribute="95" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="col-12 col-w40 pl-0">
-                                                        <div class="thumbnail-container">
-
-                                                            <a href="http://demo.bestprestashoptheme.com/savemart/ar/smartphone-tablet/3-95-the-best-is-yet-to-come-framed-poster.html#/1-الحجم-ص/13-اللون_-برتقالي" class="thumbnail product-thumbnail two-image">
-                                                                <img
-                                                                    class="img-fluid image-cover"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/34-home_default/the-best-is-yet-to-come-framed-poster.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/34-large_default/the-best-is-yet-to-come-framed-poster.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                                <img
-                                                                    class="img-fluid image-secondary"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/35-home_default/the-best-is-yet-to-come-framed-poster.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/35-large_default/the-best-is-yet-to-come-framed-poster.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                            </a>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 col-w60 no-padding">
-                                                        <div class="product-description">
-                                                            <div class="product-groups">
-
-                                                                <!-- begin modules/novproductcomments/novproductcomments_reviews.tpl -->
-                                                                <div class="product-comments">
-                                                                    <div class="star_content">
-                                                                        <div class="star star_on"></div>
-                                                                        <div class="star star_on"></div>
-                                                                        <div class="star star_on"></div>
-                                                                        <div class="star star_on"></div>
-                                                                        <div class="star star_on"></div>
-                                                                    </div>
-                                                                    <span>5 review</span>
-                                                                </div>
-                                                                <!-- end modules/novproductcomments/novproductcomments_reviews.tpl -->
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-                                                                <p class="seller_name">
-                                                                    <a title="View seller profile" href="http://demo.bestprestashoptheme.com/savemart/ar/jmarketplace/2_taylor-jonson/">
-                                                                        <i class="fa fa-user"></i>
-                                                                        Taylor Jonson
-                                                                    </a>
-                                                                </p>
-
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-
-
-                                                                <div class="product-title" itemprop="name"><a href="http://demo.bestprestashoptheme.com/savemart/ar/smartphone-tablet/3-95-the-best-is-yet-to-come-framed-poster.html#/1-الحجم-ص/13-اللون_-برتقالي">Mauris molestie porttitor diam</a></div>
-
-                                                                <div class="product-group-price">
-
-                                                                    <div class="product-price-and-shipping">
-
-
-
-                                                                        <span itemprop="price" class="price">30.00 UK£</span>
-
-
-
-
-
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                            <div class="product-buttons d-flex justify-content-center" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-                                                                <form action="http://demo.bestprestashoptheme.com/savemart/ar/عربة التسوق" method="post" class="formAddToCart">
-                                                                    <input type="hidden" name="token" value="28add935523ef131c8432825597b9928">
-                                                                    <input type="hidden" name="id_product" value="3">
-                                                                    <a class="add-to-cart" href="#" data-button-action="add-to-cart"><i class="novicon-cart"></i><span>أضف للسلة</span></a>
-                                                                </form>
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novblockwishlist/novblockwishlist_button.tpl -->
-
-                                                                <a class="addToWishlist wishlistProd_3" href="#" data-rel="3" onclick="WishlistCart('wishlist_block_list', 'add', '3', false, 1); return false;">
-                                                                    <i class="fa fa-heart"></i>
-                                                                    <span>Add to Wishlist</span>
-                                                                </a>
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novblockwishlist/novblockwishlist_button.tpl -->
-
-                                                                <a href="#" class="quick-view hidden-sm-down" data-link-action="quickview">
-                                                                    <i class="fa fa-search"></i><span> نظرة سريعة</span>
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="item  text-center">
-                                                <div class="d-flex flex-wrap align-items-center product-miniature js-product-miniature item-row first_item" data-id-product="4" data-id-product-attribute="112" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="col-12 col-w40 pl-0">
-                                                        <div class="thumbnail-container">
-
-                                                            <a href="http://demo.bestprestashoptheme.com/savemart/ar/home-appliance/4-112-the-adventure-begins-framed-poster.html#/1-الحجم-ص/9-اللون_-ابيض_مطفي" class="thumbnail product-thumbnail two-image">
-                                                                <img
-                                                                    class="img-fluid image-cover"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/39-home_default/the-adventure-begins-framed-poster.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/39-large_default/the-adventure-begins-framed-poster.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                                <img
-                                                                    class="img-fluid image-secondary"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/43-home_default/the-adventure-begins-framed-poster.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/43-large_default/the-adventure-begins-framed-poster.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                            </a>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 col-w60 no-padding">
-                                                        <div class="product-description">
-                                                            <div class="product-groups">
-
-                                                                <!-- begin modules/novproductcomments/novproductcomments_reviews.tpl -->
-                                                                <div class="product-comments">
-                                                                    <div class="star_content">
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                    </div>
-                                                                    <span>0 review</span>
-                                                                </div>
-                                                                <!-- end modules/novproductcomments/novproductcomments_reviews.tpl -->
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-                                                                <p class="seller_name">
-                                                                    <a title="View seller profile" href="http://demo.bestprestashoptheme.com/savemart/ar/jmarketplace/2_taylor-jonson/">
-                                                                        <i class="fa fa-user"></i>
-                                                                        Taylor Jonson
-                                                                    </a>
-                                                                </p>
-
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-
-
-                                                                <div class="product-title" itemprop="name"><a href="http://demo.bestprestashoptheme.com/savemart/ar/home-appliance/4-112-the-adventure-begins-framed-poster.html#/1-الحجم-ص/9-اللون_-ابيض_مطفي">Maecenas vulputate ligula vel</a></div>
-
-                                                                <div class="product-group-price">
-
-                                                                    <div class="product-price-and-shipping">
-
-
-
-                                                                        <span itemprop="price" class="price">18.00 UK£</span>
-
-
-
-
-
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                            <div class="product-buttons d-flex justify-content-center" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-                                                                <form action="http://demo.bestprestashoptheme.com/savemart/ar/عربة التسوق" method="post" class="formAddToCart">
-                                                                    <input type="hidden" name="token" value="28add935523ef131c8432825597b9928">
-                                                                    <input type="hidden" name="id_product" value="4">
-                                                                    <a class="add-to-cart" href="#" data-button-action="add-to-cart"><i class="novicon-cart"></i><span>أضف للسلة</span></a>
-                                                                </form>
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novblockwishlist/novblockwishlist_button.tpl -->
-
-                                                                <a class="addToWishlist wishlistProd_4" href="#" data-rel="4" onclick="WishlistCart('wishlist_block_list', 'add', '4', false, 1); return false;">
-                                                                    <i class="fa fa-heart"></i>
-                                                                    <span>Add to Wishlist</span>
-                                                                </a>
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novblockwishlist/novblockwishlist_button.tpl -->
-
-                                                                <a href="#" class="quick-view hidden-sm-down" data-link-action="quickview">
-                                                                    <i class="fa fa-search"></i><span> نظرة سريعة</span>
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex flex-wrap align-items-center product-miniature js-product-miniature item-row" data-id-product="5" data-id-product-attribute="134" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="col-12 col-w40 pl-0">
-                                                        <div class="thumbnail-container">
-
-                                                            <a href="http://demo.bestprestashoptheme.com/savemart/ar/audio/5-134-today-is-a-good-day-framed-poster.html#/1-الحجم-ص/13-اللون_-برتقالي" class="thumbnail product-thumbnail two-image">
-                                                                <img
-                                                                    class="img-fluid image-cover"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/44-home_default/today-is-a-good-day-framed-poster.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/44-large_default/today-is-a-good-day-framed-poster.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                                <img
-                                                                    class="img-fluid image-secondary"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/45-home_default/today-is-a-good-day-framed-poster.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/45-large_default/today-is-a-good-day-framed-poster.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                            </a>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 col-w60 no-padding">
-                                                        <div class="product-description">
-                                                            <div class="product-groups">
-
-                                                                <!-- begin modules/novproductcomments/novproductcomments_reviews.tpl -->
-                                                                <div class="product-comments">
-                                                                    <div class="star_content">
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                    </div>
-                                                                    <span>0 review</span>
-                                                                </div>
-                                                                <!-- end modules/novproductcomments/novproductcomments_reviews.tpl -->
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-                                                                <p class="seller_name">
-                                                                    <a title="View seller profile" href="http://demo.bestprestashoptheme.com/savemart/ar/jmarketplace/2_taylor-jonson/">
-                                                                        <i class="fa fa-user"></i>
-                                                                        Taylor Jonson
-                                                                    </a>
-                                                                </p>
-
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-
-
-                                                                <div class="product-title" itemprop="name"><a href="http://demo.bestprestashoptheme.com/savemart/ar/audio/5-134-today-is-a-good-day-framed-poster.html#/1-الحجم-ص/13-اللون_-برتقالي">Vehicula vel tempus sit amet ulte</a></div>
-
-                                                                <div class="product-group-price">
-
-                                                                    <div class="product-price-and-shipping">
-
-
-
-                                                                        <span itemprop="price" class="price">34.80 UK£</span>
-
-
-
-
-
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                            <div class="product-buttons d-flex justify-content-center" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-                                                                <form action="http://demo.bestprestashoptheme.com/savemart/ar/عربة التسوق" method="post" class="formAddToCart">
-                                                                    <input type="hidden" name="token" value="28add935523ef131c8432825597b9928">
-                                                                    <input type="hidden" name="id_product" value="5">
-                                                                    <a class="add-to-cart" href="#" data-button-action="add-to-cart"><i class="novicon-cart"></i><span>أضف للسلة</span></a>
-                                                                </form>
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novblockwishlist/novblockwishlist_button.tpl -->
-
-                                                                <a class="addToWishlist wishlistProd_5" href="#" data-rel="5" onclick="WishlistCart('wishlist_block_list', 'add', '5', false, 1); return false;">
-                                                                    <i class="fa fa-heart"></i>
-                                                                    <span>Add to Wishlist</span>
-                                                                </a>
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novblockwishlist/novblockwishlist_button.tpl -->
-
-                                                                <a href="#" class="quick-view hidden-sm-down" data-link-action="quickview">
-                                                                    <i class="fa fa-search"></i><span> نظرة سريعة</span>
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex flex-wrap align-items-center product-miniature js-product-miniature item-row last_item" data-id-product="6" data-id-product-attribute="0" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="col-12 col-w40 pl-0">
-                                                        <div class="thumbnail-container">
-
-                                                            <a href="http://demo.bestprestashoptheme.com/savemart/ar/home-appliance/6-nullam-tempor-orci-eu-pretium.html" class="thumbnail product-thumbnail two-image">
-                                                                <img
-                                                                    class="img-fluid image-cover"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/49-home_default/nullam-tempor-orci-eu-pretium.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/49-large_default/nullam-tempor-orci-eu-pretium.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                                <img
-                                                                    class="img-fluid image-secondary"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/50-home_default/nullam-tempor-orci-eu-pretium.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/50-large_default/nullam-tempor-orci-eu-pretium.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                            </a>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 col-w60 no-padding">
-                                                        <div class="product-description">
-                                                            <div class="product-groups">
-
-                                                                <!-- begin modules/novproductcomments/novproductcomments_reviews.tpl -->
-                                                                <div class="product-comments">
-                                                                    <div class="star_content">
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                    </div>
-                                                                    <span>0 review</span>
-                                                                </div>
-                                                                <!-- end modules/novproductcomments/novproductcomments_reviews.tpl -->
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-                                                                <p class="seller_name">
-                                                                    <a title="View seller profile" href="http://demo.bestprestashoptheme.com/savemart/ar/jmarketplace/2_taylor-jonson/">
-                                                                        <i class="fa fa-user"></i>
-                                                                        Taylor Jonson
-                                                                    </a>
-                                                                </p>
-
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-
-
-                                                                <div class="product-title" itemprop="name"><a href="http://demo.bestprestashoptheme.com/savemart/ar/home-appliance/6-nullam-tempor-orci-eu-pretium.html">Nullam tempor orci eu pretium</a></div>
-
-                                                                <div class="product-group-price">
-
-                                                                    <div class="product-price-and-shipping">
-
-
-
-                                                                        <span itemprop="price" class="price">14.28 UK£</span>
-
-
-
-
-
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                            <div class="product-buttons d-flex justify-content-center" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-                                                                <form action="http://demo.bestprestashoptheme.com/savemart/ar/عربة التسوق" method="post" class="formAddToCart">
-                                                                    <input type="hidden" name="token" value="28add935523ef131c8432825597b9928">
-                                                                    <input type="hidden" name="id_product" value="6">
-                                                                    <a class="add-to-cart" href="#" data-button-action="add-to-cart"><i class="novicon-cart"></i><span>أضف للسلة</span></a>
-                                                                </form>
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novblockwishlist/novblockwishlist_button.tpl -->
-
-                                                                <a class="addToWishlist wishlistProd_6" href="#" data-rel="6" onclick="WishlistCart('wishlist_block_list', 'add', '6', false, 1); return false;">
-                                                                    <i class="fa fa-heart"></i>
-                                                                    <span>Add to Wishlist</span>
-                                                                </a>
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novblockwishlist/novblockwishlist_button.tpl -->
-
-                                                                <a href="#" class="quick-view hidden-sm-down" data-link-action="quickview">
-                                                                    <i class="fa fa-search"></i><span> نظرة سريعة</span>
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="item  text-center">
-                                                <div class="d-flex flex-wrap align-items-center product-miniature js-product-miniature item-row first_item" data-id-product="7" data-id-product-attribute="155" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="col-12 col-w40 pl-0">
-                                                        <div class="thumbnail-container">
-
-                                                            <a href="http://demo.bestprestashoptheme.com/savemart/ar/home-appliance/7-155-donec-non-lectus-ac-erat-sedei.html#/1-الحجم-ص/10-اللون_-احمر" class="thumbnail product-thumbnail two-image">
-                                                                <img
-                                                                    class="img-fluid image-cover"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/54-home_default/donec-non-lectus-ac-erat-sedei.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/54-large_default/donec-non-lectus-ac-erat-sedei.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                                <img
-                                                                    class="img-fluid image-secondary"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/55-home_default/donec-non-lectus-ac-erat-sedei.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/55-large_default/donec-non-lectus-ac-erat-sedei.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                            </a>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 col-w60 no-padding">
-                                                        <div class="product-description">
-                                                            <div class="product-groups">
-
-                                                                <!-- begin modules/novproductcomments/novproductcomments_reviews.tpl -->
-                                                                <div class="product-comments">
-                                                                    <div class="star_content">
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                    </div>
-                                                                    <span>0 review</span>
-                                                                </div>
-                                                                <!-- end modules/novproductcomments/novproductcomments_reviews.tpl -->
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-                                                                <p class="seller_name">
-                                                                    <a title="View seller profile" href="http://demo.bestprestashoptheme.com/savemart/ar/jmarketplace/2_taylor-jonson/">
-                                                                        <i class="fa fa-user"></i>
-                                                                        Taylor Jonson
-                                                                    </a>
-                                                                </p>
-
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-
-
-                                                                <div class="product-title" itemprop="name"><a href="http://demo.bestprestashoptheme.com/savemart/ar/home-appliance/7-155-donec-non-lectus-ac-erat-sedei.html#/1-الحجم-ص/10-اللون_-احمر">Donec non lectus ac erat sedei</a></div>
-
-                                                                <div class="product-group-price">
-
-                                                                    <div class="product-price-and-shipping">
-
-
-
-                                                                        <span itemprop="price" class="price">14.28 UK£</span>
-
-
-
-
-
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                            <div class="product-buttons d-flex justify-content-center" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-                                                                <form action="http://demo.bestprestashoptheme.com/savemart/ar/عربة التسوق" method="post" class="formAddToCart">
-                                                                    <input type="hidden" name="token" value="28add935523ef131c8432825597b9928">
-                                                                    <input type="hidden" name="id_product" value="7">
-                                                                    <a class="add-to-cart" href="#" data-button-action="add-to-cart"><i class="novicon-cart"></i><span>أضف للسلة</span></a>
-                                                                </form>
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novblockwishlist/novblockwishlist_button.tpl -->
-
-                                                                <a class="addToWishlist wishlistProd_7" href="#" data-rel="7" onclick="WishlistCart('wishlist_block_list', 'add', '7', false, 1); return false;">
-                                                                    <i class="fa fa-heart"></i>
-                                                                    <span>Add to Wishlist</span>
-                                                                </a>
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novblockwishlist/novblockwishlist_button.tpl -->
-
-                                                                <a href="#" class="quick-view hidden-sm-down" data-link-action="quickview">
-                                                                    <i class="fa fa-search"></i><span> نظرة سريعة</span>
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex flex-wrap align-items-center product-miniature js-product-miniature item-row" data-id-product="8" data-id-product-attribute="172" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="col-12 col-w40 pl-0">
-                                                        <div class="thumbnail-container">
-
-                                                            <a href="http://demo.bestprestashoptheme.com/savemart/ar/audio/8-172-curabitur-in-lorem-sit-ameten-alt.html#/1-الحجم-ص/10-اللون_-احمر" class="thumbnail product-thumbnail two-image">
-                                                                <img
-                                                                    class="img-fluid image-cover"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/59-home_default/curabitur-in-lorem-sit-ameten-alt.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/59-large_default/curabitur-in-lorem-sit-ameten-alt.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                                <img
-                                                                    class="img-fluid image-secondary"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/60-home_default/curabitur-in-lorem-sit-ameten-alt.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/60-large_default/curabitur-in-lorem-sit-ameten-alt.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                            </a>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 col-w60 no-padding">
-                                                        <div class="product-description">
-                                                            <div class="product-groups">
-
-                                                                <!-- begin modules/novproductcomments/novproductcomments_reviews.tpl -->
-                                                                <div class="product-comments">
-                                                                    <div class="star_content">
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                    </div>
-                                                                    <span>0 review</span>
-                                                                </div>
-                                                                <!-- end modules/novproductcomments/novproductcomments_reviews.tpl -->
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-                                                                <p class="seller_name">
-                                                                    <a title="View seller profile" href="http://demo.bestprestashoptheme.com/savemart/ar/jmarketplace/2_taylor-jonson/">
-                                                                        <i class="fa fa-user"></i>
-                                                                        Taylor Jonson
-                                                                    </a>
-                                                                </p>
-
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-
-
-                                                                <div class="product-title" itemprop="name"><a href="http://demo.bestprestashoptheme.com/savemart/ar/audio/8-172-curabitur-in-lorem-sit-ameten-alt.html#/1-الحجم-ص/10-اللون_-احمر">Curabitur in lorem sit ameten alt</a></div>
-
-                                                                <div class="product-group-price">
-
-                                                                    <div class="product-price-and-shipping">
-
-
-
-                                                                        <span itemprop="price" class="price">18.00 UK£</span>
-
-
-
-
-
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                            <div class="product-buttons d-flex justify-content-center" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-                                                                <form action="http://demo.bestprestashoptheme.com/savemart/ar/عربة التسوق" method="post" class="formAddToCart">
-                                                                    <input type="hidden" name="token" value="28add935523ef131c8432825597b9928">
-                                                                    <input type="hidden" name="id_product" value="8">
-                                                                    <a class="add-to-cart" href="#" data-button-action="add-to-cart"><i class="novicon-cart"></i><span>أضف للسلة</span></a>
-                                                                </form>
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novblockwishlist/novblockwishlist_button.tpl -->
-
-                                                                <a class="addToWishlist wishlistProd_8" href="#" data-rel="8" onclick="WishlistCart('wishlist_block_list', 'add', '8', false, 1); return false;">
-                                                                    <i class="fa fa-heart"></i>
-                                                                    <span>Add to Wishlist</span>
-                                                                </a>
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novblockwishlist/novblockwishlist_button.tpl -->
-
-                                                                <a href="#" class="quick-view hidden-sm-down" data-link-action="quickview">
-                                                                    <i class="fa fa-search"></i><span> نظرة سريعة</span>
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex flex-wrap align-items-center product-miniature js-product-miniature item-row last_item" data-id-product="9" data-id-product-attribute="179" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="col-12 col-w40 pl-0">
-                                                        <div class="thumbnail-container">
-
-                                                            <a href="http://demo.bestprestashoptheme.com/savemart/ar/smartphone-tablet/9-179-mauris-feugiat-et-dui-sit-amet.html#/1-الحجم-ص/15-اللون_-اخضر" class="thumbnail product-thumbnail two-image">
-                                                                <img
-                                                                    class="img-fluid image-cover"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/64-home_default/mauris-feugiat-et-dui-sit-amet.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/64-large_default/mauris-feugiat-et-dui-sit-amet.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                                <img
-                                                                    class="img-fluid image-secondary"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/65-home_default/mauris-feugiat-et-dui-sit-amet.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/65-large_default/mauris-feugiat-et-dui-sit-amet.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                            </a>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 col-w60 no-padding">
-                                                        <div class="product-description">
-                                                            <div class="product-groups">
-
-                                                                <!-- begin modules/novproductcomments/novproductcomments_reviews.tpl -->
-                                                                <div class="product-comments">
-                                                                    <div class="star_content">
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                    </div>
-                                                                    <span>0 review</span>
-                                                                </div>
-                                                                <!-- end modules/novproductcomments/novproductcomments_reviews.tpl -->
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-                                                                <p class="seller_name">
-                                                                    <a title="View seller profile" href="http://demo.bestprestashoptheme.com/savemart/ar/jmarketplace/3_harry-makle/">
-                                                                        <i class="fa fa-user"></i>
-                                                                        Harry Makle
-                                                                    </a>
-                                                                </p>
-
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-
-
-                                                                <div class="product-title" itemprop="name"><a href="http://demo.bestprestashoptheme.com/savemart/ar/smartphone-tablet/9-179-mauris-feugiat-et-dui-sit-amet.html#/1-الحجم-ص/15-اللون_-اخضر">Mauris feugiat et dui sit amet</a></div>
-
-                                                                <div class="product-group-price">
-
-                                                                    <div class="product-price-and-shipping">
-
-
-
-                                                                        <span itemprop="price" class="price">24.00 UK£</span>
-
-
-
-
-
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                            <div class="product-buttons d-flex justify-content-center" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-                                                                <form action="http://demo.bestprestashoptheme.com/savemart/ar/عربة التسوق" method="post" class="formAddToCart">
-                                                                    <input type="hidden" name="token" value="28add935523ef131c8432825597b9928">
-                                                                    <input type="hidden" name="id_product" value="9">
-                                                                    <a class="add-to-cart" href="#" data-button-action="add-to-cart"><i class="novicon-cart"></i><span>أضف للسلة</span></a>
-                                                                </form>
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novblockwishlist/novblockwishlist_button.tpl -->
-
-                                                                <a class="addToWishlist wishlistProd_9" href="#" data-rel="9" onclick="WishlistCart('wishlist_block_list', 'add', '9', false, 1); return false;">
-                                                                    <i class="fa fa-heart"></i>
-                                                                    <span>Add to Wishlist</span>
-                                                                </a>
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novblockwishlist/novblockwishlist_button.tpl -->
-
-                                                                <a href="#" class="quick-view hidden-sm-down" data-link-action="quickview">
-                                                                    <i class="fa fa-search"></i><span> نظرة سريعة</span>
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="item  text-center">
-                                                <div class="d-flex flex-wrap align-items-center product-miniature js-product-miniature item-row first_item" data-id-product="10" data-id-product-attribute="192" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="col-12 col-w40 pl-0">
-                                                        <div class="thumbnail-container">
-
-                                                            <a href="http://demo.bestprestashoptheme.com/savemart/ar/smartphone-tablet/10-192-nullam-lacinia-metus-posuere.html#/1-الحجم-ص/18-اللون_-وردي" class="thumbnail product-thumbnail two-image">
-                                                                <img
-                                                                    class="img-fluid image-cover"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/69-home_default/nullam-lacinia-metus-posuere.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/69-large_default/nullam-lacinia-metus-posuere.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                                <img
-                                                                    class="img-fluid image-secondary"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/70-home_default/nullam-lacinia-metus-posuere.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/70-large_default/nullam-lacinia-metus-posuere.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                            </a>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 col-w60 no-padding">
-                                                        <div class="product-description">
-                                                            <div class="product-groups">
-
-                                                                <!-- begin modules/novproductcomments/novproductcomments_reviews.tpl -->
-                                                                <div class="product-comments">
-                                                                    <div class="star_content">
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                    </div>
-                                                                    <span>0 review</span>
-                                                                </div>
-                                                                <!-- end modules/novproductcomments/novproductcomments_reviews.tpl -->
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-                                                                <p class="seller_name">
-                                                                    <a title="View seller profile" href="http://demo.bestprestashoptheme.com/savemart/ar/jmarketplace/3_harry-makle/">
-                                                                        <i class="fa fa-user"></i>
-                                                                        Harry Makle
-                                                                    </a>
-                                                                </p>
-
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-
-
-                                                                <div class="product-title" itemprop="name"><a href="http://demo.bestprestashoptheme.com/savemart/ar/smartphone-tablet/10-192-nullam-lacinia-metus-posuere.html#/1-الحجم-ص/18-اللون_-وردي">Nullam lacinia metus posuere</a></div>
-
-                                                                <div class="product-group-price">
-
-                                                                    <div class="product-price-and-shipping">
-
-
-
-                                                                        <span itemprop="price" class="price">36.00 UK£</span>
-
-
-
-
-
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                            <div class="product-buttons d-flex justify-content-center" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-                                                                <form action="http://demo.bestprestashoptheme.com/savemart/ar/عربة التسوق" method="post" class="formAddToCart">
-                                                                    <input type="hidden" name="token" value="28add935523ef131c8432825597b9928">
-                                                                    <input type="hidden" name="id_product" value="10">
-                                                                    <a class="add-to-cart" href="#" data-button-action="add-to-cart"><i class="novicon-cart"></i><span>أضف للسلة</span></a>
-                                                                </form>
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novblockwishlist/novblockwishlist_button.tpl -->
-
-                                                                <a class="addToWishlist wishlistProd_10" href="#" data-rel="10" onclick="WishlistCart('wishlist_block_list', 'add', '10', false, 1); return false;">
-                                                                    <i class="fa fa-heart"></i>
-                                                                    <span>Add to Wishlist</span>
-                                                                </a>
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novblockwishlist/novblockwishlist_button.tpl -->
-
-                                                                <a href="#" class="quick-view hidden-sm-down" data-link-action="quickview">
-                                                                    <i class="fa fa-search"></i><span> نظرة سريعة</span>
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex flex-wrap align-items-center product-miniature js-product-miniature item-row" data-id-product="12" data-id-product-attribute="232" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="col-12 col-w40 pl-0">
-                                                        <div class="thumbnail-container">
-
-                                                            <a href="http://demo.bestprestashoptheme.com/savemart/ar/home-appliance/12-232-nam-volutpat-justo-a-vehicula.html#/1-الحجم-ص/11-اللون_-اسود" class="thumbnail product-thumbnail two-image">
-                                                                <img
-                                                                    class="img-fluid image-cover"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/79-home_default/nam-volutpat-justo-a-vehicula.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/79-large_default/nam-volutpat-justo-a-vehicula.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                                <img
-                                                                    class="img-fluid image-secondary"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/80-home_default/nam-volutpat-justo-a-vehicula.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/80-large_default/nam-volutpat-justo-a-vehicula.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                            </a>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 col-w60 no-padding">
-                                                        <div class="product-description">
-                                                            <div class="product-groups">
-
-                                                                <!-- begin modules/novproductcomments/novproductcomments_reviews.tpl -->
-                                                                <div class="product-comments">
-                                                                    <div class="star_content">
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                    </div>
-                                                                    <span>0 review</span>
-                                                                </div>
-                                                                <!-- end modules/novproductcomments/novproductcomments_reviews.tpl -->
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-                                                                <p class="seller_name">
-                                                                    <a title="View seller profile" href="http://demo.bestprestashoptheme.com/savemart/ar/jmarketplace/3_harry-makle/">
-                                                                        <i class="fa fa-user"></i>
-                                                                        Harry Makle
-                                                                    </a>
-                                                                </p>
-
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-
-
-                                                                <div class="product-title" itemprop="name"><a href="http://demo.bestprestashoptheme.com/savemart/ar/home-appliance/12-232-nam-volutpat-justo-a-vehicula.html#/1-الحجم-ص/11-اللون_-اسود">Nam volutpat justo a vehicula</a></div>
-
-                                                                <div class="product-group-price">
-
-                                                                    <div class="product-price-and-shipping">
-
-
-
-                                                                        <span itemprop="price" class="price">7.56 UK£</span>
-
-
-
-                                                                        <span class="regular-price">10.80 UK£</span>
-
-
-
-
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                            <div class="product-buttons d-flex justify-content-center" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-                                                                <form action="http://demo.bestprestashoptheme.com/savemart/ar/عربة التسوق" method="post" class="formAddToCart">
-                                                                    <input type="hidden" name="token" value="28add935523ef131c8432825597b9928">
-                                                                    <input type="hidden" name="id_product" value="12">
-                                                                    <a class="add-to-cart" href="#" data-button-action="add-to-cart"><i class="novicon-cart"></i><span>أضف للسلة</span></a>
-                                                                </form>
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novblockwishlist/novblockwishlist_button.tpl -->
-
-                                                                <a class="addToWishlist wishlistProd_12" href="#" data-rel="12" onclick="WishlistCart('wishlist_block_list', 'add', '12', false, 1); return false;">
-                                                                    <i class="fa fa-heart"></i>
-                                                                    <span>Add to Wishlist</span>
-                                                                </a>
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novblockwishlist/novblockwishlist_button.tpl -->
-
-                                                                <a href="#" class="quick-view hidden-sm-down" data-link-action="quickview">
-                                                                    <i class="fa fa-search"></i><span> نظرة سريعة</span>
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex flex-wrap align-items-center product-miniature js-product-miniature item-row last_item" data-id-product="13" data-id-product-attribute="254" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="col-12 col-w40 pl-0">
-                                                        <div class="thumbnail-container">
-
-                                                            <a href="http://demo.bestprestashoptheme.com/savemart/ar/audio/13-254-proin-placerat-lacus-eget-auctor.html#/1-الحجم-ص/10-اللون_-احمر" class="thumbnail product-thumbnail two-image">
-                                                                <img
-                                                                    class="img-fluid image-cover"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/84-home_default/proin-placerat-lacus-eget-auctor.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/84-large_default/proin-placerat-lacus-eget-auctor.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                                <img
-                                                                    class="img-fluid image-secondary"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/85-home_default/proin-placerat-lacus-eget-auctor.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/85-large_default/proin-placerat-lacus-eget-auctor.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                            </a>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 col-w60 no-padding">
-                                                        <div class="product-description">
-                                                            <div class="product-groups">
-
-                                                                <!-- begin modules/novproductcomments/novproductcomments_reviews.tpl -->
-                                                                <div class="product-comments">
-                                                                    <div class="star_content">
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                    </div>
-                                                                    <span>0 review</span>
-                                                                </div>
-                                                                <!-- end modules/novproductcomments/novproductcomments_reviews.tpl -->
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-                                                                <p class="seller_name">
-                                                                    <a title="View seller profile" href="http://demo.bestprestashoptheme.com/savemart/ar/jmarketplace/1_david-james/">
-                                                                        <i class="fa fa-user"></i>
-                                                                        David James
-                                                                    </a>
-                                                                </p>
-
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-
-
-                                                                <div class="product-title" itemprop="name"><a href="http://demo.bestprestashoptheme.com/savemart/ar/audio/13-254-proin-placerat-lacus-eget-auctor.html#/1-الحجم-ص/10-اللون_-احمر">Proin placerat lacus eget auctor</a></div>
-
-                                                                <div class="product-group-price">
-
-                                                                    <div class="product-price-and-shipping">
-
-
-
-                                                                        <span itemprop="price" class="price">12.00 UK£</span>
-
-
-
-
-
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                            <div class="product-buttons d-flex justify-content-center" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-                                                                <form action="http://demo.bestprestashoptheme.com/savemart/ar/عربة التسوق" method="post" class="formAddToCart">
-                                                                    <input type="hidden" name="token" value="28add935523ef131c8432825597b9928">
-                                                                    <input type="hidden" name="id_product" value="13">
-                                                                    <a class="add-to-cart" href="#" data-button-action="add-to-cart"><i class="novicon-cart"></i><span>أضف للسلة</span></a>
-                                                                </form>
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novblockwishlist/novblockwishlist_button.tpl -->
-
-                                                                <a class="addToWishlist wishlistProd_13" href="#" data-rel="13" onclick="WishlistCart('wishlist_block_list', 'add', '13', false, 1); return false;">
-                                                                    <i class="fa fa-heart"></i>
-                                                                    <span>Add to Wishlist</span>
-                                                                </a>
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novblockwishlist/novblockwishlist_button.tpl -->
-
-                                                                <a href="#" class="quick-view hidden-sm-down" data-link-action="quickview">
-                                                                    <i class="fa fa-search"></i><span> نظرة سريعة</span>
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="item  text-center">
-                                                <div class="d-flex flex-wrap align-items-center product-miniature js-product-miniature item-row first_item" data-id-product="14" data-id-product-attribute="270" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="col-12 col-w40 pl-0">
-                                                        <div class="thumbnail-container">
-
-                                                            <a href="http://demo.bestprestashoptheme.com/savemart/ar/smartphone-tablet/14-270-donec-laoreet-imperdiet-elit-ut.html#/1-الحجم-ص/6-اللون_-رمادي_داكن" class="thumbnail product-thumbnail two-image">
-                                                                <img
-                                                                    class="img-fluid image-cover"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/89-home_default/donec-laoreet-imperdiet-elit-ut.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/89-large_default/donec-laoreet-imperdiet-elit-ut.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                                <img
-                                                                    class="img-fluid image-secondary"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/90-home_default/donec-laoreet-imperdiet-elit-ut.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/90-large_default/donec-laoreet-imperdiet-elit-ut.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                            </a>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 col-w60 no-padding">
-                                                        <div class="product-description">
-                                                            <div class="product-groups">
-
-                                                                <!-- begin modules/novproductcomments/novproductcomments_reviews.tpl -->
-                                                                <div class="product-comments">
-                                                                    <div class="star_content">
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                    </div>
-                                                                    <span>0 review</span>
-                                                                </div>
-                                                                <!-- end modules/novproductcomments/novproductcomments_reviews.tpl -->
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-                                                                <p class="seller_name">
-                                                                    <a title="View seller profile" href="http://demo.bestprestashoptheme.com/savemart/ar/jmarketplace/3_harry-makle/">
-                                                                        <i class="fa fa-user"></i>
-                                                                        Harry Makle
-                                                                    </a>
-                                                                </p>
-
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-
-
-                                                                <div class="product-title" itemprop="name"><a href="http://demo.bestprestashoptheme.com/savemart/ar/smartphone-tablet/14-270-donec-laoreet-imperdiet-elit-ut.html#/1-الحجم-ص/6-اللون_-رمادي_داكن">Donec laoreet imperdiet elit ut</a></div>
-
-                                                                <div class="product-group-price">
-
-                                                                    <div class="product-price-and-shipping">
-
-
-
-                                                                        <span itemprop="price" class="price">18.00 UK£</span>
-
-
-
-
-
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                            <div class="product-buttons d-flex justify-content-center" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-                                                                <form action="http://demo.bestprestashoptheme.com/savemart/ar/عربة التسوق" method="post" class="formAddToCart">
-                                                                    <input type="hidden" name="token" value="28add935523ef131c8432825597b9928">
-                                                                    <input type="hidden" name="id_product" value="14">
-                                                                    <a class="add-to-cart" href="#" data-button-action="add-to-cart"><i class="novicon-cart"></i><span>أضف للسلة</span></a>
-                                                                </form>
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novblockwishlist/novblockwishlist_button.tpl -->
-
-                                                                <a class="addToWishlist wishlistProd_14" href="#" data-rel="14" onclick="WishlistCart('wishlist_block_list', 'add', '14', false, 1); return false;">
-                                                                    <i class="fa fa-heart"></i>
-                                                                    <span>Add to Wishlist</span>
-                                                                </a>
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novblockwishlist/novblockwishlist_button.tpl -->
-
-                                                                <a href="#" class="quick-view hidden-sm-down" data-link-action="quickview">
-                                                                    <i class="fa fa-search"></i><span> نظرة سريعة</span>
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex flex-wrap align-items-center product-miniature js-product-miniature item-row" data-id-product="15" data-id-product-attribute="303" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="col-12 col-w40 pl-0">
-                                                        <div class="thumbnail-container">
-
-                                                            <a href="http://demo.bestprestashoptheme.com/savemart/ar/audio/15-303-nunc-tempus-velit-quis-urnanb.html#/1-الحجم-ص/10-اللون_-احمر" class="thumbnail product-thumbnail two-image">
-                                                                <img
-                                                                    class="img-fluid image-cover"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/94-home_default/nunc-tempus-velit-quis-urnanb.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/94-large_default/nunc-tempus-velit-quis-urnanb.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                                <img
-                                                                    class="img-fluid image-secondary"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/95-home_default/nunc-tempus-velit-quis-urnanb.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/95-large_default/nunc-tempus-velit-quis-urnanb.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                            </a>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 col-w60 no-padding">
-                                                        <div class="product-description">
-                                                            <div class="product-groups">
-
-                                                                <!-- begin modules/novproductcomments/novproductcomments_reviews.tpl -->
-                                                                <div class="product-comments">
-                                                                    <div class="star_content">
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                    </div>
-                                                                    <span>0 review</span>
-                                                                </div>
-                                                                <!-- end modules/novproductcomments/novproductcomments_reviews.tpl -->
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-                                                                <p class="seller_name">
-                                                                    <a title="View seller profile" href="http://demo.bestprestashoptheme.com/savemart/ar/jmarketplace/1_david-james/">
-                                                                        <i class="fa fa-user"></i>
-                                                                        David James
-                                                                    </a>
-                                                                </p>
-
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-
-
-                                                                <div class="product-title" itemprop="name"><a href="http://demo.bestprestashoptheme.com/savemart/ar/audio/15-303-nunc-tempus-velit-quis-urnanb.html#/1-الحجم-ص/10-اللون_-احمر">Nunc tempus velit quis urnanb</a></div>
-
-                                                                <div class="product-group-price">
-
-                                                                    <div class="product-price-and-shipping">
-
-
-
-                                                                        <span itemprop="price" class="price">37.80 UK£</span>
-
-
-
-                                                                        <span class="regular-price">42.00 UK£</span>
-
-
-
-
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                            <div class="product-buttons d-flex justify-content-center" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-                                                                <form action="http://demo.bestprestashoptheme.com/savemart/ar/عربة التسوق" method="post" class="formAddToCart">
-                                                                    <input type="hidden" name="token" value="28add935523ef131c8432825597b9928">
-                                                                    <input type="hidden" name="id_product" value="15">
-                                                                    <a class="add-to-cart" href="#" data-button-action="add-to-cart"><i class="novicon-cart"></i><span>أضف للسلة</span></a>
-                                                                </form>
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novblockwishlist/novblockwishlist_button.tpl -->
-
-                                                                <a class="addToWishlist wishlistProd_15" href="#" data-rel="15" onclick="WishlistCart('wishlist_block_list', 'add', '15', false, 1); return false;">
-                                                                    <i class="fa fa-heart"></i>
-                                                                    <span>Add to Wishlist</span>
-                                                                </a>
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novblockwishlist/novblockwishlist_button.tpl -->
-
-                                                                <a href="#" class="quick-view hidden-sm-down" data-link-action="quickview">
-                                                                    <i class="fa fa-search"></i><span> نظرة سريعة</span>
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex flex-wrap align-items-center product-miniature js-product-miniature item-row last_item" data-id-product="16" data-id-product-attribute="323" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="col-12 col-w40 pl-0">
-                                                        <div class="thumbnail-container">
-
-                                                            <a href="http://demo.bestprestashoptheme.com/savemart/ar/home-appliance/16-323-cras-consequat-quis-dolor-eunde.html#/1-الحجم-ص/11-اللون_-اسود" class="thumbnail product-thumbnail two-image">
-                                                                <img
-                                                                    class="img-fluid image-cover"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/99-home_default/cras-consequat-quis-dolor-eunde.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/99-large_default/cras-consequat-quis-dolor-eunde.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                                <img
-                                                                    class="img-fluid image-secondary"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/100-home_default/cras-consequat-quis-dolor-eunde.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/100-large_default/cras-consequat-quis-dolor-eunde.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                            </a>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 col-w60 no-padding">
-                                                        <div class="product-description">
-                                                            <div class="product-groups">
-
-                                                                <!-- begin modules/novproductcomments/novproductcomments_reviews.tpl -->
-                                                                <div class="product-comments">
-                                                                    <div class="star_content">
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                    </div>
-                                                                    <span>0 review</span>
-                                                                </div>
-                                                                <!-- end modules/novproductcomments/novproductcomments_reviews.tpl -->
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-                                                                <p class="seller_name">
-                                                                    <a title="View seller profile" href="http://demo.bestprestashoptheme.com/savemart/ar/jmarketplace/3_harry-makle/">
-                                                                        <i class="fa fa-user"></i>
-                                                                        Harry Makle
-                                                                    </a>
-                                                                </p>
-
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-
-
-                                                                <div class="product-title" itemprop="name"><a href="http://demo.bestprestashoptheme.com/savemart/ar/home-appliance/16-323-cras-consequat-quis-dolor-eunde.html#/1-الحجم-ص/11-اللون_-اسود">Cras consequat quis dolor eunde</a></div>
-
-                                                                <div class="product-group-price">
-
-                                                                    <div class="product-price-and-shipping">
-
-
-
-                                                                        <span itemprop="price" class="price">21.60 UK£</span>
-
-
-
-                                                                        <span class="regular-price">24.00 UK£</span>
-
-
-
-
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                            <div class="product-buttons d-flex justify-content-center" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-                                                                <form action="http://demo.bestprestashoptheme.com/savemart/ar/عربة التسوق" method="post" class="formAddToCart">
-                                                                    <input type="hidden" name="token" value="28add935523ef131c8432825597b9928">
-                                                                    <input type="hidden" name="id_product" value="16">
-                                                                    <a class="add-to-cart" href="#" data-button-action="add-to-cart"><i class="novicon-cart"></i><span>أضف للسلة</span></a>
-                                                                </form>
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novblockwishlist/novblockwishlist_button.tpl -->
-
-                                                                <a class="addToWishlist wishlistProd_16" href="#" data-rel="16" onclick="WishlistCart('wishlist_block_list', 'add', '16', false, 1); return false;">
-                                                                    <i class="fa fa-heart"></i>
-                                                                    <span>Add to Wishlist</span>
-                                                                </a>
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novblockwishlist/novblockwishlist_button.tpl -->
-
-                                                                <a href="#" class="quick-view hidden-sm-down" data-link-action="quickview">
-                                                                    <i class="fa fa-search"></i><span> نظرة سريعة</span>
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="item  text-center">
-                                                <div class="d-flex flex-wrap align-items-center product-miniature js-product-miniature item-row first_item" data-id-product="17" data-id-product-attribute="328" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="col-12 col-w40 pl-0">
-                                                        <div class="thumbnail-container">
-
-                                                            <a href="http://demo.bestprestashoptheme.com/savemart/ar/camera-photo/17-328-nam-feugiat-tellus-nec-ultrices.html#/1-الحجم-ص/10-اللون_-احمر" class="thumbnail product-thumbnail two-image">
-                                                                <img
-                                                                    class="img-fluid image-cover"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/104-home_default/nam-feugiat-tellus-nec-ultrices.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/104-large_default/nam-feugiat-tellus-nec-ultrices.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                                <img
-                                                                    class="img-fluid image-secondary"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/105-home_default/nam-feugiat-tellus-nec-ultrices.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/105-large_default/nam-feugiat-tellus-nec-ultrices.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                            </a>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 col-w60 no-padding">
-                                                        <div class="product-description">
-                                                            <div class="product-groups">
-
-                                                                <!-- begin modules/novproductcomments/novproductcomments_reviews.tpl -->
-                                                                <div class="product-comments">
-                                                                    <div class="star_content">
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                    </div>
-                                                                    <span>0 review</span>
-                                                                </div>
-                                                                <!-- end modules/novproductcomments/novproductcomments_reviews.tpl -->
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-                                                                <p class="seller_name">
-                                                                    <a title="View seller profile" href="http://demo.bestprestashoptheme.com/savemart/ar/jmarketplace/3_harry-makle/">
-                                                                        <i class="fa fa-user"></i>
-                                                                        Harry Makle
-                                                                    </a>
-                                                                </p>
-
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-
-
-                                                                <div class="product-title" itemprop="name"><a href="http://demo.bestprestashoptheme.com/savemart/ar/camera-photo/17-328-nam-feugiat-tellus-nec-ultrices.html#/1-الحجم-ص/10-اللون_-احمر">Nam feugiat tellus nec ultrices</a></div>
-
-                                                                <div class="product-group-price">
-
-                                                                    <div class="product-price-and-shipping">
-
-
-
-                                                                        <span itemprop="price" class="price">12.00 UK£</span>
-
-
-
-
-
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                            <div class="product-buttons d-flex justify-content-center" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-                                                                <form action="http://demo.bestprestashoptheme.com/savemart/ar/عربة التسوق" method="post" class="formAddToCart">
-                                                                    <input type="hidden" name="token" value="28add935523ef131c8432825597b9928">
-                                                                    <input type="hidden" name="id_product" value="17">
-                                                                    <a class="add-to-cart" href="#" data-button-action="add-to-cart"><i class="novicon-cart"></i><span>أضف للسلة</span></a>
-                                                                </form>
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novblockwishlist/novblockwishlist_button.tpl -->
-
-                                                                <a class="addToWishlist wishlistProd_17" href="#" data-rel="17" onclick="WishlistCart('wishlist_block_list', 'add', '17', false, 1); return false;">
-                                                                    <i class="fa fa-heart"></i>
-                                                                    <span>Add to Wishlist</span>
-                                                                </a>
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novblockwishlist/novblockwishlist_button.tpl -->
-
-                                                                <a href="#" class="quick-view hidden-sm-down" data-link-action="quickview">
-                                                                    <i class="fa fa-search"></i><span> نظرة سريعة</span>
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex flex-wrap align-items-center product-miniature js-product-miniature item-row" data-id-product="18" data-id-product-attribute="363" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="col-12 col-w40 pl-0">
-                                                        <div class="thumbnail-container">
-
-                                                            <a href="http://demo.bestprestashoptheme.com/savemart/ar/home-appliance/18-363-mauris-semper-mattis-gravida.html#/1-الحجم-ص/10-اللون_-احمر" class="thumbnail product-thumbnail two-image">
-                                                                <img
-                                                                    class="img-fluid image-cover"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/109-home_default/mauris-semper-mattis-gravida.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/109-large_default/mauris-semper-mattis-gravida.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                                <img
-                                                                    class="img-fluid image-secondary"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/110-home_default/mauris-semper-mattis-gravida.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/110-large_default/mauris-semper-mattis-gravida.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                            </a>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 col-w60 no-padding">
-                                                        <div class="product-description">
-                                                            <div class="product-groups">
-
-                                                                <!-- begin modules/novproductcomments/novproductcomments_reviews.tpl -->
-                                                                <div class="product-comments">
-                                                                    <div class="star_content">
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                    </div>
-                                                                    <span>0 review</span>
-                                                                </div>
-                                                                <!-- end modules/novproductcomments/novproductcomments_reviews.tpl -->
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-                                                                <p class="seller_name">
-                                                                    <a title="View seller profile" href="http://demo.bestprestashoptheme.com/savemart/ar/jmarketplace/3_harry-makle/">
-                                                                        <i class="fa fa-user"></i>
-                                                                        Harry Makle
-                                                                    </a>
-                                                                </p>
-
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-
-
-                                                                <div class="product-title" itemprop="name"><a href="http://demo.bestprestashoptheme.com/savemart/ar/home-appliance/18-363-mauris-semper-mattis-gravida.html#/1-الحجم-ص/10-اللون_-احمر">Mauris semper mattis gravida</a></div>
-
-                                                                <div class="product-group-price">
-
-                                                                    <div class="product-price-and-shipping">
-
-
-
-                                                                        <span itemprop="price" class="price">18.00 UK£</span>
-
-
-
-
-
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                            <div class="product-buttons d-flex justify-content-center" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-                                                                <form action="http://demo.bestprestashoptheme.com/savemart/ar/عربة التسوق" method="post" class="formAddToCart">
-                                                                    <input type="hidden" name="token" value="28add935523ef131c8432825597b9928">
-                                                                    <input type="hidden" name="id_product" value="18">
-                                                                    <a class="add-to-cart" href="#" data-button-action="add-to-cart"><i class="novicon-cart"></i><span>أضف للسلة</span></a>
-                                                                </form>
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novblockwishlist/novblockwishlist_button.tpl -->
-
-                                                                <a class="addToWishlist wishlistProd_18" href="#" data-rel="18" onclick="WishlistCart('wishlist_block_list', 'add', '18', false, 1); return false;">
-                                                                    <i class="fa fa-heart"></i>
-                                                                    <span>Add to Wishlist</span>
-                                                                </a>
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novblockwishlist/novblockwishlist_button.tpl -->
-
-                                                                <a href="#" class="quick-view hidden-sm-down" data-link-action="quickview">
-                                                                    <i class="fa fa-search"></i><span> نظرة سريعة</span>
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex flex-wrap align-items-center product-miniature js-product-miniature item-row last_item" data-id-product="19" data-id-product-attribute="383" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="col-12 col-w40 pl-0">
-                                                        <div class="thumbnail-container">
-
-                                                            <a href="http://demo.bestprestashoptheme.com/savemart/ar/home-appliance/19-383-vivamus-non-ante-quis-est-rhont.html#/1-الحجم-ص/10-اللون_-احمر" class="thumbnail product-thumbnail two-image">
-                                                                <img
-                                                                    class="img-fluid image-cover"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/115-home_default/vivamus-non-ante-quis-est-rhont.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/115-large_default/vivamus-non-ante-quis-est-rhont.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                                <img
-                                                                    class="img-fluid image-secondary"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/116-home_default/vivamus-non-ante-quis-est-rhont.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/116-large_default/vivamus-non-ante-quis-est-rhont.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                            </a>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 col-w60 no-padding">
-                                                        <div class="product-description">
-                                                            <div class="product-groups">
-
-                                                                <!-- begin modules/novproductcomments/novproductcomments_reviews.tpl -->
-                                                                <div class="product-comments">
-                                                                    <div class="star_content">
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                    </div>
-                                                                    <span>0 review</span>
-                                                                </div>
-                                                                <!-- end modules/novproductcomments/novproductcomments_reviews.tpl -->
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-                                                                <p class="seller_name">
-                                                                    <a title="View seller profile" href="http://demo.bestprestashoptheme.com/savemart/ar/jmarketplace/3_harry-makle/">
-                                                                        <i class="fa fa-user"></i>
-                                                                        Harry Makle
-                                                                    </a>
-                                                                </p>
-
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-
-
-                                                                <div class="product-title" itemprop="name"><a href="http://demo.bestprestashoptheme.com/savemart/ar/home-appliance/19-383-vivamus-non-ante-quis-est-rhont.html#/1-الحجم-ص/10-اللون_-احمر">Vivamus non ante quis est rhont</a></div>
-
-                                                                <div class="product-group-price">
-
-                                                                    <div class="product-price-and-shipping">
-
-
-
-                                                                        <span itemprop="price" class="price">12.00 UK£</span>
-
-
-
-
-
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                            <div class="product-buttons d-flex justify-content-center" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-                                                                <form action="http://demo.bestprestashoptheme.com/savemart/ar/عربة التسوق" method="post" class="formAddToCart">
-                                                                    <input type="hidden" name="token" value="28add935523ef131c8432825597b9928">
-                                                                    <input type="hidden" name="id_product" value="19">
-                                                                    <a class="add-to-cart" href="#" data-button-action="add-to-cart"><i class="novicon-cart"></i><span>أضف للسلة</span></a>
-                                                                </form>
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novblockwishlist/novblockwishlist_button.tpl -->
-
-                                                                <a class="addToWishlist wishlistProd_19" href="#" data-rel="19" onclick="WishlistCart('wishlist_block_list', 'add', '19', false, 1); return false;">
-                                                                    <i class="fa fa-heart"></i>
-                                                                    <span>Add to Wishlist</span>
-                                                                </a>
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novblockwishlist/novblockwishlist_button.tpl -->
-
-                                                                <a href="#" class="quick-view hidden-sm-down" data-link-action="quickview">
-                                                                    <i class="fa fa-search"></i><span> نظرة سريعة</span>
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novpagemanage/views/source/productlist.tpl -->
-                        </div></div><div class="nov-row spacing-30 col-lg-12 col-xs-12" ><div class="nov-row-wrap row">
-                            <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novpagemanage/views/source/image.tpl -->
-                            <div class="nov-image col-lg-6 col-md-6">
-                                <div class="block">
-                                    <div class="block_content">
-                                        <div class="effect">
-                                            <a href="#"> <img class="img-fluid" src="/savemart/modules/novpagemanage/img/7fdfbf16d6ffe0c99cd109bd3a886527.jpg" alt="banner-4" title="banner-4"></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novpagemanage/views/source/image.tpl -->
-
-                            <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novpagemanage/views/source/image.tpl -->
-                            <div class="nov-image col-lg-6 col-md-6">
-                                <div class="block">
-                                    <div class="block_content">
-                                        <div class="effect">
-                                            <a href="#"> <img class="img-fluid" src="/savemart/modules/novpagemanage/img/64cc43a522417168a8f8418b3d783545.jpg" alt="banner-5" title="banner-5"></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novpagemanage/views/source/image.tpl -->
-                        </div></div><div class="nov-row  col-lg-12 col-xs-12" ><div class="nov-row-wrap row">
-                            <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novpagemanage/views/source/productlist.tpl -->
-
-                            <div class="nov-productlist   productlist-slider      col-xl-9 col-lg-9 col-md-9 col-xs-12 col-md-12 col-lg-12">
-                                <div class="block block-product clearfix">
-                                    <h2 class="title_block">
-                                        TRENDING NOW
-                                    </h2>
-                                    <div class="block_content">
-                                        <div id="productlist381904327" class="product_list grid owl-carousel owl-theme multi-row" data-autoplay="false" data-autoplayTimeout="6000" data-loop="false" data-margin="0" data-dots="false" data-nav="true" data-items="3" data-items_large="3" data-items_tablet="3" data-items_mobile="2" >
-                                            <div class="item  text-center">
-                                                <div class="product-miniature js-product-miniature item-one first_item" data-id-product="1" data-id-product-attribute="40" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="thumbnail-container">
-
-                                                        <a href="http://demo.bestprestashoptheme.com/savemart/ar/smartphone-tablet/1-40-hummingbird-printed-t-shirt.html#/1-الحجم-ص/6-اللون_-رمادي_داكن" class="thumbnail product-thumbnail two-image">
-                                                            <img
-                                                                class="img-fluid image-cover"
-                                                                src = "http://demo.bestprestashoptheme.com/savemart/24-home_default/hummingbird-printed-t-shirt.jpg"
-                                                                alt = ""
-                                                                data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/24-large_default/hummingbird-printed-t-shirt.jpg"
-                                                                width="600"
-                                                                height="600"
-                                                            >
-                                                            <img
-                                                                class="img-fluid image-secondary"
-                                                                src = "http://demo.bestprestashoptheme.com/savemart/25-home_default/hummingbird-printed-t-shirt.jpg"
-                                                                alt = ""
-                                                                data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/25-large_default/hummingbird-printed-t-shirt.jpg"
-                                                                width="600"
-                                                                height="600"
-                                                            >
-                                                        </a>
-
-
-
-
-
-                                                    </div>
-
-                                                    <div class="product-description">
-                                                        <div class="product-groups">
-
-                                                            <div class="category-title"><a href="http://demo.bestprestashoptheme.com/savemart/ar/smartphone-tablet/1-hummingbird-printed-t-shirt.html">Smartphone &amp; Tablet</a></div>
-
-
-                                                            <!-- begin modules/novproductcomments/novproductcomments_reviews.tpl -->
-                                                            <div class="product-comments">
-                                                                <div class="star_content">
-                                                                    <div class="star star_on"></div>
-                                                                    <div class="star star_on"></div>
-                                                                    <div class="star star_on"></div>
-                                                                    <div class="star star_on"></div>
-                                                                    <div class="star star_on"></div>
-                                                                </div>
-                                                                <span>5 review</span>
-                                                            </div>
-                                                            <!-- end modules/novproductcomments/novproductcomments_reviews.tpl -->
-
-                                                            <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-                                                            <p class="seller_name">
-                                                                <a title="View seller profile" href="http://demo.bestprestashoptheme.com/savemart/ar/jmarketplace/1_david-james/">
-                                                                    <i class="fa fa-user"></i>
-                                                                    David James
-                                                                </a>
-                                                            </p>
-
-                                                            <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-
-
-                                                            <div class="product-title" itemprop="name"><a href="http://demo.bestprestashoptheme.com/savemart/ar/smartphone-tablet/1-40-hummingbird-printed-t-shirt.html#/1-الحجم-ص/6-اللون_-رمادي_داكن">Nullam sed sollicitudin mauris</a></div>
-
-                                                            <div class="product-group-price">
-
-                                                                <div class="product-price-and-shipping">
-
-
-
-                                                                    <span itemprop="price" class="price">24.00 UK£</span>
-
-
-
-
-
-                                                                </div>
-
-                                                            </div>
-                                                        </div>
-                                                        <div class="product-buttons d-flex justify-content-center" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-                                                            <form action="http://demo.bestprestashoptheme.com/savemart/ar/عربة التسوق" method="post" class="formAddToCart">
-                                                                <input type="hidden" name="token" value="28add935523ef131c8432825597b9928">
-                                                                <input type="hidden" name="id_product" value="1">
-                                                                <a class="add-to-cart" href="#" data-button-action="add-to-cart"><i class="novicon-cart"></i><span>أضف للسلة</span></a>
-                                                            </form>
-
-                                                            <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novblockwishlist/novblockwishlist_button.tpl -->
-
-                                                            <a class="addToWishlist wishlistProd_1" href="#" data-rel="1" onclick="WishlistCart('wishlist_block_list', 'add', '1', false, 1); return false;">
-                                                                <i class="fa fa-heart"></i>
-                                                                <span>Add to Wishlist</span>
-                                                            </a>
-                                                            <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novblockwishlist/novblockwishlist_button.tpl -->
-
-                                                            <a href="#" class="quick-view hidden-sm-down" data-link-action="quickview">
-                                                                <i class="fa fa-search"></i><span> نظرة سريعة</span>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="product-miniature js-product-miniature item-one last_item" data-id-product="2" data-id-product-attribute="60" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="thumbnail-container">
-
-                                                        <a href="http://demo.bestprestashoptheme.com/savemart/ar/smartphone-tablet/2-60-brown-bear-printed-sweater.html#/1-الحجم-ص/11-اللون_-اسود" class="thumbnail product-thumbnail two-image">
-                                                            <img
-                                                                class="img-fluid image-cover"
-                                                                src = "http://demo.bestprestashoptheme.com/savemart/29-home_default/brown-bear-printed-sweater.jpg"
-                                                                alt = ""
-                                                                data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/29-large_default/brown-bear-printed-sweater.jpg"
-                                                                width="600"
-                                                                height="600"
-                                                            >
-                                                            <img
-                                                                class="img-fluid image-secondary"
-                                                                src = "http://demo.bestprestashoptheme.com/savemart/30-home_default/brown-bear-printed-sweater.jpg"
-                                                                alt = ""
-                                                                data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/30-large_default/brown-bear-printed-sweater.jpg"
-                                                                width="600"
-                                                                height="600"
-                                                            >
-                                                        </a>
-
-
-
-
-
-                                                    </div>
-
-                                                    <div class="product-description">
-                                                        <div class="product-groups">
-
-                                                            <div class="category-title"><a href="http://demo.bestprestashoptheme.com/savemart/ar/smartphone-tablet/2-brown-bear-printed-sweater.html">Smartphone &amp; Tablet</a></div>
-
-
-                                                            <!-- begin modules/novproductcomments/novproductcomments_reviews.tpl -->
-                                                            <div class="product-comments">
-                                                                <div class="star_content">
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                </div>
-                                                                <span>0 review</span>
-                                                            </div>
-                                                            <!-- end modules/novproductcomments/novproductcomments_reviews.tpl -->
-
-                                                            <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-                                                            <p class="seller_name">
-                                                                <a title="View seller profile" href="http://demo.bestprestashoptheme.com/savemart/ar/jmarketplace/1_david-james/">
-                                                                    <i class="fa fa-user"></i>
-                                                                    David James
-                                                                </a>
-                                                            </p>
-
-                                                            <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-
-
-                                                            <div class="product-title" itemprop="name"><a href="http://demo.bestprestashoptheme.com/savemart/ar/smartphone-tablet/2-60-brown-bear-printed-sweater.html#/1-الحجم-ص/11-اللون_-اسود">Lorem ipsum dolor sit amet ege</a></div>
-
-                                                            <div class="product-group-price">
-
-                                                                <div class="product-price-and-shipping">
-
-
-
-                                                                    <span itemprop="price" class="price">36.00 UK£</span>
-
-
-
-
-
-                                                                </div>
-
-                                                            </div>
-                                                        </div>
-                                                        <div class="product-buttons d-flex justify-content-center" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-                                                            <form action="http://demo.bestprestashoptheme.com/savemart/ar/عربة التسوق" method="post" class="formAddToCart">
-                                                                <input type="hidden" name="token" value="28add935523ef131c8432825597b9928">
-                                                                <input type="hidden" name="id_product" value="2">
-                                                                <a class="add-to-cart" href="#" data-button-action="add-to-cart"><i class="novicon-cart"></i><span>أضف للسلة</span></a>
-                                                            </form>
-
-                                                            <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novblockwishlist/novblockwishlist_button.tpl -->
-
-                                                            <a class="addToWishlist wishlistProd_2" href="#" data-rel="2" onclick="WishlistCart('wishlist_block_list', 'add', '2', false, 1); return false;">
-                                                                <i class="fa fa-heart"></i>
-                                                                <span>Add to Wishlist</span>
-                                                            </a>
-                                                            <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novblockwishlist/novblockwishlist_button.tpl -->
-
-                                                            <a href="#" class="quick-view hidden-sm-down" data-link-action="quickview">
-                                                                <i class="fa fa-search"></i><span> نظرة سريعة</span>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="item  text-center">
-                                                <div class="product-miniature js-product-miniature item-one first_item" data-id-product="3" data-id-product-attribute="95" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="thumbnail-container">
-
-                                                        <a href="http://demo.bestprestashoptheme.com/savemart/ar/smartphone-tablet/3-95-the-best-is-yet-to-come-framed-poster.html#/1-الحجم-ص/13-اللون_-برتقالي" class="thumbnail product-thumbnail two-image">
-                                                            <img
-                                                                class="img-fluid image-cover"
-                                                                src = "http://demo.bestprestashoptheme.com/savemart/34-home_default/the-best-is-yet-to-come-framed-poster.jpg"
-                                                                alt = ""
-                                                                data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/34-large_default/the-best-is-yet-to-come-framed-poster.jpg"
-                                                                width="600"
-                                                                height="600"
-                                                            >
-                                                            <img
-                                                                class="img-fluid image-secondary"
-                                                                src = "http://demo.bestprestashoptheme.com/savemart/35-home_default/the-best-is-yet-to-come-framed-poster.jpg"
-                                                                alt = ""
-                                                                data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/35-large_default/the-best-is-yet-to-come-framed-poster.jpg"
-                                                                width="600"
-                                                                height="600"
-                                                            >
-                                                        </a>
-
-
-
-
-
-                                                    </div>
-
-                                                    <div class="product-description">
-                                                        <div class="product-groups">
-
-                                                            <div class="category-title"><a href="http://demo.bestprestashoptheme.com/savemart/ar/smartphone-tablet/3-the-best-is-yet-to-come-framed-poster.html">Smartphone &amp; Tablet</a></div>
-
-
-                                                            <!-- begin modules/novproductcomments/novproductcomments_reviews.tpl -->
-                                                            <div class="product-comments">
-                                                                <div class="star_content">
-                                                                    <div class="star star_on"></div>
-                                                                    <div class="star star_on"></div>
-                                                                    <div class="star star_on"></div>
-                                                                    <div class="star star_on"></div>
-                                                                    <div class="star star_on"></div>
-                                                                </div>
-                                                                <span>5 review</span>
-                                                            </div>
-                                                            <!-- end modules/novproductcomments/novproductcomments_reviews.tpl -->
-
-                                                            <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-                                                            <p class="seller_name">
-                                                                <a title="View seller profile" href="http://demo.bestprestashoptheme.com/savemart/ar/jmarketplace/2_taylor-jonson/">
-                                                                    <i class="fa fa-user"></i>
-                                                                    Taylor Jonson
-                                                                </a>
-                                                            </p>
-
-                                                            <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-
-
-                                                            <div class="product-title" itemprop="name"><a href="http://demo.bestprestashoptheme.com/savemart/ar/smartphone-tablet/3-95-the-best-is-yet-to-come-framed-poster.html#/1-الحجم-ص/13-اللون_-برتقالي">Mauris molestie porttitor diam</a></div>
-
-                                                            <div class="product-group-price">
-
-                                                                <div class="product-price-and-shipping">
-
-
-
-                                                                    <span itemprop="price" class="price">30.00 UK£</span>
-
-
-
-
-
-                                                                </div>
-
-                                                            </div>
-                                                        </div>
-                                                        <div class="product-buttons d-flex justify-content-center" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-                                                            <form action="http://demo.bestprestashoptheme.com/savemart/ar/عربة التسوق" method="post" class="formAddToCart">
-                                                                <input type="hidden" name="token" value="28add935523ef131c8432825597b9928">
-                                                                <input type="hidden" name="id_product" value="3">
-                                                                <a class="add-to-cart" href="#" data-button-action="add-to-cart"><i class="novicon-cart"></i><span>أضف للسلة</span></a>
-                                                            </form>
-
-                                                            <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novblockwishlist/novblockwishlist_button.tpl -->
-
-                                                            <a class="addToWishlist wishlistProd_3" href="#" data-rel="3" onclick="WishlistCart('wishlist_block_list', 'add', '3', false, 1); return false;">
-                                                                <i class="fa fa-heart"></i>
-                                                                <span>Add to Wishlist</span>
-                                                            </a>
-                                                            <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novblockwishlist/novblockwishlist_button.tpl -->
-
-                                                            <a href="#" class="quick-view hidden-sm-down" data-link-action="quickview">
-                                                                <i class="fa fa-search"></i><span> نظرة سريعة</span>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="product-miniature js-product-miniature item-one last_item" data-id-product="4" data-id-product-attribute="112" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="thumbnail-container">
-
-                                                        <a href="http://demo.bestprestashoptheme.com/savemart/ar/home-appliance/4-112-the-adventure-begins-framed-poster.html#/1-الحجم-ص/9-اللون_-ابيض_مطفي" class="thumbnail product-thumbnail two-image">
-                                                            <img
-                                                                class="img-fluid image-cover"
-                                                                src = "http://demo.bestprestashoptheme.com/savemart/39-home_default/the-adventure-begins-framed-poster.jpg"
-                                                                alt = ""
-                                                                data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/39-large_default/the-adventure-begins-framed-poster.jpg"
-                                                                width="600"
-                                                                height="600"
-                                                            >
-                                                            <img
-                                                                class="img-fluid image-secondary"
-                                                                src = "http://demo.bestprestashoptheme.com/savemart/43-home_default/the-adventure-begins-framed-poster.jpg"
-                                                                alt = ""
-                                                                data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/43-large_default/the-adventure-begins-framed-poster.jpg"
-                                                                width="600"
-                                                                height="600"
-                                                            >
-                                                        </a>
-
-
-
-
-
-                                                    </div>
-
-                                                    <div class="product-description">
-                                                        <div class="product-groups">
-
-                                                            <div class="category-title"><a href="http://demo.bestprestashoptheme.com/savemart/ar/home-appliance/4-the-adventure-begins-framed-poster.html">Home Appliance</a></div>
-
-
-                                                            <!-- begin modules/novproductcomments/novproductcomments_reviews.tpl -->
-                                                            <div class="product-comments">
-                                                                <div class="star_content">
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                </div>
-                                                                <span>0 review</span>
-                                                            </div>
-                                                            <!-- end modules/novproductcomments/novproductcomments_reviews.tpl -->
-
-                                                            <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-                                                            <p class="seller_name">
-                                                                <a title="View seller profile" href="http://demo.bestprestashoptheme.com/savemart/ar/jmarketplace/2_taylor-jonson/">
-                                                                    <i class="fa fa-user"></i>
-                                                                    Taylor Jonson
-                                                                </a>
-                                                            </p>
-
-                                                            <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-
-
-                                                            <div class="product-title" itemprop="name"><a href="http://demo.bestprestashoptheme.com/savemart/ar/home-appliance/4-112-the-adventure-begins-framed-poster.html#/1-الحجم-ص/9-اللون_-ابيض_مطفي">Maecenas vulputate ligula vel</a></div>
-
-                                                            <div class="product-group-price">
-
-                                                                <div class="product-price-and-shipping">
-
-
-
-                                                                    <span itemprop="price" class="price">18.00 UK£</span>
-
-
-
-
-
-                                                                </div>
-
-                                                            </div>
-                                                        </div>
-                                                        <div class="product-buttons d-flex justify-content-center" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-                                                            <form action="http://demo.bestprestashoptheme.com/savemart/ar/عربة التسوق" method="post" class="formAddToCart">
-                                                                <input type="hidden" name="token" value="28add935523ef131c8432825597b9928">
-                                                                <input type="hidden" name="id_product" value="4">
-                                                                <a class="add-to-cart" href="#" data-button-action="add-to-cart"><i class="novicon-cart"></i><span>أضف للسلة</span></a>
-                                                            </form>
-
-                                                            <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novblockwishlist/novblockwishlist_button.tpl -->
-
-                                                            <a class="addToWishlist wishlistProd_4" href="#" data-rel="4" onclick="WishlistCart('wishlist_block_list', 'add', '4', false, 1); return false;">
-                                                                <i class="fa fa-heart"></i>
-                                                                <span>Add to Wishlist</span>
-                                                            </a>
-                                                            <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novblockwishlist/novblockwishlist_button.tpl -->
-
-                                                            <a href="#" class="quick-view hidden-sm-down" data-link-action="quickview">
-                                                                <i class="fa fa-search"></i><span> نظرة سريعة</span>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="item  text-center">
-                                                <div class="product-miniature js-product-miniature item-one first_item" data-id-product="5" data-id-product-attribute="134" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="thumbnail-container">
-
-                                                        <a href="http://demo.bestprestashoptheme.com/savemart/ar/audio/5-134-today-is-a-good-day-framed-poster.html#/1-الحجم-ص/13-اللون_-برتقالي" class="thumbnail product-thumbnail two-image">
-                                                            <img
-                                                                class="img-fluid image-cover"
-                                                                src = "http://demo.bestprestashoptheme.com/savemart/44-home_default/today-is-a-good-day-framed-poster.jpg"
-                                                                alt = ""
-                                                                data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/44-large_default/today-is-a-good-day-framed-poster.jpg"
-                                                                width="600"
-                                                                height="600"
-                                                            >
-                                                            <img
-                                                                class="img-fluid image-secondary"
-                                                                src = "http://demo.bestprestashoptheme.com/savemart/45-home_default/today-is-a-good-day-framed-poster.jpg"
-                                                                alt = ""
-                                                                data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/45-large_default/today-is-a-good-day-framed-poster.jpg"
-                                                                width="600"
-                                                                height="600"
-                                                            >
-                                                        </a>
-
-
-
-
-
-                                                    </div>
-
-                                                    <div class="product-description">
-                                                        <div class="product-groups">
-
-                                                            <div class="category-title"><a href="http://demo.bestprestashoptheme.com/savemart/ar/audio/5-today-is-a-good-day-framed-poster.html">Audio</a></div>
-
-
-                                                            <!-- begin modules/novproductcomments/novproductcomments_reviews.tpl -->
-                                                            <div class="product-comments">
-                                                                <div class="star_content">
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                </div>
-                                                                <span>0 review</span>
-                                                            </div>
-                                                            <!-- end modules/novproductcomments/novproductcomments_reviews.tpl -->
-
-                                                            <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-                                                            <p class="seller_name">
-                                                                <a title="View seller profile" href="http://demo.bestprestashoptheme.com/savemart/ar/jmarketplace/2_taylor-jonson/">
-                                                                    <i class="fa fa-user"></i>
-                                                                    Taylor Jonson
-                                                                </a>
-                                                            </p>
-
-                                                            <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-
-
-                                                            <div class="product-title" itemprop="name"><a href="http://demo.bestprestashoptheme.com/savemart/ar/audio/5-134-today-is-a-good-day-framed-poster.html#/1-الحجم-ص/13-اللون_-برتقالي">Vehicula vel tempus sit amet ulte</a></div>
-
-                                                            <div class="product-group-price">
-
-                                                                <div class="product-price-and-shipping">
-
-
-
-                                                                    <span itemprop="price" class="price">34.80 UK£</span>
-
-
-
-
-
-                                                                </div>
-
-                                                            </div>
-                                                        </div>
-                                                        <div class="product-buttons d-flex justify-content-center" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-                                                            <form action="http://demo.bestprestashoptheme.com/savemart/ar/عربة التسوق" method="post" class="formAddToCart">
-                                                                <input type="hidden" name="token" value="28add935523ef131c8432825597b9928">
-                                                                <input type="hidden" name="id_product" value="5">
-                                                                <a class="add-to-cart" href="#" data-button-action="add-to-cart"><i class="novicon-cart"></i><span>أضف للسلة</span></a>
-                                                            </form>
-
-                                                            <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novblockwishlist/novblockwishlist_button.tpl -->
-
-                                                            <a class="addToWishlist wishlistProd_5" href="#" data-rel="5" onclick="WishlistCart('wishlist_block_list', 'add', '5', false, 1); return false;">
-                                                                <i class="fa fa-heart"></i>
-                                                                <span>Add to Wishlist</span>
-                                                            </a>
-                                                            <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novblockwishlist/novblockwishlist_button.tpl -->
-
-                                                            <a href="#" class="quick-view hidden-sm-down" data-link-action="quickview">
-                                                                <i class="fa fa-search"></i><span> نظرة سريعة</span>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="product-miniature js-product-miniature item-one last_item" data-id-product="6" data-id-product-attribute="0" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="thumbnail-container">
-
-                                                        <a href="http://demo.bestprestashoptheme.com/savemart/ar/home-appliance/6-nullam-tempor-orci-eu-pretium.html" class="thumbnail product-thumbnail two-image">
-                                                            <img
-                                                                class="img-fluid image-cover"
-                                                                src = "http://demo.bestprestashoptheme.com/savemart/49-home_default/nullam-tempor-orci-eu-pretium.jpg"
-                                                                alt = ""
-                                                                data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/49-large_default/nullam-tempor-orci-eu-pretium.jpg"
-                                                                width="600"
-                                                                height="600"
-                                                            >
-                                                            <img
-                                                                class="img-fluid image-secondary"
-                                                                src = "http://demo.bestprestashoptheme.com/savemart/50-home_default/nullam-tempor-orci-eu-pretium.jpg"
-                                                                alt = ""
-                                                                data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/50-large_default/nullam-tempor-orci-eu-pretium.jpg"
-                                                                width="600"
-                                                                height="600"
-                                                            >
-                                                        </a>
-
-
-
-
-
-                                                    </div>
-
-                                                    <div class="product-description">
-                                                        <div class="product-groups">
-
-                                                            <div class="category-title"><a href="http://demo.bestprestashoptheme.com/savemart/ar/home-appliance/6-nullam-tempor-orci-eu-pretium.html">Home Appliance</a></div>
-
-
-                                                            <!-- begin modules/novproductcomments/novproductcomments_reviews.tpl -->
-                                                            <div class="product-comments">
-                                                                <div class="star_content">
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                </div>
-                                                                <span>0 review</span>
-                                                            </div>
-                                                            <!-- end modules/novproductcomments/novproductcomments_reviews.tpl -->
-
-                                                            <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-                                                            <p class="seller_name">
-                                                                <a title="View seller profile" href="http://demo.bestprestashoptheme.com/savemart/ar/jmarketplace/2_taylor-jonson/">
-                                                                    <i class="fa fa-user"></i>
-                                                                    Taylor Jonson
-                                                                </a>
-                                                            </p>
-
-                                                            <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-
-
-                                                            <div class="product-title" itemprop="name"><a href="http://demo.bestprestashoptheme.com/savemart/ar/home-appliance/6-nullam-tempor-orci-eu-pretium.html">Nullam tempor orci eu pretium</a></div>
-
-                                                            <div class="product-group-price">
-
-                                                                <div class="product-price-and-shipping">
-
-
-
-                                                                    <span itemprop="price" class="price">14.28 UK£</span>
-
-
-
-
-
-                                                                </div>
-
-                                                            </div>
-                                                        </div>
-                                                        <div class="product-buttons d-flex justify-content-center" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-                                                            <form action="http://demo.bestprestashoptheme.com/savemart/ar/عربة التسوق" method="post" class="formAddToCart">
-                                                                <input type="hidden" name="token" value="28add935523ef131c8432825597b9928">
-                                                                <input type="hidden" name="id_product" value="6">
-                                                                <a class="add-to-cart" href="#" data-button-action="add-to-cart"><i class="novicon-cart"></i><span>أضف للسلة</span></a>
-                                                            </form>
-
-                                                            <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novblockwishlist/novblockwishlist_button.tpl -->
-
-                                                            <a class="addToWishlist wishlistProd_6" href="#" data-rel="6" onclick="WishlistCart('wishlist_block_list', 'add', '6', false, 1); return false;">
-                                                                <i class="fa fa-heart"></i>
-                                                                <span>Add to Wishlist</span>
-                                                            </a>
-                                                            <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novblockwishlist/novblockwishlist_button.tpl -->
-
-                                                            <a href="#" class="quick-view hidden-sm-down" data-link-action="quickview">
-                                                                <i class="fa fa-search"></i><span> نظرة سريعة</span>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="item  text-center">
-                                                <div class="product-miniature js-product-miniature item-one first_item" data-id-product="7" data-id-product-attribute="155" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="thumbnail-container">
-
-                                                        <a href="http://demo.bestprestashoptheme.com/savemart/ar/home-appliance/7-155-donec-non-lectus-ac-erat-sedei.html#/1-الحجم-ص/10-اللون_-احمر" class="thumbnail product-thumbnail two-image">
-                                                            <img
-                                                                class="img-fluid image-cover"
-                                                                src = "http://demo.bestprestashoptheme.com/savemart/54-home_default/donec-non-lectus-ac-erat-sedei.jpg"
-                                                                alt = ""
-                                                                data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/54-large_default/donec-non-lectus-ac-erat-sedei.jpg"
-                                                                width="600"
-                                                                height="600"
-                                                            >
-                                                            <img
-                                                                class="img-fluid image-secondary"
-                                                                src = "http://demo.bestprestashoptheme.com/savemart/55-home_default/donec-non-lectus-ac-erat-sedei.jpg"
-                                                                alt = ""
-                                                                data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/55-large_default/donec-non-lectus-ac-erat-sedei.jpg"
-                                                                width="600"
-                                                                height="600"
-                                                            >
-                                                        </a>
-
-
-
-
-
-                                                    </div>
-
-                                                    <div class="product-description">
-                                                        <div class="product-groups">
-
-                                                            <div class="category-title"><a href="http://demo.bestprestashoptheme.com/savemart/ar/home-appliance/7-donec-non-lectus-ac-erat-sedei.html">Home Appliance</a></div>
-
-
-                                                            <!-- begin modules/novproductcomments/novproductcomments_reviews.tpl -->
-                                                            <div class="product-comments">
-                                                                <div class="star_content">
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                </div>
-                                                                <span>0 review</span>
-                                                            </div>
-                                                            <!-- end modules/novproductcomments/novproductcomments_reviews.tpl -->
-
-                                                            <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-                                                            <p class="seller_name">
-                                                                <a title="View seller profile" href="http://demo.bestprestashoptheme.com/savemart/ar/jmarketplace/2_taylor-jonson/">
-                                                                    <i class="fa fa-user"></i>
-                                                                    Taylor Jonson
-                                                                </a>
-                                                            </p>
-
-                                                            <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-
-
-                                                            <div class="product-title" itemprop="name"><a href="http://demo.bestprestashoptheme.com/savemart/ar/home-appliance/7-155-donec-non-lectus-ac-erat-sedei.html#/1-الحجم-ص/10-اللون_-احمر">Donec non lectus ac erat sedei</a></div>
-
-                                                            <div class="product-group-price">
-
-                                                                <div class="product-price-and-shipping">
-
-
-
-                                                                    <span itemprop="price" class="price">14.28 UK£</span>
-
-
-
-
-
-                                                                </div>
-
-                                                            </div>
-                                                        </div>
-                                                        <div class="product-buttons d-flex justify-content-center" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-                                                            <form action="http://demo.bestprestashoptheme.com/savemart/ar/عربة التسوق" method="post" class="formAddToCart">
-                                                                <input type="hidden" name="token" value="28add935523ef131c8432825597b9928">
-                                                                <input type="hidden" name="id_product" value="7">
-                                                                <a class="add-to-cart" href="#" data-button-action="add-to-cart"><i class="novicon-cart"></i><span>أضف للسلة</span></a>
-                                                            </form>
-
-                                                            <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novblockwishlist/novblockwishlist_button.tpl -->
-
-                                                            <a class="addToWishlist wishlistProd_7" href="#" data-rel="7" onclick="WishlistCart('wishlist_block_list', 'add', '7', false, 1); return false;">
-                                                                <i class="fa fa-heart"></i>
-                                                                <span>Add to Wishlist</span>
-                                                            </a>
-                                                            <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novblockwishlist/novblockwishlist_button.tpl -->
-
-                                                            <a href="#" class="quick-view hidden-sm-down" data-link-action="quickview">
-                                                                <i class="fa fa-search"></i><span> نظرة سريعة</span>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="product-miniature js-product-miniature item-one last_item" data-id-product="8" data-id-product-attribute="172" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="thumbnail-container">
-
-                                                        <a href="http://demo.bestprestashoptheme.com/savemart/ar/audio/8-172-curabitur-in-lorem-sit-ameten-alt.html#/1-الحجم-ص/10-اللون_-احمر" class="thumbnail product-thumbnail two-image">
-                                                            <img
-                                                                class="img-fluid image-cover"
-                                                                src = "http://demo.bestprestashoptheme.com/savemart/59-home_default/curabitur-in-lorem-sit-ameten-alt.jpg"
-                                                                alt = ""
-                                                                data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/59-large_default/curabitur-in-lorem-sit-ameten-alt.jpg"
-                                                                width="600"
-                                                                height="600"
-                                                            >
-                                                            <img
-                                                                class="img-fluid image-secondary"
-                                                                src = "http://demo.bestprestashoptheme.com/savemart/60-home_default/curabitur-in-lorem-sit-ameten-alt.jpg"
-                                                                alt = ""
-                                                                data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/60-large_default/curabitur-in-lorem-sit-ameten-alt.jpg"
-                                                                width="600"
-                                                                height="600"
-                                                            >
-                                                        </a>
-
-
-
-
-
-                                                    </div>
-
-                                                    <div class="product-description">
-                                                        <div class="product-groups">
-
-                                                            <div class="category-title"><a href="http://demo.bestprestashoptheme.com/savemart/ar/audio/8-curabitur-in-lorem-sit-ameten-alt.html">Audio</a></div>
-
-
-                                                            <!-- begin modules/novproductcomments/novproductcomments_reviews.tpl -->
-                                                            <div class="product-comments">
-                                                                <div class="star_content">
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                </div>
-                                                                <span>0 review</span>
-                                                            </div>
-                                                            <!-- end modules/novproductcomments/novproductcomments_reviews.tpl -->
-
-                                                            <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-                                                            <p class="seller_name">
-                                                                <a title="View seller profile" href="http://demo.bestprestashoptheme.com/savemart/ar/jmarketplace/2_taylor-jonson/">
-                                                                    <i class="fa fa-user"></i>
-                                                                    Taylor Jonson
-                                                                </a>
-                                                            </p>
-
-                                                            <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-
-
-                                                            <div class="product-title" itemprop="name"><a href="http://demo.bestprestashoptheme.com/savemart/ar/audio/8-172-curabitur-in-lorem-sit-ameten-alt.html#/1-الحجم-ص/10-اللون_-احمر">Curabitur in lorem sit ameten alt</a></div>
-
-                                                            <div class="product-group-price">
-
-                                                                <div class="product-price-and-shipping">
-
-
-
-                                                                    <span itemprop="price" class="price">18.00 UK£</span>
-
-
-
-
-
-                                                                </div>
-
-                                                            </div>
-                                                        </div>
-                                                        <div class="product-buttons d-flex justify-content-center" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-                                                            <form action="http://demo.bestprestashoptheme.com/savemart/ar/عربة التسوق" method="post" class="formAddToCart">
-                                                                <input type="hidden" name="token" value="28add935523ef131c8432825597b9928">
-                                                                <input type="hidden" name="id_product" value="8">
-                                                                <a class="add-to-cart" href="#" data-button-action="add-to-cart"><i class="novicon-cart"></i><span>أضف للسلة</span></a>
-                                                            </form>
-
-                                                            <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novblockwishlist/novblockwishlist_button.tpl -->
-
-                                                            <a class="addToWishlist wishlistProd_8" href="#" data-rel="8" onclick="WishlistCart('wishlist_block_list', 'add', '8', false, 1); return false;">
-                                                                <i class="fa fa-heart"></i>
-                                                                <span>Add to Wishlist</span>
-                                                            </a>
-                                                            <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novblockwishlist/novblockwishlist_button.tpl -->
-
-                                                            <a href="#" class="quick-view hidden-sm-down" data-link-action="quickview">
-                                                                <i class="fa fa-search"></i><span> نظرة سريعة</span>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="item  text-center">
-                                                <div class="product-miniature js-product-miniature item-one first_item" data-id-product="9" data-id-product-attribute="179" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="thumbnail-container">
-
-                                                        <a href="http://demo.bestprestashoptheme.com/savemart/ar/smartphone-tablet/9-179-mauris-feugiat-et-dui-sit-amet.html#/1-الحجم-ص/15-اللون_-اخضر" class="thumbnail product-thumbnail two-image">
-                                                            <img
-                                                                class="img-fluid image-cover"
-                                                                src = "http://demo.bestprestashoptheme.com/savemart/64-home_default/mauris-feugiat-et-dui-sit-amet.jpg"
-                                                                alt = ""
-                                                                data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/64-large_default/mauris-feugiat-et-dui-sit-amet.jpg"
-                                                                width="600"
-                                                                height="600"
-                                                            >
-                                                            <img
-                                                                class="img-fluid image-secondary"
-                                                                src = "http://demo.bestprestashoptheme.com/savemart/65-home_default/mauris-feugiat-et-dui-sit-amet.jpg"
-                                                                alt = ""
-                                                                data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/65-large_default/mauris-feugiat-et-dui-sit-amet.jpg"
-                                                                width="600"
-                                                                height="600"
-                                                            >
-                                                        </a>
-
-
-
-
-
-                                                    </div>
-
-                                                    <div class="product-description">
-                                                        <div class="product-groups">
-
-                                                            <div class="category-title"><a href="http://demo.bestprestashoptheme.com/savemart/ar/smartphone-tablet/9-mauris-feugiat-et-dui-sit-amet.html">Smartphone &amp; Tablet</a></div>
-
-
-                                                            <!-- begin modules/novproductcomments/novproductcomments_reviews.tpl -->
-                                                            <div class="product-comments">
-                                                                <div class="star_content">
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                </div>
-                                                                <span>0 review</span>
-                                                            </div>
-                                                            <!-- end modules/novproductcomments/novproductcomments_reviews.tpl -->
-
-                                                            <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-                                                            <p class="seller_name">
-                                                                <a title="View seller profile" href="http://demo.bestprestashoptheme.com/savemart/ar/jmarketplace/3_harry-makle/">
-                                                                    <i class="fa fa-user"></i>
-                                                                    Harry Makle
-                                                                </a>
-                                                            </p>
-
-                                                            <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-
-
-                                                            <div class="product-title" itemprop="name"><a href="http://demo.bestprestashoptheme.com/savemart/ar/smartphone-tablet/9-179-mauris-feugiat-et-dui-sit-amet.html#/1-الحجم-ص/15-اللون_-اخضر">Mauris feugiat et dui sit amet</a></div>
-
-                                                            <div class="product-group-price">
-
-                                                                <div class="product-price-and-shipping">
-
-
-
-                                                                    <span itemprop="price" class="price">24.00 UK£</span>
-
-
-
-
-
-                                                                </div>
-
-                                                            </div>
-                                                        </div>
-                                                        <div class="product-buttons d-flex justify-content-center" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-                                                            <form action="http://demo.bestprestashoptheme.com/savemart/ar/عربة التسوق" method="post" class="formAddToCart">
-                                                                <input type="hidden" name="token" value="28add935523ef131c8432825597b9928">
-                                                                <input type="hidden" name="id_product" value="9">
-                                                                <a class="add-to-cart" href="#" data-button-action="add-to-cart"><i class="novicon-cart"></i><span>أضف للسلة</span></a>
-                                                            </form>
-
-                                                            <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novblockwishlist/novblockwishlist_button.tpl -->
-
-                                                            <a class="addToWishlist wishlistProd_9" href="#" data-rel="9" onclick="WishlistCart('wishlist_block_list', 'add', '9', false, 1); return false;">
-                                                                <i class="fa fa-heart"></i>
-                                                                <span>Add to Wishlist</span>
-                                                            </a>
-                                                            <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novblockwishlist/novblockwishlist_button.tpl -->
-
-                                                            <a href="#" class="quick-view hidden-sm-down" data-link-action="quickview">
-                                                                <i class="fa fa-search"></i><span> نظرة سريعة</span>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="product-miniature js-product-miniature item-one last_item" data-id-product="10" data-id-product-attribute="192" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="thumbnail-container">
-
-                                                        <a href="http://demo.bestprestashoptheme.com/savemart/ar/smartphone-tablet/10-192-nullam-lacinia-metus-posuere.html#/1-الحجم-ص/18-اللون_-وردي" class="thumbnail product-thumbnail two-image">
-                                                            <img
-                                                                class="img-fluid image-cover"
-                                                                src = "http://demo.bestprestashoptheme.com/savemart/69-home_default/nullam-lacinia-metus-posuere.jpg"
-                                                                alt = ""
-                                                                data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/69-large_default/nullam-lacinia-metus-posuere.jpg"
-                                                                width="600"
-                                                                height="600"
-                                                            >
-                                                            <img
-                                                                class="img-fluid image-secondary"
-                                                                src = "http://demo.bestprestashoptheme.com/savemart/70-home_default/nullam-lacinia-metus-posuere.jpg"
-                                                                alt = ""
-                                                                data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/70-large_default/nullam-lacinia-metus-posuere.jpg"
-                                                                width="600"
-                                                                height="600"
-                                                            >
-                                                        </a>
-
-
-
-
-
-                                                    </div>
-
-                                                    <div class="product-description">
-                                                        <div class="product-groups">
-
-                                                            <div class="category-title"><a href="http://demo.bestprestashoptheme.com/savemart/ar/smartphone-tablet/10-nullam-lacinia-metus-posuere.html">Smartphone &amp; Tablet</a></div>
-
-
-                                                            <!-- begin modules/novproductcomments/novproductcomments_reviews.tpl -->
-                                                            <div class="product-comments">
-                                                                <div class="star_content">
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                </div>
-                                                                <span>0 review</span>
-                                                            </div>
-                                                            <!-- end modules/novproductcomments/novproductcomments_reviews.tpl -->
-
-                                                            <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-                                                            <p class="seller_name">
-                                                                <a title="View seller profile" href="http://demo.bestprestashoptheme.com/savemart/ar/jmarketplace/3_harry-makle/">
-                                                                    <i class="fa fa-user"></i>
-                                                                    Harry Makle
-                                                                </a>
-                                                            </p>
-
-                                                            <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-
-
-                                                            <div class="product-title" itemprop="name"><a href="http://demo.bestprestashoptheme.com/savemart/ar/smartphone-tablet/10-192-nullam-lacinia-metus-posuere.html#/1-الحجم-ص/18-اللون_-وردي">Nullam lacinia metus posuere</a></div>
-
-                                                            <div class="product-group-price">
-
-                                                                <div class="product-price-and-shipping">
-
-
-
-                                                                    <span itemprop="price" class="price">36.00 UK£</span>
-
-
-
-
-
-                                                                </div>
-
-                                                            </div>
-                                                        </div>
-                                                        <div class="product-buttons d-flex justify-content-center" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-                                                            <form action="http://demo.bestprestashoptheme.com/savemart/ar/عربة التسوق" method="post" class="formAddToCart">
-                                                                <input type="hidden" name="token" value="28add935523ef131c8432825597b9928">
-                                                                <input type="hidden" name="id_product" value="10">
-                                                                <a class="add-to-cart" href="#" data-button-action="add-to-cart"><i class="novicon-cart"></i><span>أضف للسلة</span></a>
-                                                            </form>
-
-                                                            <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novblockwishlist/novblockwishlist_button.tpl -->
-
-                                                            <a class="addToWishlist wishlistProd_10" href="#" data-rel="10" onclick="WishlistCart('wishlist_block_list', 'add', '10', false, 1); return false;">
-                                                                <i class="fa fa-heart"></i>
-                                                                <span>Add to Wishlist</span>
-                                                            </a>
-                                                            <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novblockwishlist/novblockwishlist_button.tpl -->
-
-                                                            <a href="#" class="quick-view hidden-sm-down" data-link-action="quickview">
-                                                                <i class="fa fa-search"></i><span> نظرة سريعة</span>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="item  text-center">
-                                                <div class="product-miniature js-product-miniature item-one first_item" data-id-product="12" data-id-product-attribute="232" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="thumbnail-container">
-
-                                                        <a href="http://demo.bestprestashoptheme.com/savemart/ar/home-appliance/12-232-nam-volutpat-justo-a-vehicula.html#/1-الحجم-ص/11-اللون_-اسود" class="thumbnail product-thumbnail two-image">
-                                                            <img
-                                                                class="img-fluid image-cover"
-                                                                src = "http://demo.bestprestashoptheme.com/savemart/79-home_default/nam-volutpat-justo-a-vehicula.jpg"
-                                                                alt = ""
-                                                                data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/79-large_default/nam-volutpat-justo-a-vehicula.jpg"
-                                                                width="600"
-                                                                height="600"
-                                                            >
-                                                            <img
-                                                                class="img-fluid image-secondary"
-                                                                src = "http://demo.bestprestashoptheme.com/savemart/80-home_default/nam-volutpat-justo-a-vehicula.jpg"
-                                                                alt = ""
-                                                                data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/80-large_default/nam-volutpat-justo-a-vehicula.jpg"
-                                                                width="600"
-                                                                height="600"
-                                                            >
-                                                        </a>
-
-
-                                                        <div class="product-flags discount">Sale</div>
-
-
-
-                                                    </div>
-
-                                                    <div class="product-description">
-                                                        <div class="product-groups">
-
-                                                            <div class="category-title"><a href="http://demo.bestprestashoptheme.com/savemart/ar/home-appliance/12-nam-volutpat-justo-a-vehicula.html">Home Appliance</a></div>
-
-
-                                                            <!-- begin modules/novproductcomments/novproductcomments_reviews.tpl -->
-                                                            <div class="product-comments">
-                                                                <div class="star_content">
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                </div>
-                                                                <span>0 review</span>
-                                                            </div>
-                                                            <!-- end modules/novproductcomments/novproductcomments_reviews.tpl -->
-
-                                                            <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-                                                            <p class="seller_name">
-                                                                <a title="View seller profile" href="http://demo.bestprestashoptheme.com/savemart/ar/jmarketplace/3_harry-makle/">
-                                                                    <i class="fa fa-user"></i>
-                                                                    Harry Makle
-                                                                </a>
-                                                            </p>
-
-                                                            <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-
-
-                                                            <div class="product-title" itemprop="name"><a href="http://demo.bestprestashoptheme.com/savemart/ar/home-appliance/12-232-nam-volutpat-justo-a-vehicula.html#/1-الحجم-ص/11-اللون_-اسود">Nam volutpat justo a vehicula</a></div>
-
-                                                            <div class="product-group-price">
-
-                                                                <div class="product-price-and-shipping">
-
-
-
-                                                                    <span itemprop="price" class="price">7.56 UK£</span>
-
-
-
-                                                                    <span class="regular-price">10.80 UK£</span>
-
-
-
-
-                                                                </div>
-
-                                                            </div>
-                                                        </div>
-                                                        <div class="product-buttons d-flex justify-content-center" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-                                                            <form action="http://demo.bestprestashoptheme.com/savemart/ar/عربة التسوق" method="post" class="formAddToCart">
-                                                                <input type="hidden" name="token" value="28add935523ef131c8432825597b9928">
-                                                                <input type="hidden" name="id_product" value="12">
-                                                                <a class="add-to-cart" href="#" data-button-action="add-to-cart"><i class="novicon-cart"></i><span>أضف للسلة</span></a>
-                                                            </form>
-
-                                                            <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novblockwishlist/novblockwishlist_button.tpl -->
-
-                                                            <a class="addToWishlist wishlistProd_12" href="#" data-rel="12" onclick="WishlistCart('wishlist_block_list', 'add', '12', false, 1); return false;">
-                                                                <i class="fa fa-heart"></i>
-                                                                <span>Add to Wishlist</span>
-                                                            </a>
-                                                            <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novblockwishlist/novblockwishlist_button.tpl -->
-
-                                                            <a href="#" class="quick-view hidden-sm-down" data-link-action="quickview">
-                                                                <i class="fa fa-search"></i><span> نظرة سريعة</span>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="product-miniature js-product-miniature item-one last_item" data-id-product="13" data-id-product-attribute="254" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="thumbnail-container">
-
-                                                        <a href="http://demo.bestprestashoptheme.com/savemart/ar/audio/13-254-proin-placerat-lacus-eget-auctor.html#/1-الحجم-ص/10-اللون_-احمر" class="thumbnail product-thumbnail two-image">
-                                                            <img
-                                                                class="img-fluid image-cover"
-                                                                src = "http://demo.bestprestashoptheme.com/savemart/84-home_default/proin-placerat-lacus-eget-auctor.jpg"
-                                                                alt = ""
-                                                                data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/84-large_default/proin-placerat-lacus-eget-auctor.jpg"
-                                                                width="600"
-                                                                height="600"
-                                                            >
-                                                            <img
-                                                                class="img-fluid image-secondary"
-                                                                src = "http://demo.bestprestashoptheme.com/savemart/85-home_default/proin-placerat-lacus-eget-auctor.jpg"
-                                                                alt = ""
-                                                                data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/85-large_default/proin-placerat-lacus-eget-auctor.jpg"
-                                                                width="600"
-                                                                height="600"
-                                                            >
-                                                        </a>
-
-
-
-
-
-                                                    </div>
-
-                                                    <div class="product-description">
-                                                        <div class="product-groups">
-
-                                                            <div class="category-title"><a href="http://demo.bestprestashoptheme.com/savemart/ar/audio/13-proin-placerat-lacus-eget-auctor.html">Audio</a></div>
-
-
-                                                            <!-- begin modules/novproductcomments/novproductcomments_reviews.tpl -->
-                                                            <div class="product-comments">
-                                                                <div class="star_content">
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                    <div class="star"></div>
-                                                                </div>
-                                                                <span>0 review</span>
-                                                            </div>
-                                                            <!-- end modules/novproductcomments/novproductcomments_reviews.tpl -->
-
-                                                            <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-                                                            <p class="seller_name">
-                                                                <a title="View seller profile" href="http://demo.bestprestashoptheme.com/savemart/ar/jmarketplace/1_david-james/">
-                                                                    <i class="fa fa-user"></i>
-                                                                    David James
-                                                                </a>
-                                                            </p>
-
-                                                            <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-
-
-                                                            <div class="product-title" itemprop="name"><a href="http://demo.bestprestashoptheme.com/savemart/ar/audio/13-254-proin-placerat-lacus-eget-auctor.html#/1-الحجم-ص/10-اللون_-احمر">Proin placerat lacus eget auctor</a></div>
-
-                                                            <div class="product-group-price">
-
-                                                                <div class="product-price-and-shipping">
-
-
-
-                                                                    <span itemprop="price" class="price">12.00 UK£</span>
-
-
-
-
-
-                                                                </div>
-
-                                                            </div>
-                                                        </div>
-                                                        <div class="product-buttons d-flex justify-content-center" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-                                                            <form action="http://demo.bestprestashoptheme.com/savemart/ar/عربة التسوق" method="post" class="formAddToCart">
-                                                                <input type="hidden" name="token" value="28add935523ef131c8432825597b9928">
-                                                                <input type="hidden" name="id_product" value="13">
-                                                                <a class="add-to-cart" href="#" data-button-action="add-to-cart"><i class="novicon-cart"></i><span>أضف للسلة</span></a>
-                                                            </form>
-
-                                                            <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novblockwishlist/novblockwishlist_button.tpl -->
-
-                                                            <a class="addToWishlist wishlistProd_13" href="#" data-rel="13" onclick="WishlistCart('wishlist_block_list', 'add', '13', false, 1); return false;">
-                                                                <i class="fa fa-heart"></i>
-                                                                <span>Add to Wishlist</span>
-                                                            </a>
-                                                            <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novblockwishlist/novblockwishlist_button.tpl -->
-
-                                                            <a href="#" class="quick-view hidden-sm-down" data-link-action="quickview">
-                                                                <i class="fa fa-search"></i><span> نظرة سريعة</span>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novpagemanage/views/source/productlist.tpl -->
-
-                            <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novpagemanage/views/source/productlist.tpl -->
-
-                            <div class="nov-productlist     productlist-liststyle-2  col-xl-3 col-lg-3 col-md-3 col-xs-12 col-md-12 col-lg-12">
-                                <div class="block block-product clearfix">
-                                    <h2 class="title_block">
-                                        BEST SELLERS
-                                    </h2>
-                                    <div class="block_content">
-                                        <div id="productlist331208303" class="product_list grid owl-carousel owl-theme multi-row" data-autoplay="false" data-autoplayTimeout="6000" data-loop="false" data-margin="0" data-dots="false" data-nav="true" data-items="1" data-items_large="3" data-items_tablet="2" data-items_mobile="1" >
-                                            <div class="item  text-center">
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature  first_item" data-id-product="1" data-id-product-attribute="40" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="col-12 col-w37 no-padding">
-                                                        <div class="thumbnail-container">
-
-                                                            <a href="http://demo.bestprestashoptheme.com/savemart/ar/smartphone-tablet/1-40-hummingbird-printed-t-shirt.html#/1-الحجم-ص/6-اللون_-رمادي_داكن" class="thumbnail product-thumbnail two-image">
-                                                                <img
-                                                                    class="img-fluid image-cover"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/24-home_default/hummingbird-printed-t-shirt.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/24-large_default/hummingbird-printed-t-shirt.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                                <img
-                                                                    class="img-fluid image-secondary"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/25-home_default/hummingbird-printed-t-shirt.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/25-large_default/hummingbird-printed-t-shirt.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                            </a>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 col-w63 no-padding">
-                                                        <div class="product-description">
-                                                            <div class="product-groups">
-
-                                                                <!-- begin modules/novproductcomments/novproductcomments_reviews.tpl -->
-                                                                <div class="product-comments">
-                                                                    <div class="star_content">
-                                                                        <div class="star star_on"></div>
-                                                                        <div class="star star_on"></div>
-                                                                        <div class="star star_on"></div>
-                                                                        <div class="star star_on"></div>
-                                                                        <div class="star star_on"></div>
-                                                                    </div>
-                                                                    <span>5 review</span>
-                                                                </div>
-                                                                <!-- end modules/novproductcomments/novproductcomments_reviews.tpl -->
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-                                                                <p class="seller_name">
-                                                                    <a title="View seller profile" href="http://demo.bestprestashoptheme.com/savemart/ar/jmarketplace/1_david-james/">
-                                                                        <i class="fa fa-user"></i>
-                                                                        David James
-                                                                    </a>
-                                                                </p>
-
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-
-
-
-                                                                <div class="product-title" itemprop="name"><a href="http://demo.bestprestashoptheme.com/savemart/ar/smartphone-tablet/1-40-hummingbird-printed-t-shirt.html#/1-الحجم-ص/6-اللون_-رمادي_داكن">Nullam sed sollicitudin mauris</a></div>
-
-                                                                <div class="product-group-price">
-
-                                                                    <div class="product-price-and-shipping">
-
-
-
-                                                                        <span itemprop="price" class="price">24.00 UK£</span>
-
-
-
-
-
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature " data-id-product="2" data-id-product-attribute="60" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="col-12 col-w37 no-padding">
-                                                        <div class="thumbnail-container">
-
-                                                            <a href="http://demo.bestprestashoptheme.com/savemart/ar/smartphone-tablet/2-60-brown-bear-printed-sweater.html#/1-الحجم-ص/11-اللون_-اسود" class="thumbnail product-thumbnail two-image">
-                                                                <img
-                                                                    class="img-fluid image-cover"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/29-home_default/brown-bear-printed-sweater.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/29-large_default/brown-bear-printed-sweater.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                                <img
-                                                                    class="img-fluid image-secondary"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/30-home_default/brown-bear-printed-sweater.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/30-large_default/brown-bear-printed-sweater.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                            </a>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 col-w63 no-padding">
-                                                        <div class="product-description">
-                                                            <div class="product-groups">
-
-                                                                <!-- begin modules/novproductcomments/novproductcomments_reviews.tpl -->
-                                                                <div class="product-comments">
-                                                                    <div class="star_content">
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                    </div>
-                                                                    <span>0 review</span>
-                                                                </div>
-                                                                <!-- end modules/novproductcomments/novproductcomments_reviews.tpl -->
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-                                                                <p class="seller_name">
-                                                                    <a title="View seller profile" href="http://demo.bestprestashoptheme.com/savemart/ar/jmarketplace/1_david-james/">
-                                                                        <i class="fa fa-user"></i>
-                                                                        David James
-                                                                    </a>
-                                                                </p>
-
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-
-
-
-                                                                <div class="product-title" itemprop="name"><a href="http://demo.bestprestashoptheme.com/savemart/ar/smartphone-tablet/2-60-brown-bear-printed-sweater.html#/1-الحجم-ص/11-اللون_-اسود">Lorem ipsum dolor sit amet ege</a></div>
-
-                                                                <div class="product-group-price">
-
-                                                                    <div class="product-price-and-shipping">
-
-
-
-                                                                        <span itemprop="price" class="price">36.00 UK£</span>
-
-
-
-
-
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature " data-id-product="3" data-id-product-attribute="95" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="col-12 col-w37 no-padding">
-                                                        <div class="thumbnail-container">
-
-                                                            <a href="http://demo.bestprestashoptheme.com/savemart/ar/smartphone-tablet/3-95-the-best-is-yet-to-come-framed-poster.html#/1-الحجم-ص/13-اللون_-برتقالي" class="thumbnail product-thumbnail two-image">
-                                                                <img
-                                                                    class="img-fluid image-cover"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/34-home_default/the-best-is-yet-to-come-framed-poster.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/34-large_default/the-best-is-yet-to-come-framed-poster.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                                <img
-                                                                    class="img-fluid image-secondary"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/35-home_default/the-best-is-yet-to-come-framed-poster.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/35-large_default/the-best-is-yet-to-come-framed-poster.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                            </a>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 col-w63 no-padding">
-                                                        <div class="product-description">
-                                                            <div class="product-groups">
-
-                                                                <!-- begin modules/novproductcomments/novproductcomments_reviews.tpl -->
-                                                                <div class="product-comments">
-                                                                    <div class="star_content">
-                                                                        <div class="star star_on"></div>
-                                                                        <div class="star star_on"></div>
-                                                                        <div class="star star_on"></div>
-                                                                        <div class="star star_on"></div>
-                                                                        <div class="star star_on"></div>
-                                                                    </div>
-                                                                    <span>5 review</span>
-                                                                </div>
-                                                                <!-- end modules/novproductcomments/novproductcomments_reviews.tpl -->
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-                                                                <p class="seller_name">
-                                                                    <a title="View seller profile" href="http://demo.bestprestashoptheme.com/savemart/ar/jmarketplace/2_taylor-jonson/">
-                                                                        <i class="fa fa-user"></i>
-                                                                        Taylor Jonson
-                                                                    </a>
-                                                                </p>
-
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-
-
-
-                                                                <div class="product-title" itemprop="name"><a href="http://demo.bestprestashoptheme.com/savemart/ar/smartphone-tablet/3-95-the-best-is-yet-to-come-framed-poster.html#/1-الحجم-ص/13-اللون_-برتقالي">Mauris molestie porttitor diam</a></div>
-
-                                                                <div class="product-group-price">
-
-                                                                    <div class="product-price-and-shipping">
-
-
-
-                                                                        <span itemprop="price" class="price">30.00 UK£</span>
-
-
-
-
-
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature " data-id-product="4" data-id-product-attribute="112" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="col-12 col-w37 no-padding">
-                                                        <div class="thumbnail-container">
-
-                                                            <a href="http://demo.bestprestashoptheme.com/savemart/ar/home-appliance/4-112-the-adventure-begins-framed-poster.html#/1-الحجم-ص/9-اللون_-ابيض_مطفي" class="thumbnail product-thumbnail two-image">
-                                                                <img
-                                                                    class="img-fluid image-cover"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/39-home_default/the-adventure-begins-framed-poster.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/39-large_default/the-adventure-begins-framed-poster.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                                <img
-                                                                    class="img-fluid image-secondary"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/43-home_default/the-adventure-begins-framed-poster.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/43-large_default/the-adventure-begins-framed-poster.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                            </a>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 col-w63 no-padding">
-                                                        <div class="product-description">
-                                                            <div class="product-groups">
-
-                                                                <!-- begin modules/novproductcomments/novproductcomments_reviews.tpl -->
-                                                                <div class="product-comments">
-                                                                    <div class="star_content">
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                    </div>
-                                                                    <span>0 review</span>
-                                                                </div>
-                                                                <!-- end modules/novproductcomments/novproductcomments_reviews.tpl -->
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-                                                                <p class="seller_name">
-                                                                    <a title="View seller profile" href="http://demo.bestprestashoptheme.com/savemart/ar/jmarketplace/2_taylor-jonson/">
-                                                                        <i class="fa fa-user"></i>
-                                                                        Taylor Jonson
-                                                                    </a>
-                                                                </p>
-
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-
-
-
-                                                                <div class="product-title" itemprop="name"><a href="http://demo.bestprestashoptheme.com/savemart/ar/home-appliance/4-112-the-adventure-begins-framed-poster.html#/1-الحجم-ص/9-اللون_-ابيض_مطفي">Maecenas vulputate ligula vel</a></div>
-
-                                                                <div class="product-group-price">
-
-                                                                    <div class="product-price-and-shipping">
-
-
-
-                                                                        <span itemprop="price" class="price">18.00 UK£</span>
-
-
-
-
-
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature " data-id-product="5" data-id-product-attribute="134" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="col-12 col-w37 no-padding">
-                                                        <div class="thumbnail-container">
-
-                                                            <a href="http://demo.bestprestashoptheme.com/savemart/ar/audio/5-134-today-is-a-good-day-framed-poster.html#/1-الحجم-ص/13-اللون_-برتقالي" class="thumbnail product-thumbnail two-image">
-                                                                <img
-                                                                    class="img-fluid image-cover"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/44-home_default/today-is-a-good-day-framed-poster.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/44-large_default/today-is-a-good-day-framed-poster.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                                <img
-                                                                    class="img-fluid image-secondary"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/45-home_default/today-is-a-good-day-framed-poster.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/45-large_default/today-is-a-good-day-framed-poster.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                            </a>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 col-w63 no-padding">
-                                                        <div class="product-description">
-                                                            <div class="product-groups">
-
-                                                                <!-- begin modules/novproductcomments/novproductcomments_reviews.tpl -->
-                                                                <div class="product-comments">
-                                                                    <div class="star_content">
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                    </div>
-                                                                    <span>0 review</span>
-                                                                </div>
-                                                                <!-- end modules/novproductcomments/novproductcomments_reviews.tpl -->
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-                                                                <p class="seller_name">
-                                                                    <a title="View seller profile" href="http://demo.bestprestashoptheme.com/savemart/ar/jmarketplace/2_taylor-jonson/">
-                                                                        <i class="fa fa-user"></i>
-                                                                        Taylor Jonson
-                                                                    </a>
-                                                                </p>
-
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-
-
-
-                                                                <div class="product-title" itemprop="name"><a href="http://demo.bestprestashoptheme.com/savemart/ar/audio/5-134-today-is-a-good-day-framed-poster.html#/1-الحجم-ص/13-اللون_-برتقالي">Vehicula vel tempus sit amet ulte</a></div>
-
-                                                                <div class="product-group-price">
-
-                                                                    <div class="product-price-and-shipping">
-
-
-
-                                                                        <span itemprop="price" class="price">34.80 UK£</span>
-
-
-
-
-
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature  last_item" data-id-product="6" data-id-product-attribute="0" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="col-12 col-w37 no-padding">
-                                                        <div class="thumbnail-container">
-
-                                                            <a href="http://demo.bestprestashoptheme.com/savemart/ar/home-appliance/6-nullam-tempor-orci-eu-pretium.html" class="thumbnail product-thumbnail two-image">
-                                                                <img
-                                                                    class="img-fluid image-cover"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/49-home_default/nullam-tempor-orci-eu-pretium.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/49-large_default/nullam-tempor-orci-eu-pretium.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                                <img
-                                                                    class="img-fluid image-secondary"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/50-home_default/nullam-tempor-orci-eu-pretium.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/50-large_default/nullam-tempor-orci-eu-pretium.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                            </a>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 col-w63 no-padding">
-                                                        <div class="product-description">
-                                                            <div class="product-groups">
-
-                                                                <!-- begin modules/novproductcomments/novproductcomments_reviews.tpl -->
-                                                                <div class="product-comments">
-                                                                    <div class="star_content">
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                    </div>
-                                                                    <span>0 review</span>
-                                                                </div>
-                                                                <!-- end modules/novproductcomments/novproductcomments_reviews.tpl -->
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-                                                                <p class="seller_name">
-                                                                    <a title="View seller profile" href="http://demo.bestprestashoptheme.com/savemart/ar/jmarketplace/2_taylor-jonson/">
-                                                                        <i class="fa fa-user"></i>
-                                                                        Taylor Jonson
-                                                                    </a>
-                                                                </p>
-
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-
-
-
-                                                                <div class="product-title" itemprop="name"><a href="http://demo.bestprestashoptheme.com/savemart/ar/home-appliance/6-nullam-tempor-orci-eu-pretium.html">Nullam tempor orci eu pretium</a></div>
-
-                                                                <div class="product-group-price">
-
-                                                                    <div class="product-price-and-shipping">
-
-
-
-                                                                        <span itemprop="price" class="price">14.28 UK£</span>
-
-
-
-
-
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="item  text-center">
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature  first_item" data-id-product="7" data-id-product-attribute="155" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="col-12 col-w37 no-padding">
-                                                        <div class="thumbnail-container">
-
-                                                            <a href="http://demo.bestprestashoptheme.com/savemart/ar/home-appliance/7-155-donec-non-lectus-ac-erat-sedei.html#/1-الحجم-ص/10-اللون_-احمر" class="thumbnail product-thumbnail two-image">
-                                                                <img
-                                                                    class="img-fluid image-cover"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/54-home_default/donec-non-lectus-ac-erat-sedei.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/54-large_default/donec-non-lectus-ac-erat-sedei.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                                <img
-                                                                    class="img-fluid image-secondary"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/55-home_default/donec-non-lectus-ac-erat-sedei.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/55-large_default/donec-non-lectus-ac-erat-sedei.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                            </a>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 col-w63 no-padding">
-                                                        <div class="product-description">
-                                                            <div class="product-groups">
-
-                                                                <!-- begin modules/novproductcomments/novproductcomments_reviews.tpl -->
-                                                                <div class="product-comments">
-                                                                    <div class="star_content">
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                    </div>
-                                                                    <span>0 review</span>
-                                                                </div>
-                                                                <!-- end modules/novproductcomments/novproductcomments_reviews.tpl -->
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-                                                                <p class="seller_name">
-                                                                    <a title="View seller profile" href="http://demo.bestprestashoptheme.com/savemart/ar/jmarketplace/2_taylor-jonson/">
-                                                                        <i class="fa fa-user"></i>
-                                                                        Taylor Jonson
-                                                                    </a>
-                                                                </p>
-
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-
-
-
-                                                                <div class="product-title" itemprop="name"><a href="http://demo.bestprestashoptheme.com/savemart/ar/home-appliance/7-155-donec-non-lectus-ac-erat-sedei.html#/1-الحجم-ص/10-اللون_-احمر">Donec non lectus ac erat sedei</a></div>
-
-                                                                <div class="product-group-price">
-
-                                                                    <div class="product-price-and-shipping">
-
-
-
-                                                                        <span itemprop="price" class="price">14.28 UK£</span>
-
-
-
-
-
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature " data-id-product="8" data-id-product-attribute="172" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="col-12 col-w37 no-padding">
-                                                        <div class="thumbnail-container">
-
-                                                            <a href="http://demo.bestprestashoptheme.com/savemart/ar/audio/8-172-curabitur-in-lorem-sit-ameten-alt.html#/1-الحجم-ص/10-اللون_-احمر" class="thumbnail product-thumbnail two-image">
-                                                                <img
-                                                                    class="img-fluid image-cover"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/59-home_default/curabitur-in-lorem-sit-ameten-alt.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/59-large_default/curabitur-in-lorem-sit-ameten-alt.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                                <img
-                                                                    class="img-fluid image-secondary"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/60-home_default/curabitur-in-lorem-sit-ameten-alt.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/60-large_default/curabitur-in-lorem-sit-ameten-alt.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                            </a>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 col-w63 no-padding">
-                                                        <div class="product-description">
-                                                            <div class="product-groups">
-
-                                                                <!-- begin modules/novproductcomments/novproductcomments_reviews.tpl -->
-                                                                <div class="product-comments">
-                                                                    <div class="star_content">
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                    </div>
-                                                                    <span>0 review</span>
-                                                                </div>
-                                                                <!-- end modules/novproductcomments/novproductcomments_reviews.tpl -->
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-                                                                <p class="seller_name">
-                                                                    <a title="View seller profile" href="http://demo.bestprestashoptheme.com/savemart/ar/jmarketplace/2_taylor-jonson/">
-                                                                        <i class="fa fa-user"></i>
-                                                                        Taylor Jonson
-                                                                    </a>
-                                                                </p>
-
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-
-
-
-                                                                <div class="product-title" itemprop="name"><a href="http://demo.bestprestashoptheme.com/savemart/ar/audio/8-172-curabitur-in-lorem-sit-ameten-alt.html#/1-الحجم-ص/10-اللون_-احمر">Curabitur in lorem sit ameten alt</a></div>
-
-                                                                <div class="product-group-price">
-
-                                                                    <div class="product-price-and-shipping">
-
-
-
-                                                                        <span itemprop="price" class="price">18.00 UK£</span>
-
-
-
-
-
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature " data-id-product="9" data-id-product-attribute="179" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="col-12 col-w37 no-padding">
-                                                        <div class="thumbnail-container">
-
-                                                            <a href="http://demo.bestprestashoptheme.com/savemart/ar/smartphone-tablet/9-179-mauris-feugiat-et-dui-sit-amet.html#/1-الحجم-ص/15-اللون_-اخضر" class="thumbnail product-thumbnail two-image">
-                                                                <img
-                                                                    class="img-fluid image-cover"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/64-home_default/mauris-feugiat-et-dui-sit-amet.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/64-large_default/mauris-feugiat-et-dui-sit-amet.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                                <img
-                                                                    class="img-fluid image-secondary"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/65-home_default/mauris-feugiat-et-dui-sit-amet.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/65-large_default/mauris-feugiat-et-dui-sit-amet.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                            </a>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 col-w63 no-padding">
-                                                        <div class="product-description">
-                                                            <div class="product-groups">
-
-                                                                <!-- begin modules/novproductcomments/novproductcomments_reviews.tpl -->
-                                                                <div class="product-comments">
-                                                                    <div class="star_content">
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                    </div>
-                                                                    <span>0 review</span>
-                                                                </div>
-                                                                <!-- end modules/novproductcomments/novproductcomments_reviews.tpl -->
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-                                                                <p class="seller_name">
-                                                                    <a title="View seller profile" href="http://demo.bestprestashoptheme.com/savemart/ar/jmarketplace/3_harry-makle/">
-                                                                        <i class="fa fa-user"></i>
-                                                                        Harry Makle
-                                                                    </a>
-                                                                </p>
-
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-
-
-
-                                                                <div class="product-title" itemprop="name"><a href="http://demo.bestprestashoptheme.com/savemart/ar/smartphone-tablet/9-179-mauris-feugiat-et-dui-sit-amet.html#/1-الحجم-ص/15-اللون_-اخضر">Mauris feugiat et dui sit amet</a></div>
-
-                                                                <div class="product-group-price">
-
-                                                                    <div class="product-price-and-shipping">
-
-
-
-                                                                        <span itemprop="price" class="price">24.00 UK£</span>
-
-
-
-
-
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature " data-id-product="10" data-id-product-attribute="192" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="col-12 col-w37 no-padding">
-                                                        <div class="thumbnail-container">
-
-                                                            <a href="http://demo.bestprestashoptheme.com/savemart/ar/smartphone-tablet/10-192-nullam-lacinia-metus-posuere.html#/1-الحجم-ص/18-اللون_-وردي" class="thumbnail product-thumbnail two-image">
-                                                                <img
-                                                                    class="img-fluid image-cover"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/69-home_default/nullam-lacinia-metus-posuere.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/69-large_default/nullam-lacinia-metus-posuere.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                                <img
-                                                                    class="img-fluid image-secondary"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/70-home_default/nullam-lacinia-metus-posuere.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/70-large_default/nullam-lacinia-metus-posuere.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                            </a>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 col-w63 no-padding">
-                                                        <div class="product-description">
-                                                            <div class="product-groups">
-
-                                                                <!-- begin modules/novproductcomments/novproductcomments_reviews.tpl -->
-                                                                <div class="product-comments">
-                                                                    <div class="star_content">
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                    </div>
-                                                                    <span>0 review</span>
-                                                                </div>
-                                                                <!-- end modules/novproductcomments/novproductcomments_reviews.tpl -->
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-                                                                <p class="seller_name">
-                                                                    <a title="View seller profile" href="http://demo.bestprestashoptheme.com/savemart/ar/jmarketplace/3_harry-makle/">
-                                                                        <i class="fa fa-user"></i>
-                                                                        Harry Makle
-                                                                    </a>
-                                                                </p>
-
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-
-
-
-                                                                <div class="product-title" itemprop="name"><a href="http://demo.bestprestashoptheme.com/savemart/ar/smartphone-tablet/10-192-nullam-lacinia-metus-posuere.html#/1-الحجم-ص/18-اللون_-وردي">Nullam lacinia metus posuere</a></div>
-
-                                                                <div class="product-group-price">
-
-                                                                    <div class="product-price-and-shipping">
-
-
-
-                                                                        <span itemprop="price" class="price">36.00 UK£</span>
-
-
-
-
-
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature " data-id-product="12" data-id-product-attribute="232" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="col-12 col-w37 no-padding">
-                                                        <div class="thumbnail-container">
-
-                                                            <a href="http://demo.bestprestashoptheme.com/savemart/ar/home-appliance/12-232-nam-volutpat-justo-a-vehicula.html#/1-الحجم-ص/11-اللون_-اسود" class="thumbnail product-thumbnail two-image">
-                                                                <img
-                                                                    class="img-fluid image-cover"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/79-home_default/nam-volutpat-justo-a-vehicula.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/79-large_default/nam-volutpat-justo-a-vehicula.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                                <img
-                                                                    class="img-fluid image-secondary"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/80-home_default/nam-volutpat-justo-a-vehicula.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/80-large_default/nam-volutpat-justo-a-vehicula.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                            </a>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 col-w63 no-padding">
-                                                        <div class="product-description">
-                                                            <div class="product-groups">
-
-                                                                <!-- begin modules/novproductcomments/novproductcomments_reviews.tpl -->
-                                                                <div class="product-comments">
-                                                                    <div class="star_content">
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                    </div>
-                                                                    <span>0 review</span>
-                                                                </div>
-                                                                <!-- end modules/novproductcomments/novproductcomments_reviews.tpl -->
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-                                                                <p class="seller_name">
-                                                                    <a title="View seller profile" href="http://demo.bestprestashoptheme.com/savemart/ar/jmarketplace/3_harry-makle/">
-                                                                        <i class="fa fa-user"></i>
-                                                                        Harry Makle
-                                                                    </a>
-                                                                </p>
-
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-
-
-
-                                                                <div class="product-title" itemprop="name"><a href="http://demo.bestprestashoptheme.com/savemart/ar/home-appliance/12-232-nam-volutpat-justo-a-vehicula.html#/1-الحجم-ص/11-اللون_-اسود">Nam volutpat justo a vehicula</a></div>
-
-                                                                <div class="product-group-price">
-
-                                                                    <div class="product-price-and-shipping">
-
-
-
-                                                                        <span itemprop="price" class="price">7.56 UK£</span>
-
-
-
-                                                                        <span class="regular-price">10.80 UK£</span>
-
-
-
-
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature  last_item" data-id-product="13" data-id-product-attribute="254" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="col-12 col-w37 no-padding">
-                                                        <div class="thumbnail-container">
-
-                                                            <a href="http://demo.bestprestashoptheme.com/savemart/ar/audio/13-254-proin-placerat-lacus-eget-auctor.html#/1-الحجم-ص/10-اللون_-احمر" class="thumbnail product-thumbnail two-image">
-                                                                <img
-                                                                    class="img-fluid image-cover"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/84-home_default/proin-placerat-lacus-eget-auctor.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/84-large_default/proin-placerat-lacus-eget-auctor.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                                <img
-                                                                    class="img-fluid image-secondary"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/85-home_default/proin-placerat-lacus-eget-auctor.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/85-large_default/proin-placerat-lacus-eget-auctor.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                            </a>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 col-w63 no-padding">
-                                                        <div class="product-description">
-                                                            <div class="product-groups">
-
-                                                                <!-- begin modules/novproductcomments/novproductcomments_reviews.tpl -->
-                                                                <div class="product-comments">
-                                                                    <div class="star_content">
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                    </div>
-                                                                    <span>0 review</span>
-                                                                </div>
-                                                                <!-- end modules/novproductcomments/novproductcomments_reviews.tpl -->
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-                                                                <p class="seller_name">
-                                                                    <a title="View seller profile" href="http://demo.bestprestashoptheme.com/savemart/ar/jmarketplace/1_david-james/">
-                                                                        <i class="fa fa-user"></i>
-                                                                        David James
-                                                                    </a>
-                                                                </p>
-
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-
-
-
-                                                                <div class="product-title" itemprop="name"><a href="http://demo.bestprestashoptheme.com/savemart/ar/audio/13-254-proin-placerat-lacus-eget-auctor.html#/1-الحجم-ص/10-اللون_-احمر">Proin placerat lacus eget auctor</a></div>
-
-                                                                <div class="product-group-price">
-
-                                                                    <div class="product-price-and-shipping">
-
-
-
-                                                                        <span itemprop="price" class="price">12.00 UK£</span>
-
-
-
-
-
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="item  text-center">
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature  first_item" data-id-product="14" data-id-product-attribute="270" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="col-12 col-w37 no-padding">
-                                                        <div class="thumbnail-container">
-
-                                                            <a href="http://demo.bestprestashoptheme.com/savemart/ar/smartphone-tablet/14-270-donec-laoreet-imperdiet-elit-ut.html#/1-الحجم-ص/6-اللون_-رمادي_داكن" class="thumbnail product-thumbnail two-image">
-                                                                <img
-                                                                    class="img-fluid image-cover"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/89-home_default/donec-laoreet-imperdiet-elit-ut.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/89-large_default/donec-laoreet-imperdiet-elit-ut.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                                <img
-                                                                    class="img-fluid image-secondary"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/90-home_default/donec-laoreet-imperdiet-elit-ut.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/90-large_default/donec-laoreet-imperdiet-elit-ut.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                            </a>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 col-w63 no-padding">
-                                                        <div class="product-description">
-                                                            <div class="product-groups">
-
-                                                                <!-- begin modules/novproductcomments/novproductcomments_reviews.tpl -->
-                                                                <div class="product-comments">
-                                                                    <div class="star_content">
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                    </div>
-                                                                    <span>0 review</span>
-                                                                </div>
-                                                                <!-- end modules/novproductcomments/novproductcomments_reviews.tpl -->
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-                                                                <p class="seller_name">
-                                                                    <a title="View seller profile" href="http://demo.bestprestashoptheme.com/savemart/ar/jmarketplace/3_harry-makle/">
-                                                                        <i class="fa fa-user"></i>
-                                                                        Harry Makle
-                                                                    </a>
-                                                                </p>
-
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-
-
-
-                                                                <div class="product-title" itemprop="name"><a href="http://demo.bestprestashoptheme.com/savemart/ar/smartphone-tablet/14-270-donec-laoreet-imperdiet-elit-ut.html#/1-الحجم-ص/6-اللون_-رمادي_داكن">Donec laoreet imperdiet elit ut</a></div>
-
-                                                                <div class="product-group-price">
-
-                                                                    <div class="product-price-and-shipping">
-
-
-
-                                                                        <span itemprop="price" class="price">18.00 UK£</span>
-
-
-
-
-
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature " data-id-product="15" data-id-product-attribute="303" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="col-12 col-w37 no-padding">
-                                                        <div class="thumbnail-container">
-
-                                                            <a href="http://demo.bestprestashoptheme.com/savemart/ar/audio/15-303-nunc-tempus-velit-quis-urnanb.html#/1-الحجم-ص/10-اللون_-احمر" class="thumbnail product-thumbnail two-image">
-                                                                <img
-                                                                    class="img-fluid image-cover"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/94-home_default/nunc-tempus-velit-quis-urnanb.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/94-large_default/nunc-tempus-velit-quis-urnanb.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                                <img
-                                                                    class="img-fluid image-secondary"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/95-home_default/nunc-tempus-velit-quis-urnanb.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/95-large_default/nunc-tempus-velit-quis-urnanb.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                            </a>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 col-w63 no-padding">
-                                                        <div class="product-description">
-                                                            <div class="product-groups">
-
-                                                                <!-- begin modules/novproductcomments/novproductcomments_reviews.tpl -->
-                                                                <div class="product-comments">
-                                                                    <div class="star_content">
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                    </div>
-                                                                    <span>0 review</span>
-                                                                </div>
-                                                                <!-- end modules/novproductcomments/novproductcomments_reviews.tpl -->
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-                                                                <p class="seller_name">
-                                                                    <a title="View seller profile" href="http://demo.bestprestashoptheme.com/savemart/ar/jmarketplace/1_david-james/">
-                                                                        <i class="fa fa-user"></i>
-                                                                        David James
-                                                                    </a>
-                                                                </p>
-
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-
-
-
-                                                                <div class="product-title" itemprop="name"><a href="http://demo.bestprestashoptheme.com/savemart/ar/audio/15-303-nunc-tempus-velit-quis-urnanb.html#/1-الحجم-ص/10-اللون_-احمر">Nunc tempus velit quis urnanb</a></div>
-
-                                                                <div class="product-group-price">
-
-                                                                    <div class="product-price-and-shipping">
-
-
-
-                                                                        <span itemprop="price" class="price">37.80 UK£</span>
-
-
-
-                                                                        <span class="regular-price">42.00 UK£</span>
-
-
-
-
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature " data-id-product="16" data-id-product-attribute="323" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="col-12 col-w37 no-padding">
-                                                        <div class="thumbnail-container">
-
-                                                            <a href="http://demo.bestprestashoptheme.com/savemart/ar/home-appliance/16-323-cras-consequat-quis-dolor-eunde.html#/1-الحجم-ص/11-اللون_-اسود" class="thumbnail product-thumbnail two-image">
-                                                                <img
-                                                                    class="img-fluid image-cover"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/99-home_default/cras-consequat-quis-dolor-eunde.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/99-large_default/cras-consequat-quis-dolor-eunde.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                                <img
-                                                                    class="img-fluid image-secondary"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/100-home_default/cras-consequat-quis-dolor-eunde.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/100-large_default/cras-consequat-quis-dolor-eunde.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                            </a>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 col-w63 no-padding">
-                                                        <div class="product-description">
-                                                            <div class="product-groups">
-
-                                                                <!-- begin modules/novproductcomments/novproductcomments_reviews.tpl -->
-                                                                <div class="product-comments">
-                                                                    <div class="star_content">
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                    </div>
-                                                                    <span>0 review</span>
-                                                                </div>
-                                                                <!-- end modules/novproductcomments/novproductcomments_reviews.tpl -->
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-                                                                <p class="seller_name">
-                                                                    <a title="View seller profile" href="http://demo.bestprestashoptheme.com/savemart/ar/jmarketplace/3_harry-makle/">
-                                                                        <i class="fa fa-user"></i>
-                                                                        Harry Makle
-                                                                    </a>
-                                                                </p>
-
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-
-
-
-                                                                <div class="product-title" itemprop="name"><a href="http://demo.bestprestashoptheme.com/savemart/ar/home-appliance/16-323-cras-consequat-quis-dolor-eunde.html#/1-الحجم-ص/11-اللون_-اسود">Cras consequat quis dolor eunde</a></div>
-
-                                                                <div class="product-group-price">
-
-                                                                    <div class="product-price-and-shipping">
-
-
-
-                                                                        <span itemprop="price" class="price">21.60 UK£</span>
-
-
-
-                                                                        <span class="regular-price">24.00 UK£</span>
-
-
-
-
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature " data-id-product="17" data-id-product-attribute="328" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="col-12 col-w37 no-padding">
-                                                        <div class="thumbnail-container">
-
-                                                            <a href="http://demo.bestprestashoptheme.com/savemart/ar/camera-photo/17-328-nam-feugiat-tellus-nec-ultrices.html#/1-الحجم-ص/10-اللون_-احمر" class="thumbnail product-thumbnail two-image">
-                                                                <img
-                                                                    class="img-fluid image-cover"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/104-home_default/nam-feugiat-tellus-nec-ultrices.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/104-large_default/nam-feugiat-tellus-nec-ultrices.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                                <img
-                                                                    class="img-fluid image-secondary"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/105-home_default/nam-feugiat-tellus-nec-ultrices.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/105-large_default/nam-feugiat-tellus-nec-ultrices.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                            </a>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 col-w63 no-padding">
-                                                        <div class="product-description">
-                                                            <div class="product-groups">
-
-                                                                <!-- begin modules/novproductcomments/novproductcomments_reviews.tpl -->
-                                                                <div class="product-comments">
-                                                                    <div class="star_content">
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                    </div>
-                                                                    <span>0 review</span>
-                                                                </div>
-                                                                <!-- end modules/novproductcomments/novproductcomments_reviews.tpl -->
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-                                                                <p class="seller_name">
-                                                                    <a title="View seller profile" href="http://demo.bestprestashoptheme.com/savemart/ar/jmarketplace/3_harry-makle/">
-                                                                        <i class="fa fa-user"></i>
-                                                                        Harry Makle
-                                                                    </a>
-                                                                </p>
-
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-
-
-
-                                                                <div class="product-title" itemprop="name"><a href="http://demo.bestprestashoptheme.com/savemart/ar/camera-photo/17-328-nam-feugiat-tellus-nec-ultrices.html#/1-الحجم-ص/10-اللون_-احمر">Nam feugiat tellus nec ultrices</a></div>
-
-                                                                <div class="product-group-price">
-
-                                                                    <div class="product-price-and-shipping">
-
-
-
-                                                                        <span itemprop="price" class="price">12.00 UK£</span>
-
-
-
-
-
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature " data-id-product="18" data-id-product-attribute="363" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="col-12 col-w37 no-padding">
-                                                        <div class="thumbnail-container">
-
-                                                            <a href="http://demo.bestprestashoptheme.com/savemart/ar/home-appliance/18-363-mauris-semper-mattis-gravida.html#/1-الحجم-ص/10-اللون_-احمر" class="thumbnail product-thumbnail two-image">
-                                                                <img
-                                                                    class="img-fluid image-cover"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/109-home_default/mauris-semper-mattis-gravida.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/109-large_default/mauris-semper-mattis-gravida.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                                <img
-                                                                    class="img-fluid image-secondary"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/110-home_default/mauris-semper-mattis-gravida.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/110-large_default/mauris-semper-mattis-gravida.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                            </a>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 col-w63 no-padding">
-                                                        <div class="product-description">
-                                                            <div class="product-groups">
-
-                                                                <!-- begin modules/novproductcomments/novproductcomments_reviews.tpl -->
-                                                                <div class="product-comments">
-                                                                    <div class="star_content">
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                    </div>
-                                                                    <span>0 review</span>
-                                                                </div>
-                                                                <!-- end modules/novproductcomments/novproductcomments_reviews.tpl -->
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-                                                                <p class="seller_name">
-                                                                    <a title="View seller profile" href="http://demo.bestprestashoptheme.com/savemart/ar/jmarketplace/3_harry-makle/">
-                                                                        <i class="fa fa-user"></i>
-                                                                        Harry Makle
-                                                                    </a>
-                                                                </p>
-
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-
-
-
-                                                                <div class="product-title" itemprop="name"><a href="http://demo.bestprestashoptheme.com/savemart/ar/home-appliance/18-363-mauris-semper-mattis-gravida.html#/1-الحجم-ص/10-اللون_-احمر">Mauris semper mattis gravida</a></div>
-
-                                                                <div class="product-group-price">
-
-                                                                    <div class="product-price-and-shipping">
-
-
-
-                                                                        <span itemprop="price" class="price">18.00 UK£</span>
-
-
-
-
-
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature  last_item" data-id-product="19" data-id-product-attribute="383" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="col-12 col-w37 no-padding">
-                                                        <div class="thumbnail-container">
-
-                                                            <a href="http://demo.bestprestashoptheme.com/savemart/ar/home-appliance/19-383-vivamus-non-ante-quis-est-rhont.html#/1-الحجم-ص/10-اللون_-احمر" class="thumbnail product-thumbnail two-image">
-                                                                <img
-                                                                    class="img-fluid image-cover"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/115-home_default/vivamus-non-ante-quis-est-rhont.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/115-large_default/vivamus-non-ante-quis-est-rhont.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                                <img
-                                                                    class="img-fluid image-secondary"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/116-home_default/vivamus-non-ante-quis-est-rhont.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/116-large_default/vivamus-non-ante-quis-est-rhont.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                            </a>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 col-w63 no-padding">
-                                                        <div class="product-description">
-                                                            <div class="product-groups">
-
-                                                                <!-- begin modules/novproductcomments/novproductcomments_reviews.tpl -->
-                                                                <div class="product-comments">
-                                                                    <div class="star_content">
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                    </div>
-                                                                    <span>0 review</span>
-                                                                </div>
-                                                                <!-- end modules/novproductcomments/novproductcomments_reviews.tpl -->
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-                                                                <p class="seller_name">
-                                                                    <a title="View seller profile" href="http://demo.bestprestashoptheme.com/savemart/ar/jmarketplace/3_harry-makle/">
-                                                                        <i class="fa fa-user"></i>
-                                                                        Harry Makle
-                                                                    </a>
-                                                                </p>
-
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-
-
-
-                                                                <div class="product-title" itemprop="name"><a href="http://demo.bestprestashoptheme.com/savemart/ar/home-appliance/19-383-vivamus-non-ante-quis-est-rhont.html#/1-الحجم-ص/10-اللون_-احمر">Vivamus non ante quis est rhont</a></div>
-
-                                                                <div class="product-group-price">
-
-                                                                    <div class="product-price-and-shipping">
-
-
-
-                                                                        <span itemprop="price" class="price">12.00 UK£</span>
-
-
-
-
-
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="item  text-center">
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature  first_item" data-id-product="21" data-id-product-attribute="391" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="col-12 col-w37 no-padding">
-                                                        <div class="thumbnail-container">
-
-                                                            <a href="http://demo.bestprestashoptheme.com/savemart/ar/audio/21-391-nunc-eros-lacus-porta-sed-mattis.html#/1-الحجم-ص/13-اللون_-برتقالي" class="thumbnail product-thumbnail two-image">
-                                                                <img
-                                                                    class="img-fluid image-cover"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/120-home_default/nunc-eros-lacus-porta-sed-mattis.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/120-large_default/nunc-eros-lacus-porta-sed-mattis.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                                <img
-                                                                    class="img-fluid image-secondary"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/121-home_default/nunc-eros-lacus-porta-sed-mattis.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/121-large_default/nunc-eros-lacus-porta-sed-mattis.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                            </a>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 col-w63 no-padding">
-                                                        <div class="product-description">
-                                                            <div class="product-groups">
-
-                                                                <!-- begin modules/novproductcomments/novproductcomments_reviews.tpl -->
-                                                                <div class="product-comments">
-                                                                    <div class="star_content">
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                    </div>
-                                                                    <span>0 review</span>
-                                                                </div>
-                                                                <!-- end modules/novproductcomments/novproductcomments_reviews.tpl -->
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-                                                                <p class="seller_name">
-                                                                    <a title="View seller profile" href="http://demo.bestprestashoptheme.com/savemart/ar/jmarketplace/1_david-james/">
-                                                                        <i class="fa fa-user"></i>
-                                                                        David James
-                                                                    </a>
-                                                                </p>
-
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-
-
-
-                                                                <div class="product-title" itemprop="name"><a href="http://demo.bestprestashoptheme.com/savemart/ar/audio/21-391-nunc-eros-lacus-porta-sed-mattis.html#/1-الحجم-ص/13-اللون_-برتقالي">Nunc eros lacus porta sed mattis</a></div>
-
-                                                                <div class="product-group-price">
-
-                                                                    <div class="product-price-and-shipping">
-
-
-
-                                                                        <span itemprop="price" class="price">16.20 UK£</span>
-
-
-
-                                                                        <span class="regular-price">18.00 UK£</span>
-
-
-
-
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature " data-id-product="22" data-id-product-attribute="408" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="col-12 col-w37 no-padding">
-                                                        <div class="thumbnail-container">
-
-                                                            <a href="http://demo.bestprestashoptheme.com/savemart/ar/audio/22-408-aenean-porta-ligula-egestas-east.html#/1-الحجم-ص/10-اللون_-احمر" class="thumbnail product-thumbnail two-image">
-                                                                <img
-                                                                    class="img-fluid image-cover"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/125-home_default/aenean-porta-ligula-egestas-east.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/125-large_default/aenean-porta-ligula-egestas-east.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                                <img
-                                                                    class="img-fluid image-secondary"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/126-home_default/aenean-porta-ligula-egestas-east.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/126-large_default/aenean-porta-ligula-egestas-east.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                            </a>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 col-w63 no-padding">
-                                                        <div class="product-description">
-                                                            <div class="product-groups">
-
-                                                                <!-- begin modules/novproductcomments/novproductcomments_reviews.tpl -->
-                                                                <div class="product-comments">
-                                                                    <div class="star_content">
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                    </div>
-                                                                    <span>0 review</span>
-                                                                </div>
-                                                                <!-- end modules/novproductcomments/novproductcomments_reviews.tpl -->
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-                                                                <p class="seller_name">
-                                                                    <a title="View seller profile" href="http://demo.bestprestashoptheme.com/savemart/ar/jmarketplace/1_david-james/">
-                                                                        <i class="fa fa-user"></i>
-                                                                        David James
-                                                                    </a>
-                                                                </p>
-
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-
-
-
-                                                                <div class="product-title" itemprop="name"><a href="http://demo.bestprestashoptheme.com/savemart/ar/audio/22-408-aenean-porta-ligula-egestas-east.html#/1-الحجم-ص/10-اللون_-احمر">Aenean porta ligula egestas east</a></div>
-
-                                                                <div class="product-group-price">
-
-                                                                    <div class="product-price-and-shipping">
-
-
-
-                                                                        <span itemprop="price" class="price">24.00 UK£</span>
-
-
-
-
-
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature " data-id-product="23" data-id-product-attribute="443" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="col-12 col-w37 no-padding">
-                                                        <div class="thumbnail-container">
-
-                                                            <a href="http://demo.bestprestashoptheme.com/savemart/ar/home-appliance/23-443-aliquam-in-augue-ac-enim-tinci.html#/1-الحجم-ص/10-اللون_-احمر" class="thumbnail product-thumbnail two-image">
-                                                                <img
-                                                                    class="img-fluid image-cover"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/131-home_default/aliquam-in-augue-ac-enim-tinci.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/131-large_default/aliquam-in-augue-ac-enim-tinci.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                                <img
-                                                                    class="img-fluid image-secondary"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/132-home_default/aliquam-in-augue-ac-enim-tinci.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/132-large_default/aliquam-in-augue-ac-enim-tinci.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                            </a>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 col-w63 no-padding">
-                                                        <div class="product-description">
-                                                            <div class="product-groups">
-
-                                                                <!-- begin modules/novproductcomments/novproductcomments_reviews.tpl -->
-                                                                <div class="product-comments">
-                                                                    <div class="star_content">
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                    </div>
-                                                                    <span>0 review</span>
-                                                                </div>
-                                                                <!-- end modules/novproductcomments/novproductcomments_reviews.tpl -->
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-                                                                <p class="seller_name">
-                                                                    <a title="View seller profile" href="http://demo.bestprestashoptheme.com/savemart/ar/jmarketplace/1_david-james/">
-                                                                        <i class="fa fa-user"></i>
-                                                                        David James
-                                                                    </a>
-                                                                </p>
-
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-
-
-
-                                                                <div class="product-title" itemprop="name"><a href="http://demo.bestprestashoptheme.com/savemart/ar/home-appliance/23-443-aliquam-in-augue-ac-enim-tinci.html#/1-الحجم-ص/10-اللون_-احمر">Aliquam in augue ac enim tinci</a></div>
-
-                                                                <div class="product-group-price">
-
-                                                                    <div class="product-price-and-shipping">
-
-
-
-                                                                        <span itemprop="price" class="price">14.40 UK£</span>
-
-
-
-                                                                        <span class="regular-price">18.00 UK£</span>
-
-
-
-
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature " data-id-product="24" data-id-product-attribute="0" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="col-12 col-w37 no-padding">
-                                                        <div class="thumbnail-container">
-
-                                                            <a href="http://demo.bestprestashoptheme.com/savemart/ar/camera-photo/24-nullam-sed-sollicitudin-mauris.html" class="thumbnail product-thumbnail two-image">
-                                                                <img
-                                                                    class="img-fluid image-cover"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/137-home_default/nullam-sed-sollicitudin-mauris.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/137-large_default/nullam-sed-sollicitudin-mauris.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                                <img
-                                                                    class="img-fluid image-secondary"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/138-home_default/nullam-sed-sollicitudin-mauris.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/138-large_default/nullam-sed-sollicitudin-mauris.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                            </a>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 col-w63 no-padding">
-                                                        <div class="product-description">
-                                                            <div class="product-groups">
-
-                                                                <!-- begin modules/novproductcomments/novproductcomments_reviews.tpl -->
-                                                                <div class="product-comments">
-                                                                    <div class="star_content">
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                    </div>
-                                                                    <span>0 review</span>
-                                                                </div>
-                                                                <!-- end modules/novproductcomments/novproductcomments_reviews.tpl -->
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-                                                                <p class="seller_name">
-                                                                    <a title="View seller profile" href="http://demo.bestprestashoptheme.com/savemart/ar/jmarketplace/1_david-james/">
-                                                                        <i class="fa fa-user"></i>
-                                                                        David James
-                                                                    </a>
-                                                                </p>
-
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-
-
-
-                                                                <div class="product-title" itemprop="name"><a href="http://demo.bestprestashoptheme.com/savemart/ar/camera-photo/24-nullam-sed-sollicitudin-mauris.html">Nullam sed sollicitudin mauris</a></div>
-
-                                                                <div class="product-group-price">
-
-                                                                    <div class="product-price-and-shipping">
-
-
-
-                                                                        <span itemprop="price" class="price">9.60 UK£</span>
-
-
-
-                                                                        <span class="regular-price">12.00 UK£</span>
-
-
-
-
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature  last_item" data-id-product="26" data-id-product-attribute="0" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="col-12 col-w37 no-padding">
-                                                        <div class="thumbnail-container">
-
-                                                            <a href="http://demo.bestprestashoptheme.com/savemart/ar/smartphone-tablet/26-nullam-sed-sollicitudin-valumis.html" class="thumbnail product-thumbnail two-image">
-                                                                <img
-                                                                    class="img-fluid image-cover"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/146-home_default/nullam-sed-sollicitudin-valumis.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/146-large_default/nullam-sed-sollicitudin-valumis.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                                <img
-                                                                    class="img-fluid image-secondary"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/147-home_default/nullam-sed-sollicitudin-valumis.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/147-large_default/nullam-sed-sollicitudin-valumis.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                            </a>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 col-w63 no-padding">
-                                                        <div class="product-description">
-                                                            <div class="product-groups">
-
-                                                                <!-- begin modules/novproductcomments/novproductcomments_reviews.tpl -->
-                                                                <div class="product-comments">
-                                                                    <div class="star_content">
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                    </div>
-                                                                    <span>0 review</span>
-                                                                </div>
-                                                                <!-- end modules/novproductcomments/novproductcomments_reviews.tpl -->
-
-
-
-                                                                <div class="product-title" itemprop="name"><a href="http://demo.bestprestashoptheme.com/savemart/ar/smartphone-tablet/26-nullam-sed-sollicitudin-valumis.html">Nullam sed sollicitudin valumis</a></div>
-
-                                                                <div class="product-group-price">
-
-                                                                    <div class="product-price-and-shipping">
-
-
-
-                                                                        <span itemprop="price" class="price">36.00 UK£</span>
-
-
-
-
-
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novpagemanage/views/source/productlist.tpl -->
-                        </div></div><div class="nov-row policy-home col-lg-12 col-xs-12" ><div class="nov-row-wrap row">
-                            <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novpagemanage/views/source/html.tpl -->
-                            <div class="nov-html col-xl-4 col-lg-4 col-md-4">
-                                <div class="block">
-                                    <div class="block_content">
-                                        <div class="policy-row"><i class="noviconpolicy noviconpolicy-1"></i>
-                                            <div class="policy-content">
-                                                <div class="policy-name">Free Delivery From $ 250</div>
-                                                <div class="policy-des">Sed ut perspiciatis unde omnis iste</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novpagemanage/views/source/html.tpl -->
-
-                            <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novpagemanage/views/source/html.tpl -->
-                            <div class="nov-html col-xl-4 col-lg-4 col-md-4">
-                                <div class="block">
-                                    <div class="block_content">
-                                        <div class="policy-row"><i class="noviconpolicy noviconpolicy-2"></i>
-                                            <div class="policy-content">
-                                                <div class="policy-name">Money Back Guarantee</div>
-                                                <div class="policy-des">Sed ut perspiciatis unde omnis iste natus</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novpagemanage/views/source/html.tpl -->
-
-                            <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novpagemanage/views/source/html.tpl -->
-                            <div class="nov-html col-xl-4 col-lg-4 col-md-4">
-                                <div class="block">
-                                    <div class="block_content">
-                                        <div class="policy-row"><i class="noviconpolicy noviconpolicy-3"></i>
-                                            <div class="policy-content">
-                                                <div class="policy-name">Authenticity 100% guaranteed</div>
-                                                <div class="policy-des">Sed ut perspiciatis unde omnis iste natus</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novpagemanage/views/source/html.tpl -->
-                        </div></div><div class="nov-row  col-lg-12 col-xs-12" ><div class="nov-row-wrap row">
-                            <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novpagemanage/views/source/productlist.tpl -->
-
-                            <div class="nov-productlist   productlist-liststyle    col-xl-4 col-lg-4 col-md-4 col-xs-12 col-md-12">
-                                <div class="block block-product clearfix">
-                                    <h2 class="title_block">
-                                        SMARTPHONE
-                                    </h2>
-                                    <div class="block_content">
-                                        <div id="productlist162539295" class="product_list grid owl-carousel owl-theme multi-row" data-autoplay="false" data-autoplayTimeout="6000" data-loop="false" data-margin="0" data-dots="false" data-nav="true" data-items="1" data-items_large="1" data-items_tablet="2" data-items_mobile="1" >
-                                            <div class="item  text-center">
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature  first_item" data-id-product="1" data-id-product-attribute="40" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="col-12 col-w27 no-padding">
-                                                        <div class="thumbnail-container">
-
-                                                            <a href="http://demo.bestprestashoptheme.com/savemart/ar/smartphone-tablet/1-40-hummingbird-printed-t-shirt.html#/1-الحجم-ص/6-اللون_-رمادي_داكن" class="thumbnail product-thumbnail two-image">
-                                                                <img
-                                                                    class="img-fluid image-cover"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/24-home_default/hummingbird-printed-t-shirt.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/24-large_default/hummingbird-printed-t-shirt.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                                <img
-                                                                    class="img-fluid image-secondary"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/25-home_default/hummingbird-printed-t-shirt.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/25-large_default/hummingbird-printed-t-shirt.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                            </a>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 col-w73 no-padding">
-                                                        <div class="product-description">
-                                                            <div class="product-groups">
-
-                                                                <!-- begin modules/novproductcomments/novproductcomments_reviews.tpl -->
-                                                                <div class="product-comments">
-                                                                    <div class="star_content">
-                                                                        <div class="star star_on"></div>
-                                                                        <div class="star star_on"></div>
-                                                                        <div class="star star_on"></div>
-                                                                        <div class="star star_on"></div>
-                                                                        <div class="star star_on"></div>
-                                                                    </div>
-                                                                    <span>5 review</span>
-                                                                </div>
-                                                                <!-- end modules/novproductcomments/novproductcomments_reviews.tpl -->
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-                                                                <p class="seller_name">
-                                                                    <a title="View seller profile" href="http://demo.bestprestashoptheme.com/savemart/ar/jmarketplace/1_david-james/">
-                                                                        <i class="fa fa-user"></i>
-                                                                        David James
-                                                                    </a>
-                                                                </p>
-
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-
-
-
-                                                                <div class="product-title" itemprop="name"><a href="http://demo.bestprestashoptheme.com/savemart/ar/smartphone-tablet/1-40-hummingbird-printed-t-shirt.html#/1-الحجم-ص/6-اللون_-رمادي_داكن">Nullam sed sollicitudin mauris</a></div>
-
-                                                                <div class="product-group-price">
-
-                                                                    <div class="product-price-and-shipping">
-
-
-
-                                                                        <span itemprop="price" class="price">24.00 UK£</span>
-
-
-
-
-
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature " data-id-product="2" data-id-product-attribute="60" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="col-12 col-w27 no-padding">
-                                                        <div class="thumbnail-container">
-
-                                                            <a href="http://demo.bestprestashoptheme.com/savemart/ar/smartphone-tablet/2-60-brown-bear-printed-sweater.html#/1-الحجم-ص/11-اللون_-اسود" class="thumbnail product-thumbnail two-image">
-                                                                <img
-                                                                    class="img-fluid image-cover"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/29-home_default/brown-bear-printed-sweater.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/29-large_default/brown-bear-printed-sweater.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                                <img
-                                                                    class="img-fluid image-secondary"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/30-home_default/brown-bear-printed-sweater.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/30-large_default/brown-bear-printed-sweater.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                            </a>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 col-w73 no-padding">
-                                                        <div class="product-description">
-                                                            <div class="product-groups">
-
-                                                                <!-- begin modules/novproductcomments/novproductcomments_reviews.tpl -->
-                                                                <div class="product-comments">
-                                                                    <div class="star_content">
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                    </div>
-                                                                    <span>0 review</span>
-                                                                </div>
-                                                                <!-- end modules/novproductcomments/novproductcomments_reviews.tpl -->
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-                                                                <p class="seller_name">
-                                                                    <a title="View seller profile" href="http://demo.bestprestashoptheme.com/savemart/ar/jmarketplace/1_david-james/">
-                                                                        <i class="fa fa-user"></i>
-                                                                        David James
-                                                                    </a>
-                                                                </p>
-
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-
-
-
-                                                                <div class="product-title" itemprop="name"><a href="http://demo.bestprestashoptheme.com/savemart/ar/smartphone-tablet/2-60-brown-bear-printed-sweater.html#/1-الحجم-ص/11-اللون_-اسود">Lorem ipsum dolor sit amet ege</a></div>
-
-                                                                <div class="product-group-price">
-
-                                                                    <div class="product-price-and-shipping">
-
-
-
-                                                                        <span itemprop="price" class="price">36.00 UK£</span>
-
-
-
-
-
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature  last_item" data-id-product="3" data-id-product-attribute="95" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="col-12 col-w27 no-padding">
-                                                        <div class="thumbnail-container">
-
-                                                            <a href="http://demo.bestprestashoptheme.com/savemart/ar/smartphone-tablet/3-95-the-best-is-yet-to-come-framed-poster.html#/1-الحجم-ص/13-اللون_-برتقالي" class="thumbnail product-thumbnail two-image">
-                                                                <img
-                                                                    class="img-fluid image-cover"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/34-home_default/the-best-is-yet-to-come-framed-poster.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/34-large_default/the-best-is-yet-to-come-framed-poster.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                                <img
-                                                                    class="img-fluid image-secondary"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/35-home_default/the-best-is-yet-to-come-framed-poster.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/35-large_default/the-best-is-yet-to-come-framed-poster.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                            </a>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 col-w73 no-padding">
-                                                        <div class="product-description">
-                                                            <div class="product-groups">
-
-                                                                <!-- begin modules/novproductcomments/novproductcomments_reviews.tpl -->
-                                                                <div class="product-comments">
-                                                                    <div class="star_content">
-                                                                        <div class="star star_on"></div>
-                                                                        <div class="star star_on"></div>
-                                                                        <div class="star star_on"></div>
-                                                                        <div class="star star_on"></div>
-                                                                        <div class="star star_on"></div>
-                                                                    </div>
-                                                                    <span>5 review</span>
-                                                                </div>
-                                                                <!-- end modules/novproductcomments/novproductcomments_reviews.tpl -->
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-                                                                <p class="seller_name">
-                                                                    <a title="View seller profile" href="http://demo.bestprestashoptheme.com/savemart/ar/jmarketplace/2_taylor-jonson/">
-                                                                        <i class="fa fa-user"></i>
-                                                                        Taylor Jonson
-                                                                    </a>
-                                                                </p>
-
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-
-
-
-                                                                <div class="product-title" itemprop="name"><a href="http://demo.bestprestashoptheme.com/savemart/ar/smartphone-tablet/3-95-the-best-is-yet-to-come-framed-poster.html#/1-الحجم-ص/13-اللون_-برتقالي">Mauris molestie porttitor diam</a></div>
-
-                                                                <div class="product-group-price">
-
-                                                                    <div class="product-price-and-shipping">
-
-
-
-                                                                        <span itemprop="price" class="price">30.00 UK£</span>
-
-
-
-
-
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="item  text-center">
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature  first_item" data-id-product="4" data-id-product-attribute="112" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="col-12 col-w27 no-padding">
-                                                        <div class="thumbnail-container">
-
-                                                            <a href="http://demo.bestprestashoptheme.com/savemart/ar/home-appliance/4-112-the-adventure-begins-framed-poster.html#/1-الحجم-ص/9-اللون_-ابيض_مطفي" class="thumbnail product-thumbnail two-image">
-                                                                <img
-                                                                    class="img-fluid image-cover"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/39-home_default/the-adventure-begins-framed-poster.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/39-large_default/the-adventure-begins-framed-poster.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                                <img
-                                                                    class="img-fluid image-secondary"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/43-home_default/the-adventure-begins-framed-poster.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/43-large_default/the-adventure-begins-framed-poster.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                            </a>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 col-w73 no-padding">
-                                                        <div class="product-description">
-                                                            <div class="product-groups">
-
-                                                                <!-- begin modules/novproductcomments/novproductcomments_reviews.tpl -->
-                                                                <div class="product-comments">
-                                                                    <div class="star_content">
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                    </div>
-                                                                    <span>0 review</span>
-                                                                </div>
-                                                                <!-- end modules/novproductcomments/novproductcomments_reviews.tpl -->
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-                                                                <p class="seller_name">
-                                                                    <a title="View seller profile" href="http://demo.bestprestashoptheme.com/savemart/ar/jmarketplace/2_taylor-jonson/">
-                                                                        <i class="fa fa-user"></i>
-                                                                        Taylor Jonson
-                                                                    </a>
-                                                                </p>
-
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-
-
-
-                                                                <div class="product-title" itemprop="name"><a href="http://demo.bestprestashoptheme.com/savemart/ar/home-appliance/4-112-the-adventure-begins-framed-poster.html#/1-الحجم-ص/9-اللون_-ابيض_مطفي">Maecenas vulputate ligula vel</a></div>
-
-                                                                <div class="product-group-price">
-
-                                                                    <div class="product-price-and-shipping">
-
-
-
-                                                                        <span itemprop="price" class="price">18.00 UK£</span>
-
-
-
-
-
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature " data-id-product="5" data-id-product-attribute="134" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="col-12 col-w27 no-padding">
-                                                        <div class="thumbnail-container">
-
-                                                            <a href="http://demo.bestprestashoptheme.com/savemart/ar/audio/5-134-today-is-a-good-day-framed-poster.html#/1-الحجم-ص/13-اللون_-برتقالي" class="thumbnail product-thumbnail two-image">
-                                                                <img
-                                                                    class="img-fluid image-cover"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/44-home_default/today-is-a-good-day-framed-poster.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/44-large_default/today-is-a-good-day-framed-poster.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                                <img
-                                                                    class="img-fluid image-secondary"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/45-home_default/today-is-a-good-day-framed-poster.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/45-large_default/today-is-a-good-day-framed-poster.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                            </a>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 col-w73 no-padding">
-                                                        <div class="product-description">
-                                                            <div class="product-groups">
-
-                                                                <!-- begin modules/novproductcomments/novproductcomments_reviews.tpl -->
-                                                                <div class="product-comments">
-                                                                    <div class="star_content">
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                    </div>
-                                                                    <span>0 review</span>
-                                                                </div>
-                                                                <!-- end modules/novproductcomments/novproductcomments_reviews.tpl -->
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-                                                                <p class="seller_name">
-                                                                    <a title="View seller profile" href="http://demo.bestprestashoptheme.com/savemart/ar/jmarketplace/2_taylor-jonson/">
-                                                                        <i class="fa fa-user"></i>
-                                                                        Taylor Jonson
-                                                                    </a>
-                                                                </p>
-
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-
-
-
-                                                                <div class="product-title" itemprop="name"><a href="http://demo.bestprestashoptheme.com/savemart/ar/audio/5-134-today-is-a-good-day-framed-poster.html#/1-الحجم-ص/13-اللون_-برتقالي">Vehicula vel tempus sit amet ulte</a></div>
-
-                                                                <div class="product-group-price">
-
-                                                                    <div class="product-price-and-shipping">
-
-
-
-                                                                        <span itemprop="price" class="price">34.80 UK£</span>
-
-
-
-
-
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature  last_item" data-id-product="6" data-id-product-attribute="0" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="col-12 col-w27 no-padding">
-                                                        <div class="thumbnail-container">
-
-                                                            <a href="http://demo.bestprestashoptheme.com/savemart/ar/home-appliance/6-nullam-tempor-orci-eu-pretium.html" class="thumbnail product-thumbnail two-image">
-                                                                <img
-                                                                    class="img-fluid image-cover"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/49-home_default/nullam-tempor-orci-eu-pretium.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/49-large_default/nullam-tempor-orci-eu-pretium.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                                <img
-                                                                    class="img-fluid image-secondary"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/50-home_default/nullam-tempor-orci-eu-pretium.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/50-large_default/nullam-tempor-orci-eu-pretium.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                            </a>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 col-w73 no-padding">
-                                                        <div class="product-description">
-                                                            <div class="product-groups">
-
-                                                                <!-- begin modules/novproductcomments/novproductcomments_reviews.tpl -->
-                                                                <div class="product-comments">
-                                                                    <div class="star_content">
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                    </div>
-                                                                    <span>0 review</span>
-                                                                </div>
-                                                                <!-- end modules/novproductcomments/novproductcomments_reviews.tpl -->
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-                                                                <p class="seller_name">
-                                                                    <a title="View seller profile" href="http://demo.bestprestashoptheme.com/savemart/ar/jmarketplace/2_taylor-jonson/">
-                                                                        <i class="fa fa-user"></i>
-                                                                        Taylor Jonson
-                                                                    </a>
-                                                                </p>
-
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-
-
-
-                                                                <div class="product-title" itemprop="name"><a href="http://demo.bestprestashoptheme.com/savemart/ar/home-appliance/6-nullam-tempor-orci-eu-pretium.html">Nullam tempor orci eu pretium</a></div>
-
-                                                                <div class="product-group-price">
-
-                                                                    <div class="product-price-and-shipping">
-
-
-
-                                                                        <span itemprop="price" class="price">14.28 UK£</span>
-
-
-
-
-
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novpagemanage/views/source/productlist.tpl -->
-
-                            <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novpagemanage/views/source/productlist.tpl -->
-
-                            <div class="nov-productlist   productlist-liststyle    col-xl-4 col-lg-4 col-md-4 col-xs-12 col-md-12">
-                                <div class="block block-product clearfix">
-                                    <h2 class="title_block">
-                                        GAMING GEAR
-                                    </h2>
-                                    <div class="block_content">
-                                        <div id="productlist169691096" class="product_list grid owl-carousel owl-theme multi-row" data-autoplay="false" data-autoplayTimeout="6000" data-loop="false" data-margin="0" data-dots="false" data-nav="true" data-items="1" data-items_large="1" data-items_tablet="2" data-items_mobile="1" >
-                                            <div class="item  text-center">
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature  first_item" data-id-product="1" data-id-product-attribute="40" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="col-12 col-w27 no-padding">
-                                                        <div class="thumbnail-container">
-
-                                                            <a href="http://demo.bestprestashoptheme.com/savemart/ar/smartphone-tablet/1-40-hummingbird-printed-t-shirt.html#/1-الحجم-ص/6-اللون_-رمادي_داكن" class="thumbnail product-thumbnail two-image">
-                                                                <img
-                                                                    class="img-fluid image-cover"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/24-home_default/hummingbird-printed-t-shirt.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/24-large_default/hummingbird-printed-t-shirt.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                                <img
-                                                                    class="img-fluid image-secondary"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/25-home_default/hummingbird-printed-t-shirt.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/25-large_default/hummingbird-printed-t-shirt.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                            </a>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 col-w73 no-padding">
-                                                        <div class="product-description">
-                                                            <div class="product-groups">
-
-                                                                <!-- begin modules/novproductcomments/novproductcomments_reviews.tpl -->
-                                                                <div class="product-comments">
-                                                                    <div class="star_content">
-                                                                        <div class="star star_on"></div>
-                                                                        <div class="star star_on"></div>
-                                                                        <div class="star star_on"></div>
-                                                                        <div class="star star_on"></div>
-                                                                        <div class="star star_on"></div>
-                                                                    </div>
-                                                                    <span>5 review</span>
-                                                                </div>
-                                                                <!-- end modules/novproductcomments/novproductcomments_reviews.tpl -->
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-                                                                <p class="seller_name">
-                                                                    <a title="View seller profile" href="http://demo.bestprestashoptheme.com/savemart/ar/jmarketplace/1_david-james/">
-                                                                        <i class="fa fa-user"></i>
-                                                                        David James
-                                                                    </a>
-                                                                </p>
-
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-
-
-
-                                                                <div class="product-title" itemprop="name"><a href="http://demo.bestprestashoptheme.com/savemart/ar/smartphone-tablet/1-40-hummingbird-printed-t-shirt.html#/1-الحجم-ص/6-اللون_-رمادي_داكن">Nullam sed sollicitudin mauris</a></div>
-
-                                                                <div class="product-group-price">
-
-                                                                    <div class="product-price-and-shipping">
-
-
-
-                                                                        <span itemprop="price" class="price">24.00 UK£</span>
-
-
-
-
-
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature " data-id-product="2" data-id-product-attribute="60" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="col-12 col-w27 no-padding">
-                                                        <div class="thumbnail-container">
-
-                                                            <a href="http://demo.bestprestashoptheme.com/savemart/ar/smartphone-tablet/2-60-brown-bear-printed-sweater.html#/1-الحجم-ص/11-اللون_-اسود" class="thumbnail product-thumbnail two-image">
-                                                                <img
-                                                                    class="img-fluid image-cover"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/29-home_default/brown-bear-printed-sweater.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/29-large_default/brown-bear-printed-sweater.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                                <img
-                                                                    class="img-fluid image-secondary"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/30-home_default/brown-bear-printed-sweater.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/30-large_default/brown-bear-printed-sweater.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                            </a>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 col-w73 no-padding">
-                                                        <div class="product-description">
-                                                            <div class="product-groups">
-
-                                                                <!-- begin modules/novproductcomments/novproductcomments_reviews.tpl -->
-                                                                <div class="product-comments">
-                                                                    <div class="star_content">
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                    </div>
-                                                                    <span>0 review</span>
-                                                                </div>
-                                                                <!-- end modules/novproductcomments/novproductcomments_reviews.tpl -->
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-                                                                <p class="seller_name">
-                                                                    <a title="View seller profile" href="http://demo.bestprestashoptheme.com/savemart/ar/jmarketplace/1_david-james/">
-                                                                        <i class="fa fa-user"></i>
-                                                                        David James
-                                                                    </a>
-                                                                </p>
-
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-
-
-
-                                                                <div class="product-title" itemprop="name"><a href="http://demo.bestprestashoptheme.com/savemart/ar/smartphone-tablet/2-60-brown-bear-printed-sweater.html#/1-الحجم-ص/11-اللون_-اسود">Lorem ipsum dolor sit amet ege</a></div>
-
-                                                                <div class="product-group-price">
-
-                                                                    <div class="product-price-and-shipping">
-
-
-
-                                                                        <span itemprop="price" class="price">36.00 UK£</span>
-
-
-
-
-
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature  last_item" data-id-product="3" data-id-product-attribute="95" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="col-12 col-w27 no-padding">
-                                                        <div class="thumbnail-container">
-
-                                                            <a href="http://demo.bestprestashoptheme.com/savemart/ar/smartphone-tablet/3-95-the-best-is-yet-to-come-framed-poster.html#/1-الحجم-ص/13-اللون_-برتقالي" class="thumbnail product-thumbnail two-image">
-                                                                <img
-                                                                    class="img-fluid image-cover"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/34-home_default/the-best-is-yet-to-come-framed-poster.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/34-large_default/the-best-is-yet-to-come-framed-poster.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                                <img
-                                                                    class="img-fluid image-secondary"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/35-home_default/the-best-is-yet-to-come-framed-poster.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/35-large_default/the-best-is-yet-to-come-framed-poster.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                            </a>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 col-w73 no-padding">
-                                                        <div class="product-description">
-                                                            <div class="product-groups">
-
-                                                                <!-- begin modules/novproductcomments/novproductcomments_reviews.tpl -->
-                                                                <div class="product-comments">
-                                                                    <div class="star_content">
-                                                                        <div class="star star_on"></div>
-                                                                        <div class="star star_on"></div>
-                                                                        <div class="star star_on"></div>
-                                                                        <div class="star star_on"></div>
-                                                                        <div class="star star_on"></div>
-                                                                    </div>
-                                                                    <span>5 review</span>
-                                                                </div>
-                                                                <!-- end modules/novproductcomments/novproductcomments_reviews.tpl -->
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-                                                                <p class="seller_name">
-                                                                    <a title="View seller profile" href="http://demo.bestprestashoptheme.com/savemart/ar/jmarketplace/2_taylor-jonson/">
-                                                                        <i class="fa fa-user"></i>
-                                                                        Taylor Jonson
-                                                                    </a>
-                                                                </p>
-
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-
-
-
-                                                                <div class="product-title" itemprop="name"><a href="http://demo.bestprestashoptheme.com/savemart/ar/smartphone-tablet/3-95-the-best-is-yet-to-come-framed-poster.html#/1-الحجم-ص/13-اللون_-برتقالي">Mauris molestie porttitor diam</a></div>
-
-                                                                <div class="product-group-price">
-
-                                                                    <div class="product-price-and-shipping">
-
-
-
-                                                                        <span itemprop="price" class="price">30.00 UK£</span>
-
-
-
-
-
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="item  text-center">
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature  first_item" data-id-product="4" data-id-product-attribute="112" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="col-12 col-w27 no-padding">
-                                                        <div class="thumbnail-container">
-
-                                                            <a href="http://demo.bestprestashoptheme.com/savemart/ar/home-appliance/4-112-the-adventure-begins-framed-poster.html#/1-الحجم-ص/9-اللون_-ابيض_مطفي" class="thumbnail product-thumbnail two-image">
-                                                                <img
-                                                                    class="img-fluid image-cover"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/39-home_default/the-adventure-begins-framed-poster.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/39-large_default/the-adventure-begins-framed-poster.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                                <img
-                                                                    class="img-fluid image-secondary"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/43-home_default/the-adventure-begins-framed-poster.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/43-large_default/the-adventure-begins-framed-poster.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                            </a>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 col-w73 no-padding">
-                                                        <div class="product-description">
-                                                            <div class="product-groups">
-
-                                                                <!-- begin modules/novproductcomments/novproductcomments_reviews.tpl -->
-                                                                <div class="product-comments">
-                                                                    <div class="star_content">
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                    </div>
-                                                                    <span>0 review</span>
-                                                                </div>
-                                                                <!-- end modules/novproductcomments/novproductcomments_reviews.tpl -->
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-                                                                <p class="seller_name">
-                                                                    <a title="View seller profile" href="http://demo.bestprestashoptheme.com/savemart/ar/jmarketplace/2_taylor-jonson/">
-                                                                        <i class="fa fa-user"></i>
-                                                                        Taylor Jonson
-                                                                    </a>
-                                                                </p>
-
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-
-
-
-                                                                <div class="product-title" itemprop="name"><a href="http://demo.bestprestashoptheme.com/savemart/ar/home-appliance/4-112-the-adventure-begins-framed-poster.html#/1-الحجم-ص/9-اللون_-ابيض_مطفي">Maecenas vulputate ligula vel</a></div>
-
-                                                                <div class="product-group-price">
-
-                                                                    <div class="product-price-and-shipping">
-
-
-
-                                                                        <span itemprop="price" class="price">18.00 UK£</span>
-
-
-
-
-
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature " data-id-product="6" data-id-product-attribute="0" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="col-12 col-w27 no-padding">
-                                                        <div class="thumbnail-container">
-
-                                                            <a href="http://demo.bestprestashoptheme.com/savemart/ar/home-appliance/6-nullam-tempor-orci-eu-pretium.html" class="thumbnail product-thumbnail two-image">
-                                                                <img
-                                                                    class="img-fluid image-cover"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/49-home_default/nullam-tempor-orci-eu-pretium.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/49-large_default/nullam-tempor-orci-eu-pretium.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                                <img
-                                                                    class="img-fluid image-secondary"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/50-home_default/nullam-tempor-orci-eu-pretium.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/50-large_default/nullam-tempor-orci-eu-pretium.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                            </a>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 col-w73 no-padding">
-                                                        <div class="product-description">
-                                                            <div class="product-groups">
-
-                                                                <!-- begin modules/novproductcomments/novproductcomments_reviews.tpl -->
-                                                                <div class="product-comments">
-                                                                    <div class="star_content">
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                    </div>
-                                                                    <span>0 review</span>
-                                                                </div>
-                                                                <!-- end modules/novproductcomments/novproductcomments_reviews.tpl -->
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-                                                                <p class="seller_name">
-                                                                    <a title="View seller profile" href="http://demo.bestprestashoptheme.com/savemart/ar/jmarketplace/2_taylor-jonson/">
-                                                                        <i class="fa fa-user"></i>
-                                                                        Taylor Jonson
-                                                                    </a>
-                                                                </p>
-
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-
-
-
-                                                                <div class="product-title" itemprop="name"><a href="http://demo.bestprestashoptheme.com/savemart/ar/home-appliance/6-nullam-tempor-orci-eu-pretium.html">Nullam tempor orci eu pretium</a></div>
-
-                                                                <div class="product-group-price">
-
-                                                                    <div class="product-price-and-shipping">
-
-
-
-                                                                        <span itemprop="price" class="price">14.28 UK£</span>
-
-
-
-
-
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature  last_item" data-id-product="7" data-id-product-attribute="155" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="col-12 col-w27 no-padding">
-                                                        <div class="thumbnail-container">
-
-                                                            <a href="http://demo.bestprestashoptheme.com/savemart/ar/home-appliance/7-155-donec-non-lectus-ac-erat-sedei.html#/1-الحجم-ص/10-اللون_-احمر" class="thumbnail product-thumbnail two-image">
-                                                                <img
-                                                                    class="img-fluid image-cover"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/54-home_default/donec-non-lectus-ac-erat-sedei.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/54-large_default/donec-non-lectus-ac-erat-sedei.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                                <img
-                                                                    class="img-fluid image-secondary"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/55-home_default/donec-non-lectus-ac-erat-sedei.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/55-large_default/donec-non-lectus-ac-erat-sedei.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                            </a>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 col-w73 no-padding">
-                                                        <div class="product-description">
-                                                            <div class="product-groups">
-
-                                                                <!-- begin modules/novproductcomments/novproductcomments_reviews.tpl -->
-                                                                <div class="product-comments">
-                                                                    <div class="star_content">
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                    </div>
-                                                                    <span>0 review</span>
-                                                                </div>
-                                                                <!-- end modules/novproductcomments/novproductcomments_reviews.tpl -->
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-                                                                <p class="seller_name">
-                                                                    <a title="View seller profile" href="http://demo.bestprestashoptheme.com/savemart/ar/jmarketplace/2_taylor-jonson/">
-                                                                        <i class="fa fa-user"></i>
-                                                                        Taylor Jonson
-                                                                    </a>
-                                                                </p>
-
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-
-
-
-                                                                <div class="product-title" itemprop="name"><a href="http://demo.bestprestashoptheme.com/savemart/ar/home-appliance/7-155-donec-non-lectus-ac-erat-sedei.html#/1-الحجم-ص/10-اللون_-احمر">Donec non lectus ac erat sedei</a></div>
-
-                                                                <div class="product-group-price">
-
-                                                                    <div class="product-price-and-shipping">
-
-
-
-                                                                        <span itemprop="price" class="price">14.28 UK£</span>
-
-
-
-
-
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novpagemanage/views/source/productlist.tpl -->
-
-                            <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novpagemanage/views/source/productlist.tpl -->
-
-                            <div class="nov-productlist   productlist-liststyle    col-xl-4 col-lg-4 col-md-4 col-xs-12 col-md-12">
-                                <div class="block block-product clearfix">
-                                    <h2 class="title_block">
-                                        AUDIO
-                                    </h2>
-                                    <div class="block_content">
-                                        <div id="productlist810673854" class="product_list grid owl-carousel owl-theme multi-row" data-autoplay="false" data-autoplayTimeout="6000" data-loop="false" data-margin="0" data-dots="false" data-nav="true" data-items="1" data-items_large="1" data-items_tablet="2" data-items_mobile="1" >
-                                            <div class="item  text-center">
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature  first_item" data-id-product="2" data-id-product-attribute="60" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="col-12 col-w27 no-padding">
-                                                        <div class="thumbnail-container">
-
-                                                            <a href="http://demo.bestprestashoptheme.com/savemart/ar/smartphone-tablet/2-60-brown-bear-printed-sweater.html#/1-الحجم-ص/11-اللون_-اسود" class="thumbnail product-thumbnail two-image">
-                                                                <img
-                                                                    class="img-fluid image-cover"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/29-home_default/brown-bear-printed-sweater.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/29-large_default/brown-bear-printed-sweater.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                                <img
-                                                                    class="img-fluid image-secondary"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/30-home_default/brown-bear-printed-sweater.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/30-large_default/brown-bear-printed-sweater.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                            </a>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 col-w73 no-padding">
-                                                        <div class="product-description">
-                                                            <div class="product-groups">
-
-                                                                <!-- begin modules/novproductcomments/novproductcomments_reviews.tpl -->
-                                                                <div class="product-comments">
-                                                                    <div class="star_content">
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                    </div>
-                                                                    <span>0 review</span>
-                                                                </div>
-                                                                <!-- end modules/novproductcomments/novproductcomments_reviews.tpl -->
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-                                                                <p class="seller_name">
-                                                                    <a title="View seller profile" href="http://demo.bestprestashoptheme.com/savemart/ar/jmarketplace/1_david-james/">
-                                                                        <i class="fa fa-user"></i>
-                                                                        David James
-                                                                    </a>
-                                                                </p>
-
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-
-
-
-                                                                <div class="product-title" itemprop="name"><a href="http://demo.bestprestashoptheme.com/savemart/ar/smartphone-tablet/2-60-brown-bear-printed-sweater.html#/1-الحجم-ص/11-اللون_-اسود">Lorem ipsum dolor sit amet ege</a></div>
-
-                                                                <div class="product-group-price">
-
-                                                                    <div class="product-price-and-shipping">
-
-
-
-                                                                        <span itemprop="price" class="price">36.00 UK£</span>
-
-
-
-
-
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature " data-id-product="7" data-id-product-attribute="155" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="col-12 col-w27 no-padding">
-                                                        <div class="thumbnail-container">
-
-                                                            <a href="http://demo.bestprestashoptheme.com/savemart/ar/home-appliance/7-155-donec-non-lectus-ac-erat-sedei.html#/1-الحجم-ص/10-اللون_-احمر" class="thumbnail product-thumbnail two-image">
-                                                                <img
-                                                                    class="img-fluid image-cover"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/54-home_default/donec-non-lectus-ac-erat-sedei.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/54-large_default/donec-non-lectus-ac-erat-sedei.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                                <img
-                                                                    class="img-fluid image-secondary"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/55-home_default/donec-non-lectus-ac-erat-sedei.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/55-large_default/donec-non-lectus-ac-erat-sedei.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                            </a>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 col-w73 no-padding">
-                                                        <div class="product-description">
-                                                            <div class="product-groups">
-
-                                                                <!-- begin modules/novproductcomments/novproductcomments_reviews.tpl -->
-                                                                <div class="product-comments">
-                                                                    <div class="star_content">
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                    </div>
-                                                                    <span>0 review</span>
-                                                                </div>
-                                                                <!-- end modules/novproductcomments/novproductcomments_reviews.tpl -->
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-                                                                <p class="seller_name">
-                                                                    <a title="View seller profile" href="http://demo.bestprestashoptheme.com/savemart/ar/jmarketplace/2_taylor-jonson/">
-                                                                        <i class="fa fa-user"></i>
-                                                                        Taylor Jonson
-                                                                    </a>
-                                                                </p>
-
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-
-
-
-                                                                <div class="product-title" itemprop="name"><a href="http://demo.bestprestashoptheme.com/savemart/ar/home-appliance/7-155-donec-non-lectus-ac-erat-sedei.html#/1-الحجم-ص/10-اللون_-احمر">Donec non lectus ac erat sedei</a></div>
-
-                                                                <div class="product-group-price">
-
-                                                                    <div class="product-price-and-shipping">
-
-
-
-                                                                        <span itemprop="price" class="price">14.28 UK£</span>
-
-
-
-
-
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature  last_item" data-id-product="8" data-id-product-attribute="172" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="col-12 col-w27 no-padding">
-                                                        <div class="thumbnail-container">
-
-                                                            <a href="http://demo.bestprestashoptheme.com/savemart/ar/audio/8-172-curabitur-in-lorem-sit-ameten-alt.html#/1-الحجم-ص/10-اللون_-احمر" class="thumbnail product-thumbnail two-image">
-                                                                <img
-                                                                    class="img-fluid image-cover"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/59-home_default/curabitur-in-lorem-sit-ameten-alt.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/59-large_default/curabitur-in-lorem-sit-ameten-alt.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                                <img
-                                                                    class="img-fluid image-secondary"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/60-home_default/curabitur-in-lorem-sit-ameten-alt.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/60-large_default/curabitur-in-lorem-sit-ameten-alt.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                            </a>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 col-w73 no-padding">
-                                                        <div class="product-description">
-                                                            <div class="product-groups">
-
-                                                                <!-- begin modules/novproductcomments/novproductcomments_reviews.tpl -->
-                                                                <div class="product-comments">
-                                                                    <div class="star_content">
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                    </div>
-                                                                    <span>0 review</span>
-                                                                </div>
-                                                                <!-- end modules/novproductcomments/novproductcomments_reviews.tpl -->
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-                                                                <p class="seller_name">
-                                                                    <a title="View seller profile" href="http://demo.bestprestashoptheme.com/savemart/ar/jmarketplace/2_taylor-jonson/">
-                                                                        <i class="fa fa-user"></i>
-                                                                        Taylor Jonson
-                                                                    </a>
-                                                                </p>
-
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-
-
-
-                                                                <div class="product-title" itemprop="name"><a href="http://demo.bestprestashoptheme.com/savemart/ar/audio/8-172-curabitur-in-lorem-sit-ameten-alt.html#/1-الحجم-ص/10-اللون_-احمر">Curabitur in lorem sit ameten alt</a></div>
-
-                                                                <div class="product-group-price">
-
-                                                                    <div class="product-price-and-shipping">
-
-
-
-                                                                        <span itemprop="price" class="price">18.00 UK£</span>
-
-
-
-
-
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="item  text-center">
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature  first_item" data-id-product="10" data-id-product-attribute="192" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="col-12 col-w27 no-padding">
-                                                        <div class="thumbnail-container">
-
-                                                            <a href="http://demo.bestprestashoptheme.com/savemart/ar/smartphone-tablet/10-192-nullam-lacinia-metus-posuere.html#/1-الحجم-ص/18-اللون_-وردي" class="thumbnail product-thumbnail two-image">
-                                                                <img
-                                                                    class="img-fluid image-cover"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/69-home_default/nullam-lacinia-metus-posuere.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/69-large_default/nullam-lacinia-metus-posuere.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                                <img
-                                                                    class="img-fluid image-secondary"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/70-home_default/nullam-lacinia-metus-posuere.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/70-large_default/nullam-lacinia-metus-posuere.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                            </a>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 col-w73 no-padding">
-                                                        <div class="product-description">
-                                                            <div class="product-groups">
-
-                                                                <!-- begin modules/novproductcomments/novproductcomments_reviews.tpl -->
-                                                                <div class="product-comments">
-                                                                    <div class="star_content">
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                    </div>
-                                                                    <span>0 review</span>
-                                                                </div>
-                                                                <!-- end modules/novproductcomments/novproductcomments_reviews.tpl -->
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-                                                                <p class="seller_name">
-                                                                    <a title="View seller profile" href="http://demo.bestprestashoptheme.com/savemart/ar/jmarketplace/3_harry-makle/">
-                                                                        <i class="fa fa-user"></i>
-                                                                        Harry Makle
-                                                                    </a>
-                                                                </p>
-
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-
-
-
-                                                                <div class="product-title" itemprop="name"><a href="http://demo.bestprestashoptheme.com/savemart/ar/smartphone-tablet/10-192-nullam-lacinia-metus-posuere.html#/1-الحجم-ص/18-اللون_-وردي">Nullam lacinia metus posuere</a></div>
-
-                                                                <div class="product-group-price">
-
-                                                                    <div class="product-price-and-shipping">
-
-
-
-                                                                        <span itemprop="price" class="price">36.00 UK£</span>
-
-
-
-
-
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature " data-id-product="12" data-id-product-attribute="232" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="col-12 col-w27 no-padding">
-                                                        <div class="thumbnail-container">
-
-                                                            <a href="http://demo.bestprestashoptheme.com/savemart/ar/home-appliance/12-232-nam-volutpat-justo-a-vehicula.html#/1-الحجم-ص/11-اللون_-اسود" class="thumbnail product-thumbnail two-image">
-                                                                <img
-                                                                    class="img-fluid image-cover"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/79-home_default/nam-volutpat-justo-a-vehicula.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/79-large_default/nam-volutpat-justo-a-vehicula.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                                <img
-                                                                    class="img-fluid image-secondary"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/80-home_default/nam-volutpat-justo-a-vehicula.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/80-large_default/nam-volutpat-justo-a-vehicula.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                            </a>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 col-w73 no-padding">
-                                                        <div class="product-description">
-                                                            <div class="product-groups">
-
-                                                                <!-- begin modules/novproductcomments/novproductcomments_reviews.tpl -->
-                                                                <div class="product-comments">
-                                                                    <div class="star_content">
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                    </div>
-                                                                    <span>0 review</span>
-                                                                </div>
-                                                                <!-- end modules/novproductcomments/novproductcomments_reviews.tpl -->
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-                                                                <p class="seller_name">
-                                                                    <a title="View seller profile" href="http://demo.bestprestashoptheme.com/savemart/ar/jmarketplace/3_harry-makle/">
-                                                                        <i class="fa fa-user"></i>
-                                                                        Harry Makle
-                                                                    </a>
-                                                                </p>
-
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-
-
-
-                                                                <div class="product-title" itemprop="name"><a href="http://demo.bestprestashoptheme.com/savemart/ar/home-appliance/12-232-nam-volutpat-justo-a-vehicula.html#/1-الحجم-ص/11-اللون_-اسود">Nam volutpat justo a vehicula</a></div>
-
-                                                                <div class="product-group-price">
-
-                                                                    <div class="product-price-and-shipping">
-
-
-
-                                                                        <span itemprop="price" class="price">7.56 UK£</span>
-
-
-
-                                                                        <span class="regular-price">10.80 UK£</span>
-
-
-
-
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature  last_item" data-id-product="13" data-id-product-attribute="254" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="col-12 col-w27 no-padding">
-                                                        <div class="thumbnail-container">
-
-                                                            <a href="http://demo.bestprestashoptheme.com/savemart/ar/audio/13-254-proin-placerat-lacus-eget-auctor.html#/1-الحجم-ص/10-اللون_-احمر" class="thumbnail product-thumbnail two-image">
-                                                                <img
-                                                                    class="img-fluid image-cover"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/84-home_default/proin-placerat-lacus-eget-auctor.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/84-large_default/proin-placerat-lacus-eget-auctor.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                                <img
-                                                                    class="img-fluid image-secondary"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/85-home_default/proin-placerat-lacus-eget-auctor.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/85-large_default/proin-placerat-lacus-eget-auctor.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                            </a>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 col-w73 no-padding">
-                                                        <div class="product-description">
-                                                            <div class="product-groups">
-
-                                                                <!-- begin modules/novproductcomments/novproductcomments_reviews.tpl -->
-                                                                <div class="product-comments">
-                                                                    <div class="star_content">
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                    </div>
-                                                                    <span>0 review</span>
-                                                                </div>
-                                                                <!-- end modules/novproductcomments/novproductcomments_reviews.tpl -->
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-                                                                <p class="seller_name">
-                                                                    <a title="View seller profile" href="http://demo.bestprestashoptheme.com/savemart/ar/jmarketplace/1_david-james/">
-                                                                        <i class="fa fa-user"></i>
-                                                                        David James
-                                                                    </a>
-                                                                </p>
-
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-
-
-
-                                                                <div class="product-title" itemprop="name"><a href="http://demo.bestprestashoptheme.com/savemart/ar/audio/13-254-proin-placerat-lacus-eget-auctor.html#/1-الحجم-ص/10-اللون_-احمر">Proin placerat lacus eget auctor</a></div>
-
-                                                                <div class="product-group-price">
-
-                                                                    <div class="product-price-and-shipping">
-
-
-
-                                                                        <span itemprop="price" class="price">12.00 UK£</span>
-
-
-
-
-
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="item  text-center">
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature  first_item" data-id-product="14" data-id-product-attribute="270" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="col-12 col-w27 no-padding">
-                                                        <div class="thumbnail-container">
-
-                                                            <a href="http://demo.bestprestashoptheme.com/savemart/ar/smartphone-tablet/14-270-donec-laoreet-imperdiet-elit-ut.html#/1-الحجم-ص/6-اللون_-رمادي_داكن" class="thumbnail product-thumbnail two-image">
-                                                                <img
-                                                                    class="img-fluid image-cover"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/89-home_default/donec-laoreet-imperdiet-elit-ut.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/89-large_default/donec-laoreet-imperdiet-elit-ut.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                                <img
-                                                                    class="img-fluid image-secondary"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/90-home_default/donec-laoreet-imperdiet-elit-ut.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/90-large_default/donec-laoreet-imperdiet-elit-ut.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                            </a>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 col-w73 no-padding">
-                                                        <div class="product-description">
-                                                            <div class="product-groups">
-
-                                                                <!-- begin modules/novproductcomments/novproductcomments_reviews.tpl -->
-                                                                <div class="product-comments">
-                                                                    <div class="star_content">
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                    </div>
-                                                                    <span>0 review</span>
-                                                                </div>
-                                                                <!-- end modules/novproductcomments/novproductcomments_reviews.tpl -->
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-                                                                <p class="seller_name">
-                                                                    <a title="View seller profile" href="http://demo.bestprestashoptheme.com/savemart/ar/jmarketplace/3_harry-makle/">
-                                                                        <i class="fa fa-user"></i>
-                                                                        Harry Makle
-                                                                    </a>
-                                                                </p>
-
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-
-
-
-                                                                <div class="product-title" itemprop="name"><a href="http://demo.bestprestashoptheme.com/savemart/ar/smartphone-tablet/14-270-donec-laoreet-imperdiet-elit-ut.html#/1-الحجم-ص/6-اللون_-رمادي_داكن">Donec laoreet imperdiet elit ut</a></div>
-
-                                                                <div class="product-group-price">
-
-                                                                    <div class="product-price-and-shipping">
-
-
-
-                                                                        <span itemprop="price" class="price">18.00 UK£</span>
-
-
-
-
-
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature " data-id-product="15" data-id-product-attribute="303" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="col-12 col-w27 no-padding">
-                                                        <div class="thumbnail-container">
-
-                                                            <a href="http://demo.bestprestashoptheme.com/savemart/ar/audio/15-303-nunc-tempus-velit-quis-urnanb.html#/1-الحجم-ص/10-اللون_-احمر" class="thumbnail product-thumbnail two-image">
-                                                                <img
-                                                                    class="img-fluid image-cover"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/94-home_default/nunc-tempus-velit-quis-urnanb.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/94-large_default/nunc-tempus-velit-quis-urnanb.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                                <img
-                                                                    class="img-fluid image-secondary"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/95-home_default/nunc-tempus-velit-quis-urnanb.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/95-large_default/nunc-tempus-velit-quis-urnanb.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                            </a>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 col-w73 no-padding">
-                                                        <div class="product-description">
-                                                            <div class="product-groups">
-
-                                                                <!-- begin modules/novproductcomments/novproductcomments_reviews.tpl -->
-                                                                <div class="product-comments">
-                                                                    <div class="star_content">
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                    </div>
-                                                                    <span>0 review</span>
-                                                                </div>
-                                                                <!-- end modules/novproductcomments/novproductcomments_reviews.tpl -->
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-                                                                <p class="seller_name">
-                                                                    <a title="View seller profile" href="http://demo.bestprestashoptheme.com/savemart/ar/jmarketplace/1_david-james/">
-                                                                        <i class="fa fa-user"></i>
-                                                                        David James
-                                                                    </a>
-                                                                </p>
-
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-
-
-
-                                                                <div class="product-title" itemprop="name"><a href="http://demo.bestprestashoptheme.com/savemart/ar/audio/15-303-nunc-tempus-velit-quis-urnanb.html#/1-الحجم-ص/10-اللون_-احمر">Nunc tempus velit quis urnanb</a></div>
-
-                                                                <div class="product-group-price">
-
-                                                                    <div class="product-price-and-shipping">
-
-
-
-                                                                        <span itemprop="price" class="price">37.80 UK£</span>
-
-
-
-                                                                        <span class="regular-price">42.00 UK£</span>
-
-
-
-
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex flex-wrap align-items-start product-miniature js-product-miniature  last_item" data-id-product="16" data-id-product-attribute="323" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="col-12 col-w27 no-padding">
-                                                        <div class="thumbnail-container">
-
-                                                            <a href="http://demo.bestprestashoptheme.com/savemart/ar/home-appliance/16-323-cras-consequat-quis-dolor-eunde.html#/1-الحجم-ص/11-اللون_-اسود" class="thumbnail product-thumbnail two-image">
-                                                                <img
-                                                                    class="img-fluid image-cover"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/99-home_default/cras-consequat-quis-dolor-eunde.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/99-large_default/cras-consequat-quis-dolor-eunde.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                                <img
-                                                                    class="img-fluid image-secondary"
-                                                                    src = "http://demo.bestprestashoptheme.com/savemart/100-home_default/cras-consequat-quis-dolor-eunde.jpg"
-                                                                    alt = ""
-                                                                    data-full-size-image-url = "http://demo.bestprestashoptheme.com/savemart/100-large_default/cras-consequat-quis-dolor-eunde.jpg"
-                                                                    width="600"
-                                                                    height="600"
-                                                                >
-                                                            </a>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 col-w73 no-padding">
-                                                        <div class="product-description">
-                                                            <div class="product-groups">
-
-                                                                <!-- begin modules/novproductcomments/novproductcomments_reviews.tpl -->
-                                                                <div class="product-comments">
-                                                                    <div class="star_content">
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                    </div>
-                                                                    <span>0 review</span>
-                                                                </div>
-                                                                <!-- end modules/novproductcomments/novproductcomments_reviews.tpl -->
-
-                                                                <!-- begin /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-                                                                <p class="seller_name">
-                                                                    <a title="View seller profile" href="http://demo.bestprestashoptheme.com/savemart/ar/jmarketplace/3_harry-makle/">
-                                                                        <i class="fa fa-user"></i>
-                                                                        Harry Makle
-                                                                    </a>
-                                                                </p>
-
-                                                                <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/jmarketplace/views/templates/hook/product-list.tpl -->
-
-
-
-                                                                <div class="product-title" itemprop="name"><a href="http://demo.bestprestashoptheme.com/savemart/ar/home-appliance/16-323-cras-consequat-quis-dolor-eunde.html#/1-الحجم-ص/11-اللون_-اسود">Cras consequat quis dolor eunde</a></div>
-
-                                                                <div class="product-group-price">
-
-                                                                    <div class="product-price-and-shipping">
-
-
-
-                                                                        <span itemprop="price" class="price">21.60 UK£</span>
-
-
-
-                                                                        <span class="regular-price">24.00 UK£</span>
-
-
-
-
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- end /var/www/demo.bestprestashoptheme.com/public_html/savemart/themes/vinova_savemart/modules/novpagemanage/views/source/productlist.tpl -->
-                        </div></div>
+  <div class="body-content outer-top-vs" id="top-banner-and-menu">
+  <div class="container">
+    @include('front.includes.alert1')
+    <div class="row"> 
+      <!-- ============================================== SIDEBAR ============================================== -->
+      <div class="col-xs-12 col-sm-12 col-md-3 sidebar"> 
+        
+        <!-- ================================== TOP NAVIGATION ================================== -->
+        <div class="side-menu animate-dropdown outer-bottom-xs">
+          <div class="head"><i class="icon fa fa-align-justify fa-fw"></i> {{__('site/home.categories')}}</div>
+          <nav class="yamm megamenu-horizontal">
+            <ul class="nav">
+
+                                    
+              
+               @foreach(AllCategorie() as $category)
+              <li class="dropdown menu-item"> <a href="{{route('category',$category -> slug )}}" class="dropdown-toggle" @if(count($category -> childrens) >0) data-toggle="dropdown" @endif><i class="icon fa fa-shopping-bag" aria-hidden="true"></i>{{$category -> name}}</a>
+                @isset($category -> childrens)
+                <ul class="dropdown-menu mega-menu">
+                    @foreach($category -> childrens as $childern)
+                  <li class="yamm-content">
+                    <div class="row">
+                      <div class="col-sm-13 col-md-3">
+                        <ul class="links list-unstyled">
+                          <li><a href="{{route('category',$childern -> slug )}}">{{$childern -> name}}</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  @endforeach
+                </ul>
+                @endisset
+                </li>
+                @endforeach  
+                </ul>
+                </nav>
                 </div>
-            </div>
-        </section>
 
+              
+        <div class="sidebar-widget hot-deals outer-bottom-xs">
+          <h3 class="section-title">{{__('site/home.specialProduct')}}</h3>
+          <div class="owl-carousel sidebar-carousel custom-carousel owl-theme outer-top-ss">
+            @foreach($special_products as $product)
+            <div class="item">
+              <div class="products">
+                <div class="hot-deal-wrapper">
+                  <div class="image"> 
+                  <a href="#">
+                  <img src="{{$product -> images[0] -> photo ?? ''}}" alt="{{$product->name}}"> 
+                  <img src="{{$product -> images[1] -> photo ?? ''}}" alt="{{$product->name}}" class="hover-image">
+                  </a>
+                  </div>
+                  <div class="sale-offer-tag"><span>{{pourcentage($product->price,$product->special_price)}}<br>
+                    promo</span></div>
+                  <!--div class="timing-wrapper">
+                    <div class="box-wrapper">
+                      <div class="date box"> <span class="key">120</span> <span class="value">DAYS</span> </div>
+                    </div>
+                    <div class="box-wrapper">
+                      <div class="hour box"> <span class="key">20</span> <span class="value">HRS</span> </div>
+                    </div>
+                    <div class="box-wrapper">
+                      <div class="minutes box"> <span class="key">36</span> <span class="value">MINS</span> </div>
+                    </div>
+                    <div class="box-wrapper">
+                      <div class="seconds box"> <span class="key">60</span> <span class="value">SEC</span> </div>
+                    </div>
+                  </div-->
+                </div>
+                <!-- /.hot-deal-wrapper -->
+                
+                <div class="product-info text-left m-t-20">
+                  <h3 class="name"><a href="detail.html">{{$product->name}}</a></h3>
+                  <div class="product-price"> <span class="price"> {{$product -> special_price ?? $product -> price }}</span> <span class="price-before-discount">@if($product -> special_price) {{$product -> price}} @endif</span> </div>
+                  <!-- /.product-price --> 
+                  
+                </div>
+                <!-- /.product-info -->
+                
+                <div class="cart clearfix animate-effect">
+                  <div class="action">
+                    <div class=" btn-group">
+                      <a class="btn btn-primary cart-addition" href="#" data-product-id="{{$product->id}}" type="button"><i class="fa fa-shopping-cart"></i>{{__('site/home.addToCart')}}</a>
+                    </div>
+                  </div>
+                  <!-- /.action --> 
+                </div>
+                <!-- /.cart --> 
+              </div>
+            </div>
+            @endforeach
+           
+          </div>
+          <!-- /.sidebar-widget --> 
+        </div>
+
+        
+        <div class="sidebar-widget outer-bottom-small">
+          <h3 class="section-title">{{__('site/home.cheapset')}}</h3>
+          <div class="sidebar-widget-body outer-top-xs">
+            <div class="owl-carousel sidebar-carousel special-offer custom-carousel owl-theme outer-top-xs">
+              <div class="item">
+                <div class="products special-product">
+                  @foreach($cheapest_prices as $product)
+                  <div class="product">
+                    <div class="product-micro">
+                      <div class="row product-micro-row">
+                        <div class="col col-xs-5">
+                          <div class="product-image">
+                            <div class="image"> <a href="#"> <img src="{{$product -> images[0] -> photo ?? ''}}" alt="{{$product->name}}"> </a> </div>
+                            <!-- /.image --> 
+                            
+                          </div>
+                          <!-- /.product-image --> 
+                        </div>
+                        <!-- /.col -->
+                        <div class="col col-xs-7">
+                          <div class="product-info">
+                            <h3 class="name"><a href="#">{{$product->name}}</a></h3>
+                            <div class="product-price"> <span class="price"> {{$product->price}} </span> </div>
+                            <!-- /.product-price --> 
+                            
+                          </div>
+                        </div>
+                        <!-- /.col --> 
+                      </div>
+                      <!-- /.product-micro-row --> 
+                    </div>
+                    <!-- /.product-micro --> 
+                    
+                  </div>
+                 @endforeach
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /.sidebar-widget-body --> 
+        </div>
+        
+        
+        <div class="sidebar-widget newsletter outer-bottom-small">
+          <h3 class="section-title">{{__('site/home.newsletter')}}</h3>
+          <div class="sidebar-widget-body outer-top-xs">
+            <p>{{__('site/home.newsletterinscrire')}}</p>
+            <div id="statusSubscribe" style="display: none;color: red"></div>
+                <form action="javascript:void(0);" type="post" class="newsletter-area">
+                  {{ csrf_field() }}
+              <div class="form-group">
+                <label class="sr-only" for="exampleInputEmail1">{{__('site/home.email')}}</label>
+                <input onfocus="enableSubscriber(); " type="email"class="form-control" id="email" placeholder="S'abonner avec notre site web">
+              </div>
+              <button onclick="checkSubscriber();addSubscriber();" id="btnSubmit" class="btn btn-primary">{{__('site/home.abonner')}}</button>
+            </form>
+          </div>
+          <!-- /.sidebar-widget-body --> 
+        </div>
+       
+        
+      </div>
+     
+      <div class="col-xs-12 col-sm-12 col-md-9 homebanner-holder"> 
+        
+        <div id="hero">
+          <div id="owl-main" class="owl-carousel owl-inner-nav owl-ui-sm">
+            <div class="item" style="background-image: url(/assets/assets/images/slider1.png);">
+              <div class="container-fluid">
+                <div class="caption bg-color vertical-center text-left">
+                  <div class="slider-header fadeInDown-1">{{__('site/home.newproducts')}}</div>
+                  <div class="big-text fadeInDown-1"> {{__('site/home.newbrand')}} </div>
+                  <div class="excerpt fadeInDown-2 hidden-xs"> <span>{{__('site/home.allproductstype')}}</span> </div>
+                  <div class="button-holder fadeInDown-3"> <a href="{{route('all-products')}}" class="btn-lg btn btn-uppercase btn-primary shop-now-button">{{__('site/home.shopnow')}}</a> </div>
+                </div>
+                <!-- /.caption --> 
+              </div>
+              <!-- /.container-fluid --> 
+            </div>
+            <!-- /.item -->
+            
+            <div class="item" style="background-image: url(/assets/assets/images/slider2.jpg);">
+              <div class="container-fluid">
+                <div class="caption bg-color vertical-center text-left">
+                  <div class="slider-header fadeInDown-1">QuickShop </div>
+                  <div class="big-text fadeInDown-1"> {{__('site/home.profiterproducts')}} </div>
+                  <div class="excerpt fadeInDown-2 hidden-xs"> <span>{{__('site/home.presentourproducts')}}</span> </div>
+                  <div class="button-holder fadeInDown-3"> <a href="{{route('all-products')}}" class="btn-lg btn btn-uppercase btn-primary shop-now-button">{{__('site/home.shopnow')}}</a> </div>
+                </div>
+                <!-- /.caption --> 
+              </div>
+              <!-- /.container-fluid --> 
+            </div>
+            <!-- /.item --> 
+            
+          </div>
+          <!-- /.owl-carousel --> 
+        </div>
+       
+        <div id="product-tabs-slider" class="scroll-tabs outer-top-vs">
+          <div class="more-info-tab clearfix ">
+            <h3 class="new-product-title pull-left">{{__('site/home.newproducts')}}</h3>
+            <ul class="nav nav-tabs nav-tab-line pull-right" id="new-products-1">
+              <li class="active"><a data-transition-type="backSlide" href="#smartphone" data-toggle="tab">{{__('site/home.bestseller')}}</a></li>
+              <li><a data-transition-type="backSlide" href="#laptop" data-toggle="tab">{{__('site/home.bestvisited')}}</a></li>
+              <li><a data-transition-type="backSlide" href="#apple" data-toggle="tab">{{__('site/home.promo')}}</a></li>
+            </ul>
+            <!-- /.nav-tabs --> 
+          </div>
+          <div class="tab-content outer-top-xs">
+         
+            <!-- /.tab-pane -->
+            
+            <div class="tab-pane in active" id="smartphone">
+              <div class="product-slider">
+                <div class="owl-carousel home-owl-carousel custom-carousel owl-theme">
+                    @isset($best_seller)
+                    @foreach($best_seller as $product)
+                  <div class="item item-carousel">
+                    <div class="products">
+                      <div class="product">
+                        <div class="product-image">
+                          <div class="image"> 
+                          <a href="detail.html">
+                             <img src="{{$product -> images[0] -> photo ?? ''}}" alt=""> 
+                              <img src="{{$product -> images[1] -> photo ?? ''}}" alt="" class="hover-image">
+                          </a>
+                          
+                          </div>
+                          <!-- /.image -->
+                          
+                          <div class="tag sale"><span>best</span></div>
+                        </div>
+                        <!-- /.product-image -->
+                        
+                        <div class="product-info text-left">
+                          <h3 class="name"><a href="{{route('product.details',$product -> slug)}}">{{$product->name}}</a></h3>
+                          <div class="description"></div>
+                          <div class="product-price"> <span class="price">{{$product -> special_price ?? $product -> price }}</span> <span class="price-before-discount">@if($product -> special_price) {{$product -> price}} @endif</span> </div>
+                          <!-- /.product-price --> 
+                          
+                        </div>
+                        <!-- /.product-info -->
+                        <div class="cart clearfix animate-effect">
+                          <div class="action">
+                            <ul class="list-unstyled">
+                             
+                               <li class="lnk wishlist"> <a class="add-to-cart cart-addition" href="#" title="ajouter au panier"  data-product-id="{{$product -> id}}"> <i class="fa fa-shopping-cart"></i>  </a> </li>
+                              <li class="lnk wishlist"> <a class="add-to-cart addToWishlist" href="#" title="ajoute au favorie"  data-product-id="{{$product -> id}}":> <i class="icon fa fa-heart"></i> </a> </li>
+                            </ul>
+                          </div>
+                          <!-- /.action --> 
+                        </div>
+                        <!-- /.cart --> 
+                      </div>
+                      <!-- /.product --> 
+                      
+                    </div>
+                    <!-- /.products --> 
+                  </div>
+                  @endforeach
+                  @endisset
+                </div>
+                <!-- /.home-owl-carousel --> 
+              </div>
+              <!-- /.product-slider --> 
+            </div>
+            <!-- /.tab-pane -->
+            
+            <div class="tab-pane" id="laptop">
+              <div class="product-slider">
+                <div class="owl-carousel home-owl-carousel custom-carousel owl-theme">
+                  
+                  @isset($best_visited)
+                    @foreach($best_visited as $product)
+                  <div class="item item-carousel">
+                     <div class="products">
+                      <div class="product">
+                        <div class="product-image">
+                          <div class="image"> 
+                          <a href="detail.html">
+                             <img src="{{$product -> images[0] -> photo ?? ''}}" alt=""> 
+                              <img src="{{$product -> images[1] -> photo ?? ''}}" alt="" class="hover-image">
+                          </a>
+                          
+                          </div>
+                          <!-- /.image -->
+                          
+                          <div class="tag sale"><span>best</span></div>
+                        </div>
+                        <!-- /.product-image -->
+                        
+                        <div class="product-info text-left">
+                          <h3 class="name"><a href="{{route('product.details',$product -> slug)}}">{{$product->name}}</a></h3>
+                          <div class="description"></div>
+                          <div class="product-price"> <span class="price">{{$product -> special_price ?? $product -> price }}</span> <span class="price-before-discount">@if($product -> special_price) {{$product -> price}} @endif</span> </div>
+                          <!-- /.product-price --> 
+                          
+                        </div>
+                        <!-- /.product-info -->
+                        <div class="cart clearfix animate-effect">
+                          <div class="action">
+                            <ul class="list-unstyled">
+                             
+                               <li class="lnk wishlist"> <a class="add-to-cart cart-addition" href="#" title="ajouter au panier"  data-product-id="{{$product -> id}}":> <i class="fa fa-shopping-cart"></i>  </a> </li>
+                              <li class="lnk wishlist"> <a class="add-to-cart addToWishlist" href="#" title="ajoute au favorie"  data-product-id="{{$product -> id}}":> <i class="icon fa fa-heart"></i> </a> </li>
+                            </ul>
+                          </div>
+                          <!-- /.action --> 
+                        </div>
+                        <!-- /.cart --> 
+                      </div>
+                      <!-- /.product --> 
+                      
+                    </div>
+                  </div>
+
+                     @endforeach
+                  @endisset
+                </div>
+              </div>
+            </div>
+            
+            <div class="tab-pane" id="apple">
+              <div class="product-slider">
+                <div class="owl-carousel home-owl-carousel custom-carousel owl-theme">
+                  
+                  @isset($promotion_products)
+                    @foreach($promotion_products as $product)
+
+                  <div class="item item-carousel">
+                    <div class="products">
+                      <div class="product">
+                        <div class="product-image">
+                          <div class="image"> 
+                          <a href="detail.html">
+                             <img src="{{$product -> images[0] -> photo ?? ''}}" alt=""> 
+                              <img src="{{$product -> images[1] -> photo ?? ''}}" alt="" class="hover-image">
+                          </a>
+                          
+                          </div>
+                          <!-- /.image -->
+                          
+                          <div class="tag sale"><span>best</span></div>
+                        </div>
+                        <!-- /.product-image -->
+                        
+                        <div class="product-info text-left">
+                          <h3 class="name"><a href="{{route('product.details',$product -> slug)}}">{{$product->name}}</a></h3>
+                          <div class="description"></div>
+                          <div class="product-price"> <span class="price">{{$product -> special_price ?? $product -> price }}</span> <span class="price-before-discount">@if($product -> special_price) {{$product -> price}} @endif</span> </div>
+                          <!-- /.product-price --> 
+                          
+                        </div>
+                        <!-- /.product-info -->
+                        <div class="cart clearfix animate-effect">
+                          <div class="action">
+                            <ul class="list-unstyled">
+                             
+                               <li class="lnk wishlist"> <a class="add-to-cart cart-addition" href="#" title="ajouter au panier"  data-product-id="{{$product -> id}}":> <i class="fa fa-shopping-cart"></i>  </a> </li>
+                              <li class="lnk wishlist"> <a class="add-to-cart addToWishlist" href="#" title="ajoute au favorie"  data-product-id="{{$product -> id}}":> <i class="icon fa fa-heart"></i> </a> </li>
+                            </ul>
+                          </div>
+                          <!-- /.action --> 
+                        </div>
+                        <!-- /.cart --> 
+                      </div>
+                      <!-- /.product --> 
+                      
+                    </div>
+                    <!-- /.products --> 
+                  </div>
+                  <!-- /.item -->
+                  
+                  @endforeach
+                  @endisset
+                </div>
+                <!-- /.home-owl-carousel --> 
+              </div>
+              <!-- /.product-slider --> 
+            </div>
+            <!-- /.tab-pane --> 
+            
+          </div>
+          <!-- /.tab-content --> 
+        </div>
+
+        <div class="wide-banners outer-bottom-xs">
+          <div class="row">
+            <div class="col-md-4 col-sm-4">
+              <div class="wide-banner cnt-strip">
+                <div class="image"> <img class="img-responsive" src="/assets/assets/images/banners/home1.png" style="height: 160px;width: 290px" alt=""> </div>
+              </div>
+              <!-- /.wide-banner --> 
+            </div>
+            
+            <div class="col-md-4 col-sm-4">
+              <div class="wide-banner cnt-strip">
+                <div class="image"> <img class="img-responsive" src="/assets/assets/images/banners/home2.png" style="height: 160px;width: 290px" alt=""> </div>
+              </div>
+              <!-- /.wide-banner --> 
+            </div>
+            
+            <!-- /.col -->
+            <div class="col-md-4 col-sm-4">
+              <div class="wide-banner cnt-strip">
+                <div class="image"> <img class="img-responsive" src="/assets/assets/images/banners/home3.png"  style="height: 160px;width: 290px" alt=""> </div>
+              </div>
+              <!-- /.wide-banner --> 
+            </div>
+            <!-- /.col --> 
+          </div>
+          <!-- /.row --> 
+        </div>
+      
+        <section class="section featured-product">
+        <div class="row">
+        <!--div class="col-lg-3">
+          <h3 class="section-title">Electronics & Digital</h3>
+          <ul class="sub-cat">
+          <li><a href="#">Computers</a></li>
+          <li><a href="#">Air Condtion</a></li>
+          <li><a href="#">Mobile Phones</a></li>
+          <li><a href="#">Camera</a></li>
+          <li><a href="#">Television</a></li>
+          <li><a href="#">Sound & Speakers</a></li>
+          <li><a href="#">Games & Audio Music</a></li>
+          <li><a href="#">Digital Watches</a></li>
+          <li><a href="#">Washing Machines</a></li>
+         <li><a href="#">Office Electronics</a></li>
+          </ul>
+          </div>
+          <div class="col-lg-9">
+          <div class="owl-carousel homepage-owl-carousel custom-carousel owl-theme outer-top-xs">
+            <div class="item item-carousel">
+              <div class="products">
+                <div class="product">
+                  <div class="product-image">
+                    <div class="image"> 
+                          <a href="detail.html">
+                             <img src="/assets/assets/images/products/p13.jpg" alt=""> 
+                              <img src="/assets/assets/images/products/p13_hover.jpg" alt="" class="hover-image">
+                          </a>
+                          
+                          </div>
+                    
+                    <div class="tag hot"><span>hot</span></div>
+                  </div>
+                  
+                  <div class="product-info text-left">
+                    <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
+                    <div class="rating rateit-small"></div>
+                    <div class="description"></div>
+                    <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
+                    
+                  </div>
+                  <div class="cart clearfix animate-effect">
+                    <div class="action">
+                      <ul class="list-unstyled">
+                        <li class="add-cart-button btn-group">
+                          <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
+                          <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
+                        </li>
+                        <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
+                        <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal" aria-hidden="true"></i> </a> </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+            <div class="item item-carousel">
+              <div class="products">
+                <div class="product">
+                  <div class="product-image">
+                    <div class="image"> 
+                          <a href="detail.html">
+                             <img src="/assets/assets/images/products/p15.jpg" alt=""> 
+                              <img src="/assets/assets/images/products/p15_hover.jpg" alt="" class="hover-image">
+                          </a>
+                          
+                          </div>
+                    
+                    <div class="tag new"><span>new</span></div>
+                  </div>
+                  
+                  <div class="product-info text-left">
+                    <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
+                    <div class="rating rateit-small"></div>
+                    <div class="description"></div>
+                    <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
+                    
+                  </div>
+                  <div class="cart clearfix animate-effect">
+                    <div class="action">
+                      <ul class="list-unstyled">
+                        <li class="add-cart-button btn-group">
+                          <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
+                          <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
+                        </li>
+                        <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
+                        <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal" aria-hidden="true"></i> </a> </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+            
+            <div class="item item-carousel">
+              <div class="products">
+                <div class="product">
+                  <div class="product-image">
+                    <div class="image"> 
+                          <a href="detail.html">
+                             <img src="/assets/assets/images/products/p10.jpg" alt=""> 
+                              <img src="/assets/assets/images/products/p10_hover.jpg" alt="" class="hover-image">
+                          </a>
+                          
+                          </div>
+                    
+                    <div class="tag sale"><span>sale</span></div>
+                  </div>
+                  
+                  <div class="product-info text-left">
+                    <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
+                    <div class="rating rateit-small"></div>
+                    <div class="description"></div>
+                    <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
+                    
+                  </div>
+                  <div class="cart clearfix animate-effect">
+                    <div class="action">
+                      <ul class="list-unstyled">
+                        <li class="add-cart-button btn-group">
+                          <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
+                          <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
+                        </li>
+                        <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
+                        <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal" aria-hidden="true"></i> </a> </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+            
+            <div class="item item-carousel">
+              <div class="products">
+                <div class="product">
+                  <div class="product-image">
+                    <div class="image"> 
+                          <a href="detail.html">
+                             <img src="/assets/assets/images/products/p11.jpg" alt=""> 
+                              <img src="/assets/assets/images/products/p11_hover.jpg" alt="" class="hover-image">
+                          </a>
+                          
+                          </div>
+                    
+                    <div class="tag hot"><span>hot</span></div>
+                  </div>
+                  
+                  <div class="product-info text-left">
+                    <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
+                    <div class="rating rateit-small"></div>
+                    <div class="description"></div>
+                    <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
+                    
+                  </div>
+                  <div class="cart clearfix animate-effect">
+                    <div class="action">
+                      <ul class="list-unstyled">
+                        <li class="add-cart-button btn-group">
+                          <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
+                          <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
+                        </li>
+                        <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
+                        <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal" aria-hidden="true"></i> </a> </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+            
+            <div class="item item-carousel">
+              <div class="products">
+                <div class="product">
+                  <div class="product-image">
+                    <div class="image"> 
+                          <a href="detail.html">
+                             <img src="/assets/assets/images/products/p8.jpg" alt=""> 
+                              <img src="/assets/assets/images/products/p8_hover.jpg" alt="" class="hover-image">
+                          </a>
+                          
+                          </div>
+                    
+                    <div class="tag new"><span>new</span></div>
+                  </div>
+                  
+                  <div class="product-info text-left">
+                    <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
+                    <div class="rating rateit-small"></div>
+                    <div class="description"></div>
+                    <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
+                    
+                  </div>
+                  <div class="cart clearfix animate-effect">
+                    <div class="action">
+                      <ul class="list-unstyled">
+                        <li class="add-cart-button btn-group">
+                          <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
+                          <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
+                        </li>
+                        <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
+                        <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal" aria-hidden="true"></i> </a> </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+            
+           
+          </div>
+          </div-->
+          </div>
+          <!-- /.home-owl-carousel --> 
+        </section>
+        <!-- /.section --> 
+        <!-- ============================================== FEATURED PRODUCTS : END ============================================== --> 
+        <!-- ============================================== WIDE PRODUCTS ============================================== -->
+        <div class="wide-banners outer-bottom-xs">
+          <div class="row">
+            <div class="col-md-8">
+              <div class="wide-banner1 cnt-strip">
+                <div class="image"> <img class="img-responsive" src="/assets/assets/images/banners/home-banner.jpg" alt=""> </div>
+                <div class="strip strip-text">
+                  <div class="strip-inner">
+                    <h2 class="text-right">{{__('site/home.newproducts')}}<br>
+                      <span class="shopping-needs">Profitez d'acheter nos derniers produits</span></h2>
+                  </div>
+                </div>
+                <div class="new-label">
+                  <div class="text">New</div>
+                </div>
+                <!-- /.new-label --> 
+              </div>
+              <!-- /.wide-banner --> 
+            </div>
+
+            <!-- /.col --> 
+            <div class="col-md-4">
+              <div class="wide-banner cnt-strip">
+                <div class="image"> <img class="img-responsive" src="/assets/assets/images/banners/home4.png" alt=""> </div>
+                
+                
+                <!-- /.new-label --> 
+              </div>
+              <!-- /.wide-banner --> 
+            </div>
+            
+          </div>
+          <!-- /.row --> 
+        </div>
+       
+
+        
+        <section class="section new-arriavls">
+          <h3 class="section-title">{{__('site/home.populaireproducts')}}</h3>
+          <div class="owl-carousel home-owl-carousel custom-carousel owl-theme outer-top-xs">
+            @isset($popular_products)
+            @foreach($popular_products as $product)
+            <div class="item item-carousel">
+                 <div class="products">
+                      <div class="product">
+                        <div class="product-image">
+                          <div class="image"> 
+                          <a href="detail.html">
+                             <img src="{{$product -> images[0] -> photo ?? ''}}" alt=""> 
+                              <img src="{{$product -> images[1] -> photo ?? ''}}" alt="" class="hover-image">
+                          </a>
+                          
+                          </div>
+                          <!-- /.image -->
+                          
+                          <div class="tag sale"><span>best</span></div>
+                        </div>
+                        <!-- /.product-image -->
+                        
+                        <div class="product-info text-left">
+                          <h3 class="name"><a href="{{route('product.details',$product -> slug)}}">{{$product->name}}</a></h3>
+                          <div class="description"></div>
+                          <div class="product-price"> <span class="price">{{$product -> special_price ?? $product -> price }}</span> <span class="price-before-discount">@if($product -> special_price) {{$product -> price}} @endif</span> </div>
+                          <!-- /.product-price --> 
+                          
+                        </div>
+                        <!-- /.product-info -->
+                        <div class="cart clearfix animate-effect">
+                          <div class="action">
+                            <ul class="list-unstyled">
+                             
+                               <li class="lnk wishlist"> <a class="add-to-cart cart-addition" href="#" title="ajouter au panier"  data-product-id="{{$product -> id}}":> <i class="fa fa-shopping-cart"></i>  </a> </li>
+                              <li class="lnk wishlist"> <a class="add-to-cart addToWishlist" href="#" title="ajoute au favorie"  data-product-id="{{$product -> id}}":> <i class="icon fa fa-heart"></i> </a> </li>
+                            </ul>
+                          </div>
+                          <!-- /.action --> 
+                        </div>
+                        <!-- /.cart --> 
+                      </div>
+                      <!-- /.product --> 
+                      
+                    </div>
+            </div>
+            @endforeach
+            @endisset
+            <!-- /.item -->
+             
+          </div>
+          <!-- /.home-owl-carousel --> 
+        </section>
+        
+        
+      </div>
+     
     </div>
+  
+      <div class="logo-slider-inner">
+       
+        <!-- /.owl-carousel #logo-slider --> 
+      </div>
+      <!-- /.logo-slider-inner --> 
+      
+    </div>
+   
+  </div>
+  <!-- /.container --> 
+</div>
+  
+@include('front.includes.not-logged')
+    @include('front.includes.alert')   
+    @include('front.includes.alert2')
+    @include('front.includes.alert-cart')
 
 @endsection
+
+
+@section('script')
+<script src="{{asset('assets/front/js/jquery-3.3.1.min.js')}}" type="text/javascript"></script>
+<script src="{{asset('assets/front/styles/bootstrap4/popper.js')}}" type="text/javascript"></script>
+
+<script src="{{asset('assets/front/styles/bootstrap4/bootstrap.min.js')}}" type="text/javascript"></script>
+
+<script src="{{asset('assets/front/plugins/greensock/TweenMax.min.js')}}" type="text/javascript"></script>
+
+<script src="{{asset('assets/front/plugins/greensock/TimelineMax.min.js')}}" type="text/javascript"></script>
+
+<script src="{{asset('assets/front/plugins/scrollmagic/ScrollMagic.min.js')}}" type="text/javascript"></script>
+<script src="{{asset('assets/front/plugins/greensock/animation.gsap.min.js')}}" type="text/javascript"></script>
+<script src="{{asset('assets/front/plugins/greensock/ScrollToPlugin.min.js')}}" type="text/javascript"></script>
+
+<script src="{{asset('assets/front/plugins/OwlCarousel2-2.2.1/owl.carousel.js')}}" type="text/javascript"></script>
+
+<script src="{{asset('assets/front/plugins/slick-1.8.0/slick.js')}}" type="text/javascript"></script>
+
+<script src="{{asset('assets/front/plugins/easing/easing.js')}}" type="text/javascript"></script>
+
+<script src="{{asset('assets/front/js/custom.js')}}" type="text/javascript"></script>
+    <script>
+        $(document).on('click', '.quick-view', function () {
+            $('.quickview-modal-product-details-' + $(this).attr('data-product-id')).css("display", "block");
+        });
+        $(document).on('click', '.close', function () {
+            $('.quickview-modal-product-details-' + $(this).attr('data-product-id')).css("display", "none");
+
+            $('.not-loggedin-modal').css("display", "none");
+            $('.alert-modal').css("display", "none");
+            $('.alert-modal2').css("display", "none");
+            $('.alert-cart').css("display", "none");
+        });
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+
+        $(document).on('click', '.addToWishlist', function (e) {
+            e.preventDefault();
+
+            @guest()
+                $('.not-loggedin-modal').css('display','block');
+            @endguest
+            $.ajax({
+                type: 'post',
+                url: "{{Route('wishlist.store')}}",
+               
+                data: {
+                    'productId': $(this).attr('data-product-id'),
+                },
+                success: function (data) {
+                    if(data.wished )
+                    $('.alert-modal').css('display','block');
+                    else
+                        $('.alert-modal2').css('display','block');
+                }
+            });
+        });
+
+        $(document).on('click', '.cart-addition', function (e) {
+            e.preventDefault();
+            
+            $.ajax({
+                type: 'post',
+                url: "{{Route('site.cart.add')}}",
+                data: {
+                    'product_id': $(this).attr('data-product-id'),
+                    'product_slug' : $(this).attr('data-product-slug'),
+                },
+                success: function (data) {
+                   if(data.cart )
+                    $('.alert-cart').css('display','block');
+                    
+                }
+            });
+        });
+    </script>
+         <script type="text/javascript">
+        function checkSubscriber(){
+            var email = $("#email").val();
+            $.ajax({
+               type:'post',
+               url: '/check-subscriber-email',
+               data:{email:email},
+               success:function(response){
+                if(response == "exist"){
+
+                    $("#statusSubscribe").show();
+                     $("#btnSubmit").hide();
+                    $("#statusSubscribe").html("<span style='color:red;'>cette Adress email est existe</span>");
+                }else{
+                    $("#statusSubscribe").show();
+                    $("#statusSubscribe").html("<font style='color:green;'>Votre Adress email est Ajouter avec succees</font>");
+                }
+               },
+               error:function(response){
+              //  alert('error');
+               }
+            });
+        }
+
+        function addSubscriber(){
+            var email = $("#email").val();
+            $.ajax({
+               type:'post',
+               url:'/add-subscriber-email',
+               data:{email:email},
+               success:function(response){
+                if(response == "exist"){
+
+                    $("#statusSubscribe").show();
+                     $("#btnSubmit").hide();
+                    $("#statusSubscribe").html("<span style='color:red;'>cette Adress email est existe</span>");
+                }else if(response == "Enregistre"){
+                    $("#statusSubscribe").show();
+                    
+                    $("#statusSubscribe").html("<font style='color:green;'>Votre Adress email est Ajouter avec succees</font>");
+                }
+               },
+               error:function(response){
+              //  alert('error');
+               }
+            });
+        }
+
+        function enableSubscriber(){
+            $("#btnSubmit").show();
+            $("#statusSubscribe").hide();
+        }
+    </script>
+
+@stop
+

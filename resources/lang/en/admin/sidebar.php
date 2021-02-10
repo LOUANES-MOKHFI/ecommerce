@@ -21,5 +21,12 @@ return [
     'options'        => 'Product Options',
     'addoptions'     => 'Add option',
     'addSliders'     => 'Add images',
-    'sliders'        => 'All Sliders'
+    'sliders'        => 'All Sliders',
+    'roles'          => 'Roles',
+    'addrole'        => 'Add new role',
+    'users'          => 'Users',
+    'adduser'        => 'Add new user',
+    'state'          => 'States',
+    'addstate'        => 'Add new state',
+
 ];

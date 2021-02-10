@@ -11,7 +11,7 @@ class Product extends Model
   use Translatable,softDeletes;
  
    protected $fillable = ['brand_id','slug','price','special_price','special_price_type'
-   ,'special_price_start','special_price_end','selling_price','manage_stock','qty','in_stock','is_active'];
+   ,'special_price_start','special_price_end','selling_price','manage_stock','qty','in_stock','is_active','special'];
    
    protected $with = ['translations'];
   
@@ -45,6 +45,16 @@ class Product extends Model
     public function scopeActive($query){
         return $query->where('is_active',1);
      }
+
+     public function scopeSpecial($query){
+        return $query->where('special',1);
+     }
+
+
+    public function scopeDelete($query){
+        return $query->where('deleted_at',null);
+     }
+
     public function getActive(){
         return $this->is_active == 1 ? __('admin/products.active') :  __('admin/products.notactive');
      }

@@ -84,7 +84,7 @@
                                                             <div class="col-md-6">
                                                                 <div class="form-group">
                                                                     <label for="projectinput1">   {{__('admin/products.track')}} </label>
-                                                                    <select id="manageStock" name="manage_stock" class="select2 form-control">
+                                                                    <select name="manage_stock" class="select2 form-control">
                                                                     <optgroup label="{{__('admin/products.chosetype')}}" >
                                                                         <option value="1">{{__('admin/products.manageStock')}}</option>
                                                                         <option value="0" selected>{{__('admin/products.dontmanageStock')}}</option>
@@ -101,10 +101,10 @@
                                                             <div class="col-md-6">
                                                                 <div class="form-group">
                                                                     <label for="projectinput1"> {{__('admin/products.stockStatus')}}</label>
-                                                                    <select name="in_stock" class="select2 form-control">
+                                                                    <select name="in_stock" class="select2 form-control" id="manageStock">
                                                                     <optgroup label="{{__('admin/products.choseStatus')}}" >
                                                                         <option value="1">{{__('admin/products.available')}}</option>
-                                                                        <option value="0">{{__('admin/products.unavailable')}}</option>
+                                                                        <option value="0" selected>{{__('admin/products.unavailable')}}</option>
                                                                     </optgroup>
                                                                     </select>
                                                                     @error("in_stock")

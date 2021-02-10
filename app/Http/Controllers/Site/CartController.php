@@ -16,8 +16,8 @@ use Illuminate\Support\Facades\Input;
 class CartController extends Controller
 {
     public function add(Request $request){
-
-         $product = Product::find($request->product_id);
+        
+        $product = Product::find($request->product_id);
         
     	if(!empty($product->special_price)){
  		 $add = Cart::add([
@@ -38,26 +38,59 @@ class CartController extends Controller
 
          ]);
        }
-         return redirect()->back()->with('success','le produit est ajouter au panier');
+         return response()->json(['status'=> true,'cart' => true]);
+        // return redirect()->back()->with('success','le produit est ajouter au panier');
          
     }
      public function addCart(Request $request){
+        $this->validate($request,[
+            'product_id' => 'required|exists:products,id',
+            'qty' => 'required|numeric',
+        ]);
+        $data = [];
+         $product = Product::find($request->product_id);
+       
+        if($request->qty > $product->qty){
+            return redirect()->back()->with('error',"Attention! vous avez demande une qauntitie plus que celle qu'il existe dans le stock");
+        }
+
+        if(!empty($product->special_price)){
          $add = Cart::add([
-              'id' => $request->id,
-               'name' => $request->name,
-               'price' => $request->prix,
-               'weight' => $request->poids,
-               'qty' => $request->qte,
+               'id' => $product->id,
+               'name' => $product->name,
+               'price' => $product->special_price,
+               'qty' => $request->qty,
+               'options' => [
+                    
+               ],
+               'weight' => 1,
+                  ]);
+        }else
+        {
+         $add = Cart::add([
+            'id' => $product->id,
+            'name' => $product->name,
+            'price' => $product->price,
+            'qty' => $request->qty,
+            'weight' => 1,
+            
+
          ]);
+       }
+
+
+     
        
          return redirect()->back()->with('success','le produit est ajouter au panier');
          
     }
    
     public function cart(){
+
         $data = [];
         $data_cart = [];
         $data['products'] = Cart::Content();
+    
         /*foreach($data['products_cart'] as $product){
              $data_cart['products'] = getProduct($product->id);
         }*/
@@ -73,10 +106,13 @@ class CartController extends Controller
     }
 
      public function update(Request $request){
-      
-         $product = Product::find($request->id);
+       $this->validate($request,[
+            'qty' => 'required|numeric',
+        ]);
+       
+        $product = Product::find($request->id);
         if($request->qty > $product->qty){
-            return redirect()->back()->with('warning',"Attention! vous etes demande un qauntitie plus que celle qu'il existe dans le stock");
+            return redirect()->back()->with('error',"Attention! vous avez demande un qauntitie plus que celle qu'il existe dans le stock");
         }
         $cart = Cart::update($request->rowId,$request->qty);
     	

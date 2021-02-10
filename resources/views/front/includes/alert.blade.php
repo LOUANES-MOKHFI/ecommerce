@@ -1,4 +1,4 @@
-<div class="modal fade in alert-modal" style="display: none; padding-right: 17px;">
+<div class="modal in alert-modal" style="display: none; padding-right: 17px;">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">

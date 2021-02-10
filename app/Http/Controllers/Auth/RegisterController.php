@@ -30,16 +30,14 @@ class RegisterController extends Controller
      * @var string
      */
     protected $redirectTo = RouteServiceProvider::HOME;
-    public $sms_services;
     /**
      * Create a new controller instance.
      *
      * @return void
      */
-    public function __construct(VerificationServices $sms_services)
+    public function __construct()
     {
         $this->middleware('guest');
-        $this->sms_services = $sms_services;
     }
 
     /**
@@ -48,11 +46,12 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \Illuminate\Contracts\Validation\Validator
      */
-    protected function validator(array $data)
+     protected function validator(array $data)
     {
+
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
-            'mobile' => ['required', 'string', 'max:255', 'unique:users'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
     }
@@ -64,36 +63,12 @@ class RegisterController extends Controller
      * @return \App\User
      */
     protected function create(array $data)
-    {   
-        try{
-            DB::beginTransaction();
-        $verification = [];
-        $user =  User::create([
+    {
+        //return $data;
+        return User::create([
             'name' => $data['name'],
-            'mobile' => $data['mobile'],
+            'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
-
-        //send OTP SMS Code
-        
-        // set/generate new code
-        $verification['user_id'] = $user->id;
-        $verification_data =$this->sms_services -> setVerificationCode($verification);
-        $message = $this->sms_services -> getSMSVerificationMessageByAppName($verification_data->code);
-        
-
-        //save this code in verification table
-       # app(VictoryLinkSms::class)->sendSms($user->mobile,$message);
-
-        //send to user mobile by sms getway
-
-
-        DB::commit();
-        return $user;
-        }
-        catch(\Exception $e){
-            
-            DB::rollback();
-        }
-    }
+   }
 }
