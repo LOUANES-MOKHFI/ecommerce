@@ -12,7 +12,7 @@ class HomeController extends Controller
 {
     public function home(){
 
-        $data = [];
+       /* $data = [];
         $data['principalcategories'] = Category::parent()->get();
         $data['last_add'] = Product::active()->latest()->limit(8)->get();
         $data['best_seller'] = Product::active()->orderBy('saled','DESC')->limit(8)->get();
@@ -25,8 +25,8 @@ class HomeController extends Controller
                             ->take(5)->get();
 
         $data['cheapest_prices'] = Product::active()->orderBy('price','ASC')->limit(3)->get();
-        $data['special_products'] = Product::active()->special()->limit(3)->get();
-        return view('front.home',$data);
+        $data['special_products'] = Product::active()->special()->limit(3)->get();*/
+        return view('front.home');
 
     }
 

@@ -10,6 +10,7 @@ return [
     'tags' => 'Mots clés ',
     'addtags'    => 'Ajouter un Mot clé',
     'products' => 'Produits',
+    'collections' => 'Collections',
     'addproduct' => 'Ajouter un produit',
     'settings' => 'Parametres',
     'shipping_methods' => 'Moyens de livraison',

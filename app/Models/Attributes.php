@@ -31,6 +31,8 @@ class Attributes extends Model
 
 
    public function options(){
-      return $this->hasMany(Options::class,'attribute_id');
+      return $this->hasMany(Options::class,'attribute_id')->select('name','id','product_id')->distinct();
   }
+
+  
 }

@@ -43,25 +43,6 @@
                             <a class="dropdown-item" href="{{route('admin.logout')}}"><i class="ft-power"></i>{{__('admin/header.logout')}} </a>
                         </div>
                     </li>
-                    <li class="dropdown dropdown-user nav-item">
-                        <a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown">
-                <span class="mr-1">
-                  <span
-                      class="user-name text-bold-700">  {{App::getLocale()}}</span>
-                </span>
-                            
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right">
-                        @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
-                           
-                                <a class="dropdown-item" rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
-                                    {{ $properties['native'] }}
-                                </a>
-                           
-                        @endforeach
-                           
-                        </div>
-                    </li>
                     <li class="dropdown dropdown-notification nav-item">
                         <a class="nav-link nav-link-label" href="#" data-toggle="dropdown"><i class="ficon ft-bell"></i>
                             <span class="notification-counter badge badge-pill badge-default badge-danger badge-default badge-up badge-glow">5</span>

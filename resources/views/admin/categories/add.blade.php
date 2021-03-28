@@ -50,10 +50,10 @@
                                             <div class="form-group">
                                                 <label> {{__('admin/category.image') }}  </label>
                                                 <label id="projectinput7" class="file center-block">
-                                                    <input type="file" id="file" name="photo">
+                                                    <input type="file" id="file" name="image">
                                                     <span class="file-custom"></span>
                                                 </label>
-                                                @error('photo')
+                                                @error('image')
                                                 <span class="text-danger">{{$message}}</span>
                                                 @enderror
                                             </div>

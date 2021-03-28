@@ -20,7 +20,7 @@ class Category extends Model
     *
     * @var array
     */
-    protected $fillable = ['parent_id','slug','is_active'];
+    protected $fillable = ['parent_id','slug','is_active','image'];
 
  /**
     * the relations to eager on very query.
@@ -37,8 +37,7 @@ class Category extends Model
     protected $casts = [
        // 'is_searchable' => 'boolean',
        // 'is_active' => 'boolean'
-    ]; 
-
+      ]; 
     public function scopeParent($query){
         return $query->whereNull('parent_id');
     }
@@ -65,6 +64,9 @@ class Category extends Model
       return $this->belongsToMany(Product::class,'product_categories');
    }
 
+public function getImageAttribute($val){
+      return ($val !== null) ? asset('assets/images/categories/'.$val) : "";
+ }
 
 
 }

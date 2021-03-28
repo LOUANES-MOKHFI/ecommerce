@@ -60,15 +60,33 @@ return [
             'url'    => env('APP_URL').'/public',
             'visibility' => 'public',
         ],
+        'categories' => [
+            'driver' => 'local',
+            'root'   => public_path().'/assets/images/categories',
+            'url'    => env('APP_URL').'/public',
+            'visibility' => 'public',
+        ],
         'products' => [
             'driver' => 'local',
             'root'   => public_path().'/assets/images/products',
             'url'    => env('APP_URL').'/public',
             'visibility' => 'public',
         ],
-        'sliders' => [
+        'collections' => [
             'driver' => 'local',
-            'root'   => public_path().'/assets/images/sliders',
+            'root'   => public_path().'/assets/images/collections',
+            'url'    => env('APP_URL').'/public',
+            'visibility' => 'public',
+        ],
+        'showrooms' => [
+            'driver' => 'local',
+            'root'   => public_path().'/assets/images/showrooms',
+            'url'    => env('APP_URL').'/public',
+            'visibility' => 'public',
+        ],
+        'blogs' => [
+            'driver' => 'local',
+            'root'   => public_path().'/assets/images/blogs',
             'url'    => env('APP_URL').'/public',
             'visibility' => 'public',
         ],

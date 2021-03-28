@@ -55,6 +55,14 @@ class MainCategoryController extends Controller
            if($request->type == CategoryType::mainCategory){
                $request->request->add(['parent_id'=> null]);
            }
+
+            $filename ="";
+          if($request->has('image'))
+          {
+          $filename = UploadImage('categories',$request->image);
+          }
+
+           $mainCategory->image = $filename;
            $mainCategory->parent_id = $request->parent_id;
            $mainCategory->slug = $request->slug;
            $mainCategory->name = $request->name;
@@ -120,7 +128,17 @@ class MainCategoryController extends Controller
                 $mainCategory->is_active = 1;
                 //$request->request->add(['is_active' => 1]);
             }
+
             $mainCategory->update($request->all());
+             $filename ="";
+              if($request->has('image'))
+              {
+              $filename = UploadImage('categories',$request->image);
+              $mainCategory->image = $filename;
+              }
+          
+           
+           
             $mainCategory->name = $request->name;
             $mainCategory -> save();
            

@@ -1,496 +1,286 @@
 @extends('layouts.site')
 
 @section('title')
- QUI SOMMES NOUS
+	Qui sommes Nous
 @endsection
 
 @section('style')
-     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+ 
+<style type="text/css">
+    @import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap');
 
- <style type="text/css">
-    .uppercase{
-        text-transform: uppercase;
+.sidebar{
+  margin-left: 120px;
+}
+@media(max-width: 768px) {
+  .sidebar{
+  padding: 20px 20px;
+  margin-top: 20px;
+  margin-left: 0px;
+}
+}
+
+@media (min-width: 993px)
+.prize-launch__logo {
+    height: 196px;
+    width: 196px;
+    left: -100px;
+    top: calc(100% - 300px);
+}
+
+.cardcontainer {
+    width: 350px;
+    height: auto;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 0.3s
+}
+
+.cardcontainer:hover {
+    box-shadow: 0 0 45px gray
+}
+
+.photo {
+    height: 300px;
+    width: 100%
+}
+
+.photo img {
+    height: 100%;
+    width: 100%
+}
+
+.txt1 {
+    margin: auto;
+    text-align: center;
+    font-size: 17px
+}
+
+.content {
+    width: 80%;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: -33px
+}
+
+.photos {
+    width: 90px;
+    height: 30px;
+    background-color: #E74C3C;
+    color: white;
+    position: relative;
+    top: -30px;
+    padding-left: 10px;
+    font-size: 20px
+}
+
+.txt4 {
+    font-size: 33px;
+    position: relative;
+    top: 33px
+}
+
+.txt5 {
+    position: relative;
+    top: 18px;
+    color: #E74C3C;
+    font-size: 23px
+}
+
+.txt2 {
+    position: relative;
+    top: 10px
+}
+
+.cardcontainer:hover>.photo {
+    height: 200px;
+    animation: move1 0.5s ease both
+}
+
+@keyframes move1 {
+    0% {
+        height: 300px
     }
-.card {
+
+    100% {
+        height: 200px
+    }
+}
+
+.cardcontainer:hover>.content {
+    height: 200px;
+}
+
+.footer {
+    width: 80%;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    position: relative;
+    top: -15px
+}
+
+.btn {
+    position: relative;
+    top: 20px
+}
+
+#heart {
     cursor: pointer
 }
 
-.hd {
-    font-size: 25px;
-    font-weight: 550
-}
-
-.card.hover,
-.card:hover {
-    box-shadow: 0 20px 40px rgba(0, 0, 0, .2)
-}
-
-.img {
-    margin-bottom: 35px;
-    -webkit-filter: drop-shadow(5px 5px 5px #222);
-    filter: drop-shadow(5px 5px 5px #222)
-}
-
-.card-title {
-    font-weight: 600
-}
-
-button.focus,
-button:focus {
-    outline: 0;
-    box-shadow: none !important
-}
-
-.ft {
-    margin-top: 25px
-}
-
-.chk {
-    margin-bottom: 5px
-}
-
-.rck {
-    margin-top: 20px;
-    padding-bottom: 15px
-}
-
-
-/*timeline*/
-
-a {
-    text-decoration: none
-}
-
-
-/*h4{text-align:center;margin:30px 0;color:#444}*/
-
-
-.main-timeline3 {
-    overflow: hidden;
-    position: relative
-}
-
-.main-timeline3 .timeline {
-    position: relative;
-    margin-top: -79px
-}
-
-.main-timeline3 .timeline:first-child {
-    margin-top: 0
-}
-
-.main-timeline3 .timeline-icon,
-.main-timeline3 .year {
-    margin: auto;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0
-}
-
-.main-timeline3 .timeline:after,
-.main-timeline3 .timeline:before {
-    content: "";
-    display: block;
-    width: 100%;
-    clear: both
-}
-
-.main-timeline3 .timeline:before {
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 2
-}
-
-.main-timeline3 .timeline-icon {
-    width: 210px;
-    height: 210px;
-    border-radius: 50%;
-    border: 25px solid transparent;
-    border-top-color: #f44556;
-    border-right-color: #f44556;
-    z-index: 1;
-    transform: rotate(45deg)
-}
-
-.main-timeline3 .year {
-    display: block;
-    width: 110px;
-    height: 110px;
-    line-height: 110px;
-    border-radius: 50%;
-    background: #fff;
-    box-shadow: 0 0 20px rgba(0, 0, 0, .4);
-    font-size: 30px;
-    font-weight: 700;
-    color: #f44556;
-    text-align: center;
-    transform: rotate(-45deg)
-}
-
-.main-timeline3 .timeline-content {
-    width: 35%;
+.like {
     float: right;
-    background: #f44556;
-    padding: 30px 20px;
-    margin: 50px 0;
-    box-shadow: 0 10px 25px -10px rgba(72, 29, 99, .3);
-    z-index: 1;
-    position: relative
+    font-size: 22px;
+    position: relative;
+    top: 20px;
+    color: #333333
 }
 
-.main-timeline3 .timeline-content:before {
-    content: "";
-    width: 20%;
-    height: 15px;
-    background: #f44556;
-    position: absolute;
-    top: 50%;
-    left: -20%;
-    z-index: -1;
-    transform: translateY(-50%)
+.fa-gratipay {
+    margin-right: 10px;
+    transition: 0.5s
 }
 
-.main-timeline3 .title {
-    font-size: 20px;
-    font-weight: 700;
-    color: #fff;
-    margin: 0 0 10px
+.fa-gratipay:hover {
+    color: #E74C3C
 }
 
-.main-timeline3 .description {
-    font-size: 16px;
-    color: #fff;
-    line-height: 24px;
-    margin: 0
+.txt3 {
+    color: gray;
+    position: relative;
+    top: 18px;
+    font-size: 14px
 }
 
-.main-timeline3 .timeline:nth-child(2n) .timeline-icon {
-    transform: rotate(-135deg);
-    border-top-color: #e97e2e;
-    border-right-color: #e97e2e
+.comments {
+    float: right;
+    cursor: pointer
 }
 
-.main-timeline3 .timeline:nth-child(2n) .year {
-    transform: rotate(135deg);
-    color: #e97e2e
+.fa-clock,
+.fa-comments {
+    margin-right: 7px
 }
-
-.main-timeline3 .timeline:nth-child(2n) .timeline-content {
-    float: left
-}
-
-.main-timeline3 .timeline:nth-child(2n) .timeline-content:before {
-    left: auto;
-    right: -20%
-}
-
-.main-timeline3 .timeline:nth-child(2n) .timeline-content,
-.main-timeline3 .timeline:nth-child(2n) .timeline-content:before {
-    background: #e97e2e
-}
-
-.main-timeline3 .timeline:nth-child(3n) .timeline-icon {
-    border-top-color: #13afae;
-    border-right-color: #13afae
-}
-
-.main-timeline3 .timeline:nth-child(3n) .year {
-    color: #13afae
-}
-
-.main-timeline3 .timeline:nth-child(3n) .timeline-content,
-.main-timeline3 .timeline:nth-child(3n) .timeline-content:before {
-    background: #13afae
-}
-
-.main-timeline3 .timeline:nth-child(4n) .timeline-icon {
-    border-top-color: #105572;
-    border-right-color: #105572
-}
-
-.main-timeline3 .timeline:nth-child(4n) .year {
-    color: #105572
-}
-
-.main-timeline3 .timeline:nth-child(4n) .timeline-content,
-.main-timeline3 .timeline:nth-child(4n) .timeline-content:before {
-    background: #105572
-}
-
-@media only screen and (max-width:1199px) {
-    .main-timeline3 .timeline {
-        margin-top: -103px
-    }
-    .main-timeline3 .timeline-content:before {
-        left: -18%
-    }
-    .main-timeline3 .timeline:nth-child(2n) .timeline-content:before {
-        right: -18%
-    }
-}
-
-@media only screen and (max-width:990px) {
-    .main-timeline3 .timeline {
-        margin-top: -127px
-    }
-    .main-timeline3 .timeline-content:before {
-        left: -2%
-    }
-    .main-timeline3 .timeline:nth-child(2n) .timeline-content:before {
-        right: -2%
-    }
-}
-
-@media only screen and (max-width:767px) {
-    .main-timeline3 .timeline {
-        margin-top: 0;
-        overflow: hidden
-    }
-    .main-timeline3 .timeline:before,
-    .main-timeline3 .timeline:nth-child(2n):before {
-        box-shadow: none
-    }
-    .main-timeline3 .timeline-icon,
-    .main-timeline3 .timeline:nth-child(2n) .timeline-icon {
-        margin-top: -30px;
-        margin-bottom: 20px;
-        position: relative;
-        transform: rotate(135deg)
-    }
-    .main-timeline3 .timeline:nth-child(2n) .year,
-    .main-timeline3 .year {
-        transform: rotate(-135deg)
-    }
-    .main-timeline3 .timeline-content,
-    .main-timeline3 .timeline:nth-child(2n) .timeline-content {
-        width: 100%;
-        float: none;
-        border-radius: 0 0 20px 20px;
-        text-align: center;
-        padding: 25px 20px;
-        margin: 0 auto
-    }
-    .main-timeline3 .timeline-content:before,
-    .main-timeline3 .timeline:nth-child(2n) .timeline-content:before {
-        width: 15px;
-        height: 25px;
-        position: absolute;
-        top: -22px;
-        left: 50%;
-        z-index: -1;
-        transform: translate(-50%, 0)
-    }
-}
-
- .counter-section i {
-     display: block;
-     margin: 0 0 10px
- }
-
- .counter-section span.counter {
-     font-size: 40px;
-     color: #000;
-     line-height: 60px;
-     display: block;
-     font-family: "Oswald", sans-serif;
-     letter-spacing: 2px
- }
-
- .counter-title {
-     font-size: 12px;
-     letter-spacing: 2px;
-     text-transform: uppercase
- }
-
- .counter-icon {
-     top: 25px;
-     position: relative
- }
-
- .counter-style2 .counter-title {
-     letter-spacing: 0.55px;
-     float: left
- }
-
- .counter-style2 span.counter {
-     letter-spacing: 0.55px;
-     float: left;
-     margin-right: 10px
- }
-
- .counter-style2 i {
-     float: right;
-     line-height: 26px;
-     margin: 0 10px 0 0
- }
-
- .counter-subheadline span {
-     float: right
- }
-
- .medium-icon {
-     font-size: 40px !important;
-     margin-bottom: 15px !important
- }
-
- 
- </style>
-
+</style>
 @endsection
 
-@section('content')
- <section class="breadcrumb-section set-bg" data-setbg="/designe/img/breadcrumb.jpg" style="margin-bottom: 0px">
-        <div class="container">
-            @include('front.includes.alert1')
+@section('content')             
+<section class="image-text  image-text--c">
+    <div class="container">
+        <div class="row"> 
+			<div class="col-xs-12">
+			    <div class="image-text__picture" style="background-image: url('/assets/assets/images/7983_z_macchiavecchia-hero.jpg')" title="">
+			    </div>
+			</div>
+        </div>
+    </div>
+</section>
+<section class="home_page sidebar">
+    <div class="prize-launch">
+        <div class="sidebar">
             <div class="row">
-                <div class="col-lg-12 text-center">
-                    <div class="breadcrumb__text">
-                        <h2 class="uppercase">Qui sommes nous</h2>
-                        <div class="breadcrumb__option">
-                            <a href="{{route('home')}}">ACCUIEL</a>
-                            <span>Qui sommes nous</span>
+                <div class="col-xs-12 col-md-6">
+                    <div class="prize-launch__text">
+                        <h2 class="prize-launch__title">Profil de la société</h2>
+                        <div class="prize-launch__description"><p>Nuevaceramica est une jeune entreprise, fondée en 2010, spécialisée dans la vente de carrelage espagnol de qualité au meilleur prix, Et partenaire référent auprès des meilleurs fabricant de céramique de luxe ou économique. nous nous engageons à mettre notre expertise à votre service.</p>
+                        	<br>
+                        <p>Découvrez un large choix de produits ( Du revêtement sol intérieur ou extérieur à la salle de bain, en passant par tous les dérivés de la céramique ( azulejos, mosaïque,...); Parmi notre gamme de produits, vous trouverez une sélection économique de carrelage design pas cher de haute qualité</p>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                    <div class="prize-launch__picture">
+                                <img class="prize-launch__image lazy img1" style="height: 400px" 
+                                    src="/assets/assets/images/7983_z_macchiavecchia-hero.jpg"
+                                    alt=""
+                                />
+                                <div class="prize-launch__logo"
+                                    style="background-image: url('/media/filer_public_thumbnails/filer_public/9f/d8/9fd872c1-19df-4158-aed6-59adc2a37ba3/demodataprize-logo.png__132x37_q80_subsampling-2_upscale.png');">
+                                </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-md-6">
+                    <div class="prize-launch__picture">
+                        <img class="prize-launch__image lazy img1" style="height: 400px"  src="/assets/assets/images/7983_z_macchiavecchia-hero.jpg" alt=""/>
+                        <div class="prize-launch__logo ll" style="right: -100px; background-image: url('/media/filer_public_thumbnails/filer_public/9f/d8/9fd872c1-19df-4158-aed6-59adc2a37ba3/demodataprize-logo.png__132x37_q80_subsampling-2_upscale.png');">
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-xs-12 col-md-6">
+                    <div class="prize-launch__text">
+                        <h2 class="prize-launch__title">Ou Sommes Nous</h2>
+                        <div class="prize-launch__description"><p>Vous pouvez trouver tout ça dans nos showrooms a Dely Brahim sur Alger ,à Ain Defla, et à Kolea ou Nous disposons d’un entrepôt de plus que 800 mètres carrés et d’un magasin d’exposition du carrelage espagnol et salles de bain de 1000 mètres carrés où vous pourrez découvrir plus de 4000 références de carrelages, céramiques et faïences et bénéficiez de la disponibilité immédiate des articles en stock et du Service Après-Vente.</p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="pg-bottom-medium ">
+        <div class="container-emil-fluid">
+            <div class="container-fluid relative">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2 class="h2 mg-bottom-medium">Nos Partenaires</h2>
+                        <div class="row">
+                            <div class="col-md-12 both">
+                                @isset($brands)
+                                @foreach($brands as $key=>$brand)
+                                <div class="call-to-action-3 text-center large-5">
+                                    <a class="call-to-action-3__link relative bg-after-{{$key+1}} _d-flex _align-items-center" >
+                                        <div class="call-to-action-3__link__content">
+                                            <img alt="" class="call-to-action-3__link__content__img mg-bottom-small" src="{{$brand->photo}}"/>
+                                            <div class="call-to-action-3__link__content__text">
+                                                <p class="p-small" style="color: white;font-size: 18px">{{$brand->name}}</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                @endforeach
+                                @endisset
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-<main>
-   
-    <div class="container">        
-        <div class="row">
-            <div class="col-md-12">
-                <div class="main-timeline3">
-                    <div class="timeline">
-                        <div class="timeline-icon"><span class="year" style="font-size: 25px">MISSION</span></div>
-                        <div class="timeline-content">
-                            <h3 class="title">QuickShop</h3>
-                            <p class="description">
-                               Un Site Web Pour La Vente Des Produits Dans Notre Boutique.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="timeline">
-                        <div class="timeline-icon"><span class="year" style="font-size: 25px">MISSION</span></div>
-                        <div class="timeline-content">
-                            <h3 class="title">QuickShop</h3>
-                            <p class="description">
-                                Un Site Web Pour La Vente Et La Réservation Des Produits En Ligne.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="timeline">
-                        <div class="timeline-icon"><span class="year" style="font-size: 25px">VISION</span></div>
-                        <div class="timeline-content">
-                            <h3 class="title">QuickShop</h3>
-                            <p class="description">
-                                Notre Site Est Votre Nouvelle Premier Destination Pour Les Achats En Ligne. 
-                            </p>
-                        </div>
-                    </div>
-                    <div class="timeline">
-                        <div class="timeline-icon"><span class="year" style="font-size: 25px">VISION</span></div>
-                        <div class="timeline-content">
-                            <h3 class="title">QuickShop</h3>
-                            <p class="description">
-                                Nous Sommes Très Désireux Chez QuickShop De Fournir Des Produits De Haute Qualité.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="">
+         <h4>Nos Showrooms</h4>
+         <div class="row">
+          @isset($showrooms)
+            @foreach($showrooms as $key=>$showroom)
+         <div class="cardcontainer col-md-6"  >
+             <div class="photo"> <img src="{{$showroom->logo}}" alt="{{$showroom->title}}">
+             </div>
+             <div class="content">
+                 <p style="font-weight: bold;font-size: 25px;padding-bottom: 20px" class="txt4">{{$showroom->title}}</p>
+                 <p style="font-size: 20px" class="txt5">{{$showroom->adress}}</p>
+             </div>
+         </div>
+             @endforeach
+          @endisset
+          </div>
     </div>
    
-</main>
- 
-    <!--div class='container-fluid mx-auto mt-5 mb-5 col-12 body' style="text-align: center ;margin-bottom:30px">
-        <div class="hd">NOS SERVICES</div>
-            <p><small class="text-muted" style="font-size: 20px">Site Web Pour La Vente Et Laivraison Des Produits En Ligne.</small></p>
-            <div class="row" style="justify-content: center">
-                <div class="card col-md-3 col-12">
-                    <div class="card-content">
-                        <div class="card-body"> <img class="img" src="/designe/img/laivrasion.png"  height="120" />
-                            <div class="shadow"></div>
-                            <div class="card-title"> Livraison Des Produits </div>
-                            <div class="card-subtitle">
-                                <p> <small class="text-muted">Nous Offrons A Vous Une Possibilite De Livraison Des Produits A Vos Adress</small> </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card col-md-3 col-12 ml-2">
-                    <div class="card-content">
-                        <div class="card-body"> <img class="img" src="/designe/img/cash-pay.png" height="120" />
-                            <div class="card-title"> Paiement à La Réception
-            </div>
-                    <div class="card-subtitle">
-                        <p> <small class="text-muted"> Le Paiement Se Fait Main a main Avec La Réception Des Commandes Pour Assurer La Fidelite Des Clients Avec Notre Boutique </small> </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="card col-md-3 col-12 ml-2">
-            <div class="card-content">
-                <div class="card-body"> <img class="img rck" src="/designe/img/seca.png" height="120"  />
-                    <div class="card-title"> Sécurite Des Informations </div>
-                    <div class="card-subtitle">
-                        <p> <small class="text-muted">QuickShop Garentit Une Protection Total De Vos Informations Personnelle</small> </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div-->
-   
-</div>
-<section class="wow fadeIn animated" style="visibility: visible; animation-name: fadeIn;" style="border-bottom: 1px solid red">
-    <div class="container">
-        <div class="row">
-            <!-- counter -->
-            <div class="col-md-4 col-sm-6 bottom-margin text-center counter-section wow fadeInUp sm-margin-bottom-ten animated" data-wow-duration="300ms" style="visibility: visible; animation-duration: 300ms; animation-name: fadeInUp;"> 
-                <i class="fa fa-list-alt medium-icon" style="color: #007bff"></i> <span id="anim-number-pizza" class="counter-number"></span> 
-                <span class="timer counter alt-font appear" data-to="980" data-speed="7000">{{count(AllCategorie())}}</span>
-                <span class="counter-title" style="font-size: 20px;font-weight: bold">CATEGORIES</span>
-            </div> <!-- end counter -->
-            <!-- counter -->
-            <div class="col-md-4 col-sm-6 bottom-margin text-center counter-section wow fadeInUp sm-margin-bottom-ten animated" data-wow-duration="600ms" style="visibility: visible; animation-duration: 600ms; animation-name: fadeInUp;"> 
-                <i class="fa fa-user medium-icon" style="color: #007bff"></i> <span class="timer counter alt-font appear" data-to="980" data-speed="7000">{{count($users)}}</span>
-                 <span class="counter-title" style="font-size: 20px;font-weight: bold"> Utilisateurs</span> 
-             </div> <!-- end counter -->
-            <!-- counter -->
-            <div class="col-md-4 col-sm-6 bottom-margin-small text-center counter-section wow fadeInUp xs-margin-bottom-ten animated" data-wow-duration="900ms" style="visibility: visible; animation-duration: 900ms; animation-name: fadeInUp;"> 
-                <i class="fa fa-product-hunt medium-icon" style="color: #007bff"></i> <span class="timer counter alt-font appear" data-to="810" data-speed="7000">{{count($products)}}</span> 
-                <span class="counter-title" style="font-size: 20px;font-weight: bold">PRODUITS</span> 
-            </div> <!-- end counter -->
-        </div>
-    </div>
-    <hr>
 </section>
+
+      
 @endsection
 
 @section('script')
- <script type="text/javascript">
-     $(document).ready(function() {
-
-$('.counter').each(function () {
-$(this).prop('Counter',0).animate({
-Counter: $(this).text()
-}, {
-duration: 4000,
-easing: 'swing',
-step: function (now) {
-$(this).text(Math.ceil(now));
-}
+<script type="text/javascript">
+    $(document).ready(function(){
+document.getElementById("heart").onclick = function(){
+document.querySelector(".fa-gratipay").style.color = "#E74C3C";
+};
 });
-});
-
-});
- </script>
+</script>
 @endsection

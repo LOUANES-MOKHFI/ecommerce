@@ -12,12 +12,13 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+/*
 Route::group(
     [
         'prefix' => LaravelLocalization::setLocale(),
         'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath']
     ], function(){ 
+        */
         Auth::routes();
         Auth::routes(['verify' => true]);
 
@@ -64,24 +65,41 @@ Route::group(['namespace' => 'Site'],function(){
         //guest user
 
         Route::get('all-products','ProductController@index')->name('all-products');
-        Route::get('category/{slug}','CategoryController@getproductsByslug')->name('category');
-        Route::get('product/{slug}', 'ProductController@getproductsBySlug')->name('product.details');
-        Route::post('product-brand', 'ProductController@getproductsBybrand')->name('product.brand');
-        Route::get('search-products','ProductController@search')->name('products.search');
-        Route::get('produts/filtr-by-price','ProductController@filtrebyprice')->name('product.price');
+
+        /// category
+        Route::get('all-products/{slug}','ProductController@getproductsBySlug')->name('category');
         
-        Route::get('produts-price/{ordre}','ProductController@filtrebyordre')->name('product.price.orderby');
-        Route::get('produts-salled','ProductController@filtrebyvente')->name('product.vente');
+        Route::get('/category/get_ceramic/{id}','ProductController@filtre_product_in_category');
+        
+        Route::get('/category/get_ceramic_by_options/{id}','ProductController@filtre_product_by_option_in_category');
+
+        Route::get('/category/get_ceramic_by_brand/{id}','ProductController@filtre_product_by_brand_in_category');
+        
+
+        ///all ceramic
+        Route::get('/get_ceramic/{id}','ProductController@filtre_product');
+        
+        Route::get('/get_ceramic_by_options/{id}','ProductController@filtre_product_by_option');
+
+        Route::get('/get_ceramic_by_brand/{id}','ProductController@filtre_product_by_brand');
+
+        //Route::get('product/{slug}', 'ProductController@getproductsBySlug')->name('product.details');
+        //Route::post('product-brand', 'ProductController@getproductsBybrand')->name('product.brand');
+        //Route::get('search-products','ProductController@search')->name('products.search');
+        //Route::get('produts/filtr-by-price','ProductController@filtrebyprice')->name('product.price');
+        
+        //Route::get('produts-price/{ordre}','ProductController@filtrebyordre')->name('product.price.orderby');
+       // Route::get('produts-salled','ProductController@filtrebyvente')->name('product.vente');
         
         //suivi la commande
-        Route::get('/commande/suivi-commande','HomeController@suiviCommande')->name('commande.suivi-commande');
+        //Route::get('/commande/suivi-commande','HomeController@suiviCommande')->name('commande.suivi-commande');
         //  contact route
 
         Route::get('contactez-nous','ContactController@contact')->name('contact');
         Route::post('contacte/store','ContactController@store')->name('contact.store');
 
 
-        Route::get('a-propos','ContactController@about')->name('about');
+        Route::get('qui-sommes-nous','ContactController@about')->name('about');
                     Route::post('add-to-cart','CartController@addCart')->name('add-to-cart');//->middleware('verified');
         /**
          *  Cart routes
@@ -98,7 +116,7 @@ Route::group(['namespace' => 'Site'],function(){
 
    
     
-});
+//});
 
 Route::group(['namespace' => 'Site', 'middleware' => 'auth'], function () {
     Route::post('wishlist', 'WishlistController@store')->name('wishlist.store');

@@ -30,7 +30,7 @@ class CreateProductsTable extends Migration
             $table->integer('viewed')->unsigned()->default(0);
             $table->boolean('is_active');
 
-            $table->foreign('brand_id')->references('id')->on('brands')->onDelete('set null');
+            //$table->foreign('brand_id')->references('id')->on('brands')->onDelete('set null');
             $table->softDeletes();
             $table->timestamps();
         });

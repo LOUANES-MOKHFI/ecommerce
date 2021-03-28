@@ -24,10 +24,10 @@ class OptionsRequest extends FormRequest
     public function rules()
     {
         return [
-            'price' => 'required|numeric|min:0',
             'name'  => 'required|min:1|max:100',
             'product_id' => 'required|exists:products,id',
             'attribute_id' => 'required|exists:attributes,id',
+            'category' => 'required|in:1,2,3',
         ];
     }
 }

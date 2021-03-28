@@ -10,19 +10,84 @@ use App\Models\Options;
 use App\Models\Category;
 use App\Models\Brand;
 use App\Models\Tags;
-
+use DB;
 class ProductController extends Controller
 {
 
     public function index()
     {
-       $data['products'] = Product::active()->paginate(20);
+
+       $data['products'] = Product::active()->get();
        $data['categories'] = Category::select('id','slug')->distinct()->get();
-        $data['brands'] = Brand::active()->get();
-         $data['tags'] = Tags::all();
-        return view('front.all-products',$data);
+       $data['brands'] = Brand::active()->get();
+       
+       $data['attributes'] = Attributes::all();
+             
+       return view('front.ceramic.all-ceramic',$data);
     }
-    public function getproductsBySlug($slug){
+
+     public function getproductsBySlug($slug){
+       $data = [];
+       $data['categories'] = Category::select('id','slug')->distinct()->get();
+       $data['brands'] = Brand::active()->get();
+       
+       $data['attributes'] = Attributes::all();
+       $data['cat'] = Category::where('slug','Like','%'.$slug.'%')->first(); // get product by slug
+        if(!$data['cat']){
+            return redirect()->back()->with(['error',"Cette category n'existe pas"]);
+      
+        }
+
+        $category_id = $data['cat']->id; // get id catgeory
+       // $product_categories_ids = $data['Category']->products->pluck('id');  // get all id categorie 
+       
+       
+        $data['products'] = Product::whereHas('categories', function($q) use($category_id){
+            
+            $q -> where('category_id',$category_id);
+           
+        })->get();
+       
+        
+        return view('front.ceramic.ceramic-category',$data);
+    }
+
+ 
+
+    public function filtre_product($id){
+        
+        if($id == 0 || empty($id)){
+            $data = Product::get();
+        }else{
+            $data = Product::whereHas('categories', function($q) use($id){
+            
+            $q ->select('category_id')->whereRaw('category_id IN ('.$id.')');
+           
+        })->get();
+}
+        echo json_encode($data);
+    }
+
+     public function filtre_product_by_option($id){
+        
+            
+       $data = Product::whereHas('options', function($q) use($id){
+            
+            $q ->select('id')->whereRaw('id IN ('.$id.')');
+           
+        })->get();
+            
+        echo json_encode($data);
+    }
+
+     public function filtre_product_by_brand($id){
+      
+        $data = DB::table('products')->selectRaw('name,image_principale,brand_id,slug')->whereRaw('brand_id IN ('.$id.')')->get();
+        echo json_encode($data);
+    }
+
+
+   /* public function getproductsBySlug($slug){
 
         $data = [];
         $data['product'] = Product::where('slug',$slug)->first(); // get product by slug
@@ -69,7 +134,7 @@ public function getproductsByBrand(Request $request){
             return view('front.products-brand',$data);
         
         }
-
+*/
 public function search(Request $request){
 
    $data['products'] = Product::active()->where('slug','Like','%'.$request->products.'%')->get();
@@ -106,4 +171,43 @@ $data['tags'] = Tags::all();
         return view('front.all-products',$data);
 }
 
+
+
+ public function filtre_product_in_category($id){
+        
+        if($id == 0 || empty($id)){
+            $data = Product::get();
+        }else{
+            $data = Product::whereHas('categories', function($q) use($id){
+            
+            $q ->select('category_id')->whereRaw('category_id IN ('.$id.')');
+           
+        })->get();
 }
+        echo json_encode($data);
+    }
+
+     public function filtre_product_by_option_in_category($id){
+        
+            
+       $data = Product::whereHas('options', function($q) use($id){
+            
+            $q ->select('id')->whereRaw('id IN ('.$id.')');
+           
+        })->get();
+            
+        echo json_encode($data);
+    }
+
+     public function filtre_product_by_brand_in_category($id){
+      
+        $data = DB::table('products')->selectRaw('name,image_principale,brand_id,slug')->whereRaw('brand_id IN ('.$id.')')->get();
+        echo json_encode($data);
+    }
+
+
+
+
+}
+
+

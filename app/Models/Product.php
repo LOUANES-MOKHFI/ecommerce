@@ -3,31 +3,31 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Astrotomic\Translatable\Translatable;
+//use Astrotomic\Translatable\Translatable;
 use Illuminate\Database\Eloquent\SoftDeletes;
 class Product extends Model
 {
   
-  use Translatable,softDeletes;
+  use softDeletes;
  
-   protected $fillable = ['brand_id','slug','price','special_price','special_price_type'
-   ,'special_price_start','special_price_end','selling_price','manage_stock','qty','in_stock','is_active','special'];
+   protected $fillable = ['name','brand_id','slug','price','special_price','special_price_type'
+   ,'special_price_start','special_price_end','selling_price','manage_stock','qty','in_stock','is_active','special','image_principale'];
    
-   protected $with = ['translations'];
+   //protected $with = ['translations'];
   
-   protected $translatedAttributes = ['name','description','short_description'];
+ //  protected $translatedAttributes = ['name','description','short_description'];
 /**
    * the relations to eager on very query.
    *
    * @var array
-   */
+   
    protected $hidden = ['translations'];
 
     /**
    * the attributes that should be cast to native types.
    *
    * @var array
-   */
+   
    protected $casts = [
        'manage_stock' => 'boolean',
        'is_stock' => 'boolean',
@@ -41,6 +41,7 @@ class Product extends Model
     'end_date' => 'boolean',
     'deleted_at' => 'boolean'
     ];
+    */
 
     public function scopeActive($query){
         return $query->where('is_active',1);
@@ -62,6 +63,7 @@ class Product extends Model
    public function getphotoAttribute($val){
       return ($val !== null) ? asset('assets/images/products/'.$val) : "";
  }
+
     public function brand(){
         return $this->belongsTo(Brand::class)->withDefault();
     }

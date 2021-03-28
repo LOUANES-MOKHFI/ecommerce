@@ -57,7 +57,7 @@ Commande
                                 <div class="card-content collapse show">
                                     <div class="card-body card-dashboard">
                                         <table
-                                            class="table display nowrap table-striped table-bordered">
+                                            class="table display nowrap table-striped table-bordered scroll-horizontal">
                                             <thead class="">
                                             <tr>
                                                 <th class="cart-description item">Image</th>

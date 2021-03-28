@@ -24,7 +24,7 @@ class ProductController extends Controller
     */
    public function index()
    {
-      $products = Product::select('id','price','slug','is_active','created_at')->orderBy('id','DESC')->paginate(PAGINATE_COUNT);
+      $products = Product::select('id','name','image_principale','slug','is_active','created_at')->orderBy('id','DESC')->paginate(PAGINATE_COUNT);
       return view('admin.products.general.index',compact('products'));
    }
 
@@ -64,25 +64,27 @@ class ProductController extends Controller
             else{
                 $request->request->add(['is_active' => 1]);
             }
-            if(!$request->has('special')){
-                $request->request->add(['special' => 0]);
-            }
-            else{
-                $request->request->add(['special' => 1]);
-            }
+
+        if($request->has('image_principale')){
+            $file = $request->file('image_principale');
+            $filename = UploadImage('products',$file);
 
           $product = Product::create([
               'slug'      => $request->slug,
               'brand_id'  => $request->brand_id,
               'is_active' => $request->is_active,
-              'special'   => $request->special,
-
+              'image_principale' => $filename,
+              
           ]);
+        }else
+        {
+          return redirect()->back()->with('error','خطأ في الملومات, يرجى التأكد.');
+        }
 
          
           $product->name = $request->name;
           $product->description = $request->description;
-          $product->short_description = $request->short_description;
+        //  $product->short_description = $request->short_description;
           $product->save();
 
           //product categories
@@ -132,20 +134,20 @@ class ProductController extends Controller
             else{
                 $request->request->add(['is_active' => 1]);
             }
-            if(!$request->has('special')){
-                $request->request->add(['special' => 0]);
-            }
-            else{
-                $request->request->add(['special' => 1]);
-            }
+            if($request->has('image_principale')){
+            $file = $request->file('image_principale');
+            $filename = UploadImage('products',$file);
 
-          $product->update([
-              'slug'      => $request->slug,
-              'brand_id'  => $request->brand_id,
-              'is_active' => $request->is_active,
-              'special'   => $request->special,
-
-          ]);
+            $product->update([
+                'slug'      => $request->slug,
+                'brand_id'  => $request->brand_id,
+                'is_active' => $request->is_active,
+                'image_principale' => $filename,
+            ]);
+            }else
+            {
+              return redirect()->back()->with('error','خطأ في الملومات, يرجى التأكد.');
+            }
 
          
           $product->name = $request->name;

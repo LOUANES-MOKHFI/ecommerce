@@ -54,7 +54,7 @@
                                             <div class="form-group">
                                                 <div class="text-center">
                                                     <img
-                                                        src="{{$mainCategory -> photo}}"
+                                                        src="{{$mainCategory -> image}}"
                                                         class="rounded-circle  height-150" alt="{{__('admin/category.image') }}">
                                                 </div>
                                             </div>
@@ -63,10 +63,10 @@
                                             <div class="form-group">
                                                 <label> {{__('admin/category.image') }}  </label>
                                                 <label id="projectinput7" class="file center-block">
-                                                    <input type="file" id="file" name="photo">
+                                                    <input type="file" id="file" name="image">
                                                     <span class="file-custom"></span>
                                                 </label>
-                                                @error('photo')
+                                                @error('image')
                                                 <span class="text-danger">{{$message}}</span>
                                                 @enderror
                                             </div>

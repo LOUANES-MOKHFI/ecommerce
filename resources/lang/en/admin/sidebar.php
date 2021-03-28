@@ -9,6 +9,7 @@ return [
     'addbrands'    => 'Add new brand',
     'tags' => 'Tags',
     'products' => 'Products',
+    'collections' => 'Collections',
     'addproduct' => 'Add new product',
     'addtags'    => 'Add new tag',
     'settings' => 'Settings',

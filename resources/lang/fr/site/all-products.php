@@ -15,5 +15,10 @@ return [
 	'ourproducts'		=> 'Nos Produits',
 	'welcome' 			=> 'Soyez les bienvenu',
     'trouverourproducts'=> 'Vous trouvrez tout nos produits',
-    'noproducts'		=> 'Aucun produit trouvée',
+    'noproduct'		    => 'Aucun produit trouvée',
+
+    'views'				=> 'Vues',
+	'available'			=> 'Disponible',
+	'qty'				=> 'Quantities',
+	'samecategories'	=> 'Meme Categorie',
 ];

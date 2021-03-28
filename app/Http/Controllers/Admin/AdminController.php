@@ -19,7 +19,7 @@ class AdminController extends Controller
     	$data['brands'] = Brand::get();
     	$data['caregories'] = Category::get();
     	$data['tags'] = Tags::get();
-    	$data['orders'] = Commande::get();
+    	//$data['orders'] = Commande::get();
     	$data['users'] = User::get();
     	$data['newsletters'] = Subscribers::get();
         return view('admin.index',$data);

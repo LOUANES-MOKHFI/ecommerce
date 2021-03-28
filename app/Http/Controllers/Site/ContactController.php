@@ -8,7 +8,8 @@ use App\Models\Contact;
 use App\Http\Requests\ContactRequest;
 use DB;
 use App\Models\Product;
-use App\Models\User;
+use App\Models\Brand;
+use App\Models\Showrooms;
 class ContactController extends Controller
 {
     public function contact(){
@@ -38,8 +39,9 @@ class ContactController extends Controller
 
 
     public function about(){
-        $data['products'] = Product::active()->get();
-        $data['users'] = User::get();
+        $data['showrooms'] = Showrooms::all();
+        $data['brands'] = Brand::all();
+        //$data['users'] = User::get();
         return view('front.about',$data);
     }
 }

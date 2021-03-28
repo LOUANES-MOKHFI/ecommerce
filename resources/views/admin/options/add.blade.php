@@ -55,31 +55,7 @@
 
                                                        
                                                         <div class="row">
-                                                            <div class="col-md-6">
-                                                                <div class="form-group">
-                                                                    <label for="projectinput1">   {{__('admin/options.name')}} </label>
-                                                                    <input type="text" value="{{old('name')}}" id="name"
-                                                                           class="form-control"
-                                                                           placeholder="  "
-                                                                           name="name">
-                                                                    @error("name")
-                                                                    <span class="text-danger"> {{$message}}  </span>
-                                                                    @enderror
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-6">
-                                                                <div class="form-group">
-                                                                    <label for="projectinput1">   {{__('admin/options.price')}} </label>
-                                                                    <input type="number" value="{{old('price')}}" id="name"
-                                                                           class="form-control"
-                                                                           placeholder="  "
-                                                                           name="price">
-                                                                    @error("price")
-                                                                    <span class="text-danger"> {{$message}}  </span>
-                                                                    @enderror
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-6">
+                                                             <div class="col-md-6">
                                                                 <div class="form-group">
                                                                     <label for="projectinput1">{{__('admin/options.product')}} </label>
                                                                     <select name="product_id" class="select2 form-control">
@@ -96,6 +72,7 @@
                                                                     @enderror
                                                                 </div>
                                                             </div>
+                                                            
                                                             <div class="col-md-6">
                                                                 <div class="form-group">
                                                                     <label for="projectinput1"> {{__('admin/options.attribute')}}</label>
@@ -113,6 +90,34 @@
                                                                     @enderror
                                                                 </div>
                                                             </div>
+                                                             <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label for="projectinput1"> Categories</label>
+                                                                    <select name="category" class="select2 form-control">
+                                                                    <optgroup label="Choisir la categorie">
+                                                                        <option value="1">Céramic</option>
+                                                                        <option value="2">Mosaique</option>
+                                                                        <option value="3">Salle De Bain</option>
+                                                                    </optgroup>
+                                                                    </select>
+                                                                    @error("category")
+                                                                    <span class="text-danger"> {{$message}}</span>
+                                                                    @enderror
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label for="projectinput1">   {{__('admin/options.name')}} </label>
+                                                                    <input type="text" value="{{old('name')}}" id="name"
+                                                                           class="form-control"
+                                                                           placeholder="  "
+                                                                           name="name">
+                                                                    @error("name")
+                                                                    <span class="text-danger"> {{$message}}  </span>
+                                                                    @enderror
+                                                                </div>
+                                                            </div>
+                                                           
                                                         </div>
                                             </div>
 

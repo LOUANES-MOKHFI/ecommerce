@@ -13,12 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::group(
+/*Route::group(
     [
         'prefix' => LaravelLocalization::setLocale(),
         'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]
     ], function(){ 
-   
+   */
 
 Route::group(['namespace' => 'Admin','middleware'=>'auth:admins','prefix' => 'admin' ],function(){
     Route::get('/','AdminController@index')->name('admin.index');
@@ -164,6 +164,16 @@ Route::group(['prefix' => 'states',/*'middleware' => 'can:users'*/],function(){
 
     });
 
+Route::group(['prefix' => 'showrooms',/*'middleware' => 'can:users'*/],function(){
+        Route::get('/','ShowroomsController@index')->name('admin.showrooms');
+        Route::get('create','ShowroomsController@create')->name('admin.showrooms.create');
+        Route::post('store','ShowroomsController@store')->name('admin.showrooms.store');
+        Route::get('edit/{id}','ShowroomsController@edit')->name('admin.showrooms.edit');
+        Route::post('update/{id}','ShowroomsController@update')->name('admin.showrooms.update');
+        Route::get('delete/{id}','ShowroomsController@destroy')->name('admin.showrooms.delete');
+
+    });
+
 
 });
 
@@ -172,4 +182,4 @@ Route::group(['namespace' => 'Admin', 'middleware'=>'guest:admins','prefix' => '
     Route::post('login','LoginController@Postlogin')->name('admin.login');
 });
 
-});
+//});

@@ -10,6 +10,7 @@ return [
     'tags' => 'العلامات ',
     'addtags'    => 'أضف علامة جديدة',
     'products' => 'المنتجات',
+    'collections' => 'الكوليكشن',
     'addproduct' => 'إضافة منتج جديد',
     'settings' => 'الإعدادات',
     'shipping_methods' => 'وسائل التوصيل',

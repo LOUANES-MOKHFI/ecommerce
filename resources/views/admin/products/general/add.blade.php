@@ -63,8 +63,21 @@
                                             <div class="form-body">
 
                                                 <h4 class="form-section"><i class="ft-home"></i>{{__('admin/products.product_information') }} </h4>
-
-                                              
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <div class="form-group">
+                                                                    <label for="projectinput1">   {{__('admin/products.product')}} </label>
+                                                                    <input type="file" 
+                                                                           class="form-control"
+                                                                           placeholder="  "
+                                                                           name="image_principale">
+                                                                    @error("image_principale")
+                                                                    <span class="text-danger"> {{$message}}  </span>
+                                                                    @enderror
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                
                                                         <div class="row">
                                                             <div class="col-md-6">
                                                                 <div class="form-group">
@@ -90,32 +103,6 @@
                                                                            name="slug">
 
                                                                     @error("slug")
-                                                                    <span class="text-danger"> {{$message}}</span>
-                                                                    @enderror
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-6">
-                                                                <div class="form-group">
-                                                                    <label for="projectinput1">   {{__('admin/products.description')}} </label>
-                                                                    <textarea class="form-control"
-                                                                           placeholder="  "
-                                                                           name="description">{{old('description')}}
-                                                                    </textarea>
-                                                                    @error("description")
-                                                                    <span class="text-danger"> {{$message}}  </span>
-                                                                    @enderror
-                                                                </div>
-                                                            </div>
-
-
-                                                            <div class="col-md-6">
-                                                                <div class="form-group">
-                                                                    <label for="projectinput1"> {{__('admin/products.short_description')}}</label>
-                                                                    <textarea class="form-control"
-                                                                           placeholder="  "
-                                                                           name="short_description">{{old('short_description')}}
-                                                                    </textarea>
-                                                                    @error("short_description")
                                                                     <span class="text-danger"> {{$message}}</span>
                                                                     @enderror
                                                                 </div>
@@ -192,23 +179,19 @@
                                                                     @enderror
                                                                 </div>
                                                             </div>
-                                                            <div class="col-md-6">
-                                                                <div class="form-group mt-1">
-                                                                    <input type="checkbox" value="1"
-                                                                           name="special"
-                                                                           id="switcheryColor4"
-                                                                           class="switchery" data-color="success"
-                                                                           checked/>
-                                                                    <label for="switcheryColor4"
-                                                                           class="card-title ml-1">Special ? </label>
-
-                                                                    @error("special")
-                                                                        <span class="text-danger"> </span>
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                                <div class="form-group">
+                                                                    <label for="projectinput1">   {{__('admin/products.description')}} </label>
+                                                                    <textarea class="form-control"
+                                                                           placeholder="  "
+                                                                           name="description">{{old('description')}}
+                                                                    </textarea>
+                                                                    @error("description")
+                                                                    <span class="text-danger"> {{$message}}  </span>
                                                                     @enderror
                                                                 </div>
                                                             </div>
-              
-                                                        </div>
                                             <div class="form-actions">
                                             <button type="button" class="btn btn-warning mr-1"
                                                         onclick="history.back();">

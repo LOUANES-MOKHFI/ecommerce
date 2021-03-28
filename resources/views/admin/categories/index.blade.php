@@ -59,7 +59,7 @@
                                             @isset($categories)
                                                 @foreach($categories as $category)
                                                     <tr>
-                                                        <td> <img style="width: 150px; height: 100px;" src=""></td>
+                                                        <td> <img style="width: 150px; height: 100px;" src="{{$category->image}}"></td>
                                                         <td>{{$category -> name}}</td>
                                                         <td>{{$category ->is_parent->name ?? '--'}}</td>
                                                         <td>{{$category -> slug}}</td>

@@ -52,7 +52,6 @@
                                                 <th>{{__('admin/products.image') }}</th>
                                                 <th>{{__('admin/products.product')}} </th>
                                                 <th>{{__('admin/products.slug')}}</th>
-                                                <th>{{__('admin/products.price')}}</th>
                                                 <th>{{__('admin/products.status')}}</th>
                                                 <th>{{__('admin/products.action')}}</th>
                                             </tr>
@@ -62,30 +61,19 @@
                                             @isset($products)
                                                 @foreach($products as $product)
                                                     <tr>
-                                                        <td> <img style="width: 150px; height: 100px;" src="{{$product -> images[0] -> photo ?? ''}}"></td>
+                                                        <td> <img style="width: 150px; height: 100px;" src="{{asset('assets/images/products/'.$product->image_principale)}}"></td>
                                                         <td>{{$product -> name}}<br>
                                                          <a href="{{route('admin.products.edit',$product->id)}}" class="btn btn-outline-warning btn-min-width box-shadow-3 mr-1 mb-1">Modifier</a>
                                                         </td>
                                                         <td>{{$product -> slug}}</td>
-                                                        <td>{{$product -> price}}</td>
                                                         <td>{{$product->getActive()}}</td>
 
                                                         <td>
                                                             <div class="btn-group" role="group"
                                                                  aria-label="Basic example">
-                                                                <a href="{{route('admin.products.price',$product -> id)}}"
-                                                                   class="btn btn-outline-primary btn-min-width box-shadow-3 mr-1 mb-1">{{__('admin/products.price') }}</a>
-
 
                                                                 <a href="{{route('admin.products.images',$product -> id)}}"
                                                                    class="btn btn-outline-danger btn-min-width box-shadow-3 mr-1 mb-1">{{__('admin/products.images') }}</a>
-
-
-                                                                <a href="{{route('admin.products.stock',$product -> id)}}"
-                                                                   class="btn btn-outline-warning btn-min-width box-shadow-3 mr-1 mb-1">
-                                                                   {{__('admin/products.stock') }}
-                                                                </a>
-
 
                                                             </div>
                                                         </td>

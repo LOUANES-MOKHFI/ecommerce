@@ -25,6 +25,7 @@ class MainCategoryRequest extends FormRequest
     {
         return [
             'name' => 'required|min:1',
+            'image' => 'required_without:id|mimes:jpg,png,jpeg',
             'type' => 'required_without:id|in:1,2',
             'slug' => 'required|unique:categories,slug,'.$this->id,
         ];

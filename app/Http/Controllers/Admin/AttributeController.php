@@ -68,8 +68,20 @@ class AttributeController extends Controller
         }
     }
 
-    public function destroy($id){
+     public function destroy($id)
+    {
+       try {
+        $option = Attributes::orderBy('id','DESC')->find($id);
+            if(!$option){
+                return redirect()->route('admin.attributes')->with(['error'=> 'Cette attribute n\'existe pas']);
+            }
+         
+            $option -> delete();
+            return redirect()->route('admin.attributes')->with('success','La suppression a ete faite avec success');
 
+       } catch (\Throwable $ex) {
+           return redirect()->route('admin.attributes')->with('error','errur de traitement , essayer plus tard');
+       }
     }
     public function changeStatus($id){
 

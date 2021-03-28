@@ -15,6 +15,11 @@ return [
 	'ourproducts'		=> 'منتجاتنا',
 	'welcome' 			=> 'مرحبا بكم',
     'trouverourproducts'=> 'ستجدون جميع انتاج المنتجات',
-    'noproducts'		=> 'لا توجد منتجات',
+    'noproduct'			=> 'لا توجد منتجات',
+
+    'views'				=> 'مشاهدات',
+	'available'			=> 'متاح',
+	'qty'				=> 'الكمية',
+	'samecategories'	=> 'نفس القسم',
 
 ];

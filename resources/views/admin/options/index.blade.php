@@ -27,7 +27,15 @@
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <h4 class="card-title">{{__('admin/options.all_options') }}</h4>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                             <h4 class="card-title">{{__('admin/options.all_options') }}</h4>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <a class="btn btn-outline-primary" href="{{route('admin.options.create')}}" data-i18n="nav.dash.crypto">{{__('admin/sidebar.addoptions')}} </a>
+                                        </div>
+                                    </div>
+                                   
                                     <a class="heading-elements-toggle"><i
                                             class="la la-ellipsis-v font-medium-3"></i></a>
                                     <div class="heading-elements">
@@ -45,25 +53,38 @@
                                 <div class="card-content collapse show">
                                     <div class="card-body card-dashboard">
                                         <table
-                                            class="table display nowrap table-striped table-bordered">
+                                            class="table display nowrap table-striped table-bordered scroll-horizontal">
                                             <thead class="">
                                             <tr>
+                                                <th>ID</th>
                                                 <th>{{__('admin/options.name')}} </th>
                                                 <th>{{__('admin/options.product')}} </th>
                                                 <th>{{__('admin/options.attribute')}} </th>
-                                                <th>{{__('admin/options.price')}} </th>
+                                                <th>Categorie</th>
                                                 <th>{{__('admin/options.action')}}</th>
+
                                             </tr>
                                             </thead>
                                             <tbody>
 
                                             @isset($options)
-                                                @foreach($options as $option)
+                                                @foreach($options as $key => $option)
                                                     <tr>
-                                                        <td>{{$option -> name}}</td>
-                                                        <td>{{$option -> product -> name}}</td>
+                                                        <td>{{$key+1}}</td>
+                                                        <td>{{$option->name}}</td>
+                                                        <td>{{$option ->product->name}}</td>
                                                         <td>{{$option -> attribute ->name}}</td>
-                                                        <td>{{$option -> price}}</td>
+                                                        <td>
+                                                            @if($option->category == 1)
+                                                                Céramic
+                                                            @endif
+                                                            @if($option->category == 2)
+                                                                Mosaique
+                                                            @endif
+                                                            @if($option->category == 3)
+                                                                Salle De Bain
+                                                            @endif
+                                                        </td>
                                                         <td>
                                                             <div class="btn-group" role="group"
                                                                  aria-label="Basic example">
@@ -84,7 +105,7 @@
                                             </tbody>
                                         </table>
                                         <div class="justify-content-center d-flex">
-                                        {{$options->links()}}
+                                        
 
                                         </div>
                                     </div>

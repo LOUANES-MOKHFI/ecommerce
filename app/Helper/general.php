@@ -7,6 +7,10 @@ function getFolder(){
 
 
 
+ function AllparentCategorie(){
+     return App\Models\Category::parent()->get();
+ }
+
 function UploadImage($folder, $image){
      $image->store('/', $folder);
      $filename = $image->hashName();

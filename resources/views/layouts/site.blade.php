@@ -1,142 +1,96 @@
 <!DOCTYPE html>
-<html lang="en" data-textdirection="{{app()-> getLocale() === 'ar' ? 'rtl' :'ltr'}}">
+<html lang="en">
 <head>
-<title>@yield('title')- QuickShop</title>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="csrf-token" content="{{csrf_token()}}">
-<meta name="description" content=" Un site web pour la vente de nos produits en ligne">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="shortcut icon" type="image/x-icon" href="{{asset('assets/quickshop3.png')}}">
-@if(app()-> getLocale() === 'ar')
-<link rel="stylesheet" href="/assets/assets/css/rtl/bootstrap.min.css">
-<link rel="stylesheet" href="/assets/assets/css/rtl/main.css">
-<link rel="stylesheet" href="/assets/assets/css/rtl/font-awesome.css">
+<title>@yield('title')- Ceramic</title>
+   
+    <meta charset="utf-8">
 
-@else
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Casalgrande Padana">
+    <meta property="og:title" content="Casalgrande Padana">
+    <meta property="og:description" content="Casalgrande Padana">
+    <meta property="og:type" content="article">
+   <meta name="csrf_token" content="{{ csrf_token() }}" />
 
-<link rel="stylesheet" href="/assets/assets/css/bootstrap.min.css">
 
-<!-- Customizable CSS -->
-<link rel="stylesheet" href="/assets/assets/css/main.css">
-@endif
+    <meta name="theme-color" content="#DB322B">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" sizes="192x192" href="/assets/assets/images/ceramic/logo.png">
+    <link rel="manifest" href="/manifest.json">
 
-<link rel="stylesheet" href="/assets/assets/css/blue.css">
-<link rel="stylesheet" href="/assets/assets/css/owl.carousel.css">
-<link rel="stylesheet" href="/assets/assets/css/owl.transitions.css">
-<link rel="stylesheet" href="/assets/assets/css/animate.min.css">
-<link rel="stylesheet" href="/assets/assets/css/rateit.css">
-<link rel="stylesheet" href="/assets/assets/css/bootstrap-select.min.css">
+    <meta name="google-site-verification" content="D2TIjgJfDBXBg2_f49Xfc-NMNwceBh1TY_VztgqeTBI">
+    
+    <link rel="icon" href="/assets/assets/images/ceramic/logo.png" type="image/x-icon">
 
-<!-- Icons/Glyphs -->
-<link rel="stylesheet" href="/assets/assets/css/font-awesome.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
+    <title>Casalgrande Padana</title>
 
-<!-- Fonts -->
-<link href="https://fonts.googleapis.com/css?family=Barlow:200,300,300i,400,400i,500,500i,600,700,800" rel="stylesheet">
-<link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600,600italic,700,700italic,800' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 
+   
+<link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <link rel="stylesheet" href="{{asset('assets/assets/css/css1.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{asset('assets/assets/css/common.HEAD.HomePage.min.css')}}" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/assets/css/main.0dd114f60009.css')}}">
+    
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/fontawesome.min.css">
+
+    
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&amp;subset=latin" media="all">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+<style type="text/css">
+
+
+</style>
 @yield('style')
+<style type="text/css">
+    .withchild a{
+        color: white
+    }
+</style>
 </head>
 
 <body>
 
-<div class="super_container">
-    
+<div id="page-container">    
     <!-- Header -->
     
    @include('front.includes.header')
-    
-    <!-- Banner -->
+  
+<main class="site-main">
 
-   @yield('content')
+<header class="page-header headroom headroom--not-bottom headroom--not-top headroom--pinned" id="sticky-header" style="height: 94px">
+    <div class="container">
+        <div class="row" style="max-width: 70%">
+            <div class="col-xs-12">
+                <a href="{{route('home')}}" class="page-header__brand">
+                    <img style="margin-bottom: 0px;height: 60px;width: 150px" src="/assets/assets/images/ceramic/logoo.png" alt="Casalgrande Padana. Pave your way">
+                </a>
+            </div>
+        </div>
+    </div>
+</header>                
+
+  @yield('content')
+
+</main>
+ 
 
     <!-- Footer -->
+@include('front.includes.footer')
 
-  @include('front.includes.footer')
-
-  @include('front.includes.suivi-commande')
     <!-- Copyright -->
 
 </div>
-
-<script src="/assets/assets/js/jquery-1.11.1.min.js"></script> 
-<script src="/assets/assets/js/bootstrap.min.js"></script> 
-<script src="/assets/assets/js/bootstrap-hover-dropdown.min.js"></script> 
-<script src="/assets/assets/js/owl.carousel.min.js"></script> 
-<script src="/assets/assets/js/echo.min.js"></script> 
-<script src="/assets/assets/js/jquery.easing-1.3.min.js"></script> 
-<script src="/assets/assets/js/bootstrap-slider.min.js"></script> 
-<script src="/assets/assets/js/jquery.rateit.min.js"></script> 
-<script src="/assets/assets/js/lightbox.min.js"></script> 
-<script src="/assets/assets/js/bootstrap-select.min.js"></script> 
-<script src="/assets/assets/js/wow.min.js"></script> 
-<script src="/assets/assets/js/scripts.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js'></script>
+<script type="text/javascript" src="{{asset('assets/assets/js/js.js')}}"></script>
 
 
-     <script type="text/javascript">
 
-     $(document).ready(function(){
-      $('body').on('click', '#btn-color-targets > .btn', function(){
-          var color = $(this).data('target-color');
-          $('#modalColor').attr('data-modal-color', color);
-        });
-    }); 
-
-        function checkSubscriber(){
-            var email = $("#email").val();
-            $.ajax({
-               type:'post',
-               url: '/check-subscriber-email',
-               data:{email:email},
-               success:function(response){
-                if(response == "exist"){
-
-                    $("#statusSubscribe").show();
-                     $("#btnSubmit").hide();
-                    $("#statusSubscribe").html("<span style='color:red;'>cette Adress email est existe</span>");
-                }else{
-                    $("#statusSubscribe").show();
-                    $("#statusSubscribe").html("<font style='color:green;'>Votre Adress email est Ajouter avec succees</font>");
-                }
-               },
-               error:function(response){
-              //  alert('error');
-               }
-            });
-        }
-
-        function addSubscriber(){
-            var email = $("#email").val();
-            $.ajax({
-               type:'post',
-               url:'/add-subscriber-email',
-               data:{email:email},
-               success:function(response){
-                if(response == "exist"){
-
-                    $("#statusSubscribe").show();
-                     $("#btnSubmit").hide();
-                    $("#statusSubscribe").html("<span style='color:red;'>cette Adress email est existe</span>");
-                }else if(response == "Enregistre"){
-                    $("#statusSubscribe").show();
-                    
-                    $("#statusSubscribe").html("<font style='color:green;'>Votre Adress email est Ajouter avec succees</font>");
-                }
-               },
-               error:function(response){
-              //  alert('error');
-               }
-            });
-        }
-
-        function enableSubscriber(){
-            $("#btnSubmit").show();
-            $("#statusSubscribe").hide();
-        }
-    </script>
+  
 @yield('script')
 </body>
 
