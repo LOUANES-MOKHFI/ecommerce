@@ -66,12 +66,12 @@
                                                         <div class="row">
                                                             <div class="col-md-12">
                                                                 <div class="form-group">
-                                                                    <label for="projectinput1">   Titre </label>
-                                                                    <input type="text" value="{{old('title')}}" id="name"
+                                                                    <label for="projectinput1">   Télèphone </label>
+                                                                    <input type="text" value="{{old('phone')}}" id="name"
                                                                            class="form-control"
                                                                            placeholder="  "
-                                                                           name="title">
-                                                                    @error("title")
+                                                                           name="phone">
+                                                                    @error("phone")
                                                                     <span class="text-danger"> {{$message}}  </span>
                                                                     @enderror
                                                                 </div>

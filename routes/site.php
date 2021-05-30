@@ -67,14 +67,15 @@ Route::group(['namespace' => 'Site'],function(){
         Route::get('all-products','ProductController@index')->name('all-products');
 
         /// category
-        Route::get('all-products/{slug}','ProductController@getproductsBySlug')->name('category');
+        Route::get('all-products/{slug}','ProductController@getcategoryBySlug')->name('category');
         
         Route::get('/category/get_ceramic/{id}','ProductController@filtre_product_in_category');
         
-        Route::get('/category/get_ceramic_by_options/{id}','ProductController@filtre_product_by_option_in_category');
+        Route::get('/category/get_ceramic_by_options/{id}/{cat_id}','ProductController@filtre_product_by_option_in_category');
 
         Route::get('/category/get_ceramic_by_brand/{id}','ProductController@filtre_product_by_brand_in_category');
-        
+
+
 
         ///all ceramic
         Route::get('/get_ceramic/{id}','ProductController@filtre_product');
@@ -83,24 +84,40 @@ Route::group(['namespace' => 'Site'],function(){
 
         Route::get('/get_ceramic_by_brand/{id}','ProductController@filtre_product_by_brand');
 
-        //Route::get('product/{slug}', 'ProductController@getproductsBySlug')->name('product.details');
-        //Route::post('product-brand', 'ProductController@getproductsBybrand')->name('product.brand');
-        //Route::get('search-products','ProductController@search')->name('products.search');
-        //Route::get('produts/filtr-by-price','ProductController@filtrebyprice')->name('product.price');
-        
-        //Route::get('produts-price/{ordre}','ProductController@filtrebyordre')->name('product.price.orderby');
-       // Route::get('produts-salled','ProductController@filtrebyvente')->name('product.vente');
-        
-        //suivi la commande
-        //Route::get('/commande/suivi-commande','HomeController@suiviCommande')->name('commande.suivi-commande');
-        //  contact route
+        Route::get('product/{slug}', 'ProductController@getproductsBySlug')->name('product.details');
+        Route::get('product/salle-de-bain/{slug}', 'ProductController@getproductsSalleBySlug')->name('product.salledebain.details');
+       
+        Route::get('salle-de-bain/{name}',"ProductController@getsalledebainByOption")->name('salle-de-bain');
+        Route::get('search-products','ProductController@search')->name('products.search');
 
+        /////detail option product
+        Route::get('/get-Detail-Option/{id}','ProductController@getDetailsOption')->name('get-Detail-Option');
+        ////devis
+
+        Route::get('/get-commune/{id}','DevisController@getCommune');
+        Route::get('/get-product/{id}','DevisController@getProduct');
+        Route::get('demande-devis/{slug}','DevisController@getdevis')->name('demande-devis');
+        
+        Route::post('post-devis','DevisController@postDevis')->name('post-devis');
+
+        ////contact
         Route::get('contactez-nous','ContactController@contact')->name('contact');
         Route::post('contacte/store','ContactController@store')->name('contact.store');
+        
+        //////catalogues
+        Route::get('catalogues','CataloguesController@catalogue')->name('catalogues');
+
+        //////Videos
+        Route::get('videos','VideosController@videos')->name('videos');
 
 
         Route::get('qui-sommes-nous','ContactController@about')->name('about');
-                    Route::post('add-to-cart','CartController@addCart')->name('add-to-cart');//->middleware('verified');
+        Route::post('add-to-cart','CartController@addCart')->name('add-to-cart');//->middleware('verified');
+
+        ///////effets
+
+        Route::get('Effet/{slug}','ProductController@getProductByEffet')->name('getproductbyeffet');
+        Route::get('/effet/get_ceramic_by_effet/{id}','ProductController@filtre_product_by_effet');
         /**
          *  Cart routes
          */

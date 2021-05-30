@@ -24,8 +24,9 @@ class SliderImagesRequest extends FormRequest
     public function rules()
     {
         return [
-            'document' => 'required|array|min:1',
-            'document.*' => 'required|string',
+
+            //'title' => 'required|min:3',
+           // 'photo' => 'required|mimes:jpg,png,jpeg',
         ];
     }
 }

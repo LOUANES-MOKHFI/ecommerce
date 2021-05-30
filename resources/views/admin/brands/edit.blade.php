@@ -139,3 +139,20 @@
     </div>
 
 @endsection
+@section('script')
+    <script type="text/javascript">
+       $('#attr').on('change',function(e){
+                console.log(e);
+                var module = e.target.value;
+               
+               if(module == 2){
+                    $('.optimg').show();
+               }else{
+                    $('.optimg').hide();
+               }
+
+
+              });
+
+    </script>
+@endsection

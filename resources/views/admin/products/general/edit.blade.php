@@ -69,7 +69,7 @@
                                                      <div class="row">
                                                             <div class="col-md-12">
                                                                 <div class="form-group">
-                                                                    <label for="projectinput1">   {{__('admin/products.product')}} </label>
+                                                                    <label for="projectinput1"> Image de produit </label>
                                                                     <input type="file" 
                                                                            class="form-control"
                                                                            placeholder="  "
@@ -129,7 +129,7 @@
                                                             </div>
 
 
-                                                            <div class="col-md-4">
+                                                            <!--div class="col-md-4">
                                                                 <div class="form-group">
                                                                     <label for="projectinput1"> {{__('admin/products.chosetags')}}</label>
                                                                     <select name="tags[]" class="select2 form-control" multiple>
@@ -145,7 +145,7 @@
                                                                     <span class="text-danger"> {{$message}}</span>
                                                                     @enderror
                                                                 </div>
-                                                            </div>
+                                                            </div-->
                                                             <div class="col-md-4">
                                                                 <div class="form-group">
                                                                     <label for="projectinput1"> {{__('admin/products.chosebrands')}}</label>
@@ -162,6 +162,34 @@
 
                                                                     @error("brand_id")
                                                                     <span class="text-danger"> {{$message}}</span>
+                                                                    @enderror
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12">
+                                                                <div class="form-group">
+                                                                    <label for="projectinput1"> Effets</label>
+                                                                    <select name="effet_id" class="select2 form-control">
+                                                                    <optgroup label="choisir l'effet">
+                                                                    @if($effets && $effets->count()>0)
+                                                                        @foreach($effets as $effet)
+                                                                            <option value="{{$effet->id}}">{{$effet->name}}</option>
+                                                                        @endforeach
+                                                                    @endif
+                                                                    </optgroup>
+                                                                    </select>
+
+                                                                    @error("effet_id")
+                                                                    <span class="text-danger"> {{$message}}</span>
+                                                                    @enderror
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12">
+                                                                <div class="form-group mt-1">
+                                                                    <label for="projectinput1"> Fichier PDF</label>
+                                                                    <input type="file" name="file"  class="form-control">
+
+                                                                    @error("file")
+                                                                        <span class="text-danger"> </span>
                                                                     @enderror
                                                                 </div>
                                                             </div>

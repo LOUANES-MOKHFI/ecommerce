@@ -4,14 +4,14 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 //use Astrotomic\Translatable\Translatable;
-use Illuminate\Database\Eloquent\SoftDeletes;
+//use Illuminate\Database\Eloquent\SoftDeletes;
 class Product extends Model
 {
   
-  use softDeletes;
+  //use softDeletes;
  
-   protected $fillable = ['name','brand_id','slug','price','special_price','special_price_type'
-   ,'special_price_start','special_price_end','selling_price','manage_stock','qty','in_stock','is_active','special','image_principale'];
+   protected $fillable = ['name','brand_id','effet_id','slug','file','price','special_price','special_price_type'
+   ,'special_price_start','special_price_end','selling_price','manage_stock','qty','in_stock','is_active','special','image_principale','description'];
    
    //protected $with = ['translations'];
   
@@ -61,8 +61,11 @@ class Product extends Model
      }
 
    public function getphotoAttribute($val){
-      return ($val !== null) ? asset('assets/images/products/'.$val) : "";
+      return ($val !== null) ? asset('ceramica/public/assets/images/products/'.$val) : "";
  }
+ /*public function getfichierAttribute($val){
+      return ($val !== null) ? asset('ceramica/public/assets/images/file/'.$val) : "";
+ }*/
 
     public function brand(){
         return $this->belongsTo(Brand::class)->withDefault();

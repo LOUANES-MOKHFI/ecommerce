@@ -8,7 +8,9 @@ use App\Models\Brand;
 use App\Models\Tags;
 use App\Models\Category;
 use App\Models\Image;
+use App\Models\Options;
 use App\Models\Product;
+use App\Models\Effet;
 use App\Http\Requests\GeneralProductRequest;
 use App\Http\Requests\PriceProductRequest;
 use App\Http\Requests\StockProductRequest;
@@ -24,7 +26,7 @@ class ProductController extends Controller
     */
    public function index()
    {
-      $products = Product::select('id','name','image_principale','slug','is_active','created_at')->orderBy('id','DESC')->paginate(PAGINATE_COUNT);
+      $products = Product::select('id','name','image_principale','slug','is_active','created_at')->orderBy('name','ASC')->get();
       return view('admin.products.general.index',compact('products'));
    }
 
@@ -37,6 +39,7 @@ class ProductController extends Controller
    {
 
     $data = [];
+    $data['effets'] = Effet::all();
     $data['brands'] = Brand::active()->select('id')->orderBy('id','DESC')->get();
     $data['tags'] = Tags::select('id')->orderBy('id','DESC')->get();
     $data['categories'] = Category::active()->select('id')->orderBy('id','DESC')->get();
@@ -66,45 +69,54 @@ class ProductController extends Controller
             }
 
         if($request->has('image_principale')){
+         
+         $filename = '';
             $file = $request->file('image_principale');
             $filename = UploadImage('products',$file);
+            $request->filename = $filename;
+          }
 
-          $product = Product::create([
+           
+           if($request->has('file')){
+            $filename1 = '';
+            $file1 = $request->file('file');
+            $filename1 = UploadImage('file',$file1);
+            $request->filename1 = $filename1;
+          }
+
+            $product = Product::create([
               'slug'      => $request->slug,
+               'name'      => $request->name,
+              'file'      => $request->filename1,
               'brand_id'  => $request->brand_id,
+              'effet_id'  => $request->effet_id,
               'is_active' => $request->is_active,
-              'image_principale' => $filename,
+              'image_principale' => $request->filename,
+              'description'=> $request->name,
               
           ]);
-        }else
-        {
-          return redirect()->back()->with('error','خطأ في الملومات, يرجى التأكد.');
-        }
+        
 
          
-          $product->name = $request->name;
-          $product->description = $request->description;
-        //  $product->short_description = $request->short_description;
-          $product->save();
-
           //product categories
 
          $product->categories()->attach($request->categories);
-         $product->tags()->attach($request->tags);
+         //$product->tags()->attach($request->tags);
          //tags products
          
 
           DB::commit();
           return redirect()->route('admin.products')->with('success','تمت إضافة القسم بنجاح.');
      
-      // } catch (\Exception $ex) {
-       //return redirect()->back()->with('error','خطأ في الملومات, يرجى التأكد.');
-        //   DB::rollback();
-       //}
+     /*  } catch (\Exception $ex) {
+       return redirect()->back()->with('error','خطأ في الملومات, يرجى التأكد.');
+         DB::rollback();
+       }*/
    }
 
  public function edit($id){
    $data = [];
+    $data['effets'] = Effet::all();
     $data['product'] = Product::find($id);
       if(!$data['product']){
         return redirect()->route('admin.products')->with('error',"Ce produit n'existe pas");
@@ -117,10 +129,27 @@ class ProductController extends Controller
 
     return view('admin.products.general.edit',$data);
    }
+
+    public function destroy($id){
+  
+   $product = Product::find($id);
+      if(!$product){
+        return redirect()->route('admin.products')->with('error',"Ce produit n'existe pas");
+      }
+      DB::table('options')->where('product_id', $product->id)->delete();
+
+
+      $product->delete();
+      return redirect()->route('admin.products')->with('error',"Le produit est supprimer  avec succees");
+
+   
+
+    return view('admin.products.general.edit',$data);
+   }
   
     public function update(GeneralProductRequest $request,$id)
    {
-       
+      
       $product = Product::find($id);
       if(!$product){
         return redirect()->route('admin.products')->with('error',"Ce produit n'existe pas");
@@ -134,41 +163,54 @@ class ProductController extends Controller
             else{
                 $request->request->add(['is_active' => 1]);
             }
+
             if($request->has('image_principale')){
+         
+         $filename = '';
             $file = $request->file('image_principale');
             $filename = UploadImage('products',$file);
+            $product->image_principale = $filename;
+          }
 
+           
+           if($request->has('file')){
+            $filename1 = '';
+            $file1 = $request->file('file');
+            $filename1 = UploadImage('file',$file1);
+           $product->file = $filename1;
+          }
+          $product->save();
             $product->update([
                 'slug'      => $request->slug,
+                'effet_id'  => $request->effet_id,
+                'name'      => $request->name,
+                //'file'      => $filename1,
+                'description'=> $request->name,
                 'brand_id'  => $request->brand_id,
                 'is_active' => $request->is_active,
-                'image_principale' => $filename,
+                //'image_principale' => $filename,
             ]);
-            }else
-            {
-              return redirect()->back()->with('error','خطأ في الملومات, يرجى التأكد.');
-            }
+
+            
 
          
-          $product->name = $request->name;
-          $product->description = $request->description;
-          $product->short_description = $request->short_description;
-          $product->save();
+        //  $product->name = $request->name;
+         
 
           //product categories
 
-         $product->categories()->attach($request->categories);
-         $product->tags()->attach($request->tags);
+        // $product->categories()->attach($request->categories);
+       //  $product->tags()->attach($request->tags);
          //tags products
          
 
           DB::commit();
-          return redirect()->route('admin.products')->with('success','تمت إضافة القسم بنجاح.');
+          return redirect()->route('admin.products')->with('success','Le produit est Ajoutée  avec succees');
      
-      // } catch (\Exception $ex) {
-       //return redirect()->back()->with('error','خطأ في الملومات, يرجى التأكد.');
-        //   DB::rollback();
-       //}
+      /* } catch (\Exception $ex) {
+       return redirect()->back()->with('error','Erreur de traitenement, veuillez essayer plus tard');
+           DB::rollback();
+       }*/
    }
 
 
@@ -267,4 +309,9 @@ class ProductController extends Controller
      }
    }
 
+public function delete_image($id){
+  $image = Image::findOrFail($id);
+  $image->delete();
+  return redirect()->back();
+}
 }

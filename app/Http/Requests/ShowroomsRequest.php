@@ -24,7 +24,7 @@ class ShowroomsRequest extends FormRequest
     public function rules()
     {
        return [
-            'title'  => 'required|min:1',
+            'phone'  => 'required|min:7',
             'logo'   => 'required_without:id|mimes:jpg,png,jpeg',
             'adress' => 'required|min:3',
         ];

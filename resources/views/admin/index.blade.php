@@ -18,11 +18,11 @@ Accueil
                                             <h1><i class=" la la-group warning font-large-2" title="BTC"></i></h1>
                                         </div>
                                         <div class="col-8 pl-2">
-                                            <h4>Newsletters</h4>
+                                            <h4>Administrateur </h4>
                                             
                                         </div>
                                         <div class="col-2 text-right">
-                                            <h4>{{$newsletters->count()}}</h4>
+                                            <h4>{{$admins->count()}}</h4>
                                             <h6 class="success darken-4"></h6>
                                         </div>
                                     </div>
@@ -66,13 +66,63 @@ Accueil
                                 <div class="card-body pb-0">
                                     <div class="row">
                                         <div class="col-2">
-                                            <h1><i class="la la-group warning font-large-2" title="BTC"></i></h1>
+                                            <h1><i class="cc XRP info font-large-2" title="XRP"></i></h1>
                                         </div>
                                         <div class="col-8 pl-2">
-                                            <h4>Utilisateurs</h4>
+                                            <h4>Marques</h4>
                                         </div>
                                         <div class="col-2 text-right">
-                                            <h4>{{$users->count()}}</h4>
+                                            <h4>{{$marques->count()}}</h4>
+                                            <h6 class="success darken-4"> <!--i class="la la-arrow-up"></i--></h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <canvas id="btc-chartjs" class="height-75"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-12">
+                        <div class="card crypto-card-3 pull-up">
+                            <div class="card-content">
+                                <div class="card-body pb-0">
+                                    <div class="row">
+                                        <div class="col-2">
+                                            <h1><i class="cc XRP info font-large-2" title="XRP"></i></h1>
+                                        </div>
+                                        <div class="col-8 pl-2">
+                                            <h4>Categories</h4>
+                                        </div>
+                                        <div class="col-2 text-right">
+                                            <h4>{{$categories->count()}}</h4>
+                                            <h6 class="success darken-4"> <!--i class="la la-arrow-up"></i--></h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <canvas id="btc-chartjs" class="height-75"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-12">
+                        <div class="card crypto-card-3 pull-up">
+                            <div class="card-content">
+                                <div class="card-body pb-0">
+                                    <div class="row">
+                                        <div class="col-2">
+                                            <h1><i class="cc XRP info font-large-2" title="XRP"></i></h1>
+                                        </div>
+                                        <div class="col-8 pl-2">
+                                            <h4>Catalogues</h4>
+                                        </div>
+                                        <div class="col-2 text-right">
+                                            <h4>{{$catalogues->count()}}</h4>
                                             <h6 class="success darken-4"> <!--i class="la la-arrow-up"></i--></h6>
                                         </div>
                                     </div>

@@ -65,7 +65,7 @@ class Category extends Model
    }
 
 public function getImageAttribute($val){
-      return ($val !== null) ? asset('assets/images/categories/'.$val) : "";
+      return ($val !== null) ? asset('/ceramica/public/assets/images/categories/'.$val) : "";
  }
 
 

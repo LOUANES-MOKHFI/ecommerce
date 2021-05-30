@@ -24,7 +24,7 @@ class ShowroomsController extends Controller
 
            DB::beginTransaction();
           
-           $showrooms->title = $request->title;
+           $showrooms->phone = $request->phone;
            $showrooms->adress = $request->adress;
 			if($request->has('logo'))
      		  {
@@ -61,7 +61,7 @@ class ShowroomsController extends Controller
         }
            DB::beginTransaction();
           
-           $showrooms->title = $request->title;
+           $showrooms->phone = $request->phone;
            $showrooms->adress = $request->adress;
       if($request->has('logo'))
           {

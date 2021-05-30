@@ -94,7 +94,10 @@
 
                                                                 <a href="{{route('admin.options.delete',$option -> id)}}"
                                                                    class="btn btn-outline-danger btn-min-width box-shadow-3 mr-1 mb-1">{{__('admin/options.delete') }}</a>
-
+                                                                @if($option->attribute_id == 3)
+                                                                 <a href="{{route('details',$option -> id)}}"
+                                                                   class="btn btn-outline-danger btn-min-width box-shadow-3 mr-1 mb-1">details</a>
+                                                                @endif
 
                                                             </div>
                                                         </td>

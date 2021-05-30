@@ -45,7 +45,7 @@ class Brand extends Model
    
 
    public function getphotoAttribute($val){
-      return ($val !== null) ? asset('assets/images/brands/'.$val) : "";
+      return ($val !== null) ? asset('/ceramica/public/assets/images/brands/'.$val) : "";
  }
 
       public function scopeActive($query){

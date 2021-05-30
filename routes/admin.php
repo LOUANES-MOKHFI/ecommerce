@@ -96,6 +96,7 @@ Route::group(['namespace' => 'Admin','middleware'=>'auth:admins','prefix' => 'ad
         //Route::post('update-general-information/{id}','ProductController@update')->name('admin.products.general-update');
 
         Route::get('images/{id}','ProductController@getImages')->name('admin.products.images');
+        Route::get('delete-image/{id}','ProductController@delete_image')->name('admin.products.image.delete');
         Route::post('store-images','ProductController@postImages')->name('admin.products.images.store');
         Route::post('save-images/db','ProductController@saveImageDB')->name('admin.products.images.store.db');
 
@@ -109,6 +110,19 @@ Route::group(['namespace' => 'Admin','middleware'=>'auth:admins','prefix' => 'ad
         Route::get('delete/{id}','ProductController@destroy')->name('admin.products.delete');
         Route::get('changeStatus/{id}','TagsController@changeStatus')->name('admin.products.changeStatus');
     });
+
+        ////detail proudct
+
+
+Route::group(['prefix' => 'products',/*'middleware' => 'can:users'*/],function(){
+        Route::get('/detail','DetailsProductController@index')->name('admin.products.detail');
+        Route::get('/detail/create','DetailsProductController@create')->name('admin.products.detail.create');
+        Route::post('/detail/store','DetailsProductController@store')->name('admin.products.detail.store');
+        Route::get('/detail/edit/{id}','DetailsProductController@edit')->name('admin.products.detail.edit');
+        Route::post('/detail/update/{id}','DetailsProductController@update')->name('admin.products.detail.update');
+        Route::get('/detail/delete/{id}','DetailsProductController@destroy')->name('admin.products.detail.delete');
+    });
+
 
     Route::group(['prefix' => 'attributes','middleware' => 'can:attributes'],function(){
         Route::get('/','AttributeController@index')->name('admin.attributes');
@@ -126,6 +140,14 @@ Route::group(['namespace' => 'Admin','middleware'=>'auth:admins','prefix' => 'ad
         Route::get('edit/{id}','OptionsController@edit')->name('admin.options.edit');
         Route::post('update/{id}','OptionsController@update')->name('admin.options.update');
         Route::get('delete/{id}','OptionsController@destroy')->name('admin.options.delete');
+        ////details
+
+        Route::get('details/{id}','OptionsController@allDetails')->name('details');
+        Route::get('details/create/{id}','OptionsController@addDetails')->name('admin.options.details.create');
+        Route::post('details/store/{id}','OptionsController@storedetails')->name('admin.options.details.store');
+        Route::get('details/edit/{id}','OptionsController@editDetails')->name('admin.options.details.edit');
+        Route::post('details/update/{id}','OptionsController@updatedetails')->name('admin.options.details.update');
+        Route::get('details/delete/{id}','OptionsController@destroydetails')->name('admin.options.details.delete');
     });
 
     Route::group(['prefix' => 'sliders','middleware' => 'can:sliders'], function () {
@@ -171,6 +193,42 @@ Route::group(['prefix' => 'showrooms',/*'middleware' => 'can:users'*/],function(
         Route::get('edit/{id}','ShowroomsController@edit')->name('admin.showrooms.edit');
         Route::post('update/{id}','ShowroomsController@update')->name('admin.showrooms.update');
         Route::get('delete/{id}','ShowroomsController@destroy')->name('admin.showrooms.delete');
+
+    });
+Route::group(['prefix' => 'catalogues',/*'middleware' => 'can:users'*/],function(){
+        Route::get('/','CataloguesController@index')->name('admin.catalogues');
+        Route::get('create','CataloguesController@create')->name('admin.catalogues.create');
+        Route::post('store','CataloguesController@store')->name('admin.catalogues.store');
+        Route::get('edit/{id}','CataloguesController@edit')->name('admin.catalogues.edit');
+        Route::post('update/{id}','CataloguesController@update')->name('admin.catalogues.update');
+        Route::get('delete/{id}','CataloguesController@destroy')->name('admin.catalogues.delete');
+
+    });
+
+Route::group(['prefix' => 'sliders',/*'middleware' => 'can:users'*/],function(){
+        Route::get('/','SlidersController@index')->name('admin.sliders');
+        Route::get('create','SlidersController@create')->name('admin.sliders.create');
+        Route::post('store','SlidersController@store')->name('admin.sliders.store');
+        Route::get('edit/{id}','SlidersController@edit')->name('admin.sliders.edit');
+        Route::post('update/{id}','SlidersController@update')->name('admin.sliders.update');
+        Route::get('delete/{id}','SlidersController@destroy')->name('admin.sliders.delete');
+    });
+Route::group(['prefix' => 'videos',/*'middleware' => 'can:users'*/],function(){
+        Route::get('/','VideoController@index')->name('admin.videos');
+        Route::get('create','VideoController@create')->name('admin.videos.create');
+        Route::get('edit/{id}','VideoController@edit')->name('admin.videos.edit');
+        Route::post('update/{id}','VideoController@update')->name('admin.videos.update');
+        Route::get('delete/{id}','VideoController@destroy')->name('admin.videos.delete');
+
+        Route::post('store-video','VideoController@postVideo')->name('admin.videos.store');
+        Route::post('save-video/db','VideoController@saveVideoDB')->name('admin.videos.store.db');
+
+        Route::post('update-video','VideoController@UpdateVideo')->name('admin.videos.update');
+        Route::post('save-update-video/db/{id}','VideoController@saveUpdateVideoDB')->name('admin.videos.update.db');
+    });
+Route::group(['prefix' => 'devis',/*'middleware' => 'can:users'*/],function(){
+        Route::get('/','DevisController@index')->name('admin.devis');
+        Route::get('show/{id}','DevisController@show')->name('admin.devis.show');
 
     });
 

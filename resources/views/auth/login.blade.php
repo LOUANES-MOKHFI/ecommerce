@@ -1,70 +1,260 @@
 @extends('layouts.site')
 @section('title')
-    {{__('site/auth.connecter')}}
+    Erreur 404
+@endsection
+@section('style')
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+<style type="text/css">
+    .clearfix:before,
+.clearfix:after {
+    display: table;
+
+    content: ' ';
+}
+.clearfix:after {
+    clear: both;
+}
+.bbody {
+    background: #f0f0f0 !important;
+    margin-top: 30px;
+    margin-left: 90px;
+}
+ #particles-js {
+    width: 100%;
+    height: 100%;
+    background-color: #e53935;
+}
+.page-404 .outer {
+    position: absolute;
+    top: 0;
+
+    display: table;
+
+    width: 100%;
+    height: 100%;
+}
+.page-404 .outer .middle {
+    display: table-cell;
+
+    vertical-align: middle;
+}
+.page-404 .outer .middle .inner {
+    width: 300px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.page-404 .outer .middle .inner .inner-circle {
+    height: 300px;
+
+    border-radius: 50%;
+    background-color: #ffffff;
+}
+.page-404 .outer .middle .inner .inner-circle:hover i {
+    color: #39bbdb!important;
+    background-color: #f5f5f5;
+    box-shadow: 0 0 0 15px #39bbdb;
+}
+.page-404 .outer .middle .inner .inner-circle:hover span {
+    color: #39bbdb;
+}
+.page-404 .outer .middle .inner .inner-circle i {
+    font-size: 5em;
+    line-height: 1em;
+
+    float: right;
+
+    width: 1.6em;
+    height: 1.6em;
+    margin-top: -.7em;
+    margin-right: -.5em;
+    padding: 20px;
+
+    -webkit-transition: all .4s;
+            transition: all .4s;
+    text-align: center;
+
+    color: #f5f5f5!important;
+    border-radius: 50%;
+    background-color: #39bbdb;
+    box-shadow: 0 0 0 15px #f0f0f0;
+}
+.page-404 .outer .middle .inner .inner-circle span {
+    font-size: 11em;
+    font-weight: 700;
+    line-height: 1.2em;
+
+    display: block;
+
+    -webkit-transition: all .4s;
+            transition: all .4s;
+    text-align: center;
+
+    color: #e0e0e0;
+}
+.page-404 .outer .middle .inner .inner-status {
+    font-size: 20px;
+
+    display: block;
+
+    margin-top: 20px;
+    margin-bottom: 5px;
+
+    text-align: center;
+
+    color: #39bbdb;
+}
+.page-404 .outer .middle .inner .inner-detail {
+    line-height: 1.4em;
+
+    display: block;
+
+    margin-bottom: 10px;
+
+    text-align: center;
+
+    color: #999999;
+}
+</style>
 @endsection
 
-
 @section('content')
-<div class="breadcrumb">
-    <div class="container">
-        <div class="breadcrumb-inner">
-            <ul class="list-inline list-unstyled">
-                <li><a href="{{route('home')}}">{{__('site/auth.home')}}</a></li>
-                <li class='active'>{{__('site/auth.connecter')}}</li>
-            </ul>
-        </div><!-- /.breadcrumb-inner -->
-    </div><!-- /.container -->
-</div><!-- /.breadcrumb -->
 
-<div class="body-content">
-    <div class="container">
-        <div class="sign-in-page">
-            <div class="row">
-                <!-- Sign-in -->            
-<div class="col-md-10 col-sm-10 sign-in">
-    <h4 class="">{{__('site/auth.connecter')}}</h4>
-    <p class="">{{__('site/auth.welcome')}}</p>
-    <!--div class="social-sign-in outer-top-xs">
-        <a href="#" class="facebook-sign-in"><i class="fa fa-facebook"></i> Sign In with Facebook</a>
-        <a href="#" class="twitter-sign-in"><i class="fa fa-twitter"></i> Sign In with Twitter</a>
-    </div-->
-    <form class="register-form outer-top-xs" role="form" action="{{ route('login') }}" method="post">
-         @csrf
-        <div class="form-group">
-            <label class="info-title" for="exampleInputEmail1">{{__('site/auth.email')}} <span>*</span></label>
-            <input  name="email" value="{{ old('email') }}" type="email" class="form-control unicase-form-control text-input" id="exampleInputEmail1" >
-            @error('email')
-                <span  class="invalid-feedback text-danger" role="alert">
-                    <strong>{{ $message }}</strong>
-                </span>
-            @enderror
-        </div>
-        <div class="form-group">
-            <label class="info-title" for="exampleInputPassword1">{{__('site/auth.password')}} <span>*</span></label>
-            <input name="password" type="password" class="form-control unicase-form-control text-input" id="exampleInputPassword1">
-            @error('password')
-            <span class="text-danger invalid-feedback" role="alert">
-                <strong>{{ $message }}</strong>
-            </span>
-            @enderror
-        </div>
-        <div class="radio outer-xs">
-            <label>
-                <input type="radio" name="optionsRadios" id="optionsRadios2" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>{{__('site/auth.remember')}}
-            </label>
-            @if (Route::has('password.request'))
-            <a href="{{ route('password.request') }}" class="forgot-password pull-right">  {{__('site/auth.forgetpassword')}}</a>
-            @endif
-        </div>
-        <button type="submit" class="btn-upper btn btn-primary checkout-page-button">{{__('site/auth.connecter')}}</button>
-    </form>                 
-</div>
-
-
-</div>
-</div>
-</div>
-</div>
   
-    <br>
+    
+<div id="particles-js" class="bbody">
+<div class="page-404">
+    <div class="outer">
+        <div class="middle">
+            <div class="inner">
+                <!--BEGIN CONTENT-->
+                <div class="inner-circle"><i class="fa fa-home"></i><span>404</span></div>
+                <span class="inner-status">Oops! Erreur 404</span>
+                <span class="inner-detail" style="color:#fff;">
+                    Cette page n'existe pas
+                    <a href="{{route('home')}}" class="btn btn-info mtl"><i class="fa fa-home"></i>&nbsp;
+                        Accueil
+                    </a> 
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
 @stop
+@section('script')
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script type="text/javascript">
+    particlesJS("particles-js", {
+    "particles": {
+        "number": {
+            "value": 80,
+            "density": {
+                "enable": true,
+                "value_area": 800
+            }
+        },
+        "color": {
+            "value": "#ffffff"
+        },
+        "shape": {
+            "type": "circle",
+            "stroke": {
+                "width": 0,
+                "color": "#000000"
+            },
+            "polygon": {
+                "nb_sides": 5
+            },
+            "image": {
+                "src": "img/github.svg",
+                "width": 100,
+                "height": 100
+            }
+        },
+        "opacity": {
+            "value": 0.5,
+            "random": false,
+            "anim": {
+                "enable": false,
+                "speed": 1,
+                "opacity_min": 0.1,
+                "sync": false
+            }
+        },
+        "size": {
+            "value": 3,
+            "random": true,
+            "anim": {
+                "enable": false,
+                "speed": 40,
+                "size_min": 0.1,
+                "sync": false
+            }
+        },
+        "line_linked": {
+            "enable": true,
+            "distance": 150,
+            "color": "#ffffff",
+            "opacity": 0.4,
+            "width": 1
+        },
+        "move": {
+            "enable": true,
+            "speed": 6,
+            "direction": "none",
+            "random": false,
+            "straight": false,
+            "out_mode": "out",
+            "bounce": false,
+            "attract": {
+                "enable": false,
+                "rotateX": 600,
+                "rotateY": 1200
+            }
+        }
+    },
+    "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+            "onhover": {
+                "enable": true,
+                "mode": "grab"
+            },
+            "onclick": {
+                "enable": true,
+                "mode": "push"
+            },
+            "resize": true
+        },
+        "modes": {
+            "grab": {
+                "distance": 140,
+                "line_linked": {
+                    "opacity": 1
+                }
+            },
+            "bubble": {
+                "distance": 400,
+                "size": 40,
+                "duration": 2,
+                "opacity": 8,
+                "speed": 3
+            },
+            "repulse": {
+                "distance": 200,
+                "duration": 0.4
+            },
+            "push": {
+                "particles_nb": 4
+            },
+            "remove": {
+                "particles_nb": 2
+            }
+        }
+    },
+    "retina_detect": true
+});
+</script>
+@endsection

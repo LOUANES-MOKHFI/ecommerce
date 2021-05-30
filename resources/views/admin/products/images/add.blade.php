@@ -3,6 +3,7 @@
 {{__('admin/sidebar.addproduct')}}
 @endsection
 
+
 @section('content')
 
     <div class="app-content content">
@@ -43,6 +44,20 @@
                                     </div>
                                 </div>
                                 @include('admin.includes.alerts.alerts')
+                                <h3>Les images de produits</h3>
+                                <div class="container" style="margin-bottom: 50px">
+                                    <div class="row">
+                                        @foreach($product->images as $image)
+                                        <div class="col-md-3" style="margin-bottom: 20px">
+                                            
+                                            <img src="{{$image->photo}}" style="height: 100%;width: 100%">
+                                            <div align="center" style="margin-top: 4px">
+                                               <a href="{{route('admin.products.image.delete',$image -> id)}}" class="btn btn-outline-danger btn-min-width box-shadow-3 mr-1 mb-1">{{__('admin/category.delete') }}</a>
+                                            </div>
+                                        </div>
+                                        @endforeach
+                                    </div>
+                                </div>
                                 <div class="card-content collapse show">
                                     <div class="card-body">
                                         <form class="form" action="{{route('admin.products.images.store.db')}}"
@@ -77,6 +92,7 @@
                                         </form>
                                     </div>
                                 </div>
+
                             </div>
                         </div>
                     </div>
@@ -152,5 +168,25 @@
                     $('#cats_list').addClass('hidden');
                 }
             });
+   </script>
+
+   <script type="text/javascript">
+       $(document).on('click', '.delete_image', function (e) {
+            e.preventDefault();
+
+        id = $(this).attr('data-id');
+        alert(id);
+            $.ajax({
+                type: 'get',
+                url: '/delete-image'+id,
+
+                success: function (data) {
+                    if(data.wished )
+                    //$('.alert-modal').css('display','block');
+                    else
+                    //$('.alert-modal2').css('display','block');
+                }
+            });
+        });
    </script>
 @endsection

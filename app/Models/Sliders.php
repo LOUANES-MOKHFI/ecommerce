@@ -6,11 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Sliders extends Model
 {
-    protected $fillable = ['photo', 'created_at', 'updated_at'];
+	protected $table = 'sliders';
+    protected $fillable = ['photo','title'];
 
 
     public function getPhotoAttribute($val)
     {
-        return ($val !== null) ? asset('assets/images/sliders/' . $val) : "";
+        return ($val !== null) ? asset('ceramica/public/assets/images/sliders/' . $val) : "";
     }
 }

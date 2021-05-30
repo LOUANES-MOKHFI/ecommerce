@@ -8,7 +8,7 @@
                     <div class="card-header border-0">
                         <div class="card-title text-center">
                             <div class="p-1">
-                                <img src="{{asset('assets/quickshop3.png')}}" alt="LOGO"/>
+                                <img src="{{asset('/assets/assets/images/ceramic/logonueva.png')}}" style="height: 100px;width: 150px" alt="LOGO"/>
 
                             </div>
                         </div>

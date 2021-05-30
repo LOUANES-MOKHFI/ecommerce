@@ -24,10 +24,16 @@ class ContactRequest extends FormRequest
     public function rules()
     {
         return [
-            'name'      => 'required|min:3',
-            'phone'     => 'required|numeric',
-            'email'     => 'required|email',
-            'message'   => 'required|min:3'
+            'nom'        => 'required|min:3',
+            'prenom'     => 'required|min:3',
+            'state_id'   => 'required|exists:states,id',
+            'commune_id' => 'required|exists:communes,id',
+            'adress'     => 'required|min:3',
+            'phone'      => 'required|numeric',
+            'fax'        => 'numeric',
+            'email'      => 'required|email',
+            'message'    => 'required|min:3',
+            'typecontact'=> 'required|in:1,2,3',
         ];
     }
 }

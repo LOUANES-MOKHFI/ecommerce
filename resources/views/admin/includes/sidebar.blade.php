@@ -21,7 +21,30 @@
                     </li>
                 </ul>
             </li-->
-       
+        <li class="nav-item">
+            <a class="menu-item" href="{{route('admin.devis')}}" data-i18n="nav.dash.ecommerce">
+                    <i class="la la-group"></i>
+                    <span class="menu-title" data-i18n="nav.dash.main">  Demande de devis  </span>
+                    <span class="badge badge badge-danger badge-pill float-right mr-2">{{\App\Models\Devis::count()}}</span>
+                </a>
+                
+        </li>
+         <li class="nav-item">
+            <a class="menu-item" href="{{route('admin.sliders')}}" data-i18n="nav.dash.ecommerce">
+                    <i class="la la-group"></i>
+                    <span class="menu-title" data-i18n="nav.dash.main">  Tout les slides  </span>
+                    <span class="badge badge badge-danger badge-pill float-right mr-2">{{\App\Models\Sliders::count()}}</span>
+                </a>
+                
+        </li>
+        <li class="nav-item">
+            <a class="menu-item" href="{{route('admin.videos')}}" data-i18n="nav.dash.ecommerce">
+                    <i class="la la-group"></i>
+                    <span class="menu-title" data-i18n="nav.dash.main">  Tout les videos  </span>
+                    <span class="badge badge badge-danger badge-pill float-right mr-2">{{\App\Models\Video::count()}}</span>
+                </a>
+                
+        </li>
        @can('categories')
             <li class="nav-item"><a href=""><i class="la la-group"></i>
                     <span class="menu-title" data-i18n="nav.dash.main"> {{__('admin/sidebar.maincategories')}} </span>
@@ -170,6 +193,20 @@
                     </li>
                     <li><a class="menu-item" href="{{route('admin.showrooms.create')}}" data-i18n="nav.dash.crypto">
                     Ajouter un Showroom </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item"><a href=""><i class="la la-group"></i>
+                    <span class="menu-title" data-i18n="nav.dash.main"> Catalogues    </span>
+                    <span
+                        class="badge badge badge-danger badge-pill float-right mr-2">{{\App\Models\Catalogues::count()}}</span>
+                </a>
+                <ul class="menu-content">
+                    <li class="active"><a class="menu-item" href="{{route('admin.catalogues')}}"
+                                          data-i18n="nav.dash.ecommerce">  Afficher Tout </a>
+                    </li>
+                    <li><a class="menu-item" href="{{route('admin.catalogues.create')}}" data-i18n="nav.dash.crypto">
+                    Ajouter un catalogue </a>
                     </li>
                 </ul>
             </li>

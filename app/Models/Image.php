@@ -11,7 +11,7 @@ class Image extends Model
     public function getPhotoAttribute($val)
     {
 
-        return $val ? asset('assets/images/products/'.$val) : '';
+        return $val ? asset('/ceramica/public/assets/images/products/'.$val) : '';
     }
     
 }

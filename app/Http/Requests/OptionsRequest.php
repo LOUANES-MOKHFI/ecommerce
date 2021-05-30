@@ -28,6 +28,7 @@ class OptionsRequest extends FormRequest
             'product_id' => 'required|exists:products,id',
             'attribute_id' => 'required|exists:attributes,id',
             'category' => 'required|in:1,2,3',
+            'category_id'   =>'required|exists:categories,id',
         ];
     }
 }
